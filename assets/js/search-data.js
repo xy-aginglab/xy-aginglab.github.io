@@ -50,7 +50,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:", "_blank");
+          window.open("mailto:%6C%69%6A%69_%78%79@%63%73%75.%65%64%75.%63%6E", "_blank");
         },
       },{
         id: 'social-rss',
@@ -58,6 +58,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'Github',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
         },
       },{
       id: 'light-theme',
