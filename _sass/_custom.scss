@@ -1,9 +1,62 @@
 /*******************************************************************************
- * Custom styles — Modern Lab Website (Sci-Tech Edition)
+ * Lab Website — Complete Standalone Stylesheet
+ * Replaces all al-folio visual styles. Only publications.scss is kept.
  ******************************************************************************/
 @use "variables" as v;
 
-/* ── Animations ───────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   1. RESET & BASE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  background: var(--global-bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--global-text-color);
+  line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2. CSS ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 @keyframes lab-gradient-shift {
   0% {
@@ -17,16 +70,6 @@
   }
 }
 
-@keyframes lab-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 @keyframes lab-pulse-glow {
   0%,
   100% {
@@ -37,7 +80,179 @@
   }
 }
 
-/* ── Hero Section ─────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   3. NAVIGATION
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lab-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(var(--global-bg-color-rgb, 255, 255, 255), 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.lab-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.lab-nav__brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--global-text-color) !important;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--global-theme-color) !important;
+  }
+}
+
+.lab-nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  li a,
+  li button {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--global-text-color-light);
+    text-transform: capitalize;
+    border-radius: 6px;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  li a:hover,
+  li button:hover {
+    color: var(--global-theme-color);
+    background: rgba(15, 123, 138, 0.06);
+  }
+
+  li.active a {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+}
+
+/* Mobile hamburger */
+.lab-nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--global-text-color);
+    border-radius: 1px;
+    transition: all 0.3s;
+  }
+}
+
+/* Theme toggle in nav */
+.lab-nav__theme-toggle button {
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem !important;
+}
+
+@media (max-width: 768px) {
+  .lab-nav__toggle {
+    display: flex;
+  }
+
+  .lab-nav__links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--global-bg-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem;
+    gap: 0;
+
+    li a,
+    li button {
+      padding: 0.7rem 1rem;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .lab-nav.is-open .lab-nav__links {
+    display: flex;
+  }
+
+  .lab-nav.is-open .lab-nav__toggle {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   4. MAIN CONTENT
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lab-main {
+  min-height: calc(100vh - 60px - 80px);
+}
+
+/* Page layout (for publications, projects, people pages) */
+.post {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.post-description {
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   5. HERO SECTION
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-hero {
   position: relative;
@@ -47,19 +262,16 @@
   color: #ffffff !important;
   padding: 6rem 2rem 5rem;
   text-align: center;
-  margin-top: -1.5rem;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
   overflow: hidden;
 
-  /* Geometric grid overlay */
+  /* Grid overlay */
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
     pointer-events: none;
   }
 
@@ -87,19 +299,19 @@
 .lab-hero__title {
   font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.8rem;
   line-height: 1.15;
   color: #ffffff !important;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .lab-hero__subtitle {
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: rgba(180, 230, 240, 0.9) !important;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em;
+  margin: 0 0 2rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -108,40 +320,39 @@
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(100, 220, 255, 0.8), transparent);
   margin: 0 auto 2rem;
-  border-radius: 2px;
 }
 
 .lab-hero__tagline {
   font-size: 1.08rem;
   font-weight: 400;
   line-height: 1.8;
-  color: rgba(200, 235, 245, 0.9) !important;
+  color: rgba(210, 240, 248, 0.92) !important;
   max-width: 680px;
   margin: 0 auto;
 }
 
-/* ── Sections ─────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   6. SECTIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .lab-section--alt {
+  max-width: none;
   background: var(--global-code-bg-color);
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding-left: calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
 }
 
 .lab-section__heading {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin: 0 0 2.5rem;
   color: var(--global-text-color);
   letter-spacing: 0.03em;
-  position: relative;
 
   &::after {
     content: "";
@@ -153,36 +364,20 @@
   }
 }
 
-/* ── About ────────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   7. ABOUT TEXT
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-about {
   max-width: 780px;
   margin: 0 auto;
   font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--global-text-color);
-
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--global-theme-color);
-  }
-
-  h4 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-top: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  ul {
-    padding-left: 1.2rem;
-  }
+  line-height: 1.85;
 }
 
-/* ── Research Cards ───────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   8. RESEARCH CARDS
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-research-grid {
   display: grid;
@@ -190,7 +385,6 @@
   gap: 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .lab-research-card {
@@ -203,7 +397,6 @@
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 
-  /* Subtle top accent line */
   &::before {
     content: "";
     position: absolute;
@@ -252,7 +445,6 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
-  color: var(--global-text-color);
 }
 
 .lab-research-card__desc {
@@ -268,10 +460,8 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--global-theme-color);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: gap 0.2s;
   gap: 0.3rem;
+  transition: gap 0.2s;
 
   i {
     font-size: 0.75rem;
@@ -287,7 +477,9 @@
   }
 }
 
-/* ── Contact ──────────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   9. CONTACT
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-contact {
   text-align: center;
@@ -298,7 +490,6 @@
 .lab-contact__info {
   margin-bottom: 1.5rem;
   line-height: 1.8;
-  color: var(--global-text-color);
 
   p {
     margin: 0;
@@ -308,12 +499,11 @@
 .lab-contact__icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.4rem;
+  gap: 1.2rem;
+  font-size: 1.3rem;
 
   a {
     color: var(--global-text-color-light);
-    transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,6 +511,7 @@
     height: 44px;
     border-radius: 50%;
     border: 1px solid var(--global-divider-color);
+    transition: all 0.3s;
 
     &:hover {
       color: #ffffff;
@@ -332,7 +523,175 @@
   }
 }
 
-/* ── Responsive ───────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   10. FOOTER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lab-footer {
+  border-top: 1px solid var(--global-divider-color);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.lab-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   11. PROJECTS GRID (for /projects/ page)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.projects {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h2.category {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 1.5rem;
+    color: var(--global-theme-color);
+    text-transform: capitalize;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--global-card-bg-color);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-body {
+      padding: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 0 0 0.4rem;
+    }
+
+    .card-text {
+      font-size: 0.88rem;
+      color: var(--global-text-color-light);
+      line-height: 1.6;
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   12. DARK MODE OVERRIDES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html[data-theme="dark"] {
+  .lab-nav {
+    background: rgba(28, 28, 29, 0.85);
+  }
+
+  .lab-research-card:hover {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.25),
+      0 0 20px rgba(15, 123, 138, 0.1);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   13. THEME TOGGLE (from al-folio, needed for dark mode)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+#light-toggle-system {
+  display: inline-block;
+}
+#light-toggle-dark,
+#light-toggle-light {
+  display: none;
+}
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-dark {
+    display: inline-block;
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  font: var(--fa-font);
+}
+
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px;
+  transform: translateX(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   14. RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
   .lab-hero {
@@ -348,12 +707,19 @@
   }
 
   .lab-section {
-    padding: 2.5rem 0;
+    padding: 2.5rem 1.5rem;
   }
 
   .lab-research-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0;
+  }
+
+  .post {
+    padding: 1.5rem 1rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
   }
 }

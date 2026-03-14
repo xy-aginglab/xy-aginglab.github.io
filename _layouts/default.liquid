@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  <!-- Head -->
   <head>
     {% if page.redirect %}
       {% if page.redirect == true %}
@@ -15,42 +14,58 @@
     {% include head.liquid %}
   </head>
 
-  <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
-    {% include header.liquid %}
+  <body>
+    <!-- Lab Navigation -->
+    <nav class="lab-nav">
+      <div class="lab-nav__inner">
+        <a class="lab-nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <button class="lab-nav__toggle" aria-label="Toggle navigation" onclick="this.closest('.lab-nav').classList.toggle('is-open')">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="lab-nav__links">
+          {% assign sorted_pages = site.pages | sort: 'nav_order' %}
+          {% for p in sorted_pages %}
+            {% if p.nav and p.autogen == null and p.dropdown == null %}
+              {% assign parent_link = p.permalink | remove: 'index.html' %}
+              <li
+                {% if page.url contains parent_link %}
+                  class="active"
+                {% endif %}
+              >
+                <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          {% if site.enable_darkmode %}
+            <li class="lab-nav__theme-toggle">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-          </div>
-        {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
-        {% endif %}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    </div>
+    <main class="lab-main">
+      {{ content }}
+    </main>
 
     <!-- Footer -->
-    {% include footer.liquid %}
+    <footer class="lab-footer">
+      <div class="lab-footer__inner">
+        <p>
+          &copy; {{ site.time | date: '%Y' }}
+          {{ site.title }}. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> &amp;
+          <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>. Hosted by
+          <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+        </p>
+      </div>
+    </footer>
 
-    <!-- JavaScripts -->
     {% include scripts.liquid %}
   </body>
 </html>
