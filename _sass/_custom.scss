@@ -8,7 +8,7 @@
 .lab-hero {
   position: relative;
   background: linear-gradient(135deg, #0d3b4c 0%, #145a6e 40%, #1a7a8a 100%);
-  color: #fff;
+  color: #ffffff !important;
   padding: 5rem 2rem 4rem;
   text-align: center;
   margin-top: -1.5rem; /* pull up into container spacing */
@@ -34,17 +34,18 @@
 }
 
 .lab-hero__title {
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 0.6rem;
   line-height: 1.2;
+  color: #ffffff !important;
 }
 
 .lab-hero__subtitle {
   font-size: 1.1rem;
   font-weight: 300;
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85) !important;
   margin-bottom: 1.5rem;
 }
 
@@ -60,7 +61,7 @@
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.7;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9) !important;
   max-width: 650px;
   margin: 0 auto;
 }
