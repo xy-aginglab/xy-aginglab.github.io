@@ -1,75 +1,129 @@
 /*******************************************************************************
- * Custom styles — Modern Lab Website
+ * Custom styles — Modern Lab Website (Sci-Tech Edition)
  ******************************************************************************/
 @use "variables" as v;
+
+/* ── Animations ───────────────────────────────────────────────────────────── */
+
+@keyframes lab-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes lab-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes lab-pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
 
 /* ── Hero Section ─────────────────────────────────────────────────────────── */
 
 .lab-hero {
   position: relative;
-  background: linear-gradient(135deg, #0d3b4c 0%, #145a6e 40%, #1a7a8a 100%);
+  background: linear-gradient(-45deg, #0a2e3d, #0d4a5a, #0f6b7a, #0a3d50, #112d4e);
+  background-size: 300% 300%;
+  animation: lab-gradient-shift 12s ease infinite;
   color: #ffffff !important;
-  padding: 5rem 2rem 4rem;
+  padding: 6rem 2rem 5rem;
   text-align: center;
-  margin-top: -1.5rem; /* pull up into container spacing */
+  margin-top: -1.5rem;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   overflow: hidden;
 
+  /* Geometric grid overlay */
   &::before {
     content: "";
     position: absolute;
     inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  /* Glowing orbs */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background:
-      radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 15% 50%, rgba(32, 200, 220, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(100, 220, 255, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 50% 80%, rgba(0, 180, 200, 0.08) 0%, transparent 45%);
+    animation: lab-pulse-glow 6s ease-in-out infinite;
     pointer-events: none;
   }
 }
 
 .lab-hero__inner {
   position: relative;
+  z-index: 1;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .lab-hero__title {
-  font-size: 2.2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.6rem;
-  line-height: 1.2;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
   color: #ffffff !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .lab-hero__subtitle {
   font-size: 1.1rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.85) !important;
-  margin-bottom: 1.5rem;
+  color: rgba(180, 230, 240, 0.9) !important;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .lab-hero__divider {
-  width: 60px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 0 auto 1.5rem;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(100, 220, 255, 0.8), transparent);
+  margin: 0 auto 2rem;
   border-radius: 2px;
 }
 
 .lab-hero__tagline {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 400;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9) !important;
-  max-width: 650px;
+  line-height: 1.8;
+  color: rgba(200, 235, 245, 0.9) !important;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 /* ── Sections ─────────────────────────────────────────────────────────────── */
 
 .lab-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .lab-section--alt {
@@ -81,21 +135,21 @@
 }
 
 .lab-section__heading {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 2.5rem;
   color: var(--global-text-color);
+  letter-spacing: 0.03em;
   position: relative;
 
   &::after {
     content: "";
     display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--global-theme-color);
-    margin: 0.6rem auto 0;
-    border-radius: 2px;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--global-theme-color), transparent);
+    margin: 0.8rem auto 0;
   }
 }
 
@@ -140,63 +194,96 @@
 }
 
 .lab-research-card {
+  position: relative;
   background: var(--global-card-bg-color);
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  padding: 2.2rem 1.5rem;
   text-align: center;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--global-divider-color);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  /* Subtle top accent line */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--global-theme-color), #64dcff);
+    opacity: 0;
+    transition: opacity 0.35s;
+  }
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.08),
+      0 0 20px rgba(15, 123, 138, 0.06);
+    border-color: var(--global-theme-color);
+
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
 .lab-research-card__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--global-theme-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--global-theme-color), #0d5a6a);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1.4rem;
+  box-shadow: 0 4px 15px rgba(15, 123, 138, 0.3);
+  transition: transform 0.3s;
+
+  .lab-research-card:hover & {
+    transform: scale(1.08);
+  }
 }
 
 .lab-research-card__title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: var(--global-text-color);
 }
 
 .lab-research-card__desc {
-  font-size: 0.92rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.7;
   color: var(--global-text-color-light);
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .lab-research-card__link {
-  font-size: 0.88rem;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--global-theme-color);
   text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: gap 0.2s;
+  gap: 0.3rem;
 
   i {
-    margin-left: 0.3rem;
-    font-size: 0.8rem;
-    transition: transform 0.2s;
+    font-size: 0.75rem;
+    transition: transform 0.25s;
   }
 
-  &:hover i {
-    transform: translateX(3px);
+  &:hover {
+    gap: 0.5rem;
+
+    i {
+      transform: translateX(2px);
+    }
   }
 }
 
@@ -221,15 +308,26 @@
 .lab-contact__icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  font-size: 1.3rem;
+  gap: 1.5rem;
+  font-size: 1.4rem;
 
   a {
     color: var(--global-text-color-light);
-    transition: color 0.2s;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--global-divider-color);
 
     &:hover {
-      color: var(--global-theme-color);
+      color: #ffffff;
+      background: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      box-shadow: 0 4px 15px rgba(15, 123, 138, 0.3);
+      transform: translateY(-2px);
     }
   }
 }
@@ -238,7 +336,7 @@
 
 @media (max-width: 768px) {
   .lab-hero {
-    padding: 3.5rem 1.5rem 3rem;
+    padding: 4rem 1.5rem 3.5rem;
   }
 
   .lab-hero__title {
@@ -246,11 +344,11 @@
   }
 
   .lab-hero__subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .lab-section {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
 
   .lab-research-grid {
