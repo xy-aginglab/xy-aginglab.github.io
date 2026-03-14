@@ -14,7 +14,7 @@ profile:
     <p>Xiangya Hospital, Central South University</p>
     <p>Changsha, Hunan, China</p>
 
-selected_papers: false # enable after adding real publications to papers.bib
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
