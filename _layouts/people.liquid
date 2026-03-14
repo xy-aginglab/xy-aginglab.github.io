@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<!-- Page Header -->
+<div class="lab-section">
+  <h2 class="lab-section__heading">{{ page.title }}</h2>
+  {% if page.description %}
+    <p class="lab-people__subtitle">{{ page.description }}</p>
+  {% endif %}
+</div>
+
+<!-- PI Section -->
+{% assign pi = site.data.members | where: 'role', 'pi' %}
+{% if pi.size > 0 %}
+  <div class="lab-section lab-section--alt">
+    <h3 class="lab-people__category">Principal Investigator</h3>
+    {% for member in pi %}
+      <div class="lab-pi-card">
+        <div class="lab-pi-card__photo">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        <div class="lab-pi-card__info">
+          <h2 class="lab-pi-card__name">
+            {{ member.name }}
+            <span class="lab-pi-card__name-en">{{ member.name_en }}</span>
+          </h2>
+          <p class="lab-pi-card__title">{{ member.title }}</p>
+          <p class="lab-pi-card__bio">{{ member.bio }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- Faculty -->
+{% assign faculty = site.data.members | where: 'role', 'faculty' %}
+{% if faculty.size > 0 %}
+  <div class="lab-section">
+    <h3 class="lab-people__category">Faculty</h3>
+    <div class="lab-people-grid">
+      {% for member in faculty %}
+        <div class="lab-member-card">
+          <div class="lab-member-card__photo">
+            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="lab-member-card__body">
+            <h4 class="lab-member-card__name">
+              {{ member.name }}
+              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+            </h4>
+            <p class="lab-member-card__title">{{ member.title }}</p>
+            <p class="lab-member-card__dept">{{ member.department }}</p>
+            <p class="lab-member-card__bio">{{ member.bio }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Researchers -->
+{% assign researchers = site.data.members | where: 'role', 'researcher' %}
+{% if researchers.size > 0 %}
+  <div class="lab-section lab-section--alt">
+    <h3 class="lab-people__category">Researchers</h3>
+    <div class="lab-people-grid">
+      {% for member in researchers %}
+        <div class="lab-member-card">
+          <div class="lab-member-card__photo">
+            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="lab-member-card__body">
+            <h4 class="lab-member-card__name">
+              {{ member.name }}
+              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+            </h4>
+            <p class="lab-member-card__title">{{ member.title }}</p>
+            <p class="lab-member-card__dept">{{ member.department }}</p>
+            <p class="lab-member-card__bio">{{ member.bio }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Clinicians -->
+{% assign clinicians = site.data.members | where: 'role', 'clinician' %}
+{% if clinicians.size > 0 %}
+  <div class="lab-section">
+    <h3 class="lab-people__category">Clinician-Scientists</h3>
+    <div class="lab-people-grid">
+      {% for member in clinicians %}
+        <div class="lab-member-card">
+          <div class="lab-member-card__photo">
+            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="lab-member-card__body">
+            <h4 class="lab-member-card__name">
+              {{ member.name }}
+              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+            </h4>
+            <p class="lab-member-card__title">{{ member.title }}</p>
+            <p class="lab-member-card__dept">{{ member.department }}</p>
+            <p class="lab-member-card__bio">{{ member.bio }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

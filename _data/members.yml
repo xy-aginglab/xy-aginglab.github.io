@@ -1,0 +1,255 @@
+# Lab Members — Hunan Key Laboratory of Aging Biology
+# Categories: pi, faculty, researcher, clinician
+
+- name: 李吉
+  name_en: Ji Li
+  role: pi
+  title: 主任医师，教授，博士生导师
+  title_en: Director & Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lj.png
+  department: 皮肤科
+  bio: >-
+    衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤科副主任。美国南加州大学博士后。
+    教育部青年长江学者，湖南省杰出青年基金获得者。主持国家自然科学基金6项。
+    以第一/通讯作者在 EMBO Mol Med, EMBO J, JID 等杂志上发表 SCI 论文50余篇。
+
+- name: 谢红付
+  name_en: Hongfu Xie
+  role: faculty
+  title: 教授，博士生导师，一级主任医师
+  title_en: Professor
+  photo: https://m.meigui88.cn/articles/a374d3ae24b9a3314778c715f0f6b297.png
+  department: 皮肤科
+  bio: >-
+    首届中南大学"湘雅名医"，湘雅医院皮肤科主任。
+    中华医学会皮肤性病学分会玫瑰痤疮硏究中心首席专家。
+    主持国家自然科学基金4项，发表论文86篇。
+
+- name: 刘宝华
+  name_en: Baohua Liu
+  role: faculty
+  title: 教授，博士生导师，国家杰青
+  title_en: Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lbh.png
+  department: 深圳大学基础医学院
+  bio: >-
+    国家杰出青年基金/优秀青年基金获得者，国家特聘专家。
+    深圳大学特聘教授，基础医学院副院长。
+    深圳市系统衰老与主动健康重点实验室主任。
+
+- name: 孔庆鹏
+  name_en: Qingpeng Kong
+  role: faculty
+  title: 研究员，博士生导师
+  title_en: Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/kqp.png
+  department: 中国科学院昆明动物研究所
+  bio: >-
+    中国科学院特聘研究员，国家"万人计划"领军人才。
+    国家重点研发计划项目首席科学家。
+    基于多组学手段揭示长寿人群健康衰老相关调控因子。
+
+- name: 邹义洲
+  name_en: Yizhou Zou
+  role: faculty
+  title: 教授，博士生导师
+  title_en: Professor
+  photo: https://m.meigui88.cn/articles/74dc513ab5772fad263ebd18f8ee7bfa.png
+  department: 湘雅免疫学系
+  bio: >-
+    医学博士，免疫学研究员。曾任美国德克萨斯州西南医学中心助理教授。
+    从事 MICA 为代表的移植免疫学研究。
+
+- name: 毕方方
+  name_en: Fangfang Bi
+  role: faculty
+  title: 主任医师，教授，博士生导师
+  title_en: Professor
+  photo: https://m.meigui88.cn/articles/10580aedb7255e1b3d72fcbdce8a11ab.png
+  department: 神经内科
+  bio: >-
+    神经重症监护专科主任，急诊科副主任。美国 Jefferson 大学博士后。
+    主持国家自然科学基金项目4项，发表 SCI 论文30余篇。
+
+- name: 刘洪
+  name_en: Hong Liu
+  role: faculty
+  title: 教授，博士生导师
+  title_en: Professor
+  photo: https://m.meigui88.cn/articles/3eb8a8a207fbad60c80802e2c7e13a23.png
+  department: 湘雅肿瘤免疫个体化临床研究中心
+  bio: >-
+    美国 MD Anderson 癌症中心博士。湖湘青年英才。
+    主持国家重点研发专项、国家自然科学优秀青年基金等10余项。
+    通讯/第一作者在 Cancer Cell, Circulation, Nature Communications 等发表论著。
+
+- name: 雷明星
+  name_en: Mingxing Lei
+  role: faculty
+  title: 教授，博士生导师
+  title_en: Professor
+  photo: https://m.meigui88.cn/articles/09af4211df679abd5f744f5b86ecfe5b.png
+  department: 重庆大学生物工程系
+  bio: >-
+    重庆英才·青年拔尖人才，国际 Vebleo 协会 Fellow。
+    致力于皮肤及附属器官再生研究。
+    在 Science, Cell, PNAS 等发表论文50余篇。
+
+- name: 简丹
+  name_en: Dan Jian
+  role: faculty
+  title: 主任医师，博士生导师
+  title_en: Associate Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/jd.png
+  department: 皮肤科
+  bio: >-
+    美国南加州大学访问学者。主要研究方向为皮肤衰老机制、
+    损容性皮肤病发病及治疗机制、色素性皮肤病光电治疗。
+
+- name: 吴晓珊
+  name_en: Xiaoshan Wu
+  role: faculty
+  title: 特聘教授，博士生导师
+  title_en: Associate Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/wxs.png
+  department: 口腔颌面外科
+  bio: >-
+    2020年国家自然基金"优秀青年科学基金"获得者。
+    湘雅医院口腔颌面部发育与再生研究中心主任。
+    以第一作者在 PNAS、EMBO J 等发表论文。
+
+- name: 付凯
+  name_en: Kai Fu
+  role: researcher
+  title: 特聘研究员，博士生导师
+  title_en: Associate Professor
+  photo: https://m.meigui88.cn/articles/d567d955ad428b148bffda334b4c5eee.png
+  department: 湘雅医院
+  bio: >-
+    美国约翰霍普金斯大学博士后。湖南省优青。
+    致力于结直肠癌等肿瘤的分子机制研究。
+    在 Cancer Discovery, Nature Communications 等发表论文。
+
+- name: 匡叶红
+  name_en: Yehong Kuang
+  role: researcher
+  title: 副教授，博士生导师
+  title_en: Associate Professor
+  photo: https://m.meigui88.cn/articles/68d62e0133c10c5bc5989aa2ebdc7e69.png
+  department: 皮肤科
+  bio: >-
+    美国圣约翰大学联合培养博士、美国康奈尔大学访问学者。
+    主持国家自然科学基金3项。研究方向为银屑病发病机制。
+
+- name: 谭嵘
+  name_en: Rong Tan
+  role: researcher
+  title: 副研究员
+  title_en: Associate Professor
+  photo: https://m.meigui88.cn/articles/fb01c753a772c71e9e0dcd66bd0dde08.png
+  department: 分子肿瘤中心
+  bio: >-
+    衰老生物学湖南省重点实验室科研骨干。湖南省优青。
+    研究方向为 DNA 损伤通路及表观遗传学参与衰老。
+    在 Molecular Cell, Aging Cell, Nucleic Acids Research 等发表论文。
+
+- name: 邓智利
+  name_en: Zhili Deng
+  role: researcher
+  title: 副研究员，硕士生导师
+  title_en: Associate Research Fellow
+  photo: https://m.meigui88.cn/articles/3ea08413e87d328c36bbab9ba41d5863.png
+  department: 皮肤科
+  bio: >-
+    主要研究皮肤及附属器官衰老与再生，
+    在玫瑰痤疮和雄秃发病机制上取得原创性成果。
+    在 EMBO Molecular Medicine, JID 等发表 SCI 论文17篇。
+
+- name: 翁良
+  name_en: Liang Weng
+  role: researcher
+  title: 特聘副研究员
+  title_en: Associate Research Fellow
+  photo: https://m.meigui88.cn/articles/245ad41a8ff5e80d76328f88390dd177.png
+  department: 分子放射肿瘤学实验室
+  bio: >-
+    北京大学学士，日本名古屋大学博士。
+    湖南省呼吸疾病临床研究中心副主任。
+
+- name: 张亦雅
+  name_en: Yiya Zhang
+  role: researcher
+  title: 副研究员
+  title_en: Associate Research Fellow
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/zyy.png
+  department: 皮肤科
+  bio: >-
+    主要从事炎症性皮肤病及皮肤衰老的机制研究。
+    在 Pharmacol Res, Front Pharmacol, J Biol Chem 等发表 SCI 论文20余篇。
+
+- name: 王成功
+  name_en: Chenggong Wang
+  role: researcher
+  title: 副教授/副研究员，硕士生导师
+  title_en: Associate Professor
+  photo: https://m.meigui88.cn/articles/1c33ca058730e72d9aca83a2776a766e.png
+  department: 骨科
+  bio: >-
+    擅长足踝外科和关节外科疾病诊疗。
+    第一/通讯作者在 Cell Death & Disease, Exp Mol Med 等发表 SCI 论文17篇。
+
+- name: 汪龙
+  name_en: Long Wang
+  role: researcher
+  title: 副研究员，硕士生导师
+  title_en: Associate Research Fellow
+  photo: https://m.meigui88.cn/articles/45467a7bc75f3434699ca46378b7374c.png
+  department: 骨科
+  bio: >-
+    研究方向为骨科疾病靶向载药体系、假体周围感染靶向治疗。
+    主持国家自然科学基金1项，以第一/通讯作者发表 SCI 论文20余篇。
+
+- name: 钟达
+  name_en: Da Zhong
+  role: clinician
+  title: 副主任医师，硕士生导师
+  title_en: Associate Chief Physician
+  photo: https://m.meigui88.cn/articles/357b7a2ebbe66336bb09480b717e27ae.png
+  department: 骨科/关节外科
+  bio: >-
+    2018年美国梅奥医学中心访问学者。
+    SICOT 中国部数字骨科学湖南省分会副主任委员。
+    发表论文30余篇，主持参与国家自然科学基金5项。
+
+- name: 朱剑熹
+  name_en: Jianxi Zhu
+  role: clinician
+  title: 助理教授，主治医师
+  title_en: Assistant Professor
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/zjj.png
+  department: 骨科
+  bio: >-
+    美国约翰霍普金斯大学联合培养博士。
+    围绕骨的神经调控发表系列成果，包括 JCI, eLife, Bone Research 等。
+
+- name: 唐言
+  name_en: Yan Tang
+  role: clinician
+  title: 主治医师，博士
+  title_en: Attending Physician
+  photo: https://m.meigui88.cn/articles/51db035e5ae28013a8aecb8cd4ed1f12.png
+  department: 皮肤科
+  bio: >-
+    美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤疾病。
+    主持国家自然科学基金2项，发表 SCI 论文15篇。
+
+- name: 刘芳芬
+  name_en: Fangfen Liu
+  role: clinician
+  title: 主治医师，博士
+  title_en: Attending Physician
+  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lff.png
+  department: 皮肤科
+  bio: >-
+    擅长脱发疾病的临床诊治及基础研究，
+    熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。

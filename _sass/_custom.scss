@@ -722,4 +722,191 @@ html[data-theme-setting="light"] {
   .post-title {
     font-size: 1.5rem;
   }
+
+  .lab-pi-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lab-pi-card__photo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .lab-people-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ========================
+// People page
+// ========================
+.lab-people__subtitle {
+  text-align: center;
+  color: var(--global-text-color-light, #666);
+  font-size: 1.05rem;
+  margin-top: -0.5rem;
+}
+
+.lab-people__category {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--global-text-color, #333);
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--global-theme-color, #0f7b8a);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+// PI card — large, horizontal
+.lab-pi-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--global-bg-color, #fff);
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.lab-pi-card__photo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 123, 138, 0.2);
+  border: 4px solid var(--global-theme-color, #0f7b8a);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lab-pi-card__info {
+  flex: 1;
+}
+
+.lab-pi-card__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+  color: var(--global-text-color, #333);
+}
+
+.lab-pi-card__name-en {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--global-text-color-light, #666);
+  margin-left: 0.5rem;
+}
+
+.lab-pi-card__title {
+  font-size: 1rem;
+  color: var(--global-theme-color, #0f7b8a);
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+
+.lab-pi-card__bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--global-text-color, #444);
+}
+
+// Member grid
+.lab-people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lab-member-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: var(--global-bg-color, #fff);
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.lab-member-card__photo {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f0f0f0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lab-member-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lab-member-card__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.2rem;
+  color: var(--global-text-color, #333);
+}
+
+.lab-member-card__name-en {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--global-text-color-light, #888);
+  margin-left: 0.3rem;
+}
+
+.lab-member-card__title {
+  font-size: 0.82rem;
+  color: var(--global-theme-color, #0f7b8a);
+  font-weight: 500;
+  margin: 0 0 0.15rem;
+}
+
+.lab-member-card__dept {
+  font-size: 0.78rem;
+  color: var(--global-text-color-light, #999);
+  margin: 0 0 0.4rem;
+}
+
+.lab-member-card__bio {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--global-text-color, #555);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
