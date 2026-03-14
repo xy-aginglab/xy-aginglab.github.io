@@ -6,7 +6,7 @@
   role: pi
   title: 主任医师，教授，博士生导师
   title_en: Director & Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lj.png
+  photo: /assets/img/members/lj.png
   department: 皮肤科
   bio: >-
     衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤科副主任。美国南加州大学博士后。
@@ -25,7 +25,7 @@
   role: faculty
   title: 教授，博士生导师，一级主任医师
   title_en: Professor
-  photo: https://m.meigui88.cn/articles/a374d3ae24b9a3314778c715f0f6b297.png
+  photo: /assets/img/members/xhf.png
   department: 皮肤科
   bio: >-
     首届中南大学"湘雅名医"，湘雅医院皮肤科主任。
@@ -37,7 +37,7 @@
   role: faculty
   title: 教授，博士生导师，国家杰青
   title_en: Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lbh.png
+  photo: /assets/img/members/lbh.png
   department: 深圳大学基础医学院
   bio: >-
     国家杰出青年基金/优秀青年基金获得者，国家特聘专家。
@@ -49,7 +49,7 @@
   role: faculty
   title: 研究员，博士生导师
   title_en: Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/kqp.png
+  photo: /assets/img/members/kqp.png
   department: 中国科学院昆明动物研究所
   bio: >-
     中国科学院特聘研究员，国家"万人计划"领军人才。
@@ -61,7 +61,7 @@
   role: faculty
   title: 教授，博士生导师
   title_en: Professor
-  photo: https://m.meigui88.cn/articles/74dc513ab5772fad263ebd18f8ee7bfa.png
+  photo: /assets/img/members/zyz.png
   department: 湘雅免疫学系
   bio: >-
     医学博士，免疫学研究员。曾任美国德克萨斯州西南医学中心助理教授。
@@ -72,7 +72,7 @@
   role: faculty
   title: 主任医师，教授，博士生导师
   title_en: Professor
-  photo: https://m.meigui88.cn/articles/10580aedb7255e1b3d72fcbdce8a11ab.png
+  photo: /assets/img/members/bff.png
   department: 神经内科
   bio: >-
     神经重症监护专科主任，急诊科副主任。美国 Jefferson 大学博士后。
@@ -83,7 +83,7 @@
   role: faculty
   title: 教授，博士生导师
   title_en: Professor
-  photo: https://m.meigui88.cn/articles/3eb8a8a207fbad60c80802e2c7e13a23.png
+  photo: /assets/img/members/lh.png
   department: 湘雅肿瘤免疫个体化临床研究中心
   bio: >-
     美国 MD Anderson 癌症中心博士。湖湘青年英才。
@@ -95,7 +95,7 @@
   role: faculty
   title: 教授，博士生导师
   title_en: Professor
-  photo: https://m.meigui88.cn/articles/09af4211df679abd5f744f5b86ecfe5b.png
+  photo: /assets/img/members/lmx.png
   department: 重庆大学生物工程系
   bio: >-
     重庆英才·青年拔尖人才，国际 Vebleo 协会 Fellow。
@@ -107,7 +107,7 @@
   role: faculty
   title: 主任医师，博士生导师
   title_en: Associate Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/jd.png
+  photo: /assets/img/members/jd.png
   department: 皮肤科
   bio: >-
     美国南加州大学访问学者。主要研究方向为皮肤衰老机制、
@@ -118,7 +118,7 @@
   role: faculty
   title: 特聘教授，博士生导师
   title_en: Associate Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/wxs.png
+  photo: /assets/img/members/wxs.png
   department: 口腔颌面外科
   bio: >-
     2020年国家自然基金"优秀青年科学基金"获得者。
@@ -130,7 +130,7 @@
   role: researcher
   title: 特聘研究员，博士生导师
   title_en: Associate Professor
-  photo: https://m.meigui88.cn/articles/d567d955ad428b148bffda334b4c5eee.png
+  photo: /assets/img/members/fk.png
   department: 湘雅医院
   bio: >-
     美国约翰霍普金斯大学博士后。湖南省优青。
@@ -142,7 +142,7 @@
   role: researcher
   title: 副教授，博士生导师
   title_en: Associate Professor
-  photo: https://m.meigui88.cn/articles/68d62e0133c10c5bc5989aa2ebdc7e69.png
+  photo: /assets/img/members/kyh.png
   department: 皮肤科
   bio: >-
     美国圣约翰大学联合培养博士、美国康奈尔大学访问学者。
@@ -153,7 +153,7 @@
   role: researcher
   title: 副研究员
   title_en: Associate Professor
-  photo: https://m.meigui88.cn/articles/fb01c753a772c71e9e0dcd66bd0dde08.png
+  photo: /assets/img/members/tr.png
   department: 分子肿瘤中心
   bio: >-
     衰老生物学湖南省重点实验室科研骨干。湖南省优青。
@@ -165,7 +165,7 @@
   role: researcher
   title: 副研究员，硕士生导师
   title_en: Associate Research Fellow
-  photo: https://m.meigui88.cn/articles/3ea08413e87d328c36bbab9ba41d5863.png
+  photo: /assets/img/members/dzl.png
   department: 皮肤科
   bio: >-
     主要研究皮肤及附属器官衰老与再生，
@@ -177,7 +177,7 @@
   role: researcher
   title: 特聘副研究员
   title_en: Associate Research Fellow
-  photo: https://m.meigui88.cn/articles/245ad41a8ff5e80d76328f88390dd177.png
+  photo: /assets/img/members/wl.png
   department: 分子放射肿瘤学实验室
   bio: >-
     北京大学学士，日本名古屋大学博士。
@@ -188,7 +188,7 @@
   role: researcher
   title: 副研究员
   title_en: Associate Research Fellow
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/zyy.png
+  photo: /assets/img/members/zyy.png
   department: 皮肤科
   bio: >-
     主要从事炎症性皮肤病及皮肤衰老的机制研究。
@@ -199,7 +199,7 @@
   role: researcher
   title: 副教授/副研究员，硕士生导师
   title_en: Associate Professor
-  photo: https://m.meigui88.cn/articles/1c33ca058730e72d9aca83a2776a766e.png
+  photo: /assets/img/members/wcg.png
   department: 骨科
   bio: >-
     擅长足踝外科和关节外科疾病诊疗。
@@ -210,7 +210,7 @@
   role: researcher
   title: 副研究员，硕士生导师
   title_en: Associate Research Fellow
-  photo: https://m.meigui88.cn/articles/45467a7bc75f3434699ca46378b7374c.png
+  photo: /assets/img/members/wlong.png
   department: 骨科
   bio: >-
     研究方向为骨科疾病靶向载药体系、假体周围感染靶向治疗。
@@ -221,7 +221,7 @@
   role: clinician
   title: 副主任医师，硕士生导师
   title_en: Associate Chief Physician
-  photo: https://m.meigui88.cn/articles/357b7a2ebbe66336bb09480b717e27ae.png
+  photo: /assets/img/members/zd.png
   department: 骨科/关节外科
   bio: >-
     2018年美国梅奥医学中心访问学者。
@@ -233,7 +233,7 @@
   role: clinician
   title: 助理教授，主治医师
   title_en: Assistant Professor
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/zjj.png
+  photo: /assets/img/members/zjx.png
   department: 骨科
   bio: >-
     美国约翰霍普金斯大学联合培养博士。
@@ -244,7 +244,7 @@
   role: clinician
   title: 主治医师，博士
   title_en: Attending Physician
-  photo: https://m.meigui88.cn/articles/51db035e5ae28013a8aecb8cd4ed1f12.png
+  photo: /assets/img/members/ty.png
   department: 皮肤科
   bio: >-
     美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤疾病。
@@ -255,7 +255,7 @@
   role: clinician
   title: 主治医师，博士
   title_en: Attending Physician
-  photo: https://hfmds.oss-cn-zhangjiakou.aliyuncs.com/mgccxcx/lff.png
+  photo: /assets/img/members/lff.png
   department: 皮肤科
   bio: >-
     擅长脱发疾病的临床诊治及基础研究，

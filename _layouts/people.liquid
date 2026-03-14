@@ -17,7 +17,7 @@ layout: default
     {% for member in pi %}
       <div class="lab-pi-card">
         <div class="lab-pi-card__photo">
-          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
         </div>
         <div class="lab-pi-card__info">
           <h2 class="lab-pi-card__name">
@@ -41,7 +41,7 @@ layout: default
       {% for member in faculty %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
-            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
@@ -67,7 +67,7 @@ layout: default
       {% for member in researchers %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
-            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
@@ -93,7 +93,7 @@ layout: default
       {% for member in clinicians %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
-            <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
