@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: >
+  Xiangya Hospital, Central South University · Department of Dermatology
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Dermatology</p>
+    <p>Xiangya Hospital, Central South University</p>
+    <p>Changsha, Hunan, China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -22,13 +23,23 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Our laboratory operates at the intersection of **clinical dermatology** and **molecular biology**, leveraging the vast clinical resources of **Xiangya Hospital** to drive translational breakthroughs. We are dedicated to uncovering the biological hallmarks of skin health and developing next-generation interventions.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+### Research Interests
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+#### 1. Mechanisms of Skin Aging & Longevity
+We investigate the complex landscape of skin aging by integrating multi-omics data from our unique **longevity population cohorts**.
+* **Focus:** Identifying novel biomarkers of aging, exploring the role of cellular senescence in the skin microenvironment, and validating potent anti-aging compounds using advanced *in vivo* and *in vitro* models.
+
+#### 2. Hair Follicle Biology & Regenerative Medicine
+Our team deciphers the molecular logic governing hair growth and regeneration to combat diverse alopecia and pigmentary disorders.
+* **Focus:** Utilizing high-fidelity clinical data and hair follicle organ culture systems to study pathogenesis. We are pioneering stem cell-based hair follicle reconstruction and the development of targeted small-molecule drugs for hair regrowth and graying reversal.
+
+#### 3. Pathogenesis of Inflammatory & Disfiguring Skin Diseases
+We aim to bridge the gap between basic immunology and clinical dermatology for prevalent conditions such as **rosacea and acne**.
+* **Focus:** Characterizing the immune-microbial interactions on the skin surface and identifying key inflammatory pathways. Our goal is to translate these mechanistic insights into precise, targeted therapeutic strategies for patients.
