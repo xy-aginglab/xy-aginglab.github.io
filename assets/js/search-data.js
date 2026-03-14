@@ -24,7 +24,7 @@ ninja.data = [{
             window.location.href = "/publications/";
           },
         },{id: "nav-people",
-          title: "people",
+          title: "People",
           description: "Members of the Hunan Key Laboratory of Aging Biology",
           section: "Navigation",
           handler: () => {
