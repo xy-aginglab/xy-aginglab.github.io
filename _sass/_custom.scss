@@ -88,8 +88,17 @@ h6 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--global-theme-color);
+  background: transparent;
   border-bottom: none;
+  color: #ffffff;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &.lab-nav--scrolled {
+    background: var(--global-theme-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .lab-nav__inner {
@@ -129,7 +138,7 @@ h6 {
     padding: 0.5rem 0.85rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85) !important;
     text-transform: capitalize;
     border-radius: 6px;
     transition: all 0.2s;
@@ -141,12 +150,12 @@ h6 {
 
   li a:hover,
   li button:hover {
-    color: #ffffff;
+    color: #ffffff !important;
     background: rgba(255, 255, 255, 0.15);
   }
 
   li.active a {
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.12);
   }
@@ -440,7 +449,7 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff !important;
   position: relative;
 
   &::before {
@@ -650,7 +659,7 @@ h6 {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 html[data-theme="dark"] {
-  .lab-nav {
+  .lab-nav.lab-nav--scrolled {
     background: var(--global-theme-color);
   }
 

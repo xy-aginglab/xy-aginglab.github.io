@@ -18,7 +18,7 @@
 
   <body>
     <!-- Lab Navigation -->
-    <nav class="lab-nav">
+    <nav class="lab-nav{% unless page.layout == 'about' %} lab-nav--scrolled{% endunless %}">
       <div class="lab-nav__inner">
         {% if lang == 'zh' %}
           <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">衰老生物学湖南省重点实验室</a>
@@ -139,5 +139,25 @@
     </footer>
 
     {% include scripts.liquid %}
+
+    <!-- Nav scroll effect: transparent at top, themed on scroll (homepage only) -->
+    {% if page.layout == 'about' %}
+      <script>
+        (function () {
+          var nav = document.querySelector('.lab-nav');
+          if (!nav) return;
+          var threshold = 80;
+          function onScroll() {
+            if (window.scrollY > threshold) {
+              nav.classList.add('lab-nav--scrolled');
+            } else {
+              nav.classList.remove('lab-nav--scrolled');
+            }
+          }
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        })();
+      </script>
+    {% endif %}
   </body>
 </html>

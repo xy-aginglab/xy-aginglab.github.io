@@ -3,5 +3,9 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
-  safelist: [/^lab-/],
+  safelist: {
+    standard: [/^lab-/],
+    deep: [/^lab-/],
+    greedy: [/^lab-/],
+  },
 };
