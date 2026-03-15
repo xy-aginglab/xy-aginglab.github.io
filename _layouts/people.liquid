@@ -36,6 +36,22 @@ layout: default
           <p class="lab-pi-card__bio">
             {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
           </p>
+          <div class="lab-pi-card__links">
+            {% if member.email %}
+              <a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>
+            {% endif %}
+            {% if member.scholar %}
+              <a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"
+                ><i class="ai ai-google-scholar"></i
+              ></a>
+            {% endif %}
+            {% if member.orcid %}
+              <a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+            {% endif %}
+            {% if member.github %}
+              <a href="https://github.com/{{ member.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            {% endif %}
+          </div>
         </div>
       </div>
     {% endfor %}
@@ -147,6 +163,27 @@ layout: default
               {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
             </p>
           </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Alumni -->
+{% assign alumni = site.data.members | where: 'role', 'alumni' %}
+{% if alumni.size > 0 %}
+  <div class="lab-section lab-section--alt">
+    <h3 class="lab-people__category">{{ t.people.alumni }}</h3>
+    <div class="lab-alumni-list">
+      {% for member in alumni %}
+        <div class="lab-alumni-item">
+          <span class="lab-alumni-item__name">
+            {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
+          </span>
+          <span class="lab-alumni-item__years">{{ member.years }}</span>
+          <span class="lab-alumni-item__position">
+            {% if lang == 'zh' %}{{ member.current_position_zh | default: member.current_position }}{% else %}{{ member.current_position }}{% endif %}
+          </span>
         </div>
       {% endfor %}
     </div>

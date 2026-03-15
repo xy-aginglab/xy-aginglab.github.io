@@ -28,58 +28,52 @@ layout: default
   <h2 class="lab-section__heading">{{ t.home.research_heading }}</h2>
   <div class="lab-research-grid">
     <div class="lab-research-card">
-      <div class="lab-research-card__icon">
+      <div class="lab-research-card__banner lab-research-card__banner--aging">
         <i class="fas fa-dna"></i>
       </div>
-      <h3 class="lab-research-card__title">{{ t.research.skin_aging_title }}</h3>
-      <p class="lab-research-card__desc">{{ t.research.skin_aging_desc }}</p>
-      {% if lang == 'zh' %}
-        <a href="{{ '/zh/projects/' | relative_url }}" class="lab-research-card__link">
+      <div class="lab-research-card__content">
+        <h3 class="lab-research-card__title">{{ t.research.skin_aging_title }}</h3>
+        <p class="lab-research-card__desc">{{ t.research.skin_aging_desc }}</p>
+        <a
+          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="lab-research-card__link"
+        >
           {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% else %}
-        <a href="{{ '/projects/' | relative_url }}" class="lab-research-card__link">
-          {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% endif %}
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
     <div class="lab-research-card">
-      <div class="lab-research-card__icon">
+      <div class="lab-research-card__banner lab-research-card__banner--hair">
         <i class="fas fa-microscope"></i>
       </div>
-      <h3 class="lab-research-card__title">{{ t.research.hair_follicle_title }}</h3>
-      <p class="lab-research-card__desc">{{ t.research.hair_follicle_desc }}</p>
-      {% if lang == 'zh' %}
-        <a href="{{ '/zh/projects/' | relative_url }}" class="lab-research-card__link">
+      <div class="lab-research-card__content">
+        <h3 class="lab-research-card__title">{{ t.research.hair_follicle_title }}</h3>
+        <p class="lab-research-card__desc">{{ t.research.hair_follicle_desc }}</p>
+        <a
+          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="lab-research-card__link"
+        >
           {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% else %}
-        <a href="{{ '/projects/' | relative_url }}" class="lab-research-card__link">
-          {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% endif %}
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
     <div class="lab-research-card">
-      <div class="lab-research-card__icon">
+      <div class="lab-research-card__banner lab-research-card__banner--immune">
         <i class="fas fa-shield-virus"></i>
       </div>
-      <h3 class="lab-research-card__title">{{ t.research.inflammatory_title }}</h3>
-      <p class="lab-research-card__desc">{{ t.research.inflammatory_desc }}</p>
-      {% if lang == 'zh' %}
-        <a href="{{ '/zh/projects/' | relative_url }}" class="lab-research-card__link">
+      <div class="lab-research-card__content">
+        <h3 class="lab-research-card__title">{{ t.research.inflammatory_title }}</h3>
+        <p class="lab-research-card__desc">{{ t.research.inflammatory_desc }}</p>
+        <a
+          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="lab-research-card__link"
+        >
           {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% else %}
-        <a href="{{ '/projects/' | relative_url }}" class="lab-research-card__link">
-          {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i
-        ></a>
-      {% endif %}
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -88,11 +82,12 @@ layout: default
 {% if page.selected_papers %}
   <div class="lab-section">
     <h2 class="lab-section__heading">
-      {% if lang == 'zh' %}
-        <a href="{{ '/zh/publications/' | relative_url }}" style="color: inherit; text-decoration: none">{{ t.home.selected_pubs_heading }}</a>
-      {% else %}
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit; text-decoration: none">{{ t.home.selected_pubs_heading }}</a>
-      {% endif %}
+      <a
+        href="{% if lang == 'zh' %}{{ '/zh/publications/' | relative_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}"
+        style="color: inherit; text-decoration: none"
+      >
+        {{- t.home.selected_pubs_heading -}}
+      </a>
     </h2>
     {% include selected_papers.liquid %}
   </div>

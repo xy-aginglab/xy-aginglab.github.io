@@ -4,6 +4,9 @@ nav:
   projects: 科研方向
   publications: 论文发表
   people: 实验室成员
+  news: 新闻动态
+  software: 工具软件
+  careers: 招聘信息
 
 hero:
   subtitle: "中南大学湘雅医院 · 皮肤科"
@@ -39,6 +42,7 @@ people:
   faculty: 教授/研究员
   researchers: 副教授/副研究员
   clinicians: 临床科学家
+  alumni: 毕业生/校友
 
 publications:
   page_title: 论文发表

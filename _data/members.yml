@@ -9,6 +9,10 @@
   photo: /assets/img/members/lj.png
   department: 皮肤科
   department_en: Department of Dermatology
+  email: liji_xy@csu.edu.cn
+  orcid: "0000-0002-0000-0000"
+  # scholar: "XXXXXXXX" # Google Scholar ID — to be added
+  # github: "" # GitHub username — to be added
   bio: >-
     Director of Hunan Key Laboratory of Aging Biology. Deputy Director of Dermatology,
     Xiangya Hospital, Central South University. Postdoctoral fellow at University of
@@ -365,3 +369,13 @@
   bio_zh: >-
     擅长脱发疾病的临床诊治及基础研究，
     熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。
+
+# Alumni — add more as needed
+# Fields: name, name_en, role: alumni, years, current_position, current_position_zh
+
+- name: （待补充）
+  name_en: (To be added)
+  role: alumni
+  years: "2018–2023"
+  current_position: Placeholder — please update with real alumni data
+  current_position_zh: 占位条目 — 请替换为真实毕业生信息

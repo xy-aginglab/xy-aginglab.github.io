@@ -58,6 +58,27 @@
             >
               <a href="{{ '/zh/people/' | relative_url }}">{{ t.nav.people }}</a>
             </li>
+            <li
+              {% if page.url contains '/zh/news' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
+            </li>
+            <li
+              {% if page.url contains '/zh/software' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/software/' | relative_url }}">{{ t.nav.software }}</a>
+            </li>
+            <li
+              {% if page.url contains '/zh/careers' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/careers/' | relative_url }}">{{ t.nav.careers }}</a>
+            </li>
           {% else %}
             {% assign sorted_pages = site.pages | sort: 'nav_order' %}
             {% for p in sorted_pages %}

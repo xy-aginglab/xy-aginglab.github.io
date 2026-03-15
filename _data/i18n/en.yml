@@ -4,6 +4,9 @@ nav:
   projects: Research
   publications: Publications
   people: People
+  news: News
+  software: Software
+  careers: Careers
 
 hero:
   subtitle: "Xiangya Hospital, Central South University · Department of Dermatology"
@@ -44,6 +47,7 @@ people:
   faculty: Faculty
   researchers: Researchers
   clinicians: Clinician-Scientists
+  alumni: Alumni
 
 publications:
   page_title: Publications

@@ -184,17 +184,19 @@ h6 {
 .lab-nav__lang-switch a {
   display: inline-block;
   padding: 0.25rem 0.7rem !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border: 1.5px solid var(--global-divider-color, #ddd);
   border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.03em;
+  color: var(--global-text-color-light) !important;
   transition: all 0.2s ease;
 }
 
 .lab-nav__lang-switch a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #fff;
+  background: rgba(15, 123, 138, 0.08);
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color) !important;
 }
 
 @media (max-width: 768px) {
@@ -411,23 +413,9 @@ h6 {
   position: relative;
   background: var(--global-card-bg-color);
   border-radius: 12px;
-  padding: 2.2rem 1.5rem;
-  text-align: center;
   border: 1px solid var(--global-divider-color);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--global-theme-color), #64dcff);
-    opacity: 0;
-    transition: opacity 0.35s;
-  }
 
   &:hover {
     transform: translateY(-6px);
@@ -435,36 +423,62 @@ h6 {
       0 12px 40px rgba(0, 0, 0, 0.08),
       0 0 20px rgba(15, 123, 138, 0.06);
     border-color: var(--global-theme-color);
-
-    &::before {
-      opacity: 1;
-    }
   }
 }
 
-.lab-research-card__icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--global-theme-color), #0d5a6a);
-  color: #fff;
+// Banner area with gradient + large icon (Liu Lab style)
+.lab-research-card__banner {
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  margin: 0 auto 1.4rem;
-  box-shadow: 0 4px 15px rgba(15, 123, 138, 0.3);
-  transition: transform 0.3s;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
 
-  .lab-research-card:hover & {
-    transform: scale(1.08);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
   }
+
+  .lab-research-card:hover & i {
+    transform: scale(1.15);
+  }
+
+  i {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s;
+  }
+}
+
+.lab-research-card__banner--aging {
+  background: linear-gradient(135deg, #0d4a5a, #0f7b8a, #14a3b8);
+}
+
+.lab-research-card__banner--hair {
+  background: linear-gradient(135deg, #1a5276, #2980b9, #5dade2);
+}
+
+.lab-research-card__banner--immune {
+  background: linear-gradient(135deg, #6c3483, #8e44ad, #af7ac5);
+}
+
+.lab-research-card__content {
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .lab-research-card__title {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin: 0 0 0.8rem;
 }
 
 .lab-research-card__desc {
@@ -848,6 +862,25 @@ html[data-theme-setting="light"] {
   color: var(--global-text-color, #444);
 }
 
+.lab-pi-card__links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+
+  a {
+    color: var(--global-text-color-light, #888);
+    transition:
+      color 0.2s,
+      transform 0.2s;
+
+    &:hover {
+      color: var(--global-theme-color, #0f7b8a);
+      transform: translateY(-2px);
+    }
+  }
+}
+
 // Member grid
 .lab-people-grid {
   display: grid;
@@ -929,4 +962,42 @@ html[data-theme-setting="light"] {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+// Alumni list
+.lab-alumni-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lab-alumni-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--global-divider-color, #eee);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.lab-alumni-item__name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 100px;
+  color: var(--global-text-color, #333);
+}
+
+.lab-alumni-item__years {
+  font-size: 0.82rem;
+  color: var(--global-theme-color, #0f7b8a);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lab-alumni-item__position {
+  font-size: 0.88rem;
+  color: var(--global-text-color-light, #666);
+  flex: 1;
 }
