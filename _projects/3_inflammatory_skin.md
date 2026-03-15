@@ -1,22 +1,22 @@
 ---
 layout: page
 title: Inflammatory Skin Diseases
-description: Bridging immunology and clinical dermatology for rosacea, acne, and related conditions
+description: Investigating pathogenesis and targeted therapeutics for rosacea, acne, and related conditions
 img:
 importance: 3
 category: research
 ---
 
-We aim to bridge the gap between basic immunology and clinical dermatology for prevalent conditions such as **rosacea and acne**.
+We integrate clinical resources with animal and cell models to investigate the pathogenesis of inflammatory skin diseases — particularly **disfiguring conditions such as rosacea and acne** — and develop targeted therapeutic drugs for key molecular pathways.
 
 **Key Areas:**
 
-- Characterizing immune-microbial interactions on the skin surface
-- Identifying key inflammatory pathways
-- Translating mechanistic insights into precise, targeted therapeutic strategies
+- Characterizing immune-microbial-neurogenic interactions in skin inflammation
+- Identifying key inflammatory pathways and therapeutic targets
+- Designing and developing targeted drugs for rosacea, acne, and related diseases
 
 ## Related Publications
 
 <div class="publications">
-{% bibliography --group_by none --query @*[category=inflammatory_skin] %}
+{% bibliography --query @*[category=inflammatory_skin] %}
 </div>
