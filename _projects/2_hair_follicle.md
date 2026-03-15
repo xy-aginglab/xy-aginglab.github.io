@@ -17,4 +17,6 @@ Our team deciphers the molecular logic governing hair growth and regeneration to
 
 ## Related Publications
 
-{% bibliography --query @*[category=hair_follicle] %}
+<div class="publications">
+{% bibliography --group_by none --query @*[category=hair_follicle] %}
+</div>

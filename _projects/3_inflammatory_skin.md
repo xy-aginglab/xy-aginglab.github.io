@@ -17,4 +17,6 @@ We aim to bridge the gap between basic immunology and clinical dermatology for p
 
 ## Related Publications
 
-{% bibliography --query @*[category=inflammatory_skin] %}
+<div class="publications">
+{% bibliography --group_by none --query @*[category=inflammatory_skin] %}
+</div>

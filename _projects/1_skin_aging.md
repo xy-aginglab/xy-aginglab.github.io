@@ -17,4 +17,6 @@ We investigate the complex landscape of skin aging by integrating multi-omics da
 
 ## Related Publications
 
-{% bibliography --query @*[category=skin_aging] %}
+<div class="publications">
+{% bibliography --group_by none --query @*[category=skin_aging] %}
+</div>
