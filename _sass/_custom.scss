@@ -88,16 +88,17 @@ h6 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: transparent;
+  background: var(--global-theme-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-bottom: none;
   color: #ffffff;
   transition:
     background 0.3s ease,
     box-shadow 0.3s ease;
 
-  &.lab-nav--scrolled {
-    background: var(--global-theme-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  &.lab-nav--at-top {
+    background: transparent;
+    box-shadow: none;
   }
 }
 
@@ -280,6 +281,7 @@ h6 {
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
+  color: var(--global-theme-color);
 }
 
 .post-description {
@@ -437,7 +439,7 @@ h6 {
     transform: translateY(-6px);
     box-shadow:
       0 12px 40px rgba(0, 0, 0, 0.08),
-      0 0 20px rgba(167, 33, 38, 0.1);
+      0 0 20px rgba(15, 123, 138, 0.1);
     border-color: var(--global-theme-color);
   }
 }
@@ -475,15 +477,15 @@ h6 {
 }
 
 .lab-research-card__banner--aging {
-  background: linear-gradient(135deg, #7a1a1e, #a72126, #c9373d);
+  background: linear-gradient(135deg, #0d4a5a, #0f7b8a, #14a3b8);
 }
 
 .lab-research-card__banner--hair {
-  background: linear-gradient(135deg, #8b1a2b, #b5303a, #d44a4a);
+  background: linear-gradient(135deg, #1a5276, #2980b9, #5dade2);
 }
 
 .lab-research-card__banner--immune {
-  background: linear-gradient(135deg, #6b1520, #962028, #c04040);
+  background: linear-gradient(135deg, #0d5a56, #0f8a7b, #14b8a3);
 }
 
 .lab-research-card__content {
@@ -659,7 +661,7 @@ h6 {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 html[data-theme="dark"] {
-  .lab-nav.lab-nav--scrolled {
+  .lab-nav {
     background: var(--global-theme-color);
   }
 

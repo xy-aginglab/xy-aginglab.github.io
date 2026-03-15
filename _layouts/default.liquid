@@ -18,7 +18,7 @@
 
   <body>
     <!-- Lab Navigation -->
-    <nav class="lab-nav{% unless page.layout == 'about' %} lab-nav--scrolled{% endunless %}">
+    <nav class="lab-nav{% if page.layout == 'about' %} lab-nav--at-top{% endif %}">
       <div class="lab-nav__inner">
         {% if lang == 'zh' %}
           <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">衰老生物学湖南省重点实验室</a>
@@ -149,9 +149,9 @@
           var threshold = 80;
           function onScroll() {
             if (window.scrollY > threshold) {
-              nav.classList.add('lab-nav--scrolled');
+              nav.classList.remove('lab-nav--at-top');
             } else {
-              nav.classList.remove('lab-nav--scrolled');
+              nav.classList.add('lab-nav--at-top');
             }
           }
           window.addEventListener('scroll', onScroll, { passive: true });
