@@ -14,3 +14,7 @@ We aim to bridge the gap between basic immunology and clinical dermatology for p
 - Characterizing immune-microbial interactions on the skin surface
 - Identifying key inflammatory pathways
 - Translating mechanistic insights into precise, targeted therapeutic strategies
+
+## Related Publications
+
+{% bibliography --query @*[category=inflammatory_skin] %}

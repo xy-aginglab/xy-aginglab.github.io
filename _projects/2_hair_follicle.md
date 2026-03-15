@@ -14,3 +14,7 @@ Our team deciphers the molecular logic governing hair growth and regeneration to
 - Utilizing high-fidelity clinical data and hair follicle organ culture systems
 - Pioneering stem cell-based hair follicle reconstruction
 - Developing targeted small-molecule drugs for hair regrowth and graying reversal
+
+## Related Publications
+
+{% bibliography --query @*[category=hair_follicle] %}
