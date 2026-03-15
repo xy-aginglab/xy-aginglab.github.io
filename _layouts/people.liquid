@@ -1,19 +1,20 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+
 <!-- Page Header -->
 <div class="lab-section">
-  <h2 class="lab-section__heading">{{ page.title }}</h2>
-  {% if page.description %}
-    <p class="lab-people__subtitle">{{ page.description }}</p>
-  {% endif %}
+  <h2 class="lab-section__heading">{{ t.people.page_title }}</h2>
+  <p class="lab-people__subtitle">{{ t.people.page_desc }}</p>
 </div>
 
 <!-- PI Section -->
 {% assign pi = site.data.members | where: 'role', 'pi' %}
 {% if pi.size > 0 %}
   <div class="lab-section lab-section--alt">
-    <h3 class="lab-people__category">Principal Investigator</h3>
+    <h3 class="lab-people__category">{{ t.people.pi }}</h3>
     {% for member in pi %}
       <div class="lab-pi-card">
         <div class="lab-pi-card__photo">
@@ -21,11 +22,20 @@ layout: default
         </div>
         <div class="lab-pi-card__info">
           <h2 class="lab-pi-card__name">
-            {{ member.name }}
-            <span class="lab-pi-card__name-en">{{ member.name_en }}</span>
+            {% if lang == 'zh' %}
+              {{ member.name }}
+              <span class="lab-pi-card__name-en">{{ member.name_en }}</span>
+            {% else %}
+              {{ member.name_en }}
+              <span class="lab-pi-card__name-en">{{ member.name }}</span>
+            {% endif %}
           </h2>
-          <p class="lab-pi-card__title">{{ member.title }}</p>
-          <p class="lab-pi-card__bio">{{ member.bio }}</p>
+          <p class="lab-pi-card__title">
+            {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+          </p>
+          <p class="lab-pi-card__bio">
+            {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
+          </p>
         </div>
       </div>
     {% endfor %}
@@ -36,7 +46,7 @@ layout: default
 {% assign faculty = site.data.members | where: 'role', 'faculty' %}
 {% if faculty.size > 0 %}
   <div class="lab-section">
-    <h3 class="lab-people__category">Faculty</h3>
+    <h3 class="lab-people__category">{{ t.people.faculty }}</h3>
     <div class="lab-people-grid">
       {% for member in faculty %}
         <div class="lab-member-card">
@@ -45,12 +55,23 @@ layout: default
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
-              {{ member.name }}
-              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% if lang == 'zh' %}
+                {{ member.name }}
+                <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% else %}
+                {{ member.name_en }}
+                <span class="lab-member-card__name-en">{{ member.name }}</span>
+              {% endif %}
             </h4>
-            <p class="lab-member-card__title">{{ member.title }}</p>
-            <p class="lab-member-card__dept">{{ member.department }}</p>
-            <p class="lab-member-card__bio">{{ member.bio }}</p>
+            <p class="lab-member-card__title">
+              {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+            </p>
+            <p class="lab-member-card__dept">
+              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
+            </p>
+            <p class="lab-member-card__bio">
+              {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
+            </p>
           </div>
         </div>
       {% endfor %}
@@ -62,7 +83,7 @@ layout: default
 {% assign researchers = site.data.members | where: 'role', 'researcher' %}
 {% if researchers.size > 0 %}
   <div class="lab-section lab-section--alt">
-    <h3 class="lab-people__category">Researchers</h3>
+    <h3 class="lab-people__category">{{ t.people.researchers }}</h3>
     <div class="lab-people-grid">
       {% for member in researchers %}
         <div class="lab-member-card">
@@ -71,12 +92,23 @@ layout: default
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
-              {{ member.name }}
-              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% if lang == 'zh' %}
+                {{ member.name }}
+                <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% else %}
+                {{ member.name_en }}
+                <span class="lab-member-card__name-en">{{ member.name }}</span>
+              {% endif %}
             </h4>
-            <p class="lab-member-card__title">{{ member.title }}</p>
-            <p class="lab-member-card__dept">{{ member.department }}</p>
-            <p class="lab-member-card__bio">{{ member.bio }}</p>
+            <p class="lab-member-card__title">
+              {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+            </p>
+            <p class="lab-member-card__dept">
+              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
+            </p>
+            <p class="lab-member-card__bio">
+              {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
+            </p>
           </div>
         </div>
       {% endfor %}
@@ -88,7 +120,7 @@ layout: default
 {% assign clinicians = site.data.members | where: 'role', 'clinician' %}
 {% if clinicians.size > 0 %}
   <div class="lab-section">
-    <h3 class="lab-people__category">Clinician-Scientists</h3>
+    <h3 class="lab-people__category">{{ t.people.clinicians }}</h3>
     <div class="lab-people-grid">
       {% for member in clinicians %}
         <div class="lab-member-card">
@@ -97,12 +129,23 @@ layout: default
           </div>
           <div class="lab-member-card__body">
             <h4 class="lab-member-card__name">
-              {{ member.name }}
-              <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% if lang == 'zh' %}
+                {{ member.name }}
+                <span class="lab-member-card__name-en">{{ member.name_en }}</span>
+              {% else %}
+                {{ member.name_en }}
+                <span class="lab-member-card__name-en">{{ member.name }}</span>
+              {% endif %}
             </h4>
-            <p class="lab-member-card__title">{{ member.title }}</p>
-            <p class="lab-member-card__dept">{{ member.department }}</p>
-            <p class="lab-member-card__bio">{{ member.bio }}</p>
+            <p class="lab-member-card__title">
+              {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+            </p>
+            <p class="lab-member-card__dept">
+              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
+            </p>
+            <p class="lab-member-card__bio">
+              {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
+            </p>
           </div>
         </div>
       {% endfor %}

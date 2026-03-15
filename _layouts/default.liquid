@@ -1,5 +1,7 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ lang }}">
   <head>
     {% if page.redirect %}
       {% if page.redirect == true %}
@@ -18,24 +20,71 @@
     <!-- Lab Navigation -->
     <nav class="lab-nav">
       <div class="lab-nav__inner">
-        <a class="lab-nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        {% if lang == 'zh' %}
+          <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">衰老生物学湖南省重点实验室</a>
+        {% else %}
+          <a class="lab-nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        {% endif %}
         <button class="lab-nav__toggle" aria-label="Toggle navigation" onclick="this.closest('.lab-nav').classList.toggle('is-open')">
           <span></span><span></span><span></span>
         </button>
         <ul class="lab-nav__links">
-          {% assign sorted_pages = site.pages | sort: 'nav_order' %}
-          {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null and p.dropdown == null %}
-              {% assign parent_link = p.permalink | remove: 'index.html' %}
-              <li
-                {% if page.url contains parent_link %}
-                  class="active"
-                {% endif %}
-              >
-                <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-              </li>
+          {% if lang == 'zh' %}
+            <li
+              {% if page.url == '/zh/' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/' | relative_url }}">{{ t.nav.home }}</a>
+            </li>
+            <li
+              {% if page.url contains '/zh/projects' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/projects/' | relative_url }}">{{ t.nav.projects }}</a>
+            </li>
+            <li
+              {% if page.url contains '/zh/publications' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/publications/' | relative_url }}">{{ t.nav.publications }}</a>
+            </li>
+            <li
+              {% if page.url contains '/zh/people' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/people/' | relative_url }}">{{ t.nav.people }}</a>
+            </li>
+          {% else %}
+            {% assign sorted_pages = site.pages | sort: 'nav_order' %}
+            {% for p in sorted_pages %}
+              {% if p.nav and p.autogen == null and p.dropdown == null and p.lang == null %}
+                {% assign parent_link = p.permalink | remove: 'index.html' %}
+                <li
+                  {% if page.url contains parent_link %}
+                    class="active"
+                  {% endif %}
+                >
+                  <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          <!-- Language Switcher -->
+          <li class="lab-nav__lang-switch">
+            {% if lang == 'zh' %}
+              {% assign switch_url = page.url | replace: '/zh/', '/' %}
+              <a href="{{ switch_url | relative_url }}" title="Switch to English">EN</a>
+            {% else %}
+              {% assign switch_url = '/zh' | append: page.url %}
+              <a href="{{ switch_url | relative_url }}" title="切换到中文">中文</a>
             {% endif %}
-          {% endfor %}
+          </li>
+
           {% if site.enable_darkmode %}
             <li class="lab-nav__theme-toggle">
               <button id="light-toggle" title="Change theme">
@@ -59,8 +108,10 @@
       <div class="lab-footer__inner">
         <p>
           &copy; {{ site.time | date: '%Y' }}
-          {{ site.title }}. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> &amp;
-          <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>. Hosted by
+          {% if lang == 'zh' %}衰老生物学湖南省重点实验室{% else %}{{ site.title }}{% endif %}. {{ t.footer.powered_by }}
+          <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> &amp;
+          <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>.
+          {{ t.footer.hosted_by }}
           <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
         </p>
       </div>

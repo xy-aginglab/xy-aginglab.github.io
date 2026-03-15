@@ -8,7 +8,15 @@
   title_en: Director & Professor
   photo: /assets/img/members/lj.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Director of Hunan Key Laboratory of Aging Biology. Deputy Director of Dermatology,
+    Xiangya Hospital, Central South University. Postdoctoral fellow at University of
+    Southern California. MOE Young Changjiang Scholar. Hunan Outstanding Youth Fund recipient.
+    Chair of Rosacea Study Group, Chinese Physicians Association. Published 50+ SCI papers
+    as first/corresponding author in EMBO Mol Med, EMBO J, JID, etc.
+    Led 6 NSFC projects. Holder of 2 national invention patents.
+  bio_zh: >-
     衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤科副主任。美国南加州大学博士后。
     教育部青年长江学者，湖南省杰出青年基金获得者。
     现任中国医师协会皮肤科医师分会玫瑰痤疮学组组长、中国整形美容协会形塑与综合技术转化分会常务理事、
@@ -27,7 +35,13 @@
   title_en: Professor
   photo: /assets/img/members/xhf.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    First "Xiangya Distinguished Physician" of Central South University.
+    Director of Dermatology, Xiangya Hospital.
+    Chief Expert at the Rosacea Research Center, Chinese Medical Association.
+    Led 4 NSFC projects. Published 86 papers.
+  bio_zh: >-
     首届中南大学"湘雅名医"，湘雅医院皮肤科主任。
     中华医学会皮肤性病学分会玫瑰痤疮硏究中心首席专家。
     主持国家自然科学基金4项，发表论文86篇。
@@ -39,7 +53,12 @@
   title_en: Professor
   photo: /assets/img/members/lbh.png
   department: 深圳大学基础医学院
+  department_en: School of Basic Medical Sciences, Shenzhen University
   bio: >-
+    NSFC Distinguished Young Scholar & Excellent Young Scholar.
+    Distinguished Professor and Vice Dean, School of Basic Medical Sciences, Shenzhen University.
+    Director, Shenzhen Key Laboratory of Systemic Aging and Active Health.
+  bio_zh: >-
     国家杰出青年基金/优秀青年基金获得者，国家特聘专家。
     深圳大学特聘教授，基础医学院副院长。
     深圳市系统衰老与主动健康重点实验室主任。
@@ -51,7 +70,12 @@
   title_en: Professor
   photo: /assets/img/members/kqp.png
   department: 中国科学院昆明动物研究所
+  department_en: Kunming Institute of Zoology, CAS
   bio: >-
+    CAS Distinguished Research Fellow. National "Ten Thousand Talents" Leading Scientist.
+    Chief Scientist, National Key R&D Program.
+    Investigates healthy aging regulators in longevity cohorts using multi-omics approaches.
+  bio_zh: >-
     中国科学院特聘研究员，国家"万人计划"领军人才。
     国家重点研发计划项目首席科学家。
     基于多组学手段揭示长寿人群健康衰老相关调控因子。
@@ -63,7 +87,11 @@
   title_en: Professor
   photo: /assets/img/members/zyz.png
   department: 湘雅免疫学系
+  department_en: Department of Immunology, Xiangya School of Medicine
   bio: >-
+    MD, PhD. Immunology researcher. Former Assistant Professor at UT Southwestern Medical Center.
+    Research focus on MICA-mediated transplantation immunology.
+  bio_zh: >-
     医学博士，免疫学研究员。曾任美国德克萨斯州西南医学中心助理教授。
     从事 MICA 为代表的移植免疫学研究。
 
@@ -74,7 +102,12 @@
   title_en: Professor
   photo: /assets/img/members/bff.png
   department: 神经内科
+  department_en: Department of Neurology
   bio: >-
+    Director of Neurocritical Care Unit. Deputy Director of Emergency Department.
+    Postdoctoral fellow at Thomas Jefferson University, USA.
+    Led 4 NSFC projects. Published 30+ SCI papers.
+  bio_zh: >-
     神经重症监护专科主任，急诊科副主任。美国 Jefferson 大学博士后。
     主持国家自然科学基金项目4项，发表 SCI 论文30余篇。
 
@@ -85,7 +118,12 @@
   title_en: Professor
   photo: /assets/img/members/lh.png
   department: 湘雅肿瘤免疫个体化临床研究中心
+  department_en: Center for Personalized Cancer Immunotherapy, Xiangya Hospital
   bio: >-
+    PhD from MD Anderson Cancer Center. Huxiang Young Talent.
+    Led 10+ projects including National Key R&D and NSFC Excellent Young Scientist grants.
+    Published in Cancer Cell, Circulation, Nature Communications as corresponding/first author.
+  bio_zh: >-
     美国 MD Anderson 癌症中心博士。湖湘青年英才。
     主持国家重点研发专项、国家自然科学优秀青年基金等10余项。
     通讯/第一作者在 Cancer Cell, Circulation, Nature Communications 等发表论著。
@@ -97,7 +135,12 @@
   title_en: Professor
   photo: /assets/img/members/lmx.png
   department: 重庆大学生物工程系
+  department_en: Department of Bioengineering, Chongqing University
   bio: >-
+    Chongqing Young Top Talent. International Vebleo Association Fellow.
+    Dedicated to skin and appendage organ regeneration research.
+    Published 50+ papers in Science, Cell, PNAS, etc.
+  bio_zh: >-
     重庆英才·青年拔尖人才，国际 Vebleo 协会 Fellow。
     致力于皮肤及附属器官再生研究。
     在 Science, Cell, PNAS 等发表论文50余篇。
@@ -109,7 +152,12 @@
   title_en: Associate Professor
   photo: /assets/img/members/jd.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Visiting Scholar at University of Southern California.
+    Research focus: skin aging mechanisms, disfiguring skin disease pathogenesis,
+    and photoelectric therapy for pigmentary disorders.
+  bio_zh: >-
     美国南加州大学访问学者。主要研究方向为皮肤衰老机制、
     损容性皮肤病发病及治疗机制、色素性皮肤病光电治疗。
 
@@ -120,7 +168,12 @@
   title_en: Associate Professor
   photo: /assets/img/members/wxs.png
   department: 口腔颌面外科
+  department_en: Department of Oral and Maxillofacial Surgery
   bio: >-
+    2020 NSFC Excellent Young Scientist Fund recipient.
+    Director, Center for Craniofacial Development and Regeneration, Xiangya Hospital.
+    Published as first author in PNAS, EMBO J, etc.
+  bio_zh: >-
     2020年国家自然基金"优秀青年科学基金"获得者。
     湘雅医院口腔颌面部发育与再生研究中心主任。
     以第一作者在 PNAS、EMBO J 等发表论文。
@@ -132,7 +185,12 @@
   title_en: Associate Professor
   photo: /assets/img/members/fk.png
   department: 湘雅医院
+  department_en: Xiangya Hospital
   bio: >-
+    Postdoctoral fellow at Johns Hopkins University. Hunan Excellent Youth Fund recipient.
+    Research focus on molecular mechanisms of colorectal cancer and other tumors.
+    Published in Cancer Discovery, Nature Communications, etc.
+  bio_zh: >-
     美国约翰霍普金斯大学博士后。湖南省优青。
     致力于结直肠癌等肿瘤的分子机制研究。
     在 Cancer Discovery, Nature Communications 等发表论文。
@@ -144,7 +202,11 @@
   title_en: Associate Professor
   photo: /assets/img/members/kyh.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Joint PhD training at St. John's University, USA. Visiting Scholar at Cornell University.
+    Led 3 NSFC projects. Research focus on psoriasis pathogenesis.
+  bio_zh: >-
     美国圣约翰大学联合培养博士、美国康奈尔大学访问学者。
     主持国家自然科学基金3项。研究方向为银屑病发病机制。
 
@@ -155,7 +217,12 @@
   title_en: Associate Professor
   photo: /assets/img/members/tr.png
   department: 分子肿瘤中心
+  department_en: Molecular Oncology Center
   bio: >-
+    Key researcher at Hunan Key Lab of Aging Biology. Hunan Excellent Youth Fund recipient.
+    Research on DNA damage pathways and epigenetics in aging.
+    Published in Molecular Cell, Aging Cell, Nucleic Acids Research, etc.
+  bio_zh: >-
     衰老生物学湖南省重点实验室科研骨干。湖南省优青。
     研究方向为 DNA 损伤通路及表观遗传学参与衰老。
     在 Molecular Cell, Aging Cell, Nucleic Acids Research 等发表论文。
@@ -167,7 +234,12 @@
   title_en: Associate Research Fellow
   photo: /assets/img/members/dzl.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Research focus on skin appendage aging and regeneration.
+    Achieved original breakthroughs in rosacea and androgenetic alopecia mechanisms.
+    Published 17 SCI papers in EMBO Molecular Medicine, JID, etc.
+  bio_zh: >-
     主要研究皮肤及附属器官衰老与再生，
     在玫瑰痤疮和雄秃发病机制上取得原创性成果。
     在 EMBO Molecular Medicine, JID 等发表 SCI 论文17篇。
@@ -179,7 +251,11 @@
   title_en: Associate Research Fellow
   photo: /assets/img/members/wl.png
   department: 分子放射肿瘤学实验室
+  department_en: Laboratory of Molecular Radiation Oncology
   bio: >-
+    BS from Peking University, PhD from Nagoya University, Japan.
+    Deputy Director, Hunan Clinical Research Center for Respiratory Diseases.
+  bio_zh: >-
     北京大学学士，日本名古屋大学博士。
     湖南省呼吸疾病临床研究中心副主任。
 
@@ -190,7 +266,11 @@
   title_en: Associate Research Fellow
   photo: /assets/img/members/zyy.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Research focus on inflammatory skin diseases and skin aging mechanisms.
+    Published 20+ SCI papers in Pharmacol Res, Front Pharmacol, J Biol Chem, etc.
+  bio_zh: >-
     主要从事炎症性皮肤病及皮肤衰老的机制研究。
     在 Pharmacol Res, Front Pharmacol, J Biol Chem 等发表 SCI 论文20余篇。
 
@@ -201,7 +281,11 @@
   title_en: Associate Professor
   photo: /assets/img/members/wcg.png
   department: 骨科
+  department_en: Department of Orthopedics
   bio: >-
+    Specializes in foot/ankle surgery and joint surgery.
+    Published 17 SCI papers as first/corresponding author in Cell Death & Disease, Exp Mol Med, etc.
+  bio_zh: >-
     擅长足踝外科和关节外科疾病诊疗。
     第一/通讯作者在 Cell Death & Disease, Exp Mol Med 等发表 SCI 论文17篇。
 
@@ -212,7 +296,11 @@
   title_en: Associate Research Fellow
   photo: /assets/img/members/wlong.png
   department: 骨科
+  department_en: Department of Orthopedics
   bio: >-
+    Research on targeted drug delivery systems for orthopedic diseases and periprosthetic infection therapy.
+    Led 1 NSFC project. Published 20+ SCI papers as first/corresponding author.
+  bio_zh: >-
     研究方向为骨科疾病靶向载药体系、假体周围感染靶向治疗。
     主持国家自然科学基金1项，以第一/通讯作者发表 SCI 论文20余篇。
 
@@ -223,7 +311,12 @@
   title_en: Associate Chief Physician
   photo: /assets/img/members/zd.png
   department: 骨科/关节外科
+  department_en: Department of Orthopedics / Joint Surgery
   bio: >-
+    2018 Visiting Scholar at Mayo Clinic, USA.
+    Vice Chair, Digital Orthopedics Hunan Chapter, SICOT China.
+    Published 30+ papers. Led/participated in 5 NSFC projects.
+  bio_zh: >-
     2018年美国梅奥医学中心访问学者。
     SICOT 中国部数字骨科学湖南省分会副主任委员。
     发表论文30余篇，主持参与国家自然科学基金5项。
@@ -235,7 +328,11 @@
   title_en: Assistant Professor
   photo: /assets/img/members/zjx.png
   department: 骨科
+  department_en: Department of Orthopedics
   bio: >-
+    Joint PhD training at Johns Hopkins University, USA.
+    Published series of studies on neural regulation of bone in JCI, eLife, Bone Research, etc.
+  bio_zh: >-
     美国约翰霍普金斯大学联合培养博士。
     围绕骨的神经调控发表系列成果，包括 JCI, eLife, Bone Research 等。
 
@@ -246,7 +343,11 @@
   title_en: Attending Physician
   photo: /assets/img/members/ty.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Visiting Scholar at Emory University. Specializes in hair disorders, rosacea,
+    and other disfiguring skin diseases. Led 2 NSFC projects. Published 15 SCI papers.
+  bio_zh: >-
     美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤疾病。
     主持国家自然科学基金2项，发表 SCI 论文15篇。
 
@@ -257,6 +358,10 @@
   title_en: Attending Physician
   photo: /assets/img/members/lff.png
   department: 皮肤科
+  department_en: Department of Dermatology
   bio: >-
+    Specializes in clinical diagnosis and basic research of alopecia.
+    Experienced in FUT/FUE hair transplant surgery. Led/participated in 4 NSFC projects.
+  bio_zh: >-
     擅长脱发疾病的临床诊治及基础研究，
     熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。
