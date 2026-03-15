@@ -51,19 +51,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/careers/";
           },
-        },{id: "projects-skin-aging-amp-longevity",
-          title: 'Skin Aging &amp;amp; Longevity',
-          description: "Investigating mechanisms of skin aging through multi-omics and longevity cohorts",
+        },{id: "projects-skin-aging",
+          title: 'Skin Aging',
+          description: "Investigating mechanisms of skin aging using longevity cohorts and targeted anti-aging drug development",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_skin_aging/";
-            },},{id: "projects-hair-follicle-biology",
-          title: 'Hair Follicle Biology',
-          description: "Deciphering hair growth and regeneration for alopecia and pigmentary disorders",
+            },},{id: "projects-hair-diseases-amp-hair-regeneration",
+          title: 'Hair Diseases &amp;amp; Hair Regeneration',
+          description: "Studying hair loss and graying mechanisms with targeted therapeutics and stem cell-based reconstruction",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_hair_follicle/";
             },},{id: "projects-inflammatory-skin-diseases",
           title: 'Inflammatory Skin Diseases',
-          description: "Bridging immunology and clinical dermatology for rosacea, acne, and related conditions",
+          description: "Investigating pathogenesis and targeted therapeutics for rosacea, acne, and related conditions",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_inflammatory_skin/";
             },},{
