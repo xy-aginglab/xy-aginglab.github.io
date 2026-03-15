@@ -30,6 +30,27 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
+        },{id: "nav-news",
+          title: "News",
+          description: "Latest news and events from the lab",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-software",
+          title: "Software",
+          description: "Tools and software developed by the lab",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/software/";
+          },
+        },{id: "nav-careers",
+          title: "Careers",
+          description: "Join our team",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/careers/";
+          },
         },{id: "projects-skin-aging-amp-longevity",
           title: 'Skin Aging &amp;amp; Longevity',
           description: "Investigating mechanisms of skin aging through multi-omics and longevity cohorts",
