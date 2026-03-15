@@ -85,8 +85,9 @@ h6 {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
   background: var(--global-theme-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -264,6 +265,7 @@ h6 {
 
 .lab-main {
   min-height: calc(100vh - 60px - 80px);
+  padding-top: 60px;
 }
 
 /* Page layout (for publications, projects, people pages) */
@@ -300,7 +302,8 @@ h6 {
   background-size: 300% 300%;
   animation: lab-gradient-shift 12s ease infinite;
   color: #ffffff !important;
-  padding: 6rem 2rem 5rem;
+  margin-top: -60px;
+  padding: 8rem 2rem 5rem;
   text-align: center;
   overflow: hidden;
 
