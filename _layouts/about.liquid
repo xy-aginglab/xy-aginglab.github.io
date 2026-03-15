@@ -115,6 +115,11 @@ layout: default
             ><i class="ai ai-google-scholar"></i
           ></a>
         {% endif %}
+        {% if site.data.socials.researchgate %}
+          <a href="https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}" target="_blank" title="ResearchGate"
+            ><i class="ai ai-researchgate"></i
+          ></a>
+        {% endif %}
         {% if site.data.socials.orcid %}
           <a href="https://orcid.org/{{ site.data.socials.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
         {% endif %}
