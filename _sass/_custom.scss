@@ -97,11 +97,6 @@ h6 {
     background 0.3s ease,
     box-shadow 0.3s ease;
 
-  a,
-  button {
-    color: #ffffff !important;
-  }
-
   &.lab-nav--at-top {
     background: transparent;
     box-shadow: none;
@@ -121,7 +116,7 @@ h6 {
 .lab-nav__brand {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   letter-spacing: 0.01em;
   white-space: nowrap;
   position: relative;
@@ -142,7 +137,7 @@ h6 {
   }
 
   &:hover {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: #ffffff !important;
 
     &::after {
       transform: scaleX(1);
@@ -165,10 +160,12 @@ h6 {
     padding: 0.5rem 0.85rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
     text-transform: capitalize;
     border-radius: 6px;
-    transition: all 0.2s;
+    transition:
+      color 0.2s,
+      background 0.2s;
     background: none;
     border: none;
     cursor: pointer;
@@ -180,9 +177,9 @@ h6 {
       position: absolute;
       left: 0.85rem;
       right: 0.85rem;
-      bottom: 0.25rem;
+      bottom: 0.15rem;
       height: 2px;
-      background: rgba(255, 255, 255, 0.8);
+      background: #ffffff;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -192,7 +189,7 @@ h6 {
   li a:hover,
   li button:hover {
     color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 
     &::after {
       transform: scaleX(1);
@@ -202,7 +199,7 @@ h6 {
   li.active a {
     color: #ffffff !important;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.15);
 
     &::after {
       transform: scaleX(1);
