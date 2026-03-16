@@ -705,7 +705,17 @@ h6 {
 
 html[data-theme="dark"] {
   .lab-nav {
-    background: var(--global-theme-color);
+    background: #0a2e3d;
+
+    &.lab-nav--at-top {
+      background: transparent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lab-nav__links {
+      background: #0a2e3d;
+    }
   }
 
   .lab-research-card:hover {
