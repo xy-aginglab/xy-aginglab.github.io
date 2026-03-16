@@ -97,6 +97,17 @@ h6 {
     background 0.3s ease,
     box-shadow 0.3s ease;
 
+  // 隔离全局 a/button 颜色（对抗 Bootstrap/MDB 的全局 a 样式）
+  a,
+  button {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff !important;
+    }
+  }
+
   &.lab-nav--at-top {
     background: transparent;
     box-shadow: none;
@@ -116,7 +127,7 @@ h6 {
 .lab-nav__brand {
   font-size: 1.1rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #ffffff;
   letter-spacing: 0.01em;
   white-space: nowrap;
   position: relative;
@@ -137,8 +148,6 @@ h6 {
   }
 
   &:hover {
-    color: #ffffff !important;
-
     &::after {
       transform: scaleX(1);
     }
@@ -160,7 +169,6 @@ h6 {
     padding: 0.5rem 0.85rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7) !important;
     text-transform: capitalize;
     border-radius: 6px;
     transition:
@@ -188,7 +196,6 @@ h6 {
 
   li a:hover,
   li button:hover {
-    color: #ffffff !important;
     background: rgba(255, 255, 255, 0.2);
 
     &::after {
@@ -197,7 +204,7 @@ h6 {
   }
 
   li.active a {
-    color: #ffffff !important;
+    color: #ffffff;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.15);
 
