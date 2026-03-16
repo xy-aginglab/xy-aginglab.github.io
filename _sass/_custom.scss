@@ -119,9 +119,27 @@ h6 {
   color: #ffffff !important;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
 
   &:hover {
     color: rgba(255, 255, 255, 0.8) !important;
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -148,18 +166,40 @@ h6 {
     border: none;
     cursor: pointer;
     white-space: nowrap;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.85rem;
+      right: 0.85rem;
+      bottom: 0.25rem;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.8);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
   }
 
   li a:hover,
   li button:hover {
     color: #ffffff !important;
     background: rgba(255, 255, 255, 0.15);
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 
   li.active a {
     color: #ffffff !important;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.12);
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
