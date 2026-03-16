@@ -374,6 +374,45 @@ h4 {
   line-height: 1.6;
 }
 
+/* Page header (unified with lab-section style) */
+.lab-page-header {
+  padding-bottom: 2rem;
+}
+
+.lab-page-header__desc {
+  text-align: center;
+  color: var(--global-text-color-light);
+  font-size: 1.08rem;
+  margin-top: -1.5rem;
+}
+
+.lab-page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  ul, ol {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    5. HERO SECTION
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -834,13 +873,6 @@ html[data-theme="dark"] {
 // ========================
 // People page
 // ========================
-.lab-people__subtitle {
-  text-align: center;
-  color: var(--global-text-color-light, #666);
-  font-size: 1.05rem;
-  margin-top: -0.5rem;
-}
-
 .lab-people__category {
   text-align: center;
   font-size: 1.6rem;
