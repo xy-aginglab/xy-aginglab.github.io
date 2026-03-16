@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: Research directions of the Hunan Key Laboratory of Aging Biology
 nav: true
-nav_order: 2
+nav_order: 1
 display_categories: [research]
 horizontal: false
 ---

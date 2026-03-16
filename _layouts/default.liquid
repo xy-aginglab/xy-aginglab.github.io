@@ -52,6 +52,13 @@
               <a href="{{ '/zh/publications/' | relative_url }}">{{ t.nav.publications }}</a>
             </li>
             <li
+              {% if page.url contains '/zh/clinical' %}
+                class="active"
+              {% endif %}
+            >
+              <a href="{{ '/zh/clinical/' | relative_url }}">{{ t.nav.clinical }}</a>
+            </li>
+            <li
               {% if page.url contains '/zh/people' %}
                 class="active"
               {% endif %}
