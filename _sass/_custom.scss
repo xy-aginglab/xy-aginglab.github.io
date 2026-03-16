@@ -97,6 +97,11 @@ h6 {
     background 0.3s ease,
     box-shadow 0.3s ease;
 
+  a,
+  button {
+    color: #ffffff !important;
+  }
+
   &.lab-nav--at-top {
     background: transparent;
     box-shadow: none;
