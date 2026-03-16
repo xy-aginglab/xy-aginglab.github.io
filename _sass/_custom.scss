@@ -1114,6 +1114,16 @@ html[data-theme="dark"] {
 
 .bib-hidden {
   display: none;
+
+  &.open {
+    display: block;
+    margin-top: 0.8rem;
+    padding: 1rem;
+    background: var(--global-code-bg-color);
+    border-radius: 6px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
 }
 
 .rounded {
