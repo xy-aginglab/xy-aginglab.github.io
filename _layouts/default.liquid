@@ -65,14 +65,7 @@
             >
               <a href="{{ '/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
             </li>
-            <li
-              {% if page.url contains '/zh/software' %}
-                class="active"
-              {% endif %}
-            >
-              <a href="{{ '/zh/software/' | relative_url }}">{{ t.nav.software }}</a>
-            </li>
-            <li
+<li
               {% if page.url contains '/zh/careers' %}
                 class="active"
               {% endif %}
