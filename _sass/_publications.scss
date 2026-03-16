@@ -48,28 +48,22 @@
       margin-bottom: 1rem;
 
       .preview {
-        display: inline-block;
+        display: block;
+        width: 100%;
+        max-width: 120px;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       }
 
       .abbr {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
 
         abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
+          display: none;
         }
 
         .award {
+          display: inline-block;
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Research directions of the Hunan Key Laboratory of Aging Biology
 nav: true
