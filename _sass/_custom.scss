@@ -752,75 +752,6 @@ html[data-theme="dark"] {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   13. THEME TOGGLE (from al-folio, needed for dark mode)
-   ═══════════════════════════════════════════════════════════════════════════ */
-
-#light-toggle-system {
-  display: inline-block;
-}
-#light-toggle-dark,
-#light-toggle-light {
-  display: none;
-}
-
-html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-  #light-toggle-dark {
-    display: inline-block;
-  }
-}
-
-html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
-  #light-toggle-light {
-    display: inline-block;
-  }
-}
-
-.fa-half-sun-moon {
-  position: relative;
-  display: inline-block;
-  --fa-font: var(--fa-font-solid);
-  speak: none;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  width: 1em;
-  height: 1em;
-}
-
-.fa-half-sun-moon::before,
-.fa-half-sun-moon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  top: -0.5px;
-  bottom: -0.5px;
-  text-align: center;
-  line-height: 1em;
-  font: var(--fa-font);
-}
-
-.fa-half-sun-moon::before {
-  content: "\f111";
-  color: var(--global-text-color);
-  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
-}
-
-.fa-half-sun-moon::after {
-  content: "\f185";
-  color: var(--global-text-color);
-  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px;
-  transform: translateX(-1px);
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
    14. RESPONSIVE
    ═══════════════════════════════════════════════════════════════════════════ */
 
@@ -1097,4 +1028,73 @@ html[data-theme-setting="light"] {
   font-size: 0.88rem;
   color: var(--global-text-color-light, #666);
   flex: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   16. BIBLIOGRAPHY (Bootstrap replacement classes for bib.liquid)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.bib-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bib-thumb {
+  flex-shrink: 0;
+  width: 120px;
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.bib-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.bib-full {
+  flex: 1;
+}
+
+.bib-btn {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--global-text-color);
+  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    background: var(--global-theme-color);
+    color: #ffffff;
+    border-color: var(--global-theme-color);
+  }
+}
+
+.bib-hidden {
+  display: none;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .bib-row {
+    flex-direction: column;
+  }
+
+  .bib-thumb {
+    width: 100%;
+    max-width: 200px;
+  }
 }
