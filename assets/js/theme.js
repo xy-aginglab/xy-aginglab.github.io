@@ -62,11 +62,7 @@ let applyTheme = () => {
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
   for (let i = 0; i < tables.length; i++) {
-    if (theme == "dark") {
-      tables[i].classList.add("table-dark");
-    } else {
-      tables[i].classList.remove("table-dark");
-    }
+    tables[i].classList.toggle("table-dark", theme == "dark");
   }
 
   // Set jupyter notebooks themes.
@@ -237,25 +233,11 @@ let setVegaLiteTheme = (theme) => {
 
 let setSearchTheme = (theme) => {
   const ninjaKeys = document.querySelector("ninja-keys");
-  if (!ninjaKeys) return;
-
-  if (theme === "dark") {
-    ninjaKeys.classList.add("dark");
-  } else {
-    ninjaKeys.classList.remove("dark");
-  }
+  if (ninjaKeys) ninjaKeys.classList.toggle("dark", theme === "dark");
 };
 
 let setCookieConsentTheme = (theme) => {
-  // Sync cookie consent modal with site's theme
-  // The cookie consent library supports dark mode via the cc--darkmode class
-  var htmlElement = document.documentElement;
-
-  if (theme === "dark") {
-    htmlElement.classList.add("cc--darkmode");
-  } else {
-    htmlElement.classList.remove("cc--darkmode");
-  }
+  document.documentElement.classList.toggle("cc--darkmode", theme === "dark");
 };
 
 let transTheme = () => {

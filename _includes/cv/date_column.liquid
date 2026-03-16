@@ -1,0 +1,43 @@
+{% comment %}
+  Reusable date+location column for CV entries.
+  Expects: entry (with start_date/startDate, end_date/endDate, location)
+{% endcomment %}
+
+<div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+  {% capture start_date %}
+    {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+  {% endcapture %}
+  {% capture end_date %}
+    {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+  {% endcapture %}
+
+  {% if start_date != '' %}
+    {% assign startYear = start_date | split: '-' | first %}
+    {% assign endYear = end_date | split: '-' | first | default: 'Present' %}
+    {% assign date = startYear | append: ' - ' | append: endYear %}
+  {% else %}
+    {% assign date = '' %}
+  {% endif %}
+
+  <table class="table-cv">
+    <tbody>
+      <tr>
+        <td>
+          {% if date != '' %}
+            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% if entry.location %}
+        <tr>
+          <td>
+            <p class="location">
+              <i class="fa-solid fa-location-dot iconlocation"></i>
+              {{ entry.location }}
+            </p>
+          </td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>

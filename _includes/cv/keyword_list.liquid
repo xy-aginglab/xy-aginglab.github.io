@@ -1,0 +1,28 @@
+{% comment %}
+  Reusable keyword list renderer for skills, interests, and similar sections.
+  Expects: entries (array with name, keywords, optional icon/level)
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="cv-keyword-item">
+      {% if entry.icon %}
+        <i class="{{ entry.icon }}"></i>
+      {% endif %}
+      <strong>
+        {{- entry.name -}}
+        {%- if entry.level %} ({{ entry.level }}){% endif %}:</strong>
+      {% if entry.keywords %}
+        {% for keyword in entry.keywords %}
+          {%- if forloop.last %}{{ keyword }}{% else %}{{ keyword }},{% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .cv-keyword-item {
+    padding: 0.5rem 0;
+  }
+</style>
