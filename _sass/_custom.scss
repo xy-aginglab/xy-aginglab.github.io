@@ -688,7 +688,51 @@ h4 {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   10. FOOTER
+   10. LOGO BAR
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lab-logos {
+  border-top: 1px solid var(--global-divider-color);
+  padding: 2rem;
+  background: var(--global-bg-color);
+}
+
+.lab-logos__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+
+  img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    filter: grayscale(30%);
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .lab-logos__inner {
+    gap: 1.5rem;
+
+    img {
+      height: 36px;
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   11. FOOTER
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .lab-footer {
@@ -1100,12 +1144,19 @@ html[data-theme="dark"] {
   color: var(--global-text-color);
   background: transparent;
   border: 1px solid var(--global-divider-color);
+  cursor: pointer;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s;
 
   &:hover {
+    background: var(--global-theme-color);
+    color: #ffffff;
+    border-color: var(--global-theme-color);
+  }
+
+  &.bib-btn--active {
     background: var(--global-theme-color);
     color: #ffffff;
     border-color: var(--global-theme-color);
@@ -1121,8 +1172,17 @@ html[data-theme="dark"] {
     padding: 1rem;
     background: var(--global-code-bg-color);
     border-radius: 6px;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     line-height: 1.6;
+    overflow-x: auto;
+    word-wrap: break-word;
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0;
+      font-size: 0.82rem;
+    }
   }
 }
 

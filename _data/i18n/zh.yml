@@ -24,7 +24,8 @@ home:
   social_label: 关注我们
   address_line1: 皮肤科
   address_line2: 中南大学湘雅医院
-  address_line3: 湖南省长沙市开福区湘雅路87号，410008
+  address_line3: 湖南省长沙市开福区湘雅路87号
+  address_line4: 邮编：410008
 
 research:
   skin_aging_title: 皮肤衰老

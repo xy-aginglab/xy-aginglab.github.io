@@ -7,8 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-## Clinical Research
-
 Leveraging the extensive clinical resources of **Xiangya Hospital**, our laboratory bridges bench research with bedside applications. Our clinical research programs focus on translating molecular discoveries into diagnostic tools and therapeutic strategies.
 
 ### Ongoing Programs
