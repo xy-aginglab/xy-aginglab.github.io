@@ -33,9 +33,9 @@ layout: default
           <p class="lab-pi-card__title">
             {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
           </p>
-          <p class="lab-pi-card__bio">
+          <div class="lab-pi-card__bio">
             {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
-          </p>
+          </div>
           <div class="lab-pi-card__links">
             {% if member.email %}
               <a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>
@@ -63,13 +63,13 @@ layout: default
   </div>
 {% endif %}
 
-<!-- Faculty -->
-{% assign faculty = site.data.members | where: 'role', 'faculty' %}
-{% if faculty.size > 0 %}
+<!-- Basic Researchers -->
+{% assign basic = site.data.members | where: 'role', 'basic_researcher' %}
+{% if basic.size > 0 %}
   <div class="lab-section">
-    <h3 class="lab-people__category">{{ t.people.faculty }}</h3>
+    <h3 class="lab-people__category">{{ t.people.basic_researchers }}</h3>
     <div class="lab-people-grid">
-      {% for member in faculty %}
+      {% for member in basic %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
             <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
@@ -87,9 +87,6 @@ layout: default
             <p class="lab-member-card__title">
               {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
             </p>
-            <p class="lab-member-card__dept">
-              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
-            </p>
             <p class="lab-member-card__bio">
               {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
             </p>
@@ -100,13 +97,13 @@ layout: default
   </div>
 {% endif %}
 
-<!-- Researchers -->
-{% assign researchers = site.data.members | where: 'role', 'researcher' %}
-{% if researchers.size > 0 %}
+<!-- Clinical Researchers -->
+{% assign clinical = site.data.members | where: 'role', 'clinical_researcher' %}
+{% if clinical.size > 0 %}
   <div class="lab-section lab-section--alt">
-    <h3 class="lab-people__category">{{ t.people.researchers }}</h3>
+    <h3 class="lab-people__category">{{ t.people.clinical_researchers }}</h3>
     <div class="lab-people-grid">
-      {% for member in researchers %}
+      {% for member in clinical %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
             <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
@@ -124,9 +121,6 @@ layout: default
             <p class="lab-member-card__title">
               {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
             </p>
-            <p class="lab-member-card__dept">
-              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
-            </p>
             <p class="lab-member-card__bio">
               {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
             </p>
@@ -137,13 +131,13 @@ layout: default
   </div>
 {% endif %}
 
-<!-- Clinicians -->
-{% assign clinicians = site.data.members | where: 'role', 'clinician' %}
-{% if clinicians.size > 0 %}
+<!-- Technicians -->
+{% assign techs = site.data.members | where: 'role', 'technician' %}
+{% if techs.size > 0 %}
   <div class="lab-section">
-    <h3 class="lab-people__category">{{ t.people.clinicians }}</h3>
+    <h3 class="lab-people__category">{{ t.people.technicians }}</h3>
     <div class="lab-people-grid">
-      {% for member in clinicians %}
+      {% for member in techs %}
         <div class="lab-member-card">
           <div class="lab-member-card__photo">
             <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
@@ -161,34 +155,10 @@ layout: default
             <p class="lab-member-card__title">
               {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
             </p>
-            <p class="lab-member-card__dept">
-              {% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}
-            </p>
             <p class="lab-member-card__bio">
               {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
             </p>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-{% endif %}
-
-<!-- Alumni -->
-{% assign alumni = site.data.members | where: 'role', 'alumni' %}
-{% if alumni.size > 0 %}
-  <div class="lab-section lab-section--alt">
-    <h3 class="lab-people__category">{{ t.people.alumni }}</h3>
-    <div class="lab-alumni-list">
-      {% for member in alumni %}
-        <div class="lab-alumni-item">
-          <span class="lab-alumni-item__name">
-            {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
-          </span>
-          <span class="lab-alumni-item__years">{{ member.years }}</span>
-          <span class="lab-alumni-item__position">
-            {% if lang == 'zh' %}{{ member.current_position_zh | default: member.current_position }}{% else %}{{ member.current_position }}{% endif %}
-          </span>
         </div>
       {% endfor %}
     </div>

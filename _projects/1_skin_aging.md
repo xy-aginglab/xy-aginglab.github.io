@@ -2,7 +2,7 @@
 layout: page
 title: Skin Aging
 description: Investigating mechanisms of skin aging using longevity cohorts and targeted anti-aging drug development
-img:
+img: research_skin_aging.svg
 importance: 1
 category: research
 ---

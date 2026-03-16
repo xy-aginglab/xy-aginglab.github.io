@@ -16,20 +16,13 @@ layout: default
   </div>
 </div>
 
-<!-- About Section -->
-<div class="lab-section">
-  <div class="lab-about">
-    {{ t.home.about_body | markdownify }}
-  </div>
-</div>
-
 <!-- Research Directions -->
 <div class="lab-section lab-section--alt">
   <h2 class="lab-section__heading">{{ t.home.research_heading }}</h2>
   <div class="lab-research-grid">
     <div class="lab-research-card">
-      <div class="lab-research-card__banner lab-research-card__banner--aging">
-        <i class="fas fa-dna"></i>
+      <div class="lab-research-card__banner">
+        <img src="{{ '/assets/img/research_skin_aging.svg' | relative_url }}" alt="Skin Aging">
       </div>
       <div class="lab-research-card__content">
         <h3 class="lab-research-card__title">{{ t.research.skin_aging_title }}</h3>
@@ -44,8 +37,8 @@ layout: default
       </div>
     </div>
     <div class="lab-research-card">
-      <div class="lab-research-card__banner lab-research-card__banner--hair">
-        <i class="fas fa-microscope"></i>
+      <div class="lab-research-card__banner">
+        <img src="{{ '/assets/img/research_hair_follicle.svg' | relative_url }}" alt="Hair Follicle">
       </div>
       <div class="lab-research-card__content">
         <h3 class="lab-research-card__title">{{ t.research.hair_follicle_title }}</h3>
@@ -60,8 +53,8 @@ layout: default
       </div>
     </div>
     <div class="lab-research-card">
-      <div class="lab-research-card__banner lab-research-card__banner--immune">
-        <i class="fas fa-shield-virus"></i>
+      <div class="lab-research-card__banner">
+        <img src="{{ '/assets/img/research_inflammatory.svg' | relative_url }}" alt="Inflammatory Skin">
       </div>
       <div class="lab-research-card__content">
         <h3 class="lab-research-card__title">{{ t.research.inflammatory_title }}</h3>

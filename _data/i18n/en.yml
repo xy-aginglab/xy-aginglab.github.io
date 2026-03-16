@@ -11,7 +11,7 @@ nav:
 
 hero:
   subtitle: "Xiangya Hospital, Central South University · Department of Dermatology"
-  tagline: "Bridging clinical dermatology with molecular biology to uncover the mechanisms of skin aging, hair follicle regeneration, and inflammatory skin diseases."
+  tagline: "Our laboratory operates at the intersection of clinical dermatology and molecular biology, leveraging the vast clinical resources of Xiangya Hospital to drive translational breakthroughs. Under the direction of Prof. Ji Li, we are dedicated to uncovering the biological hallmarks of skin health and developing next-generation interventions."
 
 home:
   about_body: >
@@ -20,7 +20,7 @@ home:
     Under the direction of **Prof. Ji Li**, we are dedicated to uncovering the biological hallmarks of
     skin health and developing next-generation interventions.
   research_heading: Research Directions
-  selected_pubs_heading: Selected Publications
+  selected_pubs_heading: Featured Publications
   contact_heading: Contact
   learn_more: Learn more
   address_label: Address
@@ -49,10 +49,9 @@ people:
   page_title: People
   page_desc: Members of the Hunan Key Laboratory of Aging Biology
   pi: Principal Investigator
-  faculty: Faculty
-  researchers: Researchers
-  clinicians: Clinician-Scientists
-  alumni: Alumni
+  basic_researchers: Basic Researchers
+  clinical_researchers: Clinical Researchers
+  technicians: Technical Staff
 
 publications:
   page_title: Publications

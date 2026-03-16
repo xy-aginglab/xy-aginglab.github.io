@@ -2,7 +2,7 @@
 layout: page
 title: Hair Diseases & Hair Regeneration
 description: Studying hair loss and graying mechanisms with targeted therapeutics and stem cell-based reconstruction
-img:
+img: research_hair_follicle.svg
 importance: 2
 category: research
 ---

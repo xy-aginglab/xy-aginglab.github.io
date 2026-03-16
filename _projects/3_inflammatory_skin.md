@@ -2,7 +2,7 @@
 layout: page
 title: Inflammatory Skin Diseases
 description: Investigating pathogenesis and targeted therapeutics for rosacea, acne, and related conditions
-img:
+img: research_inflammatory.svg
 importance: 3
 category: research
 ---
