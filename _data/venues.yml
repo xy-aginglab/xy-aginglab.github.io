@@ -1,9 +1,110 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Journal venue badges — abbr key, color, optional URL
+"Cell":
+  color: "#1A5276"
+  url: https://www.cell.com/cell/home
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Nat. Commun.":
+  color: "#E8A317"
+  url: https://www.nature.com/ncomms/
 
-"Vision":
-  color: "#009f36"
+"Nature":
+  color: "#C62828"
+  url: https://www.nature.com/nature/
+
+"Nat. Aging":
+  color: "#6A1B9A"
+  url: https://www.nature.com/nataging/
+
+"Nat. Med.":
+  color: "#AD1457"
+  url: https://www.nature.com/nm/
+
+"JAAD":
+  color: "#00695C"
+  url: https://www.jaad.org/
+
+"Adv. Sci.":
+  color: "#1565C0"
+  url: https://onlinelibrary.wiley.com/journal/21983844
+
+"Sci. Adv.":
+  color: "#B71C1C"
+  url: https://www.science.org/journal/sciadv
+
+"Dev. Cell":
+  color: "#2E7D32"
+  url: https://www.cell.com/developmental-cell/home
+
+"JCI Insight":
+  color: "#283593"
+  url: https://insight.jci.org/
+
+"JID":
+  color: "#4E342E"
+  url: https://www.jidonline.org/
+
+"Redox Biol.":
+  color: "#E65100"
+  url: https://www.sciencedirect.com/journal/redox-biology
+
+"Aging Cell":
+  color: "#558B2F"
+  url: https://onlinelibrary.wiley.com/journal/14749726
+
+"IJBS":
+  color: "#00838F"
+  url: https://www.ijbs.com/
+
+"CTM":
+  color: "#5C6BC0"
+  url: https://onlinelibrary.wiley.com/journal/20011326
+
+"Research":
+  color: "#7B1FA2"
+  url: https://spj.science.org/journal/research
+
+"MedComm":
+  color: "#0277BD"
+  url: https://onlinelibrary.wiley.com/journal/26888319
+
+"J. Biomed. Sci.":
+  color: "#00796B"
+
+"J. Dermatol.":
+  color: "#5D4037"
+
+"Life Med.":
+  color: "#388E3C"
+
+"Exp. Dermatol.":
+  color: "#795548"
+
+"Phytomedicine":
+  color: "#33691E"
+
+"J. Dermatol. Sci.":
+  color: "#4527A0"
+
+"BBRC":
+  color: "#546E7A"
+
+"JDDG":
+  color: "#37474F"
+
+"JCMS":
+  color: "#455A64"
+
+"Acta Derm. Venereol.":
+  color: "#6D4C41"
+
+"Pharmacol. Res.":
+  color: "#1B5E20"
+
+"Front. Immunol.":
+  color: "#0D47A1"
+
+"Front. Cell Dev. Biol.":
+  color: "#01579B"
+
+"Aging Dis.":
+  color: "#827717"
