@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a5276"/>
+      <stop offset="100%" stop-color="#5dade2"/>
+    </linearGradient>
+    <radialGradient id="dp" cx="0.5" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#5dade2" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a5276" stop-opacity="0.1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" rx="12" fill="url(#bg2)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="0.5">
+    <line x1="0" y1="50" x2="400" y2="50"/><line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/><line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="80" y1="0" x2="80" y2="260"/><line x1="160" y1="0" x2="160" y2="260"/>
+    <line x1="240" y1="0" x2="240" y2="260"/><line x1="320" y1="0" x2="320" y2="260"/>
+  </g>
+
+  <!-- Hair follicle cross-section (center) -->
+  <g transform="translate(200, 20)">
+    <!-- Hair shaft -->
+    <rect x="-4" y="0" width="8" height="60" rx="3" fill="rgba(255,255,255,0.25)"/>
+
+    <!-- Epidermis layer -->
+    <path d="M-60,55 Q-30,48 0,52 Q30,56 60,50" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+
+    <!-- Outer root sheath -->
+    <path d="M-30,55 C-35,90 -40,140 -35,175 C-30,200 -10,220 0,225 C10,220 30,200 35,175 C40,140 35,90 30,55"
+          fill="none" stroke="#85c1e9" stroke-width="2" opacity="0.7"/>
+
+    <!-- Inner root sheath -->
+    <path d="M-18,60 C-22,90 -25,130 -20,170 C-15,195 -5,210 0,215 C5,210 15,195 20,170 C25,130 22,90 18,60"
+          fill="rgba(133,193,233,0.1)" stroke="#aed6f1" stroke-width="1" opacity="0.6"/>
+
+    <!-- Dermal papilla (bulb) -->
+    <ellipse cx="0" cy="210" rx="28" ry="20" fill="url(#dp)" stroke="#85c1e9" stroke-width="1.5"/>
+    <!-- DP cells -->
+    <g fill="#aed6f1" opacity="0.5">
+      <circle cx="-10" cy="205" r="3.5"/><circle cx="8" cy="208" r="3"/>
+      <circle cx="-2" cy="215" r="3"/><circle cx="14" cy="200" r="2.5"/>
+      <circle cx="-15" cy="213" r="2.5"/>
+    </g>
+
+    <!-- Stem cell niche (bulge region) -->
+    <g transform="translate(-32, 95)">
+      <ellipse cx="0" cy="0" rx="12" ry="8" fill="rgba(93,173,226,0.2)" stroke="#5dade2" stroke-width="1" stroke-dasharray="3,2"/>
+      <!-- Stem cells -->
+      <circle cx="-4" cy="-1" r="2.5" fill="#5dade2" opacity="0.6"/>
+      <circle cx="4" cy="1" r="2.5" fill="#5dade2" opacity="0.6"/>
+    </g>
+
+    <!-- Growth arrows -->
+    <g stroke="#85c1e9" stroke-width="1" opacity="0.4" fill="none" stroke-linecap="round">
+      <path d="M45,180 C55,170 55,155 48,145"/>
+      <polygon points="48,145 44,150 50,150" fill="#85c1e9" opacity="0.4"/>
+      <path d="M-45,175 C-55,165 -55,150 -48,140"/>
+      <polygon points="-48,140 -44,145 -50,145" fill="#85c1e9" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Regeneration cycle (right side) -->
+  <g transform="translate(330, 130)">
+    <!-- Circular arrows -->
+    <path d="M0,-30 A30,30 0 1,1 -26,15" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <polygon points="-26,15 -22,10 -30,8" fill="rgba(255,255,255,0.25)"/>
+    <!-- Phase labels -->
+    <text x="0" y="-38" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="8" font-family="Inter,sans-serif">Anagen</text>
+    <text x="32" y="8" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="8" font-family="Inter,sans-serif">Catagen</text>
+    <text x="-10" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="8" font-family="Inter,sans-serif">Telogen</text>
+  </g>
+
+  <!-- Molecular symbols (left side) -->
+  <g transform="translate(60, 120)" opacity="0.5">
+    <!-- Small molecule -->
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#aed6f1" stroke-width="1.5"/>
+    <circle cx="15" cy="-10" r="4.5" fill="none" stroke="#85c1e9" stroke-width="1.5"/>
+    <line x1="5" y1="-3" x2="11" y2="-7" stroke="#aed6f1" stroke-width="1"/>
+    <circle cx="-12" cy="12" r="5" fill="none" stroke="#aed6f1" stroke-width="1.5"/>
+    <line x1="-5" y1="5" x2="-9" y2="9" stroke="#aed6f1" stroke-width="1"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#85c1e9" opacity="0.15">
+    <circle cx="50" cy="40" r="2"/><circle cx="350" cy="60" r="1.5"/>
+    <circle cx="120" cy="230" r="2"/><circle cx="300" cy="240" r="1.5"/>
+    <circle cx="370" cy="200" r="1"/><circle cx="30" cy="180" r="1.5"/>
+  </g>
+</svg>
