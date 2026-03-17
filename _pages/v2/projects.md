@@ -17,7 +17,7 @@ title: Research
 
     <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Skin Aging</h2>
 
-    <img src="{{ '/assets/img/research_skin_aging.svg' | relative_url }}" alt="Skin Aging Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
+    <img src="{{ '/assets/img/research_skin_aging.png' | relative_url }}" alt="Skin Aging Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
 
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
       We investigate the mechanisms of skin aging using <strong>longevity population cohorts</strong>, animal models, and cell models, with targeted anti-aging drug design and development for key molecular targets.
@@ -30,7 +30,7 @@ title: Research
 
     <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Hair Diseases &amp; Hair Regeneration</h2>
 
-    <img src="{{ '/assets/img/research_hair_follicle.svg' | relative_url }}" alt="Hair Follicle Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
+    <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="Hair Follicle Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
 
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
       We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of <strong>alopecia and hair graying</strong>, develop targeted therapeutic drugs, and establish stem cell-based <strong>hair follicle reconstruction technologies</strong>.
@@ -43,7 +43,7 @@ title: Research
 
     <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Inflammatory Skin Diseases</h2>
 
-    <img src="{{ '/assets/img/research_inflammatory.svg' | relative_url }}" alt="Inflammatory Skin Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
+    <img src="{{ '/assets/img/research_inflammatory.png' | relative_url }}" alt="Inflammatory Skin Research" class="mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md">
 
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
       We integrate clinical resources with animal and cell models to investigate the pathogenesis of inflammatory skin diseases — particularly <strong>disfiguring conditions such as rosacea and acne</strong> — and develop targeted therapeutic drugs for key molecular pathways.
