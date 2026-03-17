@@ -13,32 +13,41 @@
   {% assign lang = page.lang | default: 'en' %}
   {% assign t = site.data.i18n[lang] %}
 
-  <header class="bloom-header">
-    <div class="bloom-header__inner">
-      <a class="bloom-header__logo" href="{{ page.lang == 'zh' | if: '/zh/v2/', '/v2/' | relative_url }}">
-        {% if lang == 'zh' %}衰老生物学湖南省重点实验室{% else %}{{ site.title }}{% endif %}
-      </a>
-      <button class="bloom-header__toggle" aria-label="Toggle menu" onclick="this.closest('.bloom-header').classList.toggle('is-open')">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="bloom-header__nav">
-        <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Research</a>
-        <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>Publications</a>
-        <a href="{{ '/clinical/' | relative_url }}" {% if page.url contains '/clinical' %}class="active"{% endif %}>Clinical</a>
-        <a href="{{ '/people/' | relative_url }}" {% if page.url contains '/people' %}class="active"{% endif %}>People</a>
-        <a href="{{ '/news/' | relative_url }}" {% if page.url contains '/news' %}class="active"{% endif %}>News</a>
-        <a href="{{ '/careers/' | relative_url }}" {% if page.url contains '/careers' %}class="active"{% endif %}>Careers</a>
-      </nav>
-    </div>
-  </header>
+  <div class="bloom-app">
+    <!-- Navigation -->
+    <nav class="bloom-nav" id="bloom-nav">
+      <div class="bloom-nav__inner">
+        <a class="bloom-nav__logo" href="/v2/">
+          <span class="bloom-nav__logo-text">
+            {% if lang == 'zh' %}衰老生物学实验室{% else %}Aging Biology Lab{% endif %}
+          </span>
+        </a>
+        <button class="bloom-nav__toggle" aria-label="Toggle menu" onclick="this.closest('.bloom-nav').classList.toggle('is-open')">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="bloom-nav__links">
+          <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Research</a>
+          <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>Publications</a>
+          <a href="{{ '/clinical/' | relative_url }}" {% if page.url contains '/clinical' %}class="active"{% endif %}>Clinical</a>
+          <a href="{{ '/people/' | relative_url }}" {% if page.url contains '/people' %}class="active"{% endif %}>People</a>
+          <a href="{{ '/news/' | relative_url }}" {% if page.url contains '/news' %}class="active"{% endif %}>News</a>
+          <a href="{{ '/careers/' | relative_url }}" {% if page.url contains '/careers' %}class="active"{% endif %}>Careers</a>
+        </div>
+      </div>
+    </nav>
 
-  <main class="bloom-main">
-    {{ content }}
-  </main>
+    <!-- Main Content -->
+    <main class="bloom-main">
+      {{ content }}
+    </main>
 
-  <footer class="bloom-footer">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    <p class="bloom-footer__switch"><a href="/v1/">Switch to Version A</a> · <a href="/">Back to chooser</a></p>
-  </footer>
+    <!-- Footer -->
+    <footer class="bloom-footer">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+      <p class="bloom-footer__switch">
+        <a href="/v1/">Switch to Version A</a> · <a href="/">Back to chooser</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

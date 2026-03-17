@@ -1,9 +1,11 @@
 /* ============================================================================
    Bloom-inspired minimal academic theme
-   Inspired by jbloomlab.github.io visual style (original code, not copied)
+   Visual style inspired by jbloomlab.github.io — all CSS written from scratch
    ============================================================================ */
 
-/* --- Reset & Base --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap');
+
+/* --- Reset --- */
 *,
 *::before,
 *::after {
@@ -13,16 +15,18 @@
 }
 
 :root {
+  --bloom-accent: #a72126;
+  --bloom-accent-light: rgba(167, 33, 38, 0.1);
+  --bloom-text: #1f2937;
+  --bloom-text-light: #6b7280;
+  --bloom-text-lighter: #9ca3af;
   --bloom-bg: #ffffff;
-  --bloom-text: #1a1a2e;
-  --bloom-text-light: #555;
-  --bloom-accent: #3451b2;
-  --bloom-accent-hover: #2c3e8f;
-  --bloom-border: #e2e2e3;
-  --bloom-nav-bg: #ffffff;
-  --bloom-code-bg: #f6f6f7;
-  --bloom-max-width: 780px;
-  --bloom-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  --bloom-soft: #f6f6f7;
+  --bloom-border: #e5e7eb;
+  --bloom-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bloom-font-logo: 'Space Grotesk', sans-serif;
+  --bloom-max-width: 896px;
+  --bloom-wide-max-width: 1024px;
 }
 
 body {
@@ -32,16 +36,19 @@ body {
   color: var(--bloom-text);
   background: var(--bloom-bg);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+/* --- Links --- */
 a {
-  color: var(--bloom-accent);
-  text-decoration: none;
-  transition: color 0.15s;
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.25s;
 }
 
 a:hover {
-  color: var(--bloom-accent-hover);
+  color: var(--bloom-accent);
 }
 
 img {
@@ -49,166 +56,251 @@ img {
   height: auto;
 }
 
-/* --- Header / Nav --- */
-.bloom-header {
-  border-bottom: 1px solid var(--bloom-border);
-  background: var(--bloom-nav-bg);
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
+
+.bloom-nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: var(--bloom-bg);
+  border-bottom: 1px solid var(--bloom-border);
 }
 
-.bloom-header__inner {
-  max-width: 1100px;
+.bloom-nav__inner {
+  max-width: var(--bloom-wide-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 56px;
 }
 
-.bloom-header__logo {
-  font-size: 1.05rem;
+.bloom-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  user-select: none;
+}
+
+.bloom-nav__logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.bloom-nav__logo-text {
+  font-family: var(--bloom-font-logo);
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--bloom-text) !important;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+  color: var(--bloom-accent);
 }
 
-.bloom-header__logo:hover {
-  color: var(--bloom-accent) !important;
+.bloom-nav__links {
+  display: flex;
+  align-items: center;
 }
 
-.bloom-header__toggle {
+.bloom-nav__links a {
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--bloom-text-light);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.bloom-nav__links a:hover {
+  color: var(--bloom-accent);
+}
+
+.bloom-nav__links a.active {
+  color: var(--bloom-accent);
+  font-weight: 500;
+}
+
+.bloom-nav__toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 1.2rem;
-  color: var(--bloom-text);
-  cursor: pointer;
-}
-
-.bloom-header__nav {
-  display: flex;
-  gap: 0.25rem;
-}
-
-.bloom-header__nav a {
-  padding: 0.35rem 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.3rem;
   color: var(--bloom-text-light);
-  border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
-}
-
-.bloom-header__nav a:hover {
-  color: var(--bloom-accent);
-  background: rgba(52, 81, 178, 0.06);
-}
-
-.bloom-header__nav a.active {
-  color: var(--bloom-accent);
-  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem;
 }
 
 /* Mobile nav */
 @media (max-width: 768px) {
-  .bloom-header__toggle {
+  .bloom-nav__toggle {
     display: block;
   }
 
-  .bloom-header__nav {
+  .bloom-nav__links {
     display: none;
     position: absolute;
     top: 56px;
     left: 0;
     right: 0;
-    background: var(--bloom-nav-bg);
-    border-bottom: 1px solid var(--bloom-border);
+    background: var(--bloom-soft);
+    backdrop-filter: blur(8px);
     flex-direction: column;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem;
+    padding-bottom: 2.5rem;
+    z-index: 50;
   }
 
-  .bloom-header.is-open .bloom-header__nav {
+  .bloom-nav.is-open .bloom-nav__links {
     display: flex;
   }
 
-  .bloom-header__nav a {
-    padding: 0.6rem 0.75rem;
+  .bloom-nav__links a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    justify-content: center;
   }
 }
 
-/* --- Main --- */
+/* ============================================================================
+   MAIN CONTENT
+   ============================================================================ */
+
 .bloom-main {
+  flex: 1;
   max-width: var(--bloom-max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
+  padding: 0 1rem;
 }
 
-/* --- Hero (homepage) --- */
-.bloom-hero h1 {
-  font-size: 2.2rem;
+/* ============================================================================
+   HOME PAGE
+   ============================================================================ */
+
+.bloom-home {
+  padding: 3rem 0 2rem;
+  text-align: left;
+}
+
+.bloom-home__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1f2937;
+  user-select: none;
+}
+
+.bloom-home__title strong {
+  display: block;
   font-weight: 800;
-  line-height: 1.2;
-  color: var(--bloom-text);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
 }
 
-.bloom-hero__tagline {
-  font-size: 1.15rem;
-  color: var(--bloom-accent);
-  font-weight: 500;
-  margin-bottom: 2rem;
+.bloom-home__tagline {
+  font-size: clamp(1.15rem, 2.5vw, 1.75rem);
+  color: var(--bloom-text-light);
+  margin-top: 0.5rem;
+  user-select: none;
+}
+
+.bloom-home__tagline em {
   font-style: italic;
-}
-
-.bloom-hero__body {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.bloom-hero__body strong {
-  font-weight: 600;
-}
-
-.bloom-hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  font-size: 1rem;
   color: var(--bloom-accent);
-  transition: gap 0.2s;
+  background: var(--bloom-accent-light);
+  padding: 0 0.15em;
+  transition: color 0.8s, background 0.8s;
 }
 
-.bloom-hero__cta:hover {
-  gap: 0.7rem;
+.bloom-home__body {
+  font-size: clamp(0.875rem, 1.2vw, 1.05rem);
+  color: var(--bloom-text-light);
+  line-height: 1.75;
+  margin-top: 1.5rem;
 }
 
-/* --- Sections --- */
+.bloom-home__body strong {
+  color: var(--bloom-text);
+  font-weight: 600;
+}
+
+.bloom-home__body a {
+  color: inherit;
+}
+
+.bloom-home__body p + p {
+  margin-top: 1rem;
+}
+
+.bloom-home__cta {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none !important;
+  color: var(--bloom-text-light) !important;
+  background: var(--bloom-soft);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  transition: box-shadow 0.2s, color 0.2s;
+}
+
+.bloom-home__cta:hover {
+  box-shadow: 0 4px 12px rgba(167, 33, 38, 0.15);
+  color: var(--bloom-text-light) !important;
+}
+
+/* ============================================================================
+   SECTIONS (Research, Affiliations, Contact)
+   ============================================================================ */
+
 .bloom-section {
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--bloom-border);
 }
 
 .bloom-section h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  letter-spacing: -0.01em;
 }
 
-/* --- Affiliations --- */
-.bloom-affiliations {
-  list-style: none;
-  padding: 0;
+/* Research list */
+.bloom-research-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--bloom-border);
 }
 
+.bloom-research-list li:last-child {
+  border-bottom: none;
+}
+
+.bloom-research-list h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.bloom-research-list p {
+  font-size: 0.93rem;
+  color: var(--bloom-text-light);
+  line-height: 1.65;
+}
+
+/* Affiliations */
 .bloom-affiliations li {
   padding: 0.3rem 0;
   font-size: 0.95rem;
@@ -222,34 +314,7 @@ img {
   font-weight: 700;
 }
 
-/* --- Research list --- */
-.bloom-research-list {
-  list-style: none;
-  padding: 0;
-}
-
-.bloom-research-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--bloom-border);
-}
-
-.bloom-research-list li:last-child {
-  border-bottom: none;
-}
-
-.bloom-research-list h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.bloom-research-list p {
-  font-size: 0.93rem;
-  color: var(--bloom-text-light);
-  line-height: 1.6;
-}
-
-/* --- Contact --- */
+/* Contact */
 .bloom-contact {
   font-size: 0.95rem;
   color: var(--bloom-text-light);
@@ -265,36 +330,114 @@ img {
 .bloom-contact__icons a {
   font-size: 1.2rem;
   color: var(--bloom-text-light);
+  text-decoration: none !important;
 }
 
 .bloom-contact__icons a:hover {
   color: var(--bloom-accent);
 }
 
-/* --- Footer --- */
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
 .bloom-footer {
-  max-width: var(--bloom-max-width);
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  border-top: 1px solid var(--bloom-border);
-  font-size: 0.85rem;
-  color: var(--bloom-text-light);
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background: var(--bloom-bg);
   text-align: center;
+  font-size: 0.85rem;
+  color: var(--bloom-text-lighter);
+}
+
+.bloom-footer a {
+  color: var(--bloom-text-lighter);
+}
+
+.bloom-footer a:hover {
+  color: var(--bloom-accent);
 }
 
 .bloom-footer__switch {
-  margin-top: 0.5rem;
-}
-
-.bloom-footer__switch a {
+  margin-top: 0.4rem;
   font-size: 0.82rem;
 }
 
-/* --- Chooser page --- */
+/* ============================================================================
+   PROSE (for sub-pages using bloom layout)
+   ============================================================================ */
+
+.bloom-prose h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.bloom-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  border-top: 1px solid var(--bloom-border);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+.bloom-prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.bloom-prose p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.75;
+  margin: 1rem 0;
+}
+
+.bloom-prose ul,
+.bloom-prose ol {
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+}
+
+.bloom-prose ul {
+  list-style: disc;
+}
+
+.bloom-prose ol {
+  list-style: decimal;
+}
+
+.bloom-prose li {
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.bloom-prose hr {
+  border: none;
+  border-top: 1px solid var(--bloom-border);
+  margin: 2rem 0;
+}
+
+.bloom-prose blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--bloom-text-light);
+}
+
+/* ============================================================================
+   CHOOSER PAGE
+   ============================================================================ */
+
 .chooser {
   max-width: 700px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
   text-align: center;
 }
 
@@ -305,8 +448,9 @@ img {
 }
 
 .chooser__subtitle {
-  color: #666;
+  color: var(--bloom-text-light);
   margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 .chooser__grid {
@@ -323,7 +467,7 @@ img {
 
 .chooser__card {
   display: block;
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--bloom-border);
   border-radius: 12px;
   padding: 1.5rem;
   text-decoration: none !important;
@@ -332,7 +476,7 @@ img {
 }
 
 .chooser__card:hover {
-  border-color: #0f7b8a;
+  border-color: var(--bloom-accent);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -343,7 +487,7 @@ img {
 
 .chooser__card p {
   font-size: 0.88rem;
-  color: #666;
+  color: var(--bloom-text-light);
   line-height: 1.5;
 }
 
@@ -352,7 +496,6 @@ img {
   height: 100px;
   border-radius: 6px;
   overflow: hidden;
-  position: relative;
 }
 
 .chooser__preview--v1 {
@@ -418,4 +561,14 @@ img {
 
 .chooser__mock-line--short {
   width: 55%;
+}
+
+/* ============================================================================
+   UTILITY
+   ============================================================================ */
+
+.bloom-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
