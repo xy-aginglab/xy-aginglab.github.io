@@ -79,12 +79,14 @@ p img {
    NAVIGATION — matches NavBar.vue + NavBarTitle.vue + NavBarMenuItem.vue
    ============================================================================ */
 
+/* Layout.vue: <Nav class="mb-4"> — sticky + border-bottom + margin-bottom */
 .bloom-nav {
   position: sticky;
   top: 0;
   z-index: 100;
   background: var(--bloom-bg);
   border-bottom: 1px solid var(--bloom-border);
+  margin-bottom: 1rem;
 }
 
 .bloom-nav__inner {
@@ -218,18 +220,31 @@ p img {
   }
 }
 
+/* Layout.vue: xl:px-0 — remove horizontal padding at xl */
+@media (min-width: 1280px) {
+  .bloom-main {
+    padding: 0;
+  }
+}
+
 /* ============================================================================
    HOME PAGE — matches Home.vue exactly
    mx-auto max-w-4xl px-4 text-left flex flex-col
    ============================================================================ */
 
+/* Home.vue: mx-auto max-w-4xl px-4 text-left flex flex-col
+   The home content has flex-grow to push CTA to bottom */
 .bloom-home {
   max-width: 56rem;  /* max-w-4xl = 896px */
   margin: 0 auto;
-  padding: 3rem 1rem 2rem;
+  padding: 0 1rem;
   text-align: left;
   display: flex;
   flex-direction: column;
+}
+
+.bloom-home__content {
+  flex-grow: 1;
 }
 
 /* Home.vue: text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-800 select-none */
