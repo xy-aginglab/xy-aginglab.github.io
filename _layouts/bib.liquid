@@ -147,12 +147,12 @@
           {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
         </div>
       </div>
-      <!-- "Read more →" link — matches Papers.vue -->
-      <div class="mt-4 md:mt-0 md:self-end">
-        {% if entry.doi %}
+      <!-- "Read more →" — links to DOI (equivalent to Bloom's paper detail page) -->
+      {% if entry.doi %}
+        <div class="mt-4 md:mt-0 md:self-end">
           <a class="text-base leading-6 font-medium text-custom-orange no-underline" href="https://doi.org/{{ entry.doi }}" target="_blank">Read more →</a>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 

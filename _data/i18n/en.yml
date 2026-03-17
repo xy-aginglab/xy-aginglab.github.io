@@ -3,7 +3,7 @@ nav:
   home: Home
   projects: Research
   publications: Publications
-  people: People
+  people: Team
   clinical: Clinical Research
   news: News
   software: Software
@@ -47,7 +47,7 @@ research:
     and developing targeted therapeutic drugs for key molecular pathways.
 
 people:
-  page_title: People
+  page_title: Meet the Team
   page_desc: Members of the Hunan Key Laboratory of Aging Biology
   pi: Principal Investigator
   basic_researchers: Basic Researchers

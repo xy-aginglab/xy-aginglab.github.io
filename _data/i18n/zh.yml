@@ -3,7 +3,7 @@ nav:
   home: 首页
   projects: 科研方向
   publications: 论文发表
-  people: 实验室成员
+  people: 团队成员
   clinical: 临床研究
   news: 新闻动态
   careers: 招聘信息
@@ -39,7 +39,7 @@ research:
     整合临床资源与动物及细胞模型，研究炎症性皮肤病（特别是损容性皮肤病，如玫瑰痤疮和痤疮等）的发病机制，并针对关键靶点进行治疗药物设计及研发。
 
 people:
-  page_title: 实验室成员
+  page_title: 团队介绍
   page_desc: 衰老生物学湖南省重点实验室成员
   pi: 实验室主任
   basic_researchers: 基础研究人员
