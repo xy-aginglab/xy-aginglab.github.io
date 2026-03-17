@@ -1,13 +1,23 @@
 ---
 layout: bloom
 ---
+{%- comment -%}
+  Matches Team.vue layout exactly:
+  - Large page title (text-3xl sm:text-4xl md:text-6xl)
+  - Full-width border-t divider
+  - Category sections with headings (text-xl md:text-4xl)
+  - TeamMembers grid with TeamMembersItem cards
+{%- endcomment -%}
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
 
-<div class="bloom-prose">
+<!-- Page header — matches Team.vue pt-6 pb-8 -->
+<div class="bloom-page-header">
   <h1>{{ t.people.page_title }}</h1>
-  <p style="color:var(--bloom-text-light)">{{ t.people.page_desc }}</p>
 </div>
+
+<!-- Full-width divider — matches Team.vue border-t border-gray-200 -->
+<hr class="bloom-page-divider">
 
 <!-- PI Section -->
 {% assign pi = site.data.members | where: 'role', 'pi' %}

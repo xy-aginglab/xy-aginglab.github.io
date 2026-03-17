@@ -1,32 +1,32 @@
 /* ============================================================================
    Bloom-inspired minimal academic theme
-   Visual style inspired by jbloomlab.github.io — all CSS written from scratch
+   Visual style 1:1 replicated from jbloomlab.github.io — all CSS written from scratch
+   Color mapping: custom-orange (#F26522) → our accent (#a72126)
    ============================================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap');
 
-/* --- Reset --- */
+/* --- Reset (matches Bloom style.css) --- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
+  color-scheme: light !important;
   --bloom-accent: #a72126;
   --bloom-accent-light: rgba(167, 33, 38, 0.1);
-  --bloom-text: #1f2937;
-  --bloom-text-light: #6b7280;
-  --bloom-text-lighter: #9ca3af;
+  --bloom-text: #1f2937;          /* gray-800 */
+  --bloom-text-700: #374151;      /* gray-700 */
+  --bloom-text-light: #6b7280;    /* gray-600 */
+  --bloom-text-lighter: #9ca3af;  /* gray-500 / gray-400 */
+  --bloom-text-500: #6b7280;      /* gray-500 */
   --bloom-bg: #ffffff;
-  --bloom-soft: #f6f6f7;
-  --bloom-border: #e5e7eb;
+  --bloom-soft: #f6f6f7;          /* custom-soft */
+  --bloom-border: #e5e7eb;        /* gray-200 */
   --bloom-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --bloom-font-logo: 'Space Grotesk', sans-serif;
-  --bloom-max-width: 896px;
-  --bloom-wide-max-width: 1024px;
 }
 
 body {
@@ -38,12 +38,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
 }
 
-/* --- Links --- */
+h1, h2, h3, h4, h5, h6, li, p {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 a {
-  color: inherit;
   text-decoration: underline;
+  color: inherit;
   transition: color 0.25s;
 }
 
@@ -56,19 +71,12 @@ img {
   height: auto;
 }
 
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  overflow-wrap: break-word;
+p img {
+  margin: 0 auto;
 }
 
 /* ============================================================================
-   NAVIGATION
+   NAVIGATION — matches NavBar.vue + NavBarTitle.vue + NavBarMenuItem.vue
    ============================================================================ */
 
 .bloom-nav {
@@ -80,13 +88,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bloom-nav__inner {
-  max-width: var(--bloom-wide-max-width);
-  margin: 0 auto;
-  padding: 0 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
   height: 56px;
+  user-select: none;
 }
 
 .bloom-nav__logo {
@@ -94,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none !important;
-  user-select: none;
 }
 
 .bloom-nav__logo-icon {
@@ -103,26 +110,31 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
+/* NavBarTitle.vue: .title { font-family: 'Space Grotesk'; } */
 .bloom-nav__logo-text {
   font-family: var(--bloom-font-logo);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--bloom-accent);
 }
 
+/* NavBarMenu.vue: flex container */
 .bloom-nav__links {
   display: flex;
   align-items: center;
 }
 
+/* NavBarMenuItem.vue: text-xl md:text-lg px-4 py-4 md:py-2 no-underline
+   inactive: text-gray-600, active: text-custom-orange */
 .bloom-nav__links a {
   text-decoration: none !important;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--bloom-text-light);
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: color 0.15s;
 }
 
@@ -132,7 +144,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .bloom-nav__links a.active {
   color: var(--bloom-accent);
-  font-weight: 500;
 }
 
 .bloom-nav__toggle {
@@ -145,10 +156,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.25rem;
 }
 
-/* Mobile nav */
+/* Mobile nav — matches NavBar.vue responsive classes */
 @media (max-width: 768px) {
   .bloom-nav__toggle {
-    display: block;
+    display: flex;
   }
 
   .bloom-nav__links {
@@ -157,11 +168,12 @@ h1, h2, h3, h4, h5, h6 {
     top: 56px;
     left: 0;
     right: 0;
-    background: var(--bloom-soft);
+    width: 100%;
+    height: 100vh;
+    background: rgba(246, 246, 247, 0.75);
     backdrop-filter: blur(8px);
     flex-direction: column;
-    padding: 0.75rem;
-    padding-bottom: 2.5rem;
+    padding: 2.5rem 0.75rem;
     z-index: 50;
   }
 
@@ -170,50 +182,97 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .bloom-nav__links a {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     padding: 1rem;
-    justify-content: center;
   }
 }
 
 /* ============================================================================
-   MAIN CONTENT
+   LAYOUT — matches Layout.vue
+   flex flex-col min-h-screen, main: flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl
    ============================================================================ */
+
+.bloom-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .bloom-main {
   flex: 1;
-  max-width: var(--bloom-max-width);
+  max-width: 48rem;  /* max-w-3xl = 768px */
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .bloom-main {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bloom-main {
+    max-width: 64rem;  /* lg:max-w-5xl = 1024px */
+  }
 }
 
 /* ============================================================================
-   HOME PAGE
+   HOME PAGE — matches Home.vue exactly
+   mx-auto max-w-4xl px-4 text-left flex flex-col
    ============================================================================ */
 
 .bloom-home {
-  padding: 3rem 0 2rem;
+  max-width: 56rem;  /* max-w-4xl = 896px */
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Home.vue: text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-800 select-none */
 .bloom-home__title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: 2.25rem;
   font-weight: 400;
   line-height: 1.1;
-  color: #1f2937;
+  color: var(--bloom-text);
   user-select: none;
 }
 
-.bloom-home__title strong {
-  display: block;
-  font-weight: 800;
+@media (min-width: 640px) {
+  .bloom-home__title { font-size: 3rem; }
+}
+@media (min-width: 768px) {
+  .bloom-home__title { font-size: 4.5rem; }
+}
+@media (min-width: 1024px) {
+  .bloom-home__title { font-size: 6rem; }
 }
 
+/* "block font-bold" */
+.bloom-home__title strong {
+  display: block;
+  font-weight: 700;
+}
+
+/* text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none */
 .bloom-home__tagline {
-  font-size: clamp(1.15rem, 2.5vw, 1.75rem);
+  font-size: 1.25rem;
   color: var(--bloom-text-light);
   margin-top: 0.5rem;
   user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bloom-home__tagline { font-size: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .bloom-home__tagline {
+    font-size: 1.875rem;
+    margin-top: 1rem;
+  }
 }
 
 .bloom-home__tagline em {
@@ -221,14 +280,27 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bloom-accent);
   background: var(--bloom-accent-light);
   padding: 0 0.15em;
-  transition: color 0.8s, background 0.8s;
 }
 
+/* text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12 */
 .bloom-home__body {
-  font-size: clamp(0.875rem, 1.2vw, 1.05rem);
-  color: var(--bloom-text-light);
+  font-size: 0.875rem;
+  color: var(--bloom-text-500);
   line-height: 1.75;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bloom-home__body {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .bloom-home__body {
+    font-size: 1.125rem;
+    margin-top: 3rem;
+  }
 }
 
 .bloom-home__body strong {
@@ -241,112 +313,179 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bloom-home__body p + p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .bloom-home__body p + p { margin-top: 1rem; }
+}
+@media (min-width: 1024px) {
+  .bloom-home__body p + p { margin-top: 1.5rem; }
+}
+
+/* CTA: text-center mt-8 md:mt-12 mb-2
+   no-underline text-gray-600 hover:text-gray-600 hover:shadow-md hover:shadow-custom-orange
+   rounded-lg bg-custom-soft p-2 overflow-hidden transition-shadow duration-200 */
+.bloom-home__cta-wrap {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .bloom-home__cta-wrap { margin-top: 3rem; }
 }
 
 .bloom-home__cta {
   display: inline-block;
-  margin-top: 2rem;
   text-decoration: none !important;
   color: var(--bloom-text-light) !important;
   background: var(--bloom-soft);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
-  transition: box-shadow 0.2s, color 0.2s;
+  font-size: 0.875rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .bloom-home__cta { font-size: 1rem; }
+}
+@media (min-width: 1024px) {
+  .bloom-home__cta { font-size: 1.125rem; }
 }
 
 .bloom-home__cta:hover {
-  box-shadow: 0 4px 12px rgba(167, 33, 38, 0.15);
   color: var(--bloom-text-light) !important;
+  box-shadow: 0 4px 6px -1px rgba(167, 33, 38, 0.1),
+              0 2px 4px -2px rgba(167, 33, 38, 0.1);
 }
 
 /* ============================================================================
-   SECTIONS (Research, Affiliations, Contact)
+   PAGE HEADER — matches Bloom's page header pattern
+   pt-6 pb-8 space-y-2 md:space-y-5, divider below
    ============================================================================ */
 
-.bloom-section {
-  margin-top: 2.5rem;
+.bloom-page-header {
   padding-top: 1.5rem;
-  border-top: 1px solid var(--bloom-border);
+  padding-bottom: 2rem;
 }
 
-.bloom-section h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-}
-
-/* Research list */
-.bloom-research-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--bloom-border);
-}
-
-.bloom-research-list li:last-child {
-  border-bottom: none;
-}
-
-.bloom-research-list h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.2rem;
-}
-
-.bloom-research-list p {
-  font-size: 0.93rem;
-  color: var(--bloom-text-light);
-  line-height: 1.65;
-}
-
-/* Affiliations */
-.bloom-affiliations li {
-  padding: 0.3rem 0;
-  font-size: 0.95rem;
-  color: var(--bloom-text-light);
-}
-
-.bloom-affiliations li::before {
-  content: "·";
-  margin-right: 0.5rem;
-  color: var(--bloom-accent);
+/* text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 tracking-tight */
+.bloom-page-header h1 {
+  font-size: 1.875rem;
   font-weight: 700;
+  color: var(--bloom-text);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
-/* Contact */
-.bloom-contact {
-  font-size: 0.95rem;
+@media (min-width: 640px) {
+  .bloom-page-header h1 { font-size: 2.25rem; }
+}
+@media (min-width: 768px) {
+  .bloom-page-header h1 { font-size: 3.75rem; line-height: 1; }
+}
+
+/* text-xl leading-8 text-gray-800 (Papers) or text-lg text-gray-600 (Blog) */
+.bloom-page-header p {
+  font-size: 1.125rem;
   color: var(--bloom-text-light);
-  line-height: 1.8;
+  margin-top: 0.5rem;
+  line-height: 1.6;
 }
 
-.bloom-contact__icons {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.bloom-contact__icons a {
-  font-size: 1.2rem;
-  color: var(--bloom-text-light);
-  text-decoration: none !important;
-}
-
-.bloom-contact__icons a:hover {
-  color: var(--bloom-accent);
+/* Divider after header — matches divide-y pattern */
+.bloom-page-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--bloom-border);
+  margin: 0;
 }
 
 /* ============================================================================
-   FOOTER
+   PROSE — matches Bloom's prose styles exactly
+   ============================================================================ */
+
+/* h1: text-4xl tracking-tight leading-tight font-bold */
+.bloom-prose h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+/* h2: text-2xl tracking-tight leading-8 font-semibold border-t mt-10 mb-4 pt-6 */
+.bloom-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 2rem;
+  border-top: 1px solid var(--bloom-border);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+/* h3: text-xl tracking-tight leading-7 font-semibold mt-8 mb-0 */
+.bloom-prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+/* p: text-base text-gray-700 leading-7 my-4 */
+.bloom-prose p {
+  font-size: 1rem;
+  color: var(--bloom-text-700);
+  line-height: 1.75rem;
+  margin: 1rem 0;
+}
+
+/* hr: visibility hidden (Bloom hides them, uses border-t on h2 instead) */
+.bloom-prose hr {
+  visibility: hidden;
+  margin: 0;
+}
+
+/* ul/ol: pl-5 my-4 */
+.bloom-prose ul,
+.bloom-prose ol {
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+}
+
+.bloom-prose ul { list-style: disc; }
+.bloom-prose ol { list-style: decimal; }
+
+/* li: text-gray-700 mb-1 */
+.bloom-prose li {
+  color: var(--bloom-text-700);
+  margin-bottom: 0.25rem;
+}
+
+/* blockquote: border-l-4 border-gray-200 pl-4 italic text-gray-600 */
+.bloom-prose blockquote {
+  border-left: 4px solid var(--bloom-border);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--bloom-text-light);
+}
+
+/* ============================================================================
+   FOOTER — matches Footer.vue
+   w-full p-4 bg-white text-center text-gray-400 text-sm
    ============================================================================ */
 
 .bloom-footer {
   width: 100%;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   background: var(--bloom-bg);
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--bloom-text-lighter);
 }
 
@@ -359,75 +498,596 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bloom-footer__switch {
-  margin-top: 0.4rem;
-  font-size: 0.82rem;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
 }
 
 /* ============================================================================
-   PROSE (for sub-pages using bloom layout)
+   PEOPLE PAGE — matches Team.vue + TeamMembersItem.vue exactly
    ============================================================================ */
 
-.bloom-prose h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+/* Team.vue category heading:
+   text-xl md:text-4xl sm:text-2xl leading-9 font-bold text-gray-800 tracking-tight
+   text-center md:text-left */
+.bloom-section {
+  margin: 1.5rem 0;
 }
 
-.bloom-prose h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  border-top: 1px solid var(--bloom-border);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
-}
-
-.bloom-prose h3 {
+.bloom-section h2 {
   font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bloom-text);
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .bloom-section h2 { font-size: 1.5rem; }
+}
+@media (min-width: 768px) {
+  .bloom-section h2 {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+}
+
+/* PI card — larger format */
+.bloom-pi-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.bloom-pi-card__photo {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.bloom-pi-card__photo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.bloom-pi-card__info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.bloom-pi-card__title {
+  font-size: 0.95rem;
+  color: var(--bloom-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.bloom-pi-card__bio {
+  font-size: 0.93rem;
+  color: var(--bloom-text-light);
+  line-height: 1.7;
+}
+
+.bloom-pi-card__links {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.bloom-pi-card__links a {
+  font-size: 1.1rem;
+  color: var(--bloom-text-light);
+  text-decoration: none !important;
+}
+
+.bloom-pi-card__links a:hover {
+  color: var(--bloom-accent);
+}
+
+@media (max-width: 640px) {
+  .bloom-pi-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bloom-pi-card__links {
+    justify-content: center;
+  }
+}
+
+/* Member grid */
+.bloom-people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+/* TeamMembersItem.vue — exact replication:
+   article: hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px
+            rounded-lg w-full h-full overflow-hidden transition-shadow duration-300
+   inner div: py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer
+   figure: relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow
+   img: absolute inset-0 w-full h-full object-cover
+   name h1: m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg
+   title p: m-0 font-medium text-gray-600 pt-1 text-base
+   links div: flex justify-center h-14 m-[-1rem -4rem -3rem] pt-4 px-3 */
+.bloom-member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.bloom-member-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
+              0 4px 6px -4px rgba(167, 33, 38, 0.1);
+}
+
+.bloom-member-card__inner {
+  padding: 1.5rem 1rem;
+  background: var(--bloom-soft);
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .bloom-member-card__inner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.bloom-member-card__photo {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 auto;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.bloom-member-card__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloom-member-card__name {
+  margin: 0;
+  padding-top: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  color: var(--bloom-text);
+  letter-spacing: 0.025em;
+  line-height: 1.75rem;
 }
 
-.bloom-prose p {
+.bloom-member-card__title {
+  margin: 0;
+  padding-top: 0.25rem;
   font-size: 1rem;
-  color: #374151;
-  line-height: 1.75;
-  margin: 1rem 0;
+  font-weight: 500;
+  color: var(--bloom-text-light);
 }
 
-.bloom-prose ul,
-.bloom-prose ol {
-  padding-left: 1.25rem;
-  margin: 1rem 0;
+.bloom-member-card__links {
+  display: flex;
+  justify-content: center;
+  height: 3.5rem;
+  padding-top: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.bloom-prose ul {
-  list-style: disc;
+.bloom-member-card__links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--bloom-text-light);
+  text-decoration: none !important;
+  transition: color 0.3s;
 }
 
-.bloom-prose ol {
-  list-style: decimal;
+.bloom-member-card__links a:hover {
+  color: var(--bloom-accent);
 }
 
-.bloom-prose li {
-  color: #374151;
+/* ============================================================================
+   PUBLICATIONS — matches Papers.vue list format exactly
+   ============================================================================ */
+
+/* Bib search — full width input */
+.bib-search,
+.bibsearch-form-input,
+#bibsearch {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--bloom-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: var(--bloom-font);
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+#bibsearch:focus,
+.bibsearch-form-input:focus {
+  border-color: var(--bloom-accent);
+}
+
+.publications {
+  margin-top: 0;
+}
+
+.publications ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Papers.vue All Papers list item: py-12, divide-y divide-gray-200 */
+.bib-row {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--bloom-border);
+}
+
+@media (min-width: 768px) {
+  .bib-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.bib-row:last-child {
+  border-bottom: none;
+}
+
+/* Papers.vue thumbnail: hidden md:block md:flex-none lg:w-48 lg:h-48 md:w-32 md:h-32 md:mr-4 */
+.bib-thumb {
+  display: none;
+  flex: none;
+}
+
+@media (min-width: 768px) {
+  .bib-thumb {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bib-thumb {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.bib-thumb img.preview {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.bib-thumb .badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bloom-soft);
+  color: var(--bloom-text-light);
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.bib-thumb .badge a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Papers.vue content area: space-y-5 md:flex-grow */
+.bib-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Title: text-2xl leading-8 font-bold tracking-tight
+   a: text-gray-900 hover:text-gray-900 text-xl md:text-2xl no-underline */
+.bib-content .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bloom-text);
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .bib-content .title { font-size: 1.5rem; }
+}
+
+.bib-content .title a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.bib-content .title a:hover {
+  color: #111827;
+}
+
+/* Authors: max-w-none text-gray-700 hidden lg:block */
+.bib-content .author {
+  font-size: 0.95rem;
+  color: var(--bloom-text-700);
+  line-height: 1.5;
   margin-bottom: 0.25rem;
 }
 
-.bloom-prose hr {
-  border: none;
-  border-top: 1px solid var(--bloom-border);
-  margin: 2rem 0;
+.bib-content .author em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--bloom-text);
 }
 
-.bloom-prose blockquote {
-  border-left: 4px solid #e5e7eb;
-  padding-left: 1rem;
+.bib-content .author a {
+  color: inherit;
+}
+
+/* Journal: italic + year + doi link — max-w-none text-gray-500 */
+.bib-content .periodical {
+  font-size: 0.9rem;
+  color: var(--bloom-text-lighter);
+  margin-bottom: 0.5rem;
+}
+
+.bib-content .periodical em {
   font-style: italic;
+}
+
+/* "Read more →" link: text-base leading-6 font-medium text-custom-orange no-underline */
+.bib-content .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.bib-btn {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--bloom-text-light) !important;
+  background: var(--bloom-soft);
+  border: 1px solid var(--bloom-border);
+  border-radius: 4px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.bib-btn:hover {
+  color: var(--bloom-accent) !important;
+  border-color: var(--bloom-accent);
+}
+
+.bib-hidden {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: var(--bloom-soft);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.65;
   color: var(--bloom-text-light);
+}
+
+.bib-hidden.is-open {
+  display: block;
+}
+
+.bib-content .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.bib-content .badges img {
+  height: 18px;
+}
+
+.bib-content .more-authors {
+  cursor: pointer;
+  color: var(--bloom-accent);
+  font-weight: 500;
+}
+
+/* Year group headers */
+.publications h2.year,
+.publications h2.bibliography {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--bloom-text);
+  letter-spacing: -0.025em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bloom-border);
+}
+
+/* ============================================================================
+   NEWS — matches Blog.vue layout
+   divide-y divide-gray-200, li py-12
+   article: space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline
+   date left column, content right in xl:col-span-3
+   ============================================================================ */
+
+.news {
+  margin-top: 0;
+}
+
+.news .table-responsive {
+  overflow-x: visible;
+}
+
+.news .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Each row = a "post" item with divider */
+.news .table tr {
+  border-bottom: 1px solid var(--bloom-border);
+}
+
+.news .table tr:last-child {
+  border-bottom: none;
+}
+
+.news .table th,
+.news .table td {
+  padding: 3rem 0;
+  vertical-align: baseline;
+  text-align: left;
+}
+
+/* Date column — like Blog.vue's Date component */
+.news .table th {
+  font-weight: 400;
+  color: var(--bloom-text-lighter);
+  white-space: nowrap;
+  padding-right: 2rem;
+  font-size: 0.875rem;
+  width: 1%;
+}
+
+/* Content column */
+.news .table td {
+  color: var(--bloom-text);
+}
+
+/* Title link: text-2xl leading-8 font-bold tracking-tight no-underline text-gray-900 */
+.news .table td a.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 2rem;
+  color: #111827;
+  text-decoration: none;
+}
+
+.news .table td a.news-title:hover {
+  color: #111827;
+}
+
+/* Inline news content */
+.news .table td .news-inline-content {
+  color: var(--bloom-text-lighter);
+}
+
+/* ============================================================================
+   PROJECTS / RESEARCH — matches Research.vue + card hover style
+   ============================================================================ */
+
+.projects {
+  margin-top: 0;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Project cards: same style as TeamMembersItem —
+   hover:shadow-lg hover:shadow-custom-orange rounded-lg overflow-hidden */
+.projects .grid .grid-item,
+.projects .card {
+  background: var(--bloom-soft);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.projects .grid .grid-item:hover,
+.projects .card:hover {
+  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
+              0 4px 6px -4px rgba(167, 33, 38, 0.1);
+}
+
+.projects .card img {
+  width: 100%;
+  height: auto;
+}
+
+.projects .card .card-body {
+  padding: 1rem;
+}
+
+.projects .card .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--bloom-text);
+}
+
+.projects .card .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects .card .card-text {
+  font-size: 0.88rem;
+  color: var(--bloom-text-light);
+  line-height: 1.6;
+}
+
+.projects h2.category {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--bloom-text);
+  margin: 1.5rem 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bloom-border);
+}
+
+.projects h2.category a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* lab-project-card-link: remove underline */
+a.lab-project-card-link {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* ============================================================================
+   SECTIONS (generic, used in people page etc.)
+   ============================================================================ */
+
+/* Bloom divider between header and content */
+.bloom-section + .bloom-section {
+  border-top: none;
 }
 
 /* ============================================================================
@@ -564,505 +1224,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================================
-   PEOPLE PAGE
+   RESEARCH AIMS (for research content pages with images)
+   Matches Research.vue styles
    ============================================================================ */
 
-.bloom-pi-card {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.bloom-pi-card__photo {
-  flex-shrink: 0;
-  width: 180px;
-}
-
-.bloom-pi-card__photo img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.bloom-pi-card__info h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
-}
-
-.bloom-pi-card__title {
-  font-size: 0.95rem;
-  color: var(--bloom-text-light);
-  margin-bottom: 0.75rem;
-}
-
-.bloom-pi-card__bio {
-  font-size: 0.93rem;
-  color: var(--bloom-text-light);
-  line-height: 1.7;
-}
-
-.bloom-pi-card__links {
-  margin-top: 0.75rem;
-  display: flex;
-  gap: 0.75rem;
-}
-
-.bloom-pi-card__links a {
-  font-size: 1.1rem;
-  color: var(--bloom-text-light);
-  text-decoration: none !important;
-}
-
-.bloom-pi-card__links a:hover {
-  color: var(--bloom-accent);
-}
-
-.bloom-people-grid {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  gap: 1.5rem;
-}
-
-.bloom-member-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  border-radius: 0.5rem;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.bloom-member-card:hover {
-  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
-              0 4px 6px -4px rgba(167, 33, 38, 0.1);
-}
-
-.bloom-member-card__inner {
-  padding: 1.5rem 1rem 2rem;
-  background: var(--bloom-soft);
-  flex-grow: 1;
-  text-align: center;
-}
-
-.bloom-member-card__photo {
-  position: relative;
-  flex-shrink: 0;
-  margin: 0 auto;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-}
-
-.bloom-member-card__photo img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.bloom-member-card__name {
-  margin: 0;
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--bloom-text);
-  letter-spacing: 0.025em;
-  line-height: 1.75;
-}
-
-.bloom-member-card__title {
-  margin: 0;
-  margin-top: 0.25rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--bloom-text-light);
-}
-
-.bloom-member-card__links {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  margin-top: 1rem;
-  padding: 0 0.75rem;
-  height: 2.25rem;
-}
-
-.bloom-member-card__links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: var(--bloom-text-light);
-  text-decoration: none !important;
-  transition: color 0.3s;
-}
-
-.bloom-member-card__links a:hover {
-  color: var(--bloom-accent);
-}
-
-@media (max-width: 640px) {
-  .bloom-pi-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .bloom-pi-card__links {
-    justify-content: center;
-  }
-}
-
-/* ============================================================================
-   PAGE HEADER (bloom-page layout)
-   ============================================================================ */
-
-.bloom-page-header {
-  padding: 1.5rem 0 2rem;
-  border-bottom: 1px solid var(--bloom-border);
-  margin-bottom: 2rem;
-}
-
-.bloom-page-header h1 {
-  font-size: clamp(1.875rem, 4vw, 3.75rem);
-  font-weight: 700;
-  color: var(--bloom-text);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.bloom-page-header p {
-  font-size: 1.15rem;
-  color: var(--bloom-text-light);
-  margin-top: 0.5rem;
-  line-height: 1.6;
-}
-
-/* ============================================================================
-   PUBLICATIONS (override bib.liquid classes)
-   ============================================================================ */
-
-.publications {
-  margin-top: 1rem;
-}
-
-.publications ol {
-  list-style: none;
-  padding: 0;
-}
-
-.bib-row {
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--bloom-border);
-}
-
-.bib-row:last-child {
-  border-bottom: none;
-}
-
-.bib-thumb {
-  flex-shrink: 0;
-  width: 120px;
-}
-
-.bib-thumb img.preview {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.bib-thumb .badge {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: var(--bloom-soft);
-  color: var(--bloom-text-light);
-  border-radius: 4px;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.bib-thumb .badge a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.bib-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.bib-content .title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--bloom-text);
-  line-height: 1.4;
-  margin-bottom: 0.3rem;
-}
-
-.bib-content .author {
-  font-size: 0.88rem;
-  color: var(--bloom-text-light);
-  line-height: 1.5;
-  margin-bottom: 0.2rem;
-}
-
-.bib-content .author em {
-  font-style: normal;
-  font-weight: 600;
-  color: var(--bloom-text);
-}
-
-.bib-content .author a {
-  color: inherit;
-}
-
-.bib-content .periodical {
-  font-size: 0.85rem;
+.bloom-research-aims p {
+  font-size: 0.875rem;
   color: var(--bloom-text-lighter);
-  margin-bottom: 0.4rem;
-}
-
-.bib-content .periodical em {
-  font-style: italic;
-}
-
-.bib-content .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
   margin-top: 0.5rem;
 }
 
-.bib-btn {
-  display: inline-block;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--bloom-text-light) !important;
-  background: var(--bloom-soft);
-  border: 1px solid var(--bloom-border);
-  border-radius: 4px;
-  text-decoration: none !important;
-  cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+@media (min-width: 768px) {
+  .bloom-research-aims p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .bloom-research-aims p {
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+  }
 }
 
-.bib-btn:hover {
-  color: var(--bloom-accent) !important;
-  border-color: var(--bloom-accent);
+.bloom-research-aims img {
+  margin: 1rem auto;
+  max-width: 24rem;
 }
 
-.bib-hidden {
-  display: none;
-  margin-top: 0.75rem;
-  padding: 1rem;
-  background: var(--bloom-soft);
-  border-radius: 6px;
-  font-size: 0.88rem;
-  line-height: 1.65;
-  color: var(--bloom-text-light);
+@media (min-width: 768px) {
+  .bloom-research-aims img {
+    float: left;
+    margin-right: 1rem;
+    max-width: 28rem;
+  }
 }
 
-.bib-hidden.is-open {
-  display: block;
-}
-
-.bib-content .badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.4rem;
-}
-
-.bib-content .badges img {
-  height: 18px;
-}
-
-.bib-content .more-authors {
-  cursor: pointer;
-  color: var(--bloom-accent);
-  font-weight: 500;
-}
-
-/* Year group headers */
-.publications h2.year,
-.publications h2.bibliography {
+.bloom-research-aims h2 {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--bloom-text);
-  margin-top: 2rem;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--bloom-border);
-}
-
-/* Bib search */
-.bib-search {
-  margin-bottom: 1rem;
-}
-
-.bib-search input {
-  width: 100%;
-  padding: 0.6rem 1rem;
-  border: 1px solid var(--bloom-border);
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-family: var(--bloom-font);
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.bib-search input:focus {
-  border-color: var(--bloom-accent);
-}
-
-@media (max-width: 640px) {
-  .bib-row {
-    flex-direction: column;
-  }
-
-  .bib-thumb {
-    width: 100%;
-    max-width: 200px;
-  }
-}
-
-/* ============================================================================
-   NEWS (override news.liquid classes)
-   ============================================================================ */
-
-.news {
-  margin-top: 1rem;
-}
-
-.news .table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.news .table tr {
-  border-bottom: 1px solid var(--bloom-border);
-}
-
-.news .table tr:last-child {
-  border-bottom: none;
-}
-
-.news .table th,
-.news .table td {
-  padding: 0.75rem 0;
-  vertical-align: top;
-  text-align: left;
-  font-size: 0.95rem;
-}
-
-.news .table th {
-  font-weight: 500;
-  color: var(--bloom-text-lighter);
-  white-space: nowrap;
-  padding-right: 1.5rem;
-  font-size: 0.85rem;
-}
-
-.news .table td {
-  color: var(--bloom-text);
-}
-
-.news .table td a.news-title {
-  font-weight: 500;
-  color: var(--bloom-text);
-}
-
-.news .table td a.news-title:hover {
-  color: var(--bloom-accent);
-}
-
-/* ============================================================================
-   PROJECTS / RESEARCH (override projects.liquid classes)
-   ============================================================================ */
-
-.projects {
-  margin-top: 1rem;
-}
-
-.projects .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.projects .grid .grid-item,
-.projects .card {
-  background: var(--bloom-soft);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.3s;
-}
-
-.projects .grid .grid-item:hover,
-.projects .card:hover {
-  box-shadow: 0 4px 16px rgba(167, 33, 38, 0.12);
-}
-
-.projects .card img {
-  width: 100%;
-  height: auto;
-}
-
-.projects .card .card-body {
-  padding: 1rem;
-}
-
-.projects .card .card-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--bloom-text);
-}
-
-.projects .card .card-title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.projects .card .card-text {
-  font-size: 0.88rem;
   color: var(--bloom-text-light);
-  line-height: 1.6;
-}
-
-.projects h2.category {
-  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--bloom-text);
-  margin: 1.5rem 0 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--bloom-border);
+  text-decoration: underline;
 }
 
-.projects h2.category a {
-  color: inherit;
-  text-decoration: none;
+@media (min-width: 768px) {
+  .bloom-research-aims h2 { font-size: 1.875rem; margin-top: 1.5rem; }
 }
-
-/* ============================================================================
-   UTILITY
-   ============================================================================ */
-
-.bloom-app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@media (min-width: 1024px) {
+  .bloom-research-aims h2 { font-size: 2.25rem; margin-top: 3rem; }
 }

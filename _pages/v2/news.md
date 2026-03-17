@@ -1,8 +1,8 @@
 ---
 layout: bloom-page
 permalink: /v2/news/
-title: News
-description: Latest news and updates from the lab.
+title: Lab Blog
+description: A collection of news and updates from the Aging Biology Lab.
 ---
 
 {% include news.liquid %}
