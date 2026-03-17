@@ -56,40 +56,40 @@
       <div class="mx-auto max-w-4xl">
         <!-- Journal + Year -->
         <div class="flex items-center divide-x divide-gray-300 text-gray-500 mb-3">
-          {% if page.entry.journal %}
-            <span class="pr-3 italic text-lg">{{ page.entry.journal }}</span>
-          {% elsif page.entry.booktitle %}
-            <span class="pr-3 italic text-lg">{{ page.entry.booktitle }}</span>
+          {% if entry.journal %}
+            <span class="pr-3 italic text-lg">{{ entry.journal }}</span>
+          {% elsif entry.booktitle %}
+            <span class="pr-3 italic text-lg">{{ entry.booktitle }}</span>
           {% endif %}
-          {% if page.entry.year %}
-            <span class="pl-3 text-lg">{{ page.entry.year }}</span>
+          {% if entry.year %}
+            <span class="pl-3 text-lg">{{ entry.year }}</span>
           {% endif %}
         </div>
 
         <!-- Title -->
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight my-3">
-          {{ page.entry.title }}
+          {{ page.title }}
         </h1>
 
         <!-- Authors -->
-        {% if page.entry.author %}
+        {% if entry.author %}
           <p class="text-gray-500 font-medium text-lg my-3">
-            {{ page.entry.author }}
+            {{ entry.author }}
           </p>
         {% endif %}
 
         <!-- DOI -->
-        {% if page.entry.doi %}
+        {% if entry.doi %}
           <p class="text-gray-500 my-3">
-            <a href="https://doi.org/{{ page.entry.doi }}">doi:{{ page.entry.doi }}</a>
+            <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>
           </p>
         {% endif %}
 
         <!-- Abstract -->
-        {% if page.entry.abstract %}
+        {% if entry.abstract %}
           <div class="mt-6 pt-6 border-t border-gray-200">
             <h2 class="text-xl font-semibold text-gray-800 mb-3">Abstract</h2>
-            <p class="text-gray-700 leading-7">{{ page.entry.abstract }}</p>
+            <p class="text-gray-700 leading-7">{{ entry.abstract }}</p>
           </div>
         {% endif %}
 
