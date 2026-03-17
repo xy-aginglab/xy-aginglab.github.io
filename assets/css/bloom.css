@@ -625,9 +625,10 @@ p img {
   cursor: pointer;
 }
 
+/* Bloom uses hover:shadow-lg hover:shadow-custom-orange — strong colored shadow */
 .bloom-member-card:hover {
-  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
-              0 4px 6px -4px rgba(167, 33, 38, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.3),
+              0 4px 6px -4px rgba(167, 33, 38, 0.2);
 }
 
 .bloom-member-card__inner {
@@ -738,7 +739,8 @@ p img {
   padding: 0;
 }
 
-/* Papers.vue All Papers list item: py-12, divide-y divide-gray-200 */
+/* Papers.vue All Papers list item: py-12, divide-y divide-gray-200
+   flex flex-col md:flex-row items-start */
 .bib-row {
   display: flex;
   flex-direction: column;
@@ -755,6 +757,11 @@ p img {
 
 .bib-row:last-child {
   border-bottom: none;
+}
+
+/* When no thumbnail, content should not have left gap */
+.bib-row > .bib-content:first-child {
+  width: 100%;
 }
 
 /* Papers.vue thumbnail: hidden md:block md:flex-none lg:w-48 lg:h-48 md:w-32 md:h-32 md:mr-4 */
@@ -860,6 +867,11 @@ p img {
 
 .bib-content .periodical em {
   font-style: italic;
+}
+
+/* DOI link in periodical — styled like Bloom's doi link */
+.bib-content .periodical a {
+  color: var(--bloom-accent);
 }
 
 /* "Read more →" link: text-base leading-6 font-medium text-custom-orange no-underline */
@@ -1030,8 +1042,8 @@ p img {
 
 .projects .grid .grid-item:hover,
 .projects .card:hover {
-  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
-              0 4px 6px -4px rgba(167, 33, 38, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.3),
+              0 4px 6px -4px rgba(167, 33, 38, 0.2);
 }
 
 .projects .card img {
