@@ -191,7 +191,7 @@ scholar:
 
   details_dir: bibliography
   details_layout: paper-detail
-  details_link: Details
+  details_link: ""
 
   query: "@*"
   group_by: year
