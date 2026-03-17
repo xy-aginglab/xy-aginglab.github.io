@@ -62,8 +62,8 @@
   <div id="app" class="flex flex-col min-h-screen">
 
     <!-- NavBar.vue: flex justify-between items-center w-full px-4 select-none -->
-    <nav class="bloom-nav sticky top-0 z-50 bg-white mb-4">
-      <div class="flex justify-between items-center w-full px-4 select-none" style="height:56px">
+    <nav class="bloom-nav p-4">
+      <div class="flex justify-between items-center w-full px-4 select-none">
         <!-- NavBarTitle.vue -->
         <a href="/v2/" class="flex items-center no-underline">
           <span class="bloom-logo-text text-lg font-bold text-custom-orange">
@@ -80,7 +80,7 @@
           <a href="/v2/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Research</a>
           <a href="/v2/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Publications</a>
           <a href="/v2/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Clinical</a>
-          <a href="/v2/people/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">People</a>
+          <a href="/v2/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Team</a>
           <a href="/v2/news/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">News</a>
           <a href="/v2/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Careers</a>
         </div>
@@ -99,7 +99,7 @@
     <!-- text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none -->
     <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none">
       where we study the mechanisms of
-      <span class="italic" style="color:#a72126;background:rgba(167,33,38,0.1)">skin aging, hair follicle regeneration, and inflammatory skin diseases.</span>
+      <span id="rotating-text" class="italic" style="color:#a72126;background:rgba(167,33,38,0.1)">skin aging</span>
     </p>
     <!-- text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12 -->
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12">
@@ -125,6 +125,52 @@
       more about our research</a>
   </div>
 </div>
+
+<!-- Rotating text animation — matches Bloom Lab Home.vue virus name cycling -->
+<script>
+(function() {
+  var items = [
+    { text: 'skin aging', color: '#a72126', bg: 'rgba(167,33,38,0.1)' },
+    { text: 'hair follicle regeneration', color: '#16a34a', bg: 'rgba(22,163,74,0.1)' },
+    { text: 'inflammatory skin diseases', color: '#2563eb', bg: 'rgba(37,99,235,0.1)' }
+  ];
+  var el = document.getElementById('rotating-text');
+  if (!el) return;
+  var index = 0;
+  var charIndex = 0;
+  var deleting = false;
+  var pauseEnd = 0;
+
+  function tick() {
+    var now = Date.now();
+    if (now < pauseEnd) { requestAnimationFrame(tick); return; }
+
+    var item = items[index];
+    if (!deleting) {
+      charIndex++;
+      el.textContent = item.text.substring(0, charIndex);
+      el.style.color = item.color;
+      el.style.background = item.bg;
+      if (charIndex === item.text.length) {
+        deleting = true;
+        pauseEnd = now + 2000;
+      }
+    } else {
+      charIndex--;
+      el.textContent = item.text.substring(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        index = (index + 1) % items.length;
+      }
+    }
+    setTimeout(tick, deleting ? 30 : 60);
+  }
+  // Start after a brief pause
+  pauseEnd = Date.now() + 1500;
+  tick();
+})();
+</script>
+
 
     </main>
 
