@@ -69,7 +69,10 @@
    ============================================================================ */
 
 .publications { margin-top: 0; }
-.publications ol { list-style: none; padding: 0; }
+.publications ol, .publications ul { list-style: none; padding: 0; margin: 0; }
+/* Papers.vue: ul divide-y divide-gray-200 */
+.publications ol > li, .publications ul > li { border-bottom: 1px solid #e5e7eb; }
+.publications ol > li:last-child, .publications ul > li:last-child { border-bottom: none; }
 
 /* Bib search input */
 #bibsearch, .bibsearch-form-input, .search {
@@ -89,106 +92,7 @@
   border-color: #a72126;
 }
 
-/* Papers.vue: li py-12, divide-y divide-gray-200 */
-.bib-row {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-@media (min-width: 768px) {
-  .bib-row {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-
-.bib-row:last-child { border-bottom: none; }
-
-/* Papers.vue thumbnail: hidden md:block md:flex-none lg:w-48 lg:h-48 md:w-32 md:h-32 md:mr-4 */
-.bib-thumb {
-  display: none;
-  flex: none;
-}
-
-@media (min-width: 768px) {
-  .bib-thumb { display: block; width: 8rem; height: 8rem; margin-right: 1rem; }
-}
-
-@media (min-width: 1024px) {
-  .bib-thumb { width: 12rem; height: 12rem; }
-}
-
-.bib-thumb img.preview {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-.bib-thumb .badge {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: #f6f6f7;
-  color: #6b7280;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.bib-thumb .badge a { color: inherit; text-decoration: none; }
-
-/* Content: space-y-5 md:flex-grow */
-.bib-content { flex: 1; min-width: 0; }
-
-/* Title: text-2xl leading-8 font-bold tracking-tight */
-.bib-content .title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1f2937;
-  line-height: 2rem;
-  letter-spacing: -0.025em;
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .bib-content .title { font-size: 1.5rem; }
-}
-
-.bib-content .title a { color: #111827; text-decoration: none; }
-.bib-content .title a:hover { color: #111827; }
-
-/* Authors: text-gray-700 */
-.bib-content .author {
-  font-size: 0.95rem;
-  color: #374151;
-  line-height: 1.5;
-  margin-bottom: 0.25rem;
-}
-
-.bib-content .author em { font-style: normal; font-weight: 600; color: #1f2937; }
-.bib-content .author a { color: inherit; }
-
-/* Journal: italic, text-gray-500 */
-.bib-content .periodical {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 0.5rem;
-}
-
-.bib-content .periodical em { font-style: italic; }
-.bib-content .periodical a { color: #a72126; }
-
-/* Links/buttons row */
-.bib-content .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 1rem;
-}
+/* Legacy bib-content styles (kept for compatibility) */
 
 .bib-btn {
   display: inline-block;
@@ -222,9 +126,7 @@
 
 .bib-hidden.is-open { display: block; }
 
-.bib-content .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
-.bib-content .badges img { height: 18px; }
-.bib-content .more-authors { cursor: pointer; color: #a72126; font-weight: 500; }
+/* Badges kept for jekyll-scholar compatibility */
 
 /* Year headers */
 .publications h2.year,
