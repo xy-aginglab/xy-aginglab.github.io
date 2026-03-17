@@ -1,0 +1,92 @@
+---
+layout: bloom
+---
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+
+<div class="bloom-prose">
+  <h1>{{ t.people.page_title }}</h1>
+  <p style="color:var(--bloom-text-light)">{{ t.people.page_desc }}</p>
+</div>
+
+<!-- PI Section -->
+{% assign pi = site.data.members | where: 'role', 'pi' %}
+{% if pi.size > 0 %}
+  <div class="bloom-section">
+    <h2>{{ t.people.pi }}</h2>
+    {% for member in pi %}
+      <div class="bloom-pi-card">
+        <div class="bloom-pi-card__photo">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        <div class="bloom-pi-card__info">
+          <h3>
+            {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
+          </h3>
+          <p class="bloom-pi-card__title">
+            {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+          </p>
+          <p class="bloom-pi-card__bio">
+            {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
+          </p>
+          <div class="bloom-pi-card__links">
+            {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+            {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+            {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- Basic Researchers -->
+{% assign basic = site.data.members | where: 'role', 'basic_researcher' %}
+{% if basic.size > 0 %}
+  <div class="bloom-section">
+    <h2>{{ t.people.basic_researchers }}</h2>
+    <div class="bloom-people-grid">
+      {% for member in basic %}
+        <div class="bloom-member-card">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Clinical Researchers -->
+{% assign clinical = site.data.members | where: 'role', 'clinical_researcher' %}
+{% if clinical.size > 0 %}
+  <div class="bloom-section">
+    <h2>{{ t.people.clinical_researchers }}</h2>
+    <div class="bloom-people-grid">
+      {% for member in clinical %}
+        <div class="bloom-member-card">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<!-- Technicians -->
+{% assign techs = site.data.members | where: 'role', 'technician' %}
+{% if techs.size > 0 %}
+  <div class="bloom-section">
+    <h2>{{ t.people.technicians }}</h2>
+    <div class="bloom-people-grid">
+      {% for member in techs %}
+        <div class="bloom-member-card">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
