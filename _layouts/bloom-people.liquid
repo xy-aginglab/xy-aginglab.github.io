@@ -48,9 +48,18 @@ layout: bloom
     <div class="bloom-people-grid">
       {% for member in basic %}
         <div class="bloom-member-card">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+          <div class="bloom-member-card__inner">
+            <div class="bloom-member-card__photo">
+              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </div>
+            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+            <div class="bloom-member-card__links">
+              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+            </div>
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -65,9 +74,18 @@ layout: bloom
     <div class="bloom-people-grid">
       {% for member in clinical %}
         <div class="bloom-member-card">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+          <div class="bloom-member-card__inner">
+            <div class="bloom-member-card__photo">
+              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </div>
+            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+            <div class="bloom-member-card__links">
+              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+            </div>
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -82,9 +100,18 @@ layout: bloom
     <div class="bloom-people-grid">
       {% for member in techs %}
         <div class="bloom-member-card">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-          <h4>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-          <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+          <div class="bloom-member-card__inner">
+            <div class="bloom-member-card__photo">
+              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </div>
+            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
+            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
+            <div class="bloom-member-card__links">
+              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+            </div>
+          </div>
         </div>
       {% endfor %}
     </div>

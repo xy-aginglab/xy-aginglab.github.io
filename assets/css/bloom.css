@@ -618,32 +618,95 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bloom-people-grid {
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   gap: 1.5rem;
 }
 
 .bloom-member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.bloom-member-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(167, 33, 38, 0.1),
+              0 4px 6px -4px rgba(167, 33, 38, 0.1);
+}
+
+.bloom-member-card__inner {
+  padding: 1.5rem 1rem 2rem;
+  background: var(--bloom-soft);
+  flex-grow: 1;
   text-align: center;
 }
 
-.bloom-member-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+.bloom-member-card__photo {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 auto;
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
-  margin-bottom: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
-.bloom-member-card h4 {
-  font-size: 0.95rem;
+.bloom-member-card__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloom-member-card__name {
+  margin: 0;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.15rem;
+  color: var(--bloom-text);
+  letter-spacing: 0.025em;
+  line-height: 1.75;
 }
 
-.bloom-member-card p {
-  font-size: 0.82rem;
+.bloom-member-card__title {
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--bloom-text-light);
+}
+
+.bloom-member-card__links {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 1rem;
+  padding: 0 0.75rem;
+  height: 2.25rem;
+}
+
+.bloom-member-card__links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--bloom-text-light);
+  text-decoration: none !important;
+  transition: color 0.3s;
+}
+
+.bloom-member-card__links a:hover {
+  color: var(--bloom-accent);
 }
 
 @media (max-width: 640px) {
