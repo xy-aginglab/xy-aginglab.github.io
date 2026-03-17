@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/bloom.css' | relative_url }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+</head>
+<body>
+  {% assign lang = page.lang | default: 'en' %}
+  {% assign t = site.data.i18n[lang] %}
+
+  <header class="bloom-header">
+    <div class="bloom-header__inner">
+      <a class="bloom-header__logo" href="{{ page.lang == 'zh' | if: '/zh/v2/', '/v2/' | relative_url }}">
+        {% if lang == 'zh' %}衰老生物学湖南省重点实验室{% else %}{{ site.title }}{% endif %}
+      </a>
+      <button class="bloom-header__toggle" aria-label="Toggle menu" onclick="this.closest('.bloom-header').classList.toggle('is-open')">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="bloom-header__nav">
+        <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Research</a>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>Publications</a>
+        <a href="{{ '/clinical/' | relative_url }}" {% if page.url contains '/clinical' %}class="active"{% endif %}>Clinical</a>
+        <a href="{{ '/people/' | relative_url }}" {% if page.url contains '/people' %}class="active"{% endif %}>People</a>
+        <a href="{{ '/news/' | relative_url }}" {% if page.url contains '/news' %}class="active"{% endif %}>News</a>
+        <a href="{{ '/careers/' | relative_url }}" {% if page.url contains '/careers' %}class="active"{% endif %}>Careers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bloom-main">
+    {{ content }}
+  </main>
+
+  <footer class="bloom-footer">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p class="bloom-footer__switch"><a href="/v1/">Switch to Version A</a> · <a href="/">Back to chooser</a></p>
+  </footer>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 layout: about
 title: Home
-permalink: /
+permalink: /v1/
 subtitle: >
   Xiangya Hospital, Central South University · Department of Dermatology
 
