@@ -564,6 +564,101 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================================
+   PEOPLE PAGE
+   ============================================================================ */
+
+.bloom-pi-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.bloom-pi-card__photo {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.bloom-pi-card__photo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.bloom-pi-card__info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.bloom-pi-card__title {
+  font-size: 0.95rem;
+  color: var(--bloom-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.bloom-pi-card__bio {
+  font-size: 0.93rem;
+  color: var(--bloom-text-light);
+  line-height: 1.7;
+}
+
+.bloom-pi-card__links {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.bloom-pi-card__links a {
+  font-size: 1.1rem;
+  color: var(--bloom-text-light);
+  text-decoration: none !important;
+}
+
+.bloom-pi-card__links a:hover {
+  color: var(--bloom-accent);
+}
+
+.bloom-people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.bloom-member-card {
+  text-align: center;
+}
+
+.bloom-member-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.bloom-member-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.bloom-member-card p {
+  font-size: 0.82rem;
+  color: var(--bloom-text-light);
+}
+
+@media (max-width: 640px) {
+  .bloom-pi-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bloom-pi-card__links {
+    justify-content: center;
+  }
+}
+
+/* ============================================================================
    UTILITY
    ============================================================================ */
 
