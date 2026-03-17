@@ -1,48 +1,47 @@
 ---
 layout: bloom
 ---
-{%- comment -%}
-  Matches Team.vue layout exactly:
-  - Large page title (text-3xl sm:text-4xl md:text-6xl)
-  - Full-width border-t divider
-  - Category sections with headings (text-xl md:text-4xl)
-  - TeamMembers grid with TeamMembersItem cards
-{%- endcomment -%}
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
 
-<!-- Page header — matches Team.vue pt-6 pb-8 -->
-<div class="bloom-page-header">
-  <h1>{{ t.people.page_title }}</h1>
+<!-- Team.vue: pt-6 pb-8 space-y-2 md:space-y-5 -->
+<div class="pt-6 pb-8 space-y-2 md:space-y-5">
+  <h1 class="text-3xl leading-9 font-bold text-gray-800 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+    {{ t.people.page_title }}
+  </h1>
 </div>
-
-<!-- Full-width divider — matches Team.vue border-t border-gray-200 -->
-<hr class="bloom-page-divider">
+<!-- Team.vue: w-full border-t border-gray-200 -->
+<div class="w-full border-t border-gray-200"></div>
 
 <!-- PI Section -->
 {% assign pi = site.data.members | where: 'role', 'pi' %}
 {% if pi.size > 0 %}
-  <div class="bloom-section">
-    <h2>{{ t.people.pi }}</h2>
+  <div class="category-section my-6">
+    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
+      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+        {{ t.people.pi }}
+      </h1>
+    </div>
     {% for member in pi %}
-      <div class="bloom-pi-card">
-        <div class="bloom-pi-card__photo">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+      <!-- PI as a special large card -->
+      <div class="flex flex-col sm:flex-row gap-8 items-start">
+        <div class="flex-shrink-0 w-44">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="w-full rounded-lg" loading="lazy">
         </div>
-        <div class="bloom-pi-card__info">
-          <h3>
+        <div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">
             {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
           </h3>
-          <p class="bloom-pi-card__title">
+          <p class="text-sm text-gray-600 mb-3">
             {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
           </p>
-          <p class="bloom-pi-card__bio">
+          <p class="text-sm text-gray-500 leading-7">
             {% if lang == 'zh' %}{{ member.bio_zh | default: member.bio }}{% else %}{{ member.bio }}{% endif %}
           </p>
-          <div class="bloom-pi-card__links">
-            {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
-            {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-            {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+          <div class="flex gap-3 mt-3">
+            {% if member.email %}<a href="mailto:{{ member.email }}" class="text-gray-500 hover:text-custom-orange no-underline text-lg"><i class="fas fa-envelope"></i></a>{% endif %}
+            {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" class="text-gray-500 hover:text-custom-orange no-underline text-lg"><i class="ai ai-google-scholar"></i></a>{% endif %}
+            {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" class="text-gray-500 hover:text-custom-orange no-underline text-lg"><i class="ai ai-orcid"></i></a>{% endif %}
           </div>
         </div>
       </div>
@@ -50,79 +49,109 @@ layout: bloom
   </div>
 {% endif %}
 
-<!-- Basic Researchers -->
+<!-- Member grid macro -->
 {% assign basic = site.data.members | where: 'role', 'basic_researcher' %}
 {% if basic.size > 0 %}
-  <div class="bloom-section">
-    <h2>{{ t.people.basic_researchers }}</h2>
-    <div class="bloom-people-grid">
+  <div class="category-section my-6">
+    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
+      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+        {{ t.people.basic_researchers }}
+      </h1>
+    </div>
+    <!-- TeamMembers.vue: grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {% for member in basic %}
-        <div class="bloom-member-card">
-          <div class="bloom-member-card__inner">
-            <div class="bloom-member-card__photo">
-              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-            </div>
-            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
-            <div class="bloom-member-card__links">
-              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
-              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+        <!-- TeamMembersItem.vue: exact classes from source -->
+        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
+          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
+            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
+              <img class="absolute inset-0 w-full h-full object-cover" src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </figure>
+            <div class="text-center pt-6">
+              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
+                {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
+              </h1>
+              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
+                {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+              </p>
+              <div class="flex justify-center h-14 pt-4 px-3">
+                {% if member.email %}<a href="mailto:{{ member.email }}" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="fas fa-envelope"></i></a>{% endif %}
+                {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-google-scholar"></i></a>{% endif %}
+                {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-orcid"></i></a>{% endif %}
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
   </div>
 {% endif %}
 
-<!-- Clinical Researchers -->
 {% assign clinical = site.data.members | where: 'role', 'clinical_researcher' %}
 {% if clinical.size > 0 %}
-  <div class="bloom-section">
-    <h2>{{ t.people.clinical_researchers }}</h2>
-    <div class="bloom-people-grid">
+  <div class="category-section my-6">
+    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
+      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+        {{ t.people.clinical_researchers }}
+      </h1>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {% for member in clinical %}
-        <div class="bloom-member-card">
-          <div class="bloom-member-card__inner">
-            <div class="bloom-member-card__photo">
-              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-            </div>
-            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
-            <div class="bloom-member-card__links">
-              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
-              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
+          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
+            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
+              <img class="absolute inset-0 w-full h-full object-cover" src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </figure>
+            <div class="text-center pt-6">
+              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
+                {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
+              </h1>
+              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
+                {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+              </p>
+              <div class="flex justify-center h-14 pt-4 px-3">
+                {% if member.email %}<a href="mailto:{{ member.email }}" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="fas fa-envelope"></i></a>{% endif %}
+                {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-google-scholar"></i></a>{% endif %}
+                {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-orcid"></i></a>{% endif %}
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
   </div>
 {% endif %}
 
-<!-- Technicians -->
 {% assign techs = site.data.members | where: 'role', 'technician' %}
 {% if techs.size > 0 %}
-  <div class="bloom-section">
-    <h2>{{ t.people.technicians }}</h2>
-    <div class="bloom-people-grid">
+  <div class="category-section my-6">
+    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
+      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+        {{ t.people.technicians }}
+      </h1>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {% for member in techs %}
-        <div class="bloom-member-card">
-          <div class="bloom-member-card__inner">
-            <div class="bloom-member-card__photo">
-              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-            </div>
-            <h4 class="bloom-member-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h4>
-            <p class="bloom-member-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}</p>
-            <div class="bloom-member-card__links">
-              {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
-              {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-              {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
+          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
+            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
+              <img class="absolute inset-0 w-full h-full object-cover" src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            </figure>
+            <div class="text-center pt-6">
+              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
+                {% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}
+              </h1>
+              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
+                {% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en }}{% endif %}
+              </p>
+              <div class="flex justify-center h-14 pt-4 px-3">
+                {% if member.email %}<a href="mailto:{{ member.email }}" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="fas fa-envelope"></i></a>{% endif %}
+                {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-orcid"></i></a>{% endif %}
+                {% if member.orcid %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" class="flex justify-center items-center w-9 h-9 text-gray-500 hover:text-custom-orange no-underline"><i class="ai ai-orcid"></i></a>{% endif %}
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
   </div>

@@ -1,17 +1,19 @@
 ---
 layout: bloom
 ---
-{%- comment -%}
-  Matches Bloom Lab page pattern:
-  pt-6 pb-8 space-y-2 md:space-y-5 header → divide-y → content
-{%- endcomment -%}
-<div class="bloom-page-header">
-  <h1>{{ page.title }}</h1>
-  {% if page.description %}
-    <p>{{ page.description }}</p>
-  {% endif %}
-</div>
-<hr class="bloom-page-divider">
-<div class="bloom-prose">
-  {{ content }}
+<!-- Bloom page header pattern: divide-y divide-gray-200 -->
+<div class="divide-y divide-gray-200">
+  <!-- pt-6 pb-8 space-y-2 md:space-y-5 -->
+  <div class="pt-6 pb-8 space-y-2 md:space-y-5">
+    <h1 class="text-3xl leading-9 font-bold text-gray-800 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      {{ page.title }}
+    </h1>
+    {% if page.description %}
+      <p class="text-lg leading-7 text-gray-600">{{ page.description }}</p>
+    {% endif %}
+  </div>
+  <!-- Content area with prose styles -->
+  <div class="prose max-w-none pt-8">
+    {{ content }}
+  </div>
 </div>
