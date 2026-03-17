@@ -85,7 +85,6 @@ p img {
   top: 0;
   z-index: 100;
   background: var(--bloom-bg);
-  border-bottom: 1px solid var(--bloom-border);
   margin-bottom: 1rem;
 }
 
