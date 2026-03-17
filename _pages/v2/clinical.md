@@ -2,9 +2,10 @@
 layout: bloom-page
 permalink: /v2/clinical/
 title: Clinical Research
+description: Translating molecular discoveries into diagnostic tools and therapeutic strategies.
 ---
 
-Leveraging the extensive clinical resources of **Xiangya Hospital**, our laboratory bridges bench research with bedside applications. Our clinical research programs focus on translating molecular discoveries into diagnostic tools and therapeutic strategies.
+Leveraging the extensive clinical resources of **Xiangya Hospital**, our laboratory bridges bench research with bedside applications.
 
 ### Ongoing Programs
 
