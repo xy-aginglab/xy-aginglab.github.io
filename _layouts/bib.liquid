@@ -147,44 +147,14 @@
           {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
         </div>
       </div>
-      <!-- Action buttons + "Read more →" -->
-      <div class="mt-4 md:mt-0 md:self-end flex flex-wrap items-center gap-2">
-        {% if entry.abstract %}
-          <a class="abstract bib-btn" role="button">Abs</a>
-        {% endif %}
-        {% if entry.bibtex_show %}
-          <a class="bibtex bib-btn" role="button">Bib</a>
-        {% endif %}
-        {% if entry.pdf %}
-          {% if entry.pdf contains '://' %}
-            <a href="{{ entry.pdf }}" class="bib-btn" role="button">PDF</a>
-          {% else %}
-            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="bib-btn" role="button">PDF</a>
-          {% endif %}
-        {% endif %}
-        {% if entry.code %}
-          <a href="{{ entry.code }}" class="bib-btn" role="button">Code</a>
-        {% endif %}
+      <!-- "Read more →" link — matches Papers.vue -->
+      <div class="mt-4 md:mt-0 md:self-end">
         {% if entry.doi %}
-          <a class="text-base leading-6 font-medium text-custom-orange no-underline ml-auto" href="https://doi.org/{{ entry.doi }}">Read more →</a>
+          <a class="text-base leading-6 font-medium text-custom-orange no-underline" href="https://doi.org/{{ entry.doi }}" target="_blank">Read more →</a>
         {% endif %}
       </div>
     </div>
   </div>
-
-  {% if entry.abstract %}
-    <div class="abstract bib-hidden mt-4">
-      <p>{{ entry.abstract }}</p>
-    </div>
-  {% endif %}
-
-  {% if entry.bibtex_show %}
-    <div class="bibtex bib-hidden mt-4">
-      {% highlight bibtex %}
-      {{- entry.bibtex | hideCustomBibtex -}}
-      {% endhighlight %}
-    </div>
-  {% endif %}
 
   {% if site.enable_publication_badges %}
     {% assign entry_has_google_scholar_badge = false %}
