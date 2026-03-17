@@ -135,7 +135,7 @@
         {% endif %}
         {% assign entrytype_text = entrytype | strip_html | strip %}
         <div class="max-w-none text-gray-500">
-          {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
+          {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a class="underline" href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
         </div>
       </div>
       <!-- "Read more →" — links to paper detail page -->
