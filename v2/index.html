@@ -15,86 +15,73 @@
   
   
 
-  <header class="bloom-header">
-    <div class="bloom-header__inner">
-      <a class="bloom-header__logo" href="">
-        Hunan Key Laboratory of Aging Biology
-      </a>
-      <button class="bloom-header__toggle" aria-label="Toggle menu" onclick="this.closest('.bloom-header').classList.toggle('is-open')">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="bloom-header__nav">
-        <a href="/projects/">Research</a>
-        <a href="/publications/">Publications</a>
-        <a href="/clinical/">Clinical</a>
-        <a href="/people/">People</a>
-        <a href="/news/">News</a>
-        <a href="/careers/">Careers</a>
-      </nav>
-    </div>
-  </header>
+  <div class="bloom-app">
+    <!-- Navigation -->
+    <nav class="bloom-nav" id="bloom-nav">
+      <div class="bloom-nav__inner">
+        <a class="bloom-nav__logo" href="/v2/">
+          <span class="bloom-nav__logo-text">
+            Aging Biology Lab
+          </span>
+        </a>
+        <button class="bloom-nav__toggle" aria-label="Toggle menu" onclick="this.closest('.bloom-nav').classList.toggle('is-open')">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="bloom-nav__links">
+          <a href="/projects/">Research</a>
+          <a href="/publications/">Publications</a>
+          <a href="/clinical/">Clinical</a>
+          <a href="/people/">People</a>
+          <a href="/news/">News</a>
+          <a href="/careers/">Careers</a>
+        </div>
+      </div>
+    </nav>
 
-  <main class="bloom-main">
-    <div class="bloom-hero">
-  <h1>Welcome to the Aging Biology Lab</h1>
-  <p class="bloom-hero__tagline">where we study the mechanisms of skin aging, hair follicle regeneration, and inflammatory skin diseases.</p>
+    <!-- Main Content -->
+    <main class="bloom-main">
+      <div class="bloom-home">
+  <h1 class="bloom-home__title">
+    Welcome to the
+    <strong>Aging Biology Lab</strong>
+  </h1>
+  <p class="bloom-home__tagline">
+    where we study the mechanisms of
+    <em>skin aging, hair follicle regeneration, and inflammatory skin diseases.</em>
+  </p>
 
-  <div class="bloom-hero__body">
-    Our laboratory operates at the intersection of <strong>clinical dermatology</strong> and
-    <strong>molecular biology</strong>, leveraging the vast clinical resources of
-    <strong>Xiangya Hospital</strong> to drive translational breakthroughs.
-    Under the direction of <strong>Prof. Ji Li</strong>, we employ experimental and
-    computational techniques to uncover the biological hallmarks of skin health
-    and develop next-generation interventions.
+  <div class="bloom-home__body">
+    <p>
+      In the <strong>Aging Biology Lab</strong>, we study the mechanisms of skin aging and
+      develop next-generation interventions. We use experimental and computational techniques
+      to understand the molecular hallmarks of skin health, and how these insights can be
+      translated into clinical applications for dermatological diseases.
+    </p>
+    <p>
+      Our lab is part of the
+      <a href="https://www.xiangya.com.cn/" rel="external nofollow noopener" target="_blank">Department of Dermatology</a>
+      at <a href="https://www.csu.edu.cn/" rel="external nofollow noopener" target="_blank">Xiangya Hospital, Central South University</a>.
+      We are also affiliated with the
+      <a href="https://www.csu.edu.cn/" rel="external nofollow noopener" target="_blank">Hunan Key Laboratory of Aging Biology</a>
+      and the National Clinical Research Center for Geriatric Disorders.
+      Prof. Ji Li is the director of the laboratory.
+    </p>
   </div>
 
-  <a class="bloom-hero__cta" href="/projects/">
-    Learn more about our research <i class="fas fa-arrow-right"></i>
+  <a class="bloom-home__cta" href="/projects/">
+    Learn more about our research →
   </a>
 </div>
 
-<div class="bloom-section">
-  <h2>Research Directions</h2>
-  <ul class="bloom-research-list">
-    <li>
-      <h3>Skin Aging &amp; Longevity</h3>
-      <p>Integrating multi-omics data from longevity cohorts to identify novel biomarkers, explore cellular senescence, and validate anti-aging compounds.</p>
-    </li>
-    <li>
-      <h3>Hair Follicle Biology</h3>
-      <p>Deciphering hair growth and regeneration mechanisms, pioneering stem cell-based reconstruction and small-molecule therapies for alopecia.</p>
-    </li>
-    <li>
-      <h3>Inflammatory Skin Diseases</h3>
-      <p>Characterizing immune-microbial interactions to develop precise, targeted therapeutic strategies for rosacea, acne, and related conditions.</p>
-    </li>
-  </ul>
-</div>
+    </main>
 
-<div class="bloom-section">
-  <h2>Affiliations</h2>
-  <ul class="bloom-affiliations">
-    <li>Department of Dermatology, Xiangya Hospital</li>
-    <li>Central South University</li>
-    <li>Hunan Key Laboratory of Aging Biology</li>
-    <li>National Clinical Research Center for Geriatric Disorders</li>
-  </ul>
-</div>
-
-<div class="bloom-section">
-  <h2>Contact</h2>
-  <div class="bloom-contact">
-    <p>Department of Dermatology<br>
-    Xiangya Hospital, Central South University<br>
-    87 Xiangya Road, Kaifu District, Changsha, Hunan 410008, China</p>
+    <!-- Footer -->
+    <footer class="bloom-footer">
+      <p>© 2026 Hunan Key Laboratory of Aging Biology</p>
+      <p class="bloom-footer__switch">
+        <a href="/v1/">Switch to Version A</a> · <a href="/">Back to chooser</a>
+      </p>
+    </footer>
   </div>
-</div>
-
-  </main>
-
-  <footer class="bloom-footer">
-    <p>© 2026 Hunan Key Laboratory of Aging Biology. All rights reserved.</p>
-    <p class="bloom-footer__switch"><a href="/v1/">Switch to Version A</a> · <a href="/">Back to chooser</a></p>
-  </footer>
 </body>
 </html>
