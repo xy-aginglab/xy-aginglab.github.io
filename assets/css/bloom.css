@@ -1240,10 +1240,23 @@ a.lab-project-card-link {
    Matches Research.vue styles
    ============================================================================ */
 
+/* Research.vue: mx-auto max-w-4xl divide-y divide-gray-200 */
+.bloom-research-aims {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* .research-aims p: text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6 */
 .bloom-research-aims p {
   font-size: 0.875rem;
   color: var(--bloom-text-lighter);
   margin-top: 0.5rem;
+  line-height: 1.75;
+}
+
+.bloom-research-aims strong {
+  color: var(--bloom-text);
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -1259,7 +1272,9 @@ a.lab-project-card-link {
   }
 }
 
+/* .research-aims img: mx-auto md:float-left md:mr-4 my-4 max-w-sm md:max-w-md */
 .bloom-research-aims img {
+  display: block;
   margin: 1rem auto;
   max-width: 24rem;
 }
@@ -1267,7 +1282,7 @@ a.lab-project-card-link {
 @media (min-width: 768px) {
   .bloom-research-aims img {
     float: left;
-    margin-right: 1rem;
+    margin: 1rem 1rem 1rem 0;
     max-width: 28rem;
   }
 }
