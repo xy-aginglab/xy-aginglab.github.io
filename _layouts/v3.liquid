@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  {% assign asset_version = site.time | date: '%s' %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | truncatewords: 50 }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | truncatewords: 50 }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {% if site.icon %}
+    {% assign icon_value = site.icon | strip %}
+    {% if icon_value contains '://' %}
+      {% assign favicon_href = icon_value %}
+    {% elsif icon_value contains '/' or icon_value contains '.' %}
+      {% assign favicon_href = icon_value | relative_url %}
+    {% else %}
+      {% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}
+      {% assign emoji_svg_escaped = emoji_svg | uri_escape %}
+      {% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg_escaped %}
+    {% endif %}
+    <link rel="icon" href="{{ favicon_href }}">
+  {% endif %}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "custom-orange": "#a24f39",
+            "custom-soft": "#f5efe7"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
+</head>
+<body>
+  {% assign current_url = page.url | default: '' %}
+  <div class="v3-shell">
+    <nav class="v3-nav" data-v3-nav>
+      <div class="v3-nav__inner">
+        <a class="v3-brand" href="{{ '/v3/' | relative_url }}" aria-label="Aging Lab, Hunan Key Laboratory of Aging Biology">
+          <span class="v3-brand__title">Aging Lab</span>
+        </a>
+        <button class="v3-nav__toggle" type="button" aria-controls="v3-primary-nav" aria-expanded="false" aria-label="Toggle site navigation" data-v3-nav-toggle>
+          Menu
+        </button>
+        <div class="v3-nav__menu" id="v3-primary-nav" data-v3-nav-menu>
+          <div class="v3-nav__menu-main">
+            <a href="{{ '/v3/projects/' | relative_url }}"{% if current_url contains '/v3/projects' %} class="is-active"{% endif %}>Research</a>
+            <a href="{{ '/v3/publications/' | relative_url }}"{% if current_url contains '/v3/publications' or current_url contains '/bibliography/' %} class="is-active"{% endif %}>Publications</a>
+            <a href="{{ '/v3/team/' | relative_url }}"{% if current_url contains '/v3/team' %} class="is-active"{% endif %}>Team</a>
+          </div>
+          <div class="v3-nav__utility" aria-label="Additional pages">
+            <a href="{{ '/v3/clinical/' | relative_url }}"{% if current_url contains '/v3/clinical' %} class="is-active"{% endif %}>Clinical</a>
+            <a href="{{ '/v3/news/' | relative_url }}"{% if current_url contains '/v3/news' %} class="is-active"{% endif %}>News</a>
+            <a href="{{ '/v3/careers/' | relative_url }}"{% if current_url contains '/v3/careers' %} class="is-active"{% endif %}>Careers</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="v3-main">
+      {{ content }}
+    </main>
+
+    <footer class="v3-footer">
+      <div class="v3-footer__inner">
+        <div class="v3-footer__copy">
+          <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}.</p>
+        </div>
+        <div class="v3-footer__meta">
+          <div class="v3-footer__contact">
+            {% if site.data.socials.email %}
+              <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+            {% endif %}
+            {% if site.data.socials.github %}
+              <a href="https://github.com/{{ site.data.socials.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+            {% endif %}
+            {% if site.data.socials.researchgate %}
+              <a href="https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            {% endif %}
+          </div>
+          <div class="v3-footer__links">
+            <a href="{{ '/v3/clinical/' | relative_url }}">Clinical</a>
+            <a href="{{ '/v3/careers/' | relative_url }}">Careers</a>
+            <a href="{{ '/v3/news/' | relative_url }}">News</a>
+            <a href="{{ '/v1/' | relative_url }}">Version A</a>
+            <a href="{{ '/versions/' | relative_url }}">Versions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ '/assets/js/v3.js?v=' | append: asset_version | relative_url }}"></script>
+</body>
+</html>

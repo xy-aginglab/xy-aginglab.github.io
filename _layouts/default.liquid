@@ -23,7 +23,7 @@
         {% if lang == 'zh' %}
           <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">衰老生物学湖南省重点实验室</a>
         {% else %}
-          <a class="lab-nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <a class="lab-nav__brand" href="{{ '/v1/' | relative_url }}">{{ site.title }}</a>
         {% endif %}
         <button class="lab-nav__toggle" aria-label="Toggle navigation" onclick="this.closest('.lab-nav').classList.toggle('is-open')">
           <span></span><span></span><span></span>
@@ -72,7 +72,7 @@
             >
               <a href="{{ '/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
             </li>
-<li
+            <li
               {% if page.url contains '/zh/careers' %}
                 class="active"
               {% endif %}
@@ -96,15 +96,51 @@
           {% endif %}
 
           <!-- Language Switcher -->
-          <li class="lab-nav__lang-switch">
-            {% if lang == 'zh' %}
-              {% assign switch_url = page.url | replace: '/zh/', '/' %}
-              <a href="{{ switch_url | relative_url }}" title="Switch to English">EN</a>
-            {% else %}
-              {% assign switch_url = '/zh' | append: page.url %}
-              <a href="{{ switch_url | relative_url }}" title="切换到中文">中文</a>
-            {% endif %}
-          </li>
+          {% assign switch_url = nil %}
+          {% if lang == 'zh' %}
+            {% case page.url %}
+              {% when '/zh/' %}
+                {% assign switch_url = '/v1/' %}
+              {% when '/zh/projects/' %}
+                {% assign switch_url = '/projects/' %}
+              {% when '/zh/publications/' %}
+                {% assign switch_url = '/publications/' %}
+              {% when '/zh/clinical/' %}
+                {% assign switch_url = '/clinical/' %}
+              {% when '/zh/people/' %}
+                {% assign switch_url = '/people/' %}
+              {% when '/zh/news/' %}
+                {% assign switch_url = '/news/' %}
+              {% when '/zh/careers/' %}
+                {% assign switch_url = '/careers/' %}
+            {% endcase %}
+          {% else %}
+            {% case page.url %}
+              {% when '/v1/' %}
+                {% assign switch_url = '/zh/' %}
+              {% when '/projects/' %}
+                {% assign switch_url = '/zh/projects/' %}
+              {% when '/publications/' %}
+                {% assign switch_url = '/zh/publications/' %}
+              {% when '/clinical/' %}
+                {% assign switch_url = '/zh/clinical/' %}
+              {% when '/people/' %}
+                {% assign switch_url = '/zh/people/' %}
+              {% when '/news/' %}
+                {% assign switch_url = '/zh/news/' %}
+              {% when '/careers/' %}
+                {% assign switch_url = '/zh/careers/' %}
+            {% endcase %}
+          {% endif %}
+          {% if switch_url %}
+            <li class="lab-nav__lang-switch">
+              {% if lang == 'zh' %}
+                <a href="{{ switch_url | relative_url }}" title="Switch to English">EN</a>
+              {% else %}
+                <a href="{{ switch_url | relative_url }}" title="切换到中文">中文</a>
+              {% endif %}
+            </li>
+          {% endif %}
 
           {% if site.enable_darkmode %}
             <li class="lab-nav__theme-toggle">
@@ -140,12 +176,12 @@
         <p>
           &copy; {{ site.time | date: '%Y' }}
           {% if lang == 'zh' %}衰老生物学湖南省重点实验室{% else %}{{ site.title }}{% endif %}. {{ t.footer.powered_by }}
-          <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>.
           {{ t.footer.hosted_by }}
-          <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+          <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
         </p>
         <p style="margin-top:0.4rem;font-size:0.8rem;opacity:0.7">
-          <a href="/v2/" style="color:inherit">Switch to Version B</a> · <a href="/" style="color:inherit">Back to chooser</a>
+          <a href="/v3/" style="color:inherit">Switch to Version C</a> · <a href="/versions/" style="color:inherit">View versions</a>
         </p>
       </div>
     </footer>

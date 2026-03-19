@@ -1,37 +1,61 @@
 ---
 ---
-{%- comment -%}
-  Matches Papers.vue "All Papers" list item layout exactly:
-  li py-12 → flex flex-col md:flex-row items-start
-  Left: thumbnail (hidden md:block)
-  Right: title (text-2xl bold), authors, journal, "Read more →"
-{%- endcomment -%}
-<li class="py-12">
-  <div class="flex flex-col md:flex-row items-start">
-    {% if site.enable_publication_thumbnails %}
-      <div class="hidden md:block flex-shrink-0 md:w-32 md:h-32 lg:w-48 lg:h-48 md:mr-4 overflow-hidden rounded-lg">
-        {% if entry.preview %}
-          {% if entry.preview contains '://' %}
-            <img src="{{ entry.preview }}" alt="Image for {{ entry.title }}" class="w-full h-full object-cover">
-          {% else %}
-            {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' | prepend: site.baseurl %}
-            <img src="{{ entry_path }}" alt="Image for {{ entry.title }}" class="w-full h-full object-cover" loading="lazy">
-          {% endif %}
-        {% endif %}
+{% assign has_preview = false %}
+{% if site.enable_publication_thumbnails and entry.preview and page.hide_publication_thumbnails != true %}
+  {% assign has_preview = true %}
+{% endif %}
+{% if has_preview %}
+  {% if entry.preview contains '://' %}
+    {% assign entry_path = entry.preview %}
+  {% else %}
+    {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' | prepend: site.baseurl %}
+  {% endif %}
+{% endif %}
+{% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+{% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+{% if entry.type == 'article' %}
+  {% capture entrytype %}<span class="bib-journal">{{ entry.journal }}</span>{% endcapture %}
+{% elsif proceedings contains entry.type %}
+  {% capture entrytype %}<span class="bib-journal">In {{ entry.booktitle }}</span>{% endcapture %}
+{% elsif thesis contains entry.type %}
+  {% capture entrytype %}<span class="bib-journal">{{ entry.school }}</span>{% endcapture %}
+{% else %}
+  {% capture entrytype %}{% endcapture %}
+{% endif %}
+{% assign entryyear = '' %}
+{% if entry.year %}
+  {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
+{% endif %}
+{% if entry.location %}
+  {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
+{% endif %}
+{% if entry.additional_info %}
+  {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+{% endif %}
+{% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
+{% if hook_exists == 'true' %}
+  {% include hook/bib.liquid %}
+{% endif %}
+{% assign entrytype_text = entrytype | strip_html | strip %}
+
+<li class="bib-entry">
+  <div class="bib-row{% unless has_preview %} bib-row--no-preview{% endunless %}">
+    {% if has_preview %}
+      <div class="bib-thumb">
+        <img src="{{ entry_path }}" alt="Image for {{ entry.title }}" loading="lazy">
       </div>
     {% endif %}
-    <div class="space-y-5 md:flex-grow">
-      <div class="space-y-2">
-        <!-- Title: text-2xl leading-8 font-bold tracking-tight -->
-        <h2 class="text-2xl leading-8 font-bold tracking-tight">
+    <div class="bib-content">
+      <div class="bib-main">
+        <h2 class="bib-title">
           {% if entry.doi %}
-            <a class="text-gray-900 hover:text-gray-900 text-xl md:text-2xl no-underline" href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+            <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
           {% else %}
-            <span class="text-gray-900 text-xl md:text-2xl">{{ entry.title }}</span>
+            <span>{{ entry.title }}</span>
           {% endif %}
         </h2>
-        <!-- Authors: max-w-none text-gray-700 -->
-        <div class="max-w-none text-gray-700">
+
+        <div class="bib-authors">
           {% assign author_array_size = entry.author_array | size %}
           {% assign author_array_limit = author_array_size %}
           {% if site.max_author_limit and author_array_size > site.max_author_limit %}
@@ -88,7 +112,7 @@
             {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
             , and
             <span
-              class="cursor-pointer text-custom-orange font-medium"
+              class="bib-more-authors"
               title="click to view {{ more_authors_hide }}"
               onclick="
                   var element = this;
@@ -107,41 +131,15 @@
             </span>
           {% endif %}
         </div>
-        <!-- Journal: italic, year, doi -->
-        {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-        {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-        {% if entry.type == 'article' %}
-          {% capture entrytype %}<span class="italic">{{ entry.journal }}</span>{% endcapture %}
-        {% elsif proceedings contains entry.type %}
-          {% capture entrytype %}<span class="italic">In {{ entry.booktitle }}</span>{% endcapture %}
-        {% elsif thesis contains entry.type %}
-          {% capture entrytype %}<span class="italic">{{ entry.school }}</span>{% endcapture %}
-        {% else %}
-          {% capture entrytype %}{% endcapture %}
-        {% endif %}
-        {% assign entryyear = '' %}
-        {% if entry.year %}
-          {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
-        {% endif %}
-        {% if entry.location %}
-          {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
-        {% endif %}
-        {% if entry.additional_info %}
-          {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
-        {% endif %}
-        {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
-        {% if hook_exists == 'true' %}
-          {% include hook/bib.liquid %}
-        {% endif %}
-        {% assign entrytype_text = entrytype | strip_html | strip %}
-        <div class="max-w-none text-gray-500">
-          {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a class="underline" href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
+
+        <div class="bib-meta">
+          {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
         </div>
       </div>
-      <!-- "Read more →" — links to paper detail page -->
+
       {% if entry.key %}
-        <div class="mt-4 md:mt-0 md:self-end">
-          <a class="text-base leading-6 font-medium text-custom-orange no-underline" href="{{ entry.key | prepend: '/bibliography/' | prepend: site.baseurl }}">Read more →</a>
+        <div class="bib-actions">
+          <a class="bib-link" href="{{ entry.key | prepend: '/bibliography/' | prepend: site.baseurl }}">Read more →</a>
         </div>
       {% endif %}
     </div>
@@ -149,11 +147,11 @@
 
   {% if site.enable_publication_badges %}
     {% assign entry_has_google_scholar_badge = false %}
-    {% if entry.google_scholar_id %}
+    {% if entry.google_scholar_id and site.data.socials.scholar_userid %}
       {% assign entry_has_google_scholar_badge = true %}
     {% endif %}
     {% if entry_has_google_scholar_badge %}
-      <div class="flex flex-wrap gap-1 mt-2">
+      <div class="bib-badges">
         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}" aria-label="Google Scholar" role="button">
           {% assign citation_count = 0 %}
           {% assign publication_key = entry.google_scholar_id %}

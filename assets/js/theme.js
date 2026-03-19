@@ -36,12 +36,19 @@ let applyTheme = () => {
 };
 
 let setHighlight = (theme) => {
+  const lightHighlight = document.getElementById("highlight-theme-light");
+  const darkHighlight = document.getElementById("highlight-theme-dark");
+
+  if (!lightHighlight || !darkHighlight) {
+    return;
+  }
+
   if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
+    lightHighlight.media = "none";
+    darkHighlight.media = "";
   } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
+    darkHighlight.media = "none";
+    lightHighlight.media = "";
   }
 };
 
@@ -69,14 +76,19 @@ let initTheme = () => {
 
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
+    if (mode_toggle) {
+      mode_toggle.addEventListener("click", function () {
+        toggleThemeSetting();
+      });
+    }
   });
 
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-    applyTheme();
-  });
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  if (mediaQuery && mediaQuery.addEventListener) {
+    mediaQuery.addEventListener("change", () => {
+      applyTheme();
+    });
+  }
 };
 
 initTheme();

@@ -3,6 +3,7 @@ layout: bloom-page
 permalink: /v2/clinical/
 title: Clinical Research
 description: Translating molecular discoveries into diagnostic tools and therapeutic strategies.
+sitemap: false
 ---
 
 Leveraging the extensive clinical resources of **Xiangya Hospital**, our laboratory bridges bench research with bedside applications.

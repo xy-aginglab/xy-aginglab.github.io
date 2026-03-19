@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% assign asset_version = site.time | date: '%s' %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/bloom.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/bloom.css?v=' | append: asset_version | relative_url }}" />
 </head>
 <body>
   <div class="chooser">
     <h1 class="chooser__title">Hunan Key Laboratory of Aging Biology</h1>
-    <p class="chooser__subtitle">Choose a site design to preview</p>
+    <p class="chooser__subtitle">Compare the maintained site versions now under consideration.</p>
     <div class="chooser__grid">
       <a class="chooser__card" href="/v1/">
         <div class="chooser__preview chooser__preview--v1">
@@ -33,7 +34,19 @@
           </div>
         </div>
         <h2>Version B</h2>
-        <p>Minimal academic style — clean, content-first, inspired by Bloom Lab.</p>
+        <p>Minimal academic homepage with the sparse first-screen pacing that made this direction compelling.</p>
+      </a>
+      <a class="chooser__card" href="/v3/">
+        <div class="chooser__preview chooser__preview--v3">
+          <div class="chooser__mock-nav-editorial"></div>
+          <div class="chooser__mock-text">
+            <span class="chooser__mock-heading chooser__mock-heading--v3"></span>
+            <span class="chooser__mock-pill"></span>
+            <span class="chooser__mock-line chooser__mock-line--short"></span>
+          </div>
+        </div>
+        <h2>Version C</h2>
+        <p>Editorial minimalism with a calmer institutional tone. This is the preferred direction for the final public site.</p>
       </a>
     </div>
   </div>

@@ -3,6 +3,7 @@ layout: bloom-page
 permalink: /v2/careers/
 title: Careers
 description: Join our team at the Aging Biology Lab.
+sitemap: false
 ---
 
 We are always looking for talented and motivated researchers to join our team. If you are passionate about aging biology, skin science, or related fields, we welcome your application.

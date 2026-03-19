@@ -5,6 +5,7 @@ description: Investigating pathogenesis and targeted therapeutics for rosacea, a
 img: research_inflammatory.svg
 importance: 3
 category: research
+overview_detail: Our research characterizes immune-microbial-neurogenic interactions in skin inflammation, identifies key inflammatory pathways and therapeutic targets, and designs targeted drugs for rosacea, acne, and related diseases.
 ---
 
 We integrate clinical resources with animal and cell models to investigate the pathogenesis of inflammatory skin diseases — particularly **disfiguring conditions such as rosacea and acne** — and develop targeted therapeutic drugs for key molecular pathways.

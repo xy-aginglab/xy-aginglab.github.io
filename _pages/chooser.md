@@ -1,6 +1,6 @@
 ---
 layout: chooser
-title: Choose Design
-permalink: /
+title: Site Versions
+permalink: /versions/
 sitemap: false
 ---

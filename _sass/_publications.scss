@@ -175,6 +175,101 @@
         border-color: var(--global-text-color);
       }
     }
+
+    .bib-row {
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1rem 0;
+    }
+
+    .bib-row--no-preview {
+      display: block;
+    }
+
+    .bib-thumb {
+      width: 132px;
+
+      img {
+        aspect-ratio: 4 / 4.6;
+        object-fit: cover;
+      }
+    }
+
+    .bib-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .bib-main {
+      min-width: 0;
+    }
+
+    .bib-title {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      font-weight: 700;
+
+      a,
+      span {
+        color: var(--global-text-color);
+        text-decoration: none;
+      }
+    }
+
+    .bib-authors {
+      margin-top: 0.45rem;
+      color: var(--global-text-color-light);
+      line-height: 1.75;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .bib-more-authors {
+      color: var(--global-theme-color);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .bib-journal {
+      font-style: italic;
+    }
+
+    .bib-meta {
+      margin-top: 0.45rem;
+      color: var(--global-text-color-light);
+      line-height: 1.7;
+
+      a {
+        color: var(--global-theme-color);
+      }
+    }
+
+    .bib-actions {
+      flex-shrink: 0;
+      padding-top: 0.2rem;
+    }
+
+    .bib-link {
+      color: var(--global-theme-color);
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .bib-badges {
+      margin-top: 0.65rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
@@ -187,4 +282,26 @@
 .citation,
 .citation-number {
   color: var(--global-theme-color);
+}
+
+@media (max-width: 768px) {
+  .publications ol.bibliography {
+    .bib-row {
+      display: block;
+    }
+
+    .bib-thumb {
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 0.9rem;
+    }
+
+    .bib-content {
+      display: block;
+    }
+
+    .bib-actions {
+      margin-top: 0.9rem;
+    }
+  }
 }

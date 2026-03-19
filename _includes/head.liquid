@@ -12,7 +12,17 @@
 
 <!-- Favicon -->
 {% if site.icon %}
-<link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url }}">
+{% assign icon_value = site.icon | strip %}
+{% if icon_value contains '://' %}
+  {% assign favicon_href = icon_value %}
+{% elsif icon_value contains '/' or icon_value contains '.' %}
+  {% assign favicon_href = icon_value | relative_url %}
+{% else %}
+  {% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}
+  {% assign emoji_svg_escaped = emoji_svg | uri_escape %}
+  {% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg_escaped %}
+{% endif %}
+<link rel="icon" href="{{ favicon_href }}">
 {% endif %}
 
 <!-- Google Fonts: Inter -->

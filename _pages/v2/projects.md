@@ -2,6 +2,7 @@
 layout: bloom
 permalink: /v2/projects/
 title: Research
+sitemap: false
 ---
 
 <!-- Research.vue: mx-auto max-w-4xl divide-y divide-gray-200 -->

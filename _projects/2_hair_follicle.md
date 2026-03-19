@@ -5,6 +5,7 @@ description: Studying hair loss and graying mechanisms with targeted therapeutic
 img: research_hair_follicle.svg
 importance: 2
 category: research
+overview_detail: Our work elucidates the pathogenesis of alopecia and hair graying diseases, develops targeted small-molecule drugs for hair regrowth and graying reversal, and establishes and optimizes hair follicle reconstruction based on human follicle stem cells and mesenchymal stem cells.
 ---
 
 We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of **alopecia and hair graying**, develop targeted therapeutic drugs, and establish stem cell-based **hair follicle reconstruction technologies**.

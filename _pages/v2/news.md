@@ -2,6 +2,7 @@
 layout: bloom
 permalink: /v2/news/
 title: Lab News
+sitemap: false
 ---
 
 <!-- Blog.vue: divide-y divide-gray-200 -->

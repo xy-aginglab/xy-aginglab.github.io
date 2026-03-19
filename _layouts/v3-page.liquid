@@ -1,0 +1,54 @@
+---
+layout: v3
+---
+{% assign has_page_links = false %}
+{% if page.page_links and page.page_links.size > 0 %}
+  {% assign has_page_links = true %}
+{% endif %}
+{% assign show_page_eyebrow = true %}
+{% if page.show_eyebrow == false %}
+  {% assign show_page_eyebrow = false %}
+{% endif %}
+{% assign show_page_lead = true %}
+{% if page.show_lead == false %}
+  {% assign show_page_lead = false %}
+{% endif %}
+{% assign page_shift_class = '' %}
+{% if page.content_offset_right %}
+  {% assign page_shift_class = ' v3-page--offset' %}
+{% endif %}
+<section class="v3-page{{ page_shift_class }}">
+  <div class="v3-page__masthead">
+    <header class="v3-page__header">
+      {% if show_page_eyebrow and page.eyebrow %}
+        <p class="v3-page__eyebrow">{{ page.eyebrow }}</p>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if show_page_lead and page.lead %}
+        <p class="v3-page__lead">{{ page.lead }}</p>
+      {% elsif show_page_lead and page.description %}
+        <p class="v3-page__lead">{{ page.description }}</p>
+      {% endif %}
+      {% if has_page_links %}
+        <nav class="v3-page__links" aria-label="{{ page.page_links_title | default: 'Related links' }}">
+          {% for link in page.page_links %}
+            {% assign link_href = link.href %}
+            {% assign link_external = false %}
+            {% if link_href == 'email' %}
+              {% assign link_href = 'mailto:' | append: site.data.socials.email %}
+            {% elsif link_href contains '://' or link_href contains 'mailto:' %}
+              {% assign link_external = true %}
+            {% else %}
+              {% assign link_href = link_href | relative_url %}
+            {% endif %}
+            <a href="{{ link_href }}"{% if link_external and link_href contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+          {% endfor %}
+        </nav>
+      {% endif %}
+    </header>
+  </div>
+
+  <article class="v3-page__content v3-rich">
+    {{ content }}
+  </article>
+</section>
