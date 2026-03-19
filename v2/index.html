@@ -7,7 +7,7 @@
   <title>Hunan Key Laboratory of Aging Biology</title>
   <meta name="description" content="Hunan Key Laboratory of Aging Biology — Xiangya Hospital, Central South University. Research in skin aging, hair follicle biology, and inflammatory skin diseases.
 ">
-  <!-- Tailwind CSS CDN — same as Bloom Lab -->
+  <!-- Tailwind CSS CDN for the legacy v2 surface -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,7 +32,7 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <!-- Bloom overrides (minimal — only for jekyll-specific components) -->
+  <!-- Legacy v2 overrides for Jekyll-generated components -->
   <link rel="stylesheet" href="/assets/css/bloom.css">
   <style>
     :root { color-scheme: light !important; }
@@ -45,11 +45,8 @@
     h1, h2, h3, h4, h5, h6, li, p { overflow-wrap: break-word; }
     a { text-decoration: underline; transition: color 0.25s; }
     a:hover { color: #a72126; }
-    /* NavBarMenuItem: no underline */
     .bloom-nav a { text-decoration: none; }
-    /* Logo font */
     .bloom-logo-text { font-family: 'Space Grotesk', sans-serif; }
-    /* Mobile menu toggle */
     .bloom-mobile-menu { display: none; }
     .bloom-mobile-menu.is-open { display: flex; }
   </style>
@@ -58,25 +55,19 @@
   
   
 
-  <!-- Layout.vue: flex flex-col min-h-screen -->
   <div id="app" class="flex flex-col min-h-screen">
 
-    <!-- NavBar.vue: flex justify-between items-center w-full px-4 select-none -->
     <nav class="bloom-nav p-4">
       <div class="flex justify-between items-center w-full px-4 select-none">
-        <!-- NavBarTitle.vue -->
         <a href="/v2/" class="flex items-center no-underline">
           <span class="bloom-logo-text text-lg font-bold text-custom-orange">
             Aging Biology Lab
           </span>
         </a>
-        <!-- Mobile toggle -->
         <button class="flex md:hidden text-gray-600" onclick="document.getElementById('bloom-menu').classList.toggle('is-open')">
           <i class="fas fa-bars h-6 w-6"></i>
         </button>
-        <!-- NavBarMenu.vue -->
         <div id="bloom-menu" class="bloom-mobile-menu bg-custom-soft backdrop-blur-md md:backdrop-blur-none flex-col md:flex-row bg-opacity-75 md:bg-transparent md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute md:w-auto w-full md:h-auto h-full md:pt-0 pt-10 top-14 z-50 left-0">
-          <!-- NavBarMenuItem.vue: text-xl md:text-lg px-4 py-4 md:py-2 -->
           <a href="/v2/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Research</a>
           <a href="/v2/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Publications</a>
           <a href="/v2/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">Clinical</a>
@@ -87,28 +78,22 @@
       </div>
     </nav>
 
-    <!-- Layout.vue: main flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl xl:px-0 -->
     <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl xl:px-0 w-full">
-      <!-- Home.vue: mx-auto max-w-4xl px-4 text-left flex flex-col -->
-<div class="mx-auto max-w-4xl px-4 text-left flex flex-col">
+      <div class="mx-auto max-w-4xl px-4 text-left flex flex-col">
   <div class="flex-grow">
-    <!-- text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-800 select-none -->
     <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-800 select-none">
       Welcome to the <span class="block font-bold">Aging Biology Lab</span>
     </h1>
-    <!-- text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none -->
     <p class="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none sm:whitespace-nowrap">
       where we study the mechanisms of
       <span id="rotating-text" class="italic" style="color:#a72126;background:rgba(167,33,38,0.1)">skin aging</span>
     </p>
-    <!-- text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12 -->
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12">
       In the <strong>Aging Biology Lab</strong>, we study the mechanisms of skin aging and
       develop next-generation interventions. We use experimental and computational techniques
       to understand the molecular hallmarks of skin health, and how these insights can be
       translated into clinical applications for dermatological diseases.
     </p>
-    <!-- text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6 -->
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
       Our lab is part of the
       <a href="https://www.xiangya.com.cn/" rel="external nofollow noopener" target="_blank">Department of Dermatology</a>
@@ -119,14 +104,12 @@
       Prof. Ji Li is the director of the laboratory.
     </p>
   </div>
-  <!-- CTA: text-center mt-8 md:mt-12 mb-2 -->
   <div class="text-center mt-8 md:mt-12 mb-2">
     <a href="/v2/projects/" class="no-underline text-gray-600 hover:text-gray-600 hover:shadow-md hover:shadow-custom-orange rounded-lg bg-custom-soft p-2 overflow-hidden transition-shadow duration-200 ease-in-out text-sm md:text-base lg:text-lg">Learn
       more about our research</a>
   </div>
 </div>
 
-<!-- Rotating text animation — matches Bloom Lab Home.vue virus name cycling -->
 <script>
 (function() {
   var items = [
@@ -174,11 +157,10 @@
 
     </main>
 
-    <!-- Footer.vue: w-full p-4 bg-white text-center text-gray-400 text-sm -->
     <footer class="w-full p-4 bg-white text-center text-gray-400 text-sm">
       <p>© 2026 Hunan Key Laboratory of Aging Biology</p>
       <p class="text-xs mt-1">
-        <a href="/v1/" class="text-gray-400 hover:text-custom-orange">Switch to Version A</a> · <a href="/" class="text-gray-400 hover:text-custom-orange">Back to chooser</a>
+        <a href="/v1/" class="text-gray-400 hover:text-custom-orange">Switch to Version A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">View versions</a>
       </p>
     </footer>
   </div>

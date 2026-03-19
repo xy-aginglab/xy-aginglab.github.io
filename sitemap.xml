@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_skin_aging/</loc>
-<lastmod>2026-03-18T15:46:25+00:00</lastmod>
+<lastmod>2026-03-19T10:13:31+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_hair_follicle/</loc>
-<lastmod>2026-03-18T15:46:25+00:00</lastmod>
+<lastmod>2026-03-19T10:13:31+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/3_inflammatory_skin/</loc>
-<lastmod>2026-03-18T15:46:25+00:00</lastmod>
+<lastmod>2026-03-19T10:13:31+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/</loc>
@@ -19,7 +19,7 @@
 <loc>https://xy-aginglab.github.io/v1/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/careers/</loc>
+<loc>https://xy-aginglab.github.io/v3/careers/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/careers/</loc>
@@ -28,7 +28,7 @@
 <loc>https://xy-aginglab.github.io/careers/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/clinical/</loc>
+<loc>https://xy-aginglab.github.io/v3/clinical/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/clinical/</loc>
@@ -37,7 +37,7 @@
 <loc>https://xy-aginglab.github.io/clinical/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/news/</loc>
+<loc>https://xy-aginglab.github.io/v3/news/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/news/</loc>
@@ -52,7 +52,7 @@
 <loc>https://xy-aginglab.github.io/people/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/projects/</loc>
+<loc>https://xy-aginglab.github.io/v3/projects/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/projects/</loc>
@@ -61,7 +61,7 @@
 <loc>https://xy-aginglab.github.io/projects/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/publications/</loc>
+<loc>https://xy-aginglab.github.io/v3/publications/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/publications/</loc>
@@ -70,7 +70,10 @@
 <loc>https://xy-aginglab.github.io/publications/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v2/team/</loc>
+<loc>https://xy-aginglab.github.io/v3/team/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/xiao2026cell/</loc>
