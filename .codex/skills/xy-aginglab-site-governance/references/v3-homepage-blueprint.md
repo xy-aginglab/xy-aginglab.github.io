@@ -95,6 +95,7 @@ That choice is now active for this repository:
 - If the user explicitly asks for one more size step, increase the headline and rotating line together so the hierarchy remains coherent rather than enlarging only one of them.
 - On phones, reverse that tradeoff: reduce hero scale and padding together before allowing the first screen to feel oversized or unstable.
 - The rotating line should carry the three research directions if it is present.
+- The rotating line should not cause homepage reflow while it animates. Reserve a stable slot for the changing phrase so the lead, CTA row, and footer do not jump.
 - The supporting paragraph should not restate the rotating line.
 - The hero should not add a separate eyebrow above `Aging Lab.` when that line only repeats institutional identity already carried by nav or paragraph copy.
 - The supporting paragraph should answer:
@@ -118,6 +119,8 @@ That choice is now active for this repository:
   - Publications
   - Team
 - The visible `Aging Lab` brand in the header should serve as the homepage link instead of a duplicated `Home` tab.
+- Keep the compact `Aging Lab` label in the top-left nav when it improves header balance, even though the hero also carries `Aging Lab.` as the dominant headline.
+- In the active homepage direction, that top-left brand may use the restrained `v2` rust-red accent so it reads as a small mark rather than a second black headline.
 - Secondary visible utility navigation:
   - Clinical
   - News
@@ -247,6 +250,7 @@ The homepage may still feel more dramatic than interior pages, but it must not r
   - smaller hero title
   - tighter top and bottom padding
   - buttons that stack cleanly without creating excessive dead space
+- On phone-sized screens, the homepage footer should stack into a calm vertical rhythm rather than forcing copyright, contact, and version links into one compressed row.
 
 ## Color Direction
 

@@ -94,11 +94,15 @@
 - Do not make `Clinical`, `News`, or `Careers` footer-only if they are meant to function as real visitor destinations in the active `v3` experience.
 - During the current design-comparison phase, `Versions` may live in the footer only. Do not repeat it in the top utility navigation when the footer already exposes the version surface clearly.
 - In `v3`, the visible nav brand may use a short public label such as `Aging Lab` when the full institutional name creates clutter.
+- In `v3`, the visible nav brand should read as compact site chrome, not as a second headline competing with the page title.
+- In the current `v3` direction, the short `Aging Lab` nav brand may use the restrained rust-red accent inherited from the team's preferred `v2` reference, as long as it remains small and does not overpower the hero.
+- On the `v3` homepage, keep the visible left nav brand when it helps stabilize the header composition. Brand repetition is acceptable there if the nav brand stays compact and the hero headline remains decisively larger.
 - If the short brand is used in nav, keep the full institutional identity elsewhere on the page or in footer/meta rather than stacking it into the corner mark.
 - When the visible `Aging Lab` brand already links to `/v3/`, do not repeat `Home` as a separate top-nav tab.
 - On `v3`, do not repeat the institution in the nav, hero eyebrow, and support line at the same time. Mention it once in the homepage intro if needed.
 - On `v3`, if the short brand `Aging Lab` already appears in the header and headline, do not add a separate institutional eyebrow above the headline unless it introduces information that does not already exist elsewhere on the first screen.
 - On `v3`, the footer should stay quiet and utilitarian. Do not repeat the homepage research-direction summary in the footer when the page has already established it.
+- On `v3`, the shared interior footer should not repeat active header-navigation destinations just to fill space. If `Clinical`, `News`, or `Careers` are already discoverable in the top navigation, keep the footer focused on contact utility and version links.
 - A single-page `v3` is an exception, not the default. Use it only when the user explicitly wants that tradeoff and accepts the added density.
 - Use when a change should favor reading flow, minimal framing, and a modern institutional research presentation without direct Bloom mimicry.
 - `v3` should be polished as a complete, production-quality institutional site rather than left as a visual experiment.
@@ -124,6 +128,7 @@
 - For `v3`, avoid glassmorphism, oversized pill treatments, loud background textures, and large-radius card stacks when they make the site feel ornamental instead of institutional.
 - `v3` should prefer quieter page planes, sharper hierarchy, restrained accents, and a more paper-like or editorial sense of structure.
 - In `v3`, design hierarchy should come primarily from scale, spacing, alignment, and contrast, not from multiplying cards, labels, or decorative containers.
+- In `v3`, section and program headings must sit clearly below the page title on both desktop and mobile. Do not leave those headings to browser-default `h2` sizing, because it breaks the intended editorial ladder.
 - Keep the number of major homepage sections low enough that the page can be scanned in one pass.
 - On the `v3` homepage, favor open space, restrained navigation, and quiet section transitions over boxed panels and card-heavy layouts.
 - On the `v3` homepage, mobile should trade some desktop drama for fit and control:
@@ -162,6 +167,12 @@
   - short masthead
   - single-column body
   - divided sections or lists instead of card matrices
+- On `v3` phone-sized utility pages, keep the type ladder explicit:
+  - one clear page headline
+  - a smaller section heading
+  - compact role/item headings
+  - body copy that reads as body copy, not a fourth heading tier
+- On those mobile utility pages, do not let `h2` drift too close to the page title or let `h3` feel nearly interchangeable with body copy.
 - On `v3`, selected quiet interior pages such as `Team`, `Clinical`, `News`, and `Careers` may use a slightly right-shifted desktop content axis when the default left alignment feels visually heavy.
 - Avoid turning these utility pages into dashboards of tiles, process boxes, or explanatory frameworks unless the content truly requires them.
 - On `v3`, utility pages should err on the side of under-explaining rather than over-explaining:
@@ -185,6 +196,8 @@
   - homepage hero title: about 88px to 104px
   - rotating line: about 28px to 34px
   - page title: about 52px to 64px
+  - major section heading on interior pages: about 30px to 40px on desktop, and clearly below the mobile page title
+  - program / role / list heading: about 17px to 28px depending on page type, with a visible step down from the major section heading
   - lead paragraph: about 21px to 24px
   - body copy: about 18px to 19px
   - small metadata and footer text: about 14px to 15px
@@ -193,6 +206,7 @@
   - generous masthead spacing
   - comfortable paragraph leading
   - quiet footer
+- On `v3` interior pages, the footer meta area should read as a calm utility block rather than one long right-justified link strip. Prefer two quiet rows or stacked groups over forcing every link onto one line.
 - On phone-sized screens, navigation menus must be truly hidden when closed. A mobile menu may use an absolute dropdown panel, but it must only occupy space or become visible after the toggle opens it.
 - Avoid using heavy shadows, thick borders, or card stacks to compensate for weak typographic hierarchy.
 

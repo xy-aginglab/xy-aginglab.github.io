@@ -58,6 +58,7 @@
 - A one-page mode is optional and should not be treated as the default final direction.
 - In the minimal-home mode, the homepage intro may carry the institutional affiliation once, and the surrounding chrome should stay short.
 - In `v3`, the shared footer should support navigation and institutional identification, not restate the homepage research summary.
+- In `v3`, the shared interior footer should prioritize contact utility and version discovery, not duplicate destinations that are already visible in the header navigation.
 - In the current `v3` reset mode, the homepage should stop at:
   - the main hero
   - one primary CTA
@@ -101,6 +102,7 @@
   - smaller page titles
   - tighter masthead spacing
   - denser grouped listings
+  - section headings that visibly step down from the page title instead of staying near-title size
 - The masthead can include:
   - eyebrow
   - title
@@ -129,6 +131,7 @@
   - a half-width image on desktop
   - one or two short paragraphs
   - a clear divider before the next direction
+- In that research index, the program heading should feel like an internal section title, not like a second page title.
 - If `v3` needs cleaner research-overview copy than the full project body, store that concise overview data in `_projects/*.md` front matter rather than hard-coding it in the layout.
 
 ### Publications
@@ -145,6 +148,7 @@
   - no decorative eyebrow if the page title already says `Publications`
   - no topic pills if those destinations are already covered by the research page
   - no explanatory intro copy above every section when a short heading is enough
+- In `v3`, section labels such as `Selected papers` and `Complete list` should be visibly subordinate to the page title on both desktop and mobile.
 - For `v3`, publication detail pages should usually collapse to:
   - title
   - authors
@@ -201,6 +205,11 @@
 - If the feed is quiet, the fallback state should direct visitors to publications or careers without apologetic or self-referential copy.
 - On `v3`, the news page should stay especially sparse: a short lead, then the feed or a minimal empty-state note.
 - On `v3`, if the news page already has a clear title, the masthead lead may be omitted entirely.
+- On phone-sized `v3` utility pages, the mobile typography should compress with clearer separation than desktop:
+  - page title remains prominent
+  - section headings step down noticeably
+  - item headings step down again
+  - body text and line length stay comfortable for scanning
 
 ### Version Surface Mobile Behavior
 
