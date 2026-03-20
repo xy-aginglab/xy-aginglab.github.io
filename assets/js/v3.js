@@ -88,6 +88,34 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     });
 
+    var slot = el.parentElement;
+    if (slot && slot.classList.contains("v3-rotator-slot")) {
+      var maxWidth = 0;
+      var measurer = document.createElement("span");
+      measurer.style.position = "absolute";
+      measurer.style.visibility = "hidden";
+      measurer.style.pointerEvents = "none";
+      measurer.style.whiteSpace = "nowrap";
+      var measuredStyle = window.getComputedStyle(el);
+      measurer.style.font = measuredStyle.font;
+      measurer.style.fontStyle = measuredStyle.fontStyle;
+      measurer.style.fontWeight = measuredStyle.fontWeight;
+      measurer.style.letterSpacing = measuredStyle.letterSpacing;
+      measurer.style.textTransform = measuredStyle.textTransform;
+      measurer.style.padding = measuredStyle.padding;
+      measurer.style.border = measuredStyle.border;
+      measurer.style.boxSizing = measuredStyle.boxSizing;
+      document.body.appendChild(measurer);
+      items.forEach(function (item) {
+        measurer.textContent = item.text;
+        maxWidth = Math.max(maxWidth, Math.ceil(measurer.getBoundingClientRect().width));
+      });
+      document.body.removeChild(measurer);
+      if (maxWidth > 0 && window.innerWidth > 860) {
+        slot.style.setProperty("--v3-rotator-slot-width", maxWidth + "px");
+      }
+    }
+
     function applyTheme(item) {
       el.style.setProperty("--v3-rotator-color", item.color);
       el.style.setProperty("--v3-rotator-bg", item.background);
