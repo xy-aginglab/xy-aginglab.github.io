@@ -120,11 +120,16 @@
 - Motion should support emphasis, orientation, or polish. Avoid decorative animation that competes with scientific content.
 - Typography changes must preserve legibility on desktop and mobile.
 - Color changes must preserve academic tone and sufficient contrast. Avoid turning the site into a generic tech-brand palette.
+- On `v3`, mobile should not be a desktop layout with narrower width. Tighten chrome, type scale, and vertical rhythm deliberately for phone-sized screens.
 - For `v3`, avoid glassmorphism, oversized pill treatments, loud background textures, and large-radius card stacks when they make the site feel ornamental instead of institutional.
 - `v3` should prefer quieter page planes, sharper hierarchy, restrained accents, and a more paper-like or editorial sense of structure.
 - In `v3`, design hierarchy should come primarily from scale, spacing, alignment, and contrast, not from multiplying cards, labels, or decorative containers.
 - Keep the number of major homepage sections low enough that the page can be scanned in one pass.
 - On the `v3` homepage, favor open space, restrained navigation, and quiet section transitions over boxed panels and card-heavy layouts.
+- On the `v3` homepage, mobile should trade some desktop drama for fit and control:
+  - reduce headline scale
+  - reduce hero padding
+  - let the rotating line wrap cleanly
 - Avoid turning the first screen of `v3` into a two-column dashboard unless the second column is truly necessary.
 - For `v3`, primary structure should come from sequence and whitespace before it comes from components.
 - A one-page `v3` should still feel calm: use a small number of clear sections rather than trying to dump every detail at once.
@@ -144,6 +149,7 @@
 - On `v3`, publications pages should not repeat helper paragraphs, topic pills, or decorative labels when the page title and the publication list already make the purpose obvious.
 - On `v3`, publication detail pages should prefer straightforward bibliographic presentation over dashboard-like fact cards, repeated metadata boxes, or prominent gallery treatment.
 - On `v3`, interior mastheads should stay minimal. Avoid ornamental eyebrows, secondary link rows, or duplicated lead copy unless they solve a real orientation problem on that specific page.
+- On `v3`, mobile interior pages should tighten title scale, masthead spacing, and grouped-card density rather than preserving desktop proportions unchanged.
 - On `v3`, the team page should read like a calm people directory:
   - one short intro
   - one visually distinct PI block
@@ -187,6 +193,7 @@
   - generous masthead spacing
   - comfortable paragraph leading
   - quiet footer
+- On phone-sized screens, navigation menus must be truly hidden when closed. A mobile menu may use an absolute dropdown panel, but it must only occupy space or become visible after the toggle opens it.
 - Avoid using heavy shadows, thick borders, or card stacks to compensate for weak typographic hierarchy.
 
 ## Content Strategy Rules

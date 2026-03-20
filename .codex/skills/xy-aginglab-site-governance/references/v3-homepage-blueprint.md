@@ -93,6 +93,7 @@ That choice is now active for this repository:
 - The hero type scale can be increased slightly if the screen still clears on a MacBook Air class laptop without requiring first-screen scrolling.
 - If the hero type scale is increased, preserve the one-screen fit by tightening vertical padding before adding any extra module or secondary copy.
 - If the user explicitly asks for one more size step, increase the headline and rotating line together so the hierarchy remains coherent rather than enlarging only one of them.
+- On phones, reverse that tradeoff: reduce hero scale and padding together before allowing the first screen to feel oversized or unstable.
 - The rotating line should carry the three research directions if it is present.
 - The supporting paragraph should not restate the rotating line.
 - The hero should not add a separate eyebrow above `Aging Lab.` when that line only repeats institutional identity already carried by nav or paragraph copy.
@@ -242,6 +243,10 @@ The homepage may still feel more dramatic than interior pages, but it must not r
 - On the approved `v3` homepage, do not repeat `Clinical`, `News`, or `Careers` as a second row of exits in the footer when those destinations are already visible in the top navigation.
 - If the hero needs optical balance, bias it slightly to the right, but keep the shift subtle rather than turning the page back into a left-rail composition.
 - Keep navigation and footer spacing taut; let the main breathing room happen in the hero and interior mastheads instead of in the chrome.
+- On phone-sized screens, the homepage should feel controlled rather than monumental:
+  - smaller hero title
+  - tighter top and bottom padding
+  - buttons that stack cleanly without creating excessive dead space
 
 ## Color Direction
 

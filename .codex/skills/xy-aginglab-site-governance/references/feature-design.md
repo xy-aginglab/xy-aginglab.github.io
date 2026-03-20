@@ -91,11 +91,16 @@
 - Clinical, Careers, and News may remain routable, but should move to secondary discovery if reducing the primary nav improves clarity.
 - When `Clinical`, `Careers`, and `News` are present in the active `v3` surface, keep them in a visible secondary header navigation or similarly discoverable top-level utility area rather than burying them only in the footer.
 - In the default minimal-home mode, the primary nav should continue to point to dedicated pages rather than homepage anchors.
+- On mobile, the closed `v3` menu must not remain visibly rendered beneath the nav bar. The toggle should be the only visible control until the menu opens.
 
 ### Shared `v3` Interior Page Pattern
 
 - `v3` interior pages should prefer a shared editorial masthead rather than ad hoc page intros.
 - The shared interior pattern may support an optional desktop content offset for quieter pages that need a less left-heavy reading axis.
+- On mobile, the shared interior pattern should compress rather than preserve desktop spacing one-to-one:
+  - smaller page titles
+  - tighter masthead spacing
+  - denser grouped listings
 - The masthead can include:
   - eyebrow
   - title
@@ -159,6 +164,7 @@
   - one PI section with concise profile text
   - grouped member listings that prioritize photo, name, title, and optional contact icons
 - For `v3`, grouped member photos should read as compact headshots inside the directory rather than large gallery tiles.
+- On mobile, grouped member photos should shrink further so names and titles remain the dominant reading signal.
 - For `v3`, omit team-count summaries, repeated department lines, and long secondary-card bios unless the user explicitly asks for a denser profile page.
 - For `v3`, secondary member groups may split into:
   - portrait grid for members with real photos
@@ -195,6 +201,11 @@
 - If the feed is quiet, the fallback state should direct visitors to publications or careers without apologetic or self-referential copy.
 - On `v3`, the news page should stay especially sparse: a short lead, then the feed or a minimal empty-state note.
 - On `v3`, if the news page already has a clear title, the masthead lead may be omitted entirely.
+
+### Version Surface Mobile Behavior
+
+- On phones, the version chooser should stack cleanly and reduce outer padding.
+- Preview cards should remain tappable, but preview mockups and descriptive copy should compress so the page does not feel oversized before the first choice.
 
 ## Bilingual Expectations
 

@@ -209,6 +209,48 @@
 .chooser__mock-heading--v3 { width: 72%; height: 14px; background: #20343a; margin-bottom: 10px; }
 .chooser__mock-pill { display: block; height: 14px; width: 42%; background: rgba(162,79,57,0.22); border-radius: 999px; margin-bottom: 10px; }
 
+@media (max-width: 560px) {
+  .chooser {
+    padding: 2.6rem 1rem 3rem;
+  }
+
+  .chooser__title {
+    font-size: 1.38rem;
+    line-height: 1.25;
+  }
+
+  .chooser__subtitle {
+    font-size: 0.94rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .chooser__grid {
+    gap: 1rem;
+  }
+
+  .chooser__card {
+    padding: 1.15rem;
+  }
+
+  .chooser__card h2 {
+    margin-top: 0.85rem;
+    font-size: 1.04rem;
+  }
+
+  .chooser__card p {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .chooser__preview {
+    height: 84px;
+  }
+
+  .chooser__mock-text {
+    padding: 10px 16px;
+  }
+}
+
 /* ============================================================================
    PROJECT CARDS — jekyll projects.liquid overrides
    ============================================================================ */
