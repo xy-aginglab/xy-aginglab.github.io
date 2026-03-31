@@ -1,11 +1,22 @@
+{% assign lang = page.lang | default: 'en' %}
+{% if lang == 'zh' and project.title_zh %}
+  {% assign p_title = project.title_zh %}
+{% else %}
+  {% assign p_title = project.title %}
+{% endif %}
+{% if lang == 'zh' and project.description_zh %}
+  {% assign p_desc = project.description_zh %}
+{% else %}
+  {% assign p_desc = project.description %}
+{% endif %}
 <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="lab-project-card-link">
   <div class="card hoverable">
     {% if project.img %}
-      <img src="{{ project.img | prepend: '/assets/img/' | relative_url }}" alt="{{ project.title }}" class="card-img-top" loading="eager">
+      <img src="{{ project.img | prepend: '/assets/img/' | relative_url }}" alt="{{ p_title }}" class="card-img-top" loading="eager">
     {% endif %}
     <div class="card-body">
-      <h2 class="card-title">{{ project.title }}</h2>
-      <p class="card-text">{{ project.description }}</p>
+      <h2 class="card-title">{{ p_title }}</h2>
+      <p class="card-text">{{ p_desc }}</p>
     </div>
   </div>
 </a>

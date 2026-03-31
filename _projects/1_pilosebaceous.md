@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Pilosebaceous Unit Diseases
+title_zh: 毛囊皮脂腺相关疾病
 description: Investigating the pathogenesis and targeted therapeutics for hair loss, hair graying, rosacea, acne, and related pilosebaceous disorders
+description_zh: 研究脱发、白发、玫瑰痤疮、痤疮等毛囊皮脂腺单位疾病的发病机制，开发靶向治疗药物与干细胞毛囊重建技术
 img: research_hair_follicle.svg
 importance: 1
 category: research

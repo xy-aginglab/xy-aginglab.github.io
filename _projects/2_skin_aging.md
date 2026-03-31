@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Skin Aging
+title_zh: 皮肤衰老
 description: Investigating mechanisms of skin aging using longevity cohorts and targeted anti-aging drug development
+description_zh: 利用长寿人群队列、动物及细胞模型研究皮肤衰老机制，并针对关键靶点进行抗衰老药物设计及研发
 img: research_skin_aging.svg
 importance: 2
 category: research
