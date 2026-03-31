@@ -765,8 +765,17 @@ h4 {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .projects {
-  max-width: 1000px;
+  max-width: 780px;
   margin: 0 auto;
+
+  .row {
+    justify-content: center;
+  }
+
+  .card img.card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
 
   h2.category {
     font-size: 1.3rem;
