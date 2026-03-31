@@ -2,17 +2,20 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_pilosebaceous/</loc>
-<lastmod>2026-03-31T17:35:52+00:00</lastmod>
+<lastmod>2026-03-31T18:10:13+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_skin_aging/</loc>
-<lastmod>2026-03-31T17:35:52+00:00</lastmod>
+<lastmod>2026-03-31T18:10:13+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/zh/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/careers/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v3/careers/</loc>
@@ -24,6 +27,9 @@
 <loc>https://xy-aginglab.github.io/careers/</loc>
 </url>
 <url>
+<loc>https://xy-aginglab.github.io/v3/zh/clinical/</loc>
+</url>
+<url>
 <loc>https://xy-aginglab.github.io/v3/clinical/</loc>
 </url>
 <url>
@@ -31,6 +37,12 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/clinical/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/news/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v3/news/</loc>
@@ -48,6 +60,9 @@
 <loc>https://xy-aginglab.github.io/people/</loc>
 </url>
 <url>
+<loc>https://xy-aginglab.github.io/v3/zh/projects/</loc>
+</url>
+<url>
 <loc>https://xy-aginglab.github.io/v3/projects/</loc>
 </url>
 <url>
@@ -57,6 +72,9 @@
 <loc>https://xy-aginglab.github.io/projects/</loc>
 </url>
 <url>
+<loc>https://xy-aginglab.github.io/v3/zh/publications/</loc>
+</url>
+<url>
 <loc>https://xy-aginglab.github.io/v3/publications/</loc>
 </url>
 <url>
@@ -64,6 +82,9 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/publications/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/team/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v3/team/</loc>
