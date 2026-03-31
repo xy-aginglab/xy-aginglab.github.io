@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 科研方向
-permalink: /zh/projects/
+permalink: /v1/zh/projects/
 lang: zh
 ---
 

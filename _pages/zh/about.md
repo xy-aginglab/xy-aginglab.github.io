@@ -1,7 +1,7 @@
 ---
 layout: about
 title: 首页
-permalink: /zh/
+permalink: /v1/zh/
 lang: zh
 selected_papers: true
 social: true

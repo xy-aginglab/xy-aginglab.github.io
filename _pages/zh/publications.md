@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /zh/publications/
+permalink: /v1/zh/publications/
 title: 论文发表
 lang: zh
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /clinical/
+permalink: /v1/clinical/
 title: Clinical Research
 description: Clinical research programs at the Li Lab
 nav: true

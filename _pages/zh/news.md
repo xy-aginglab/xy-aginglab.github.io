@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /zh/news/
+permalink: /v1/zh/news/
 title: 新闻动态
 lang: zh
 ---

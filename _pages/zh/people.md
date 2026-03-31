@@ -1,6 +1,6 @@
 ---
 layout: people
-permalink: /zh/people/
+permalink: /v1/zh/people/
 title: 实验室成员
 lang: zh
 ---

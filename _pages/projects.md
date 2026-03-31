@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
+permalink: /v1/projects/
 description: Research directions of the Li Lab
 nav: true
 nav_order: 1

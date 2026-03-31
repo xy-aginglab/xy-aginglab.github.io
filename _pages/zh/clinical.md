@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /zh/clinical/
+permalink: /v1/zh/clinical/
 title: 临床研究
 lang: zh
 ---

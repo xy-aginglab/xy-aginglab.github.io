@@ -28,7 +28,7 @@ layout: default
         <h3 class="lab-research-card__title">{{ t.research.pilosebaceous_title }}</h3>
         <p class="lab-research-card__desc">{{ t.research.pilosebaceous_desc }}</p>
         <a
-          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          href="{% if lang == 'zh' %}{{ '/v1/zh/projects/' | relative_url }}{% else %}{{ '/v1/projects/' | relative_url }}{% endif %}"
           class="lab-research-card__link"
         >
           {{- t.home.learn_more }}
@@ -44,7 +44,7 @@ layout: default
         <h3 class="lab-research-card__title">{{ t.research.skin_aging_title }}</h3>
         <p class="lab-research-card__desc">{{ t.research.skin_aging_desc }}</p>
         <a
-          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          href="{% if lang == 'zh' %}{{ '/v1/zh/projects/' | relative_url }}{% else %}{{ '/v1/projects/' | relative_url }}{% endif %}"
           class="lab-research-card__link"
         >
           {{- t.home.learn_more }}
@@ -60,7 +60,7 @@ layout: default
   <div class="lab-section">
     <h2 class="lab-section__heading">
       <a
-        href="{% if lang == 'zh' %}{{ '/zh/publications/' | relative_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}"
+        href="{% if lang == 'zh' %}{{ '/v1/zh/publications/' | relative_url }}{% else %}{{ '/v1/publications/' | relative_url }}{% endif %}"
         style="color: inherit; text-decoration: none"
       >
         {{- t.home.selected_pubs_heading -}}

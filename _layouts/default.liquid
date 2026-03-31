@@ -21,7 +21,7 @@
     <nav class="lab-nav{% if page.layout == 'about' %} lab-nav--at-top{% endif %}">
       <div class="lab-nav__inner">
         {% if lang == 'zh' %}
-          <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">Li Lab</a>
+          <a class="lab-nav__brand" href="{{ '/v1/zh/' | relative_url }}">Li Lab</a>
         {% else %}
           <a class="lab-nav__brand" href="{{ '/v1/' | relative_url }}">{{ site.title }}</a>
         {% endif %}
@@ -31,53 +31,53 @@
         <ul class="lab-nav__links">
           {% if lang == 'zh' %}
             <li
-              {% if page.url == '/zh/' %}
+              {% if page.url == '/v1/zh/' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/' | relative_url }}">{{ t.nav.home }}</a>
+              <a href="{{ '/v1/zh/' | relative_url }}">{{ t.nav.home }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/projects' %}
+              {% if page.url contains '/v1/zh/projects' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/projects/' | relative_url }}">{{ t.nav.projects }}</a>
+              <a href="{{ '/v1/zh/projects/' | relative_url }}">{{ t.nav.projects }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/publications' %}
+              {% if page.url contains '/v1/zh/publications' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/publications/' | relative_url }}">{{ t.nav.publications }}</a>
+              <a href="{{ '/v1/zh/publications/' | relative_url }}">{{ t.nav.publications }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/clinical' %}
+              {% if page.url contains '/v1/zh/clinical' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/clinical/' | relative_url }}">{{ t.nav.clinical }}</a>
+              <a href="{{ '/v1/zh/clinical/' | relative_url }}">{{ t.nav.clinical }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/people' %}
+              {% if page.url contains '/v1/zh/people' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/people/' | relative_url }}">{{ t.nav.people }}</a>
+              <a href="{{ '/v1/zh/people/' | relative_url }}">{{ t.nav.people }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/news' %}
+              {% if page.url contains '/v1/zh/news' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
+              <a href="{{ '/v1/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
             </li>
             <li
-              {% if page.url contains '/zh/careers' %}
+              {% if page.url contains '/v1/zh/careers' %}
                 class="active"
               {% endif %}
             >
-              <a href="{{ '/zh/careers/' | relative_url }}">{{ t.nav.careers }}</a>
+              <a href="{{ '/v1/zh/careers/' | relative_url }}">{{ t.nav.careers }}</a>
             </li>
           {% else %}
             {% assign sorted_pages = site.pages | sort: 'nav_order' %}
@@ -99,37 +99,37 @@
           {% assign switch_url = nil %}
           {% if lang == 'zh' %}
             {% case page.url %}
-              {% when '/zh/' %}
+              {% when '/v1/zh/' %}
                 {% assign switch_url = '/v1/' %}
-              {% when '/zh/projects/' %}
-                {% assign switch_url = '/projects/' %}
-              {% when '/zh/publications/' %}
-                {% assign switch_url = '/publications/' %}
-              {% when '/zh/clinical/' %}
-                {% assign switch_url = '/clinical/' %}
-              {% when '/zh/people/' %}
-                {% assign switch_url = '/people/' %}
-              {% when '/zh/news/' %}
-                {% assign switch_url = '/news/' %}
-              {% when '/zh/careers/' %}
-                {% assign switch_url = '/careers/' %}
+              {% when '/v1/zh/projects/' %}
+                {% assign switch_url = '/v1/projects/' %}
+              {% when '/v1/zh/publications/' %}
+                {% assign switch_url = '/v1/publications/' %}
+              {% when '/v1/zh/clinical/' %}
+                {% assign switch_url = '/v1/clinical/' %}
+              {% when '/v1/zh/people/' %}
+                {% assign switch_url = '/v1/people/' %}
+              {% when '/v1/zh/news/' %}
+                {% assign switch_url = '/v1/news/' %}
+              {% when '/v1/zh/careers/' %}
+                {% assign switch_url = '/v1/careers/' %}
             {% endcase %}
           {% else %}
             {% case page.url %}
               {% when '/v1/' %}
-                {% assign switch_url = '/zh/' %}
-              {% when '/projects/' %}
-                {% assign switch_url = '/zh/projects/' %}
-              {% when '/publications/' %}
-                {% assign switch_url = '/zh/publications/' %}
-              {% when '/clinical/' %}
-                {% assign switch_url = '/zh/clinical/' %}
-              {% when '/people/' %}
-                {% assign switch_url = '/zh/people/' %}
-              {% when '/news/' %}
-                {% assign switch_url = '/zh/news/' %}
-              {% when '/careers/' %}
-                {% assign switch_url = '/zh/careers/' %}
+                {% assign switch_url = '/v1/zh/' %}
+              {% when '/v1/projects/' %}
+                {% assign switch_url = '/v1/zh/projects/' %}
+              {% when '/v1/publications/' %}
+                {% assign switch_url = '/v1/zh/publications/' %}
+              {% when '/v1/clinical/' %}
+                {% assign switch_url = '/v1/zh/clinical/' %}
+              {% when '/v1/people/' %}
+                {% assign switch_url = '/v1/zh/people/' %}
+              {% when '/v1/news/' %}
+                {% assign switch_url = '/v1/zh/news/' %}
+              {% when '/v1/careers/' %}
+                {% assign switch_url = '/v1/zh/careers/' %}
             {% endcase %}
           {% endif %}
           {% if switch_url %}

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /careers/
+permalink: /v1/careers/
 title: Careers
 description: Join our team
 nav: true
