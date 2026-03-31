@@ -6,7 +6,7 @@ subtitle: >
   Xiangya Hospital, Central South University · Department of Dermatology
 
 tagline: >
-  Bridging clinical dermatology with molecular biology to uncover the mechanisms of skin aging, hair follicle regeneration, and inflammatory skin diseases.
+  Bridging clinical dermatology with molecular biology to uncover the mechanisms of pilosebaceous unit diseases and skin aging.
 
 profile:
   align: right
@@ -18,21 +18,16 @@ profile:
     <p>Changsha, Hunan, China</p>
 
 research_areas:
-  - title: Skin Aging & Longevity
+  - title: Pilosebaceous Unit Diseases
+    icon: fa-microscope
+    description: >
+      Integrating clinical resources with hair follicle organ culture models and animal models to study the pathogenesis of alopecia, hair graying, rosacea, and acne, and develop targeted therapeutic strategies.
+    link: /projects/1_pilosebaceous/
+  - title: Skin Aging
     icon: fa-dna
     description: >
       Integrating multi-omics data from longevity cohorts to identify novel biomarkers, explore cellular senescence, and validate anti-aging compounds.
-    link: /projects/1_skin_aging/
-  - title: Hair Follicle Biology
-    icon: fa-microscope
-    description: >
-      Deciphering hair growth and regeneration mechanisms, pioneering stem cell-based reconstruction and small-molecule therapies for alopecia.
-    link: /projects/2_hair_follicle/
-  - title: Inflammatory Skin Diseases
-    icon: fa-shield-virus
-    description: >
-      Characterizing immune-microbial interactions to develop precise, targeted therapeutic strategies for rosacea, acne, and related conditions.
-    link: /projects/3_inflammatory_skin/
+    link: /projects/2_skin_aging/
 
 selected_papers: true
 social: true
