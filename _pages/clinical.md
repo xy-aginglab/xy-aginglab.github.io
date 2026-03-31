@@ -2,7 +2,7 @@
 layout: page
 permalink: /clinical/
 title: Clinical Research
-description: Clinical research programs at the Hunan Key Laboratory of Aging Biology
+description: Clinical research programs at the Li Lab
 nav: true
 nav_order: 3
 ---

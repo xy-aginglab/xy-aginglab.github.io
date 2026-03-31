@@ -21,7 +21,7 @@
     <nav class="lab-nav{% if page.layout == 'about' %} lab-nav--at-top{% endif %}">
       <div class="lab-nav__inner">
         {% if lang == 'zh' %}
-          <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">衰老生物学湖南省重点实验室</a>
+          <a class="lab-nav__brand" href="{{ '/zh/' | relative_url }}">Li Lab</a>
         {% else %}
           <a class="lab-nav__brand" href="{{ '/v1/' | relative_url }}">{{ site.title }}</a>
         {% endif %}
@@ -165,7 +165,7 @@
       <div class="lab-logos__inner">
         <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University">
         <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital">
-        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Hunan Key Laboratory of Aging Biology">
+        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab">
         <img src="{{ '/assets/img/logos/research_center.png' | relative_url }}" alt="Skin Aging and Hair Regeneration Research Center">
       </div>
     </div>
@@ -175,7 +175,7 @@
       <div class="lab-footer__inner">
         <p>
           &copy; {{ site.time | date: '%Y' }}
-          {% if lang == 'zh' %}衰老生物学湖南省重点实验室{% else %}{{ site.title }}{% endif %}. {{ t.footer.powered_by }}
+          {% if lang == 'zh' %}Li Lab{% else %}{{ site.title }}{% endif %}. {{ t.footer.powered_by }}
           <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>.
           {{ t.footer.hosted_by }}
           <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.

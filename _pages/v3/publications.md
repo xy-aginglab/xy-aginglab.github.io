@@ -2,7 +2,7 @@
 layout: v3-page
 permalink: /v3/publications/
 title: Publications
-description: Selected and complete publications from the Hunan Key Laboratory of Aging Biology.
+description: Selected and complete publications from the Li Lab.
 show_eyebrow: false
 show_lead: false
 hide_publication_thumbnails: true

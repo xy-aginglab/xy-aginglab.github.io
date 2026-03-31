@@ -2,7 +2,7 @@
 layout: bloom-page
 permalink: /v2/careers/
 title: Careers
-description: Join our team at the Aging Biology Lab.
+description: Join our team at the Li Lab.
 sitemap: false
 ---
 

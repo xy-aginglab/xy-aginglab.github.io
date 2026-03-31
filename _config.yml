@@ -2,14 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Hunan Key Laboratory of Aging Biology
-first_name: Hunan Key Laboratory
+title: Li Lab
+first_name: Li
 middle_name:
-last_name: of Aging Biology
+last_name: Lab
 contact_note: >
   Department of Dermatology, Xiangya Hospital, Central South University
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Hunan Key Laboratory of Aging Biology — Xiangya Hospital, Central South University. Research in skin aging, hair follicle biology, and inflammatory skin diseases.
+  Li Lab — Xiangya Hospital, Central South University. Research in skin aging, hair follicle biology, and inflammatory skin diseases.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
@@ -72,7 +72,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Lab News
-blog_description: News and updates from the Hunan Key Laboratory of Aging Biology
+blog_description: News and updates from the Li Lab
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

@@ -48,7 +48,7 @@ research:
 
 people:
   page_title: Meet the Team
-  page_desc: Members of the Hunan Key Laboratory of Aging Biology
+  page_desc: Members of the Li Lab
   pi: Principal Investigator
   basic_researchers: Basic Researchers
   clinical_researchers: Clinical Researchers
@@ -60,7 +60,7 @@ publications:
 
 projects:
   page_title: Research
-  page_desc: Research directions of the Hunan Key Laboratory of Aging Biology
+  page_desc: Research directions of the Li Lab
 
 footer:
   powered_by: "Powered by"

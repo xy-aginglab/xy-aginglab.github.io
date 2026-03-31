@@ -12,7 +12,7 @@ sitemap: false
       Lab News
     </h1>
     <p class="text-lg leading-7 text-gray-600">
-      A collection of news and updates from the Aging Biology Lab team.
+      A collection of news and updates from the Li Lab team.
     </p>
   </div>
   <div>

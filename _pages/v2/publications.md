@@ -11,7 +11,7 @@ sitemap: false
       Papers
     </h1>
     <p class="text-xl leading-8 text-gray-800">
-      Papers from the Aging Biology Lab.
+      Papers from the Li Lab.
       {% if site.data.socials.scholar_userid %}
         See also <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a> for a complete list of publications.
       {% endif %}

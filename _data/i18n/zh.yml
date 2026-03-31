@@ -40,7 +40,7 @@ research:
 
 people:
   page_title: 团队介绍
-  page_desc: 衰老生物学湖南省重点实验室成员
+  page_desc: Li Lab成员
   pi: 实验室主任
   basic_researchers: 基础研究人员
   clinical_researchers: 临床研究人员
@@ -52,7 +52,7 @@ publications:
 
 projects:
   page_title: 科研方向
-  page_desc: 衰老生物学湖南省重点实验室研究方向
+  page_desc: Li Lab研究方向
 
 footer:
   powered_by: "技术支持"
