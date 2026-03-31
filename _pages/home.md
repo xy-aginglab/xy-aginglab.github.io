@@ -1,6 +1,6 @@
 ---
-layout: root-redirect
+layout: chooser
+title: Site Versions
 permalink: /
-redirect_to: /v3/
 sitemap: false
 ---

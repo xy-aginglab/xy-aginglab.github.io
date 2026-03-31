@@ -187,8 +187,8 @@
 .chooser__subtitle { color: #6b7280; margin: 0 auto 2.5rem; font-size: 1rem; max-width: 40rem; }
 .chooser__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; align-items: stretch; }
 @media (max-width: 900px) { .chooser__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .chooser__grid { grid-template-columns: 1fr; } }
-.chooser__card { display: block; min-width: 0; height: 100%; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; text-decoration: none !important; color: inherit !important; transition: border-color 0.2s, box-shadow 0.2s; }
+@media (max-width: 560px) { .chooser__grid { grid-template-columns: 1fr; align-items: start; } }
+.chooser__card { display: block; min-width: 0; border: 2px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; text-decoration: none !important; color: inherit !important; transition: border-color 0.2s, box-shadow 0.2s; }
 .chooser__card:hover { border-color: #a72126; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 .chooser__card h2 { font-size: 1.15rem; margin: 1rem 0 0.4rem; }
 .chooser__card p { font-size: 0.88rem; color: #6b7280; line-height: 1.5; }
