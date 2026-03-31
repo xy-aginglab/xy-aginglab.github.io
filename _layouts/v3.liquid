@@ -46,16 +46,36 @@
 </head>
 <body>
   {% assign current_url = page.url | default: '' %}
+  {% assign lang = page.lang | default: 'en' %}
   <div class="v3-shell">
     <nav class="v3-nav" data-v3-nav>
       <div class="v3-nav__inner">
+        {% if lang == 'zh' %}
+        <a class="v3-brand" href="{{ '/v3/zh/' | relative_url }}" aria-label="Li Lab">
+          <span class="v3-brand__title">Li Lab</span>
+        </a>
+        {% else %}
         <a class="v3-brand" href="{{ '/v3/' | relative_url }}" aria-label="Li Lab">
           <span class="v3-brand__title">Li Lab</span>
         </a>
+        {% endif %}
         <button class="v3-nav__toggle" type="button" aria-controls="v3-primary-nav" aria-expanded="false" aria-label="Toggle site navigation" data-v3-nav-toggle>
           Menu
         </button>
         <div class="v3-nav__menu" id="v3-primary-nav" data-v3-nav-menu>
+          {% if lang == 'zh' %}
+          <div class="v3-nav__menu-main">
+            <a href="{{ '/v3/zh/projects/' | relative_url }}"{% if current_url contains '/v3/zh/projects' %} class="is-active"{% endif %}>科研方向</a>
+            <a href="{{ '/v3/zh/publications/' | relative_url }}"{% if current_url contains '/v3/zh/publications' %} class="is-active"{% endif %}>论文发表</a>
+            <a href="{{ '/v3/zh/team/' | relative_url }}"{% if current_url contains '/v3/zh/team' %} class="is-active"{% endif %}>团队成员</a>
+          </div>
+          <div class="v3-nav__utility" aria-label="Additional pages">
+            <a href="{{ '/v3/zh/clinical/' | relative_url }}"{% if current_url contains '/v3/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
+            <a href="{{ '/v3/zh/news/' | relative_url }}"{% if current_url contains '/v3/zh/news' %} class="is-active"{% endif %}>新闻动态</a>
+            <a href="{{ '/v3/zh/careers/' | relative_url }}"{% if current_url contains '/v3/zh/careers' %} class="is-active"{% endif %}>招聘信息</a>
+            <a href="{{ '/v3/' | relative_url }}">EN</a>
+          </div>
+          {% else %}
           <div class="v3-nav__menu-main">
             <a href="{{ '/v3/projects/' | relative_url }}"{% if current_url contains '/v3/projects' %} class="is-active"{% endif %}>Research</a>
             <a href="{{ '/v3/publications/' | relative_url }}"{% if current_url contains '/v3/publications' or current_url contains '/bibliography/' %} class="is-active"{% endif %}>Publications</a>
@@ -65,7 +85,9 @@
             <a href="{{ '/v3/clinical/' | relative_url }}"{% if current_url contains '/v3/clinical' %} class="is-active"{% endif %}>Clinical</a>
             <a href="{{ '/v3/news/' | relative_url }}"{% if current_url contains '/v3/news' %} class="is-active"{% endif %}>News</a>
             <a href="{{ '/v3/careers/' | relative_url }}"{% if current_url contains '/v3/careers' %} class="is-active"{% endif %}>Careers</a>
+            <a href="{{ '/v3/zh/' | relative_url }}">中文</a>
           </div>
+          {% endif %}
         </div>
       </div>
     </nav>

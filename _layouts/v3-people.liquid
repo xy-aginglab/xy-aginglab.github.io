@@ -1,7 +1,8 @@
 ---
 layout: v3
 ---
-{% assign t = site.data.i18n.en %}
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
 {% assign pi = site.data.members | where: 'role', 'pi' %}
 {% assign basic = site.data.members | where: 'role', 'basic_researcher' %}
 {% assign clinical = site.data.members | where: 'role', 'clinical_researcher' %}
@@ -57,7 +58,11 @@ layout: v3
   <div class="v3-people">
     {% if pi.size > 0 %}
       {% for member in pi %}
-        {% assign pi_bio_blocks = member.bio | split: '<br><br>' %}
+        {% if lang == 'zh' %}
+          {% assign pi_bio_blocks = member.bio_zh | default: member.bio | split: '<br><br>' %}
+        {% else %}
+          {% assign pi_bio_blocks = member.bio | split: '<br><br>' %}
+        {% endif %}
         {% assign has_pi_links = false %}
         {% if member.email or member.scholar or member.orcid or member.researchgate %}
           {% assign has_pi_links = true %}
@@ -65,10 +70,10 @@ layout: v3
         <section class="v3-person-group">
           <h2 class="v3-group__title">{{ t.people.pi }}</h2>
           <article class="v3-pi-card">
-            <img src="{{ member.photo | relative_url }}" alt="{{ member.name_en | default: member.name }}" loading="lazy">
+            <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
             <div class="v3-pi-card__content">
-              <h3 class="v3-pi-card__name">{{ member.name_en | default: member.name }}</h3>
-              <p class="v3-pi-card__meta">{{ member.title_en | default: member.title }}</p>
+              <h3 class="v3-pi-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+              <p class="v3-pi-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
               {% if member.bio %}
                 <div class="v3-pi-card__bio">
                   {% for bio_block in pi_bio_blocks limit: 1 %}
@@ -108,10 +113,10 @@ layout: v3
             {% endif %}
             {% if show_photo %}
               <article class="v3-person-card">
-                <img src="{{ member.photo | relative_url }}" alt="{{ member.name_en | default: member.name }}" loading="lazy">
+                <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
                       {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
@@ -137,8 +142,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}
                   <div class="v3-person-links">
@@ -169,10 +174,10 @@ layout: v3
             {% endif %}
             {% if show_photo %}
               <article class="v3-person-card">
-                <img src="{{ member.photo | relative_url }}" alt="{{ member.name_en | default: member.name }}" loading="lazy">
+                <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
                       {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
@@ -198,8 +203,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}
                   <div class="v3-person-links">
@@ -230,10 +235,10 @@ layout: v3
             {% endif %}
             {% if show_photo %}
               <article class="v3-person-card">
-                <img src="{{ member.photo | relative_url }}" alt="{{ member.name_en | default: member.name }}" loading="lazy">
+                <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
                       {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
@@ -259,8 +264,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{{ member.name_en | default: member.name }}</h3>
-                  <p class="v3-person-card__meta">{{ member.title_en | default: member.title }}</p>
+                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}
                   <div class="v3-person-links">

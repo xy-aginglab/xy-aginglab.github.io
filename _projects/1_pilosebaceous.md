@@ -8,6 +8,7 @@ img: research_hair_follicle.svg
 importance: 1
 category: research
 overview_detail: Our research spans the full spectrum of pilosebaceous unit disorders — from alopecia and hair graying to rosacea and acne. We combine clinical cohorts, human hair follicle organ culture models, animal models, and single-cell omics to elucidate disease mechanisms, develop targeted small-molecule drugs, and establish stem cell-based hair follicle reconstruction technologies.
+overview_detail_zh: 我们的研究涵盖毛囊皮脂腺单位疾病的全谱——从脱发、白发到玫瑰痤疮和痤疮。我们结合临床队列、人源毛囊器官培养模型、动物模型和单细胞组学技术，阐明疾病机制，开发靶向小分子药物，并建立基于干细胞的毛囊重建技术。
 ---
 
 We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of **pilosebaceous unit diseases** — including alopecia, hair graying, rosacea, and acne — and develop targeted therapeutic strategies.

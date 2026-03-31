@@ -57,7 +57,7 @@
 
     <nav class="bloom-nav p-4">
       <div class="flex justify-between items-center w-full px-4 select-none">
-        <a href="/v2/" class="flex items-center no-underline">
+        <a href="{% if lang == 'zh' %}/v2/zh/{% else %}/v2/{% endif %}" class="flex items-center no-underline">
           <span class="bloom-logo-text text-lg font-bold text-custom-orange">
             Li Lab
           </span>
@@ -66,12 +66,23 @@
           <i class="fas fa-bars h-6 w-6"></i>
         </button>
         <div id="bloom-menu" class="bloom-mobile-menu bg-custom-soft backdrop-blur-md md:backdrop-blur-none flex-col md:flex-row bg-opacity-75 md:bg-transparent md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute md:w-auto w-full md:h-auto h-full md:pt-0 pt-10 top-14 z-50 left-0">
-          <a href="/v2/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/projects' %}text-custom-orange{% else %}text-gray-600{% endif %}">Research</a>
-          <a href="/v2/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/publications' %}text-custom-orange{% else %}text-gray-600{% endif %}">Publications</a>
-          <a href="/v2/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/clinical' %}text-custom-orange{% else %}text-gray-600{% endif %}">Clinical</a>
-          <a href="/v2/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/team' %}text-custom-orange{% else %}text-gray-600{% endif %}">Team</a>
-          <a href="/v2/news/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/news' %}text-custom-orange{% else %}text-gray-600{% endif %}">News</a>
-          <a href="/v2/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/careers' %}text-custom-orange{% else %}text-gray-600{% endif %}">Careers</a>
+          {% if lang == 'zh' %}
+            <a href="/v2/zh/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/projects' %}text-custom-orange{% else %}text-gray-600{% endif %}">科研方向</a>
+            <a href="/v2/zh/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/publications' %}text-custom-orange{% else %}text-gray-600{% endif %}">论文发表</a>
+            <a href="/v2/zh/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/clinical' %}text-custom-orange{% else %}text-gray-600{% endif %}">临床研究</a>
+            <a href="/v2/zh/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/team' %}text-custom-orange{% else %}text-gray-600{% endif %}">团队成员</a>
+            <a href="/v2/zh/news/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/news' %}text-custom-orange{% else %}text-gray-600{% endif %}">新闻动态</a>
+            <a href="/v2/zh/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/careers' %}text-custom-orange{% else %}text-gray-600{% endif %}">招聘信息</a>
+            <a href="/v2/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-400">EN</a>
+          {% else %}
+            <a href="/v2/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/projects' %}text-custom-orange{% else %}text-gray-600{% endif %}">Research</a>
+            <a href="/v2/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/publications' %}text-custom-orange{% else %}text-gray-600{% endif %}">Publications</a>
+            <a href="/v2/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/clinical' %}text-custom-orange{% else %}text-gray-600{% endif %}">Clinical</a>
+            <a href="/v2/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/team' %}text-custom-orange{% else %}text-gray-600{% endif %}">Team</a>
+            <a href="/v2/news/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/news' %}text-custom-orange{% else %}text-gray-600{% endif %}">News</a>
+            <a href="/v2/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start {% if page.url contains '/careers' %}text-custom-orange{% else %}text-gray-600{% endif %}">Careers</a>
+            <a href="/v2/zh/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-400">中文</a>
+          {% endif %}
         </div>
       </div>
     </nav>
@@ -83,7 +94,11 @@
     <footer class="w-full p-4 bg-white text-center text-gray-400 text-sm">
       <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
       <p class="text-xs mt-1">
-        <a href="/v1/" class="text-gray-400 hover:text-custom-orange">Switch to Version A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">View versions</a>
+        {% if lang == 'zh' %}
+          <a href="/v1/" class="text-gray-400 hover:text-custom-orange">切换到版本 A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">查看版本</a>
+        {% else %}
+          <a href="/v1/" class="text-gray-400 hover:text-custom-orange">Switch to Version A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">View versions</a>
+        {% endif %}
       </p>
     </footer>
   </div>
