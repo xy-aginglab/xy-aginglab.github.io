@@ -2,7 +2,7 @@
 layout: v3-page
 permalink: /v3/projects/
 title: Our Research
-description: Skin aging, hair diseases and regeneration, and inflammatory skin disease.
+description: Pilosebaceous unit diseases and skin aging.
 show_lead: false
 ---
 {% assign projects = site.projects | sort: 'importance' %}
