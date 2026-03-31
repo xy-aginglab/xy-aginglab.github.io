@@ -66,13 +66,6 @@
               <a href="{{ '/v1/zh/people/' | relative_url }}">{{ t.nav.people }}</a>
             </li>
             <li
-              {% if page.url contains '/v1/zh/news' %}
-                class="active"
-              {% endif %}
-            >
-              <a href="{{ '/v1/zh/news/' | relative_url }}">{{ t.nav.news }}</a>
-            </li>
-            <li
               {% if page.url contains '/v1/zh/careers' %}
                 class="active"
               {% endif %}
@@ -109,8 +102,6 @@
                 {% assign switch_url = '/v1/clinical/' %}
               {% when '/v1/zh/people/' %}
                 {% assign switch_url = '/v1/people/' %}
-              {% when '/v1/zh/news/' %}
-                {% assign switch_url = '/v1/news/' %}
               {% when '/v1/zh/careers/' %}
                 {% assign switch_url = '/v1/careers/' %}
             {% endcase %}
@@ -126,8 +117,6 @@
                 {% assign switch_url = '/v1/zh/clinical/' %}
               {% when '/v1/people/' %}
                 {% assign switch_url = '/v1/zh/people/' %}
-              {% when '/v1/news/' %}
-                {% assign switch_url = '/v1/zh/news/' %}
               {% when '/v1/careers/' %}
                 {% assign switch_url = '/v1/zh/careers/' %}
             {% endcase %}
