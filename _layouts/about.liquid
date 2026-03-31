@@ -22,43 +22,27 @@ layout: default
   <div class="lab-research-grid">
     <div class="lab-research-card">
       <div class="lab-research-card__banner">
+        <img src="{{ '/assets/img/research_hair_follicle.svg' | relative_url }}" alt="Pilosebaceous Unit Diseases">
+      </div>
+      <div class="lab-research-card__content">
+        <h3 class="lab-research-card__title">{{ t.research.pilosebaceous_title }}</h3>
+        <p class="lab-research-card__desc">{{ t.research.pilosebaceous_desc }}</p>
+        <a
+          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
+          class="lab-research-card__link"
+        >
+          {{- t.home.learn_more }}
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="lab-research-card">
+      <div class="lab-research-card__banner">
         <img src="{{ '/assets/img/research_skin_aging.svg' | relative_url }}" alt="Skin Aging">
       </div>
       <div class="lab-research-card__content">
         <h3 class="lab-research-card__title">{{ t.research.skin_aging_title }}</h3>
         <p class="lab-research-card__desc">{{ t.research.skin_aging_desc }}</p>
-        <a
-          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
-          class="lab-research-card__link"
-        >
-          {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-    <div class="lab-research-card">
-      <div class="lab-research-card__banner">
-        <img src="{{ '/assets/img/research_hair_follicle.svg' | relative_url }}" alt="Hair Follicle">
-      </div>
-      <div class="lab-research-card__content">
-        <h3 class="lab-research-card__title">{{ t.research.hair_follicle_title }}</h3>
-        <p class="lab-research-card__desc">{{ t.research.hair_follicle_desc }}</p>
-        <a
-          href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
-          class="lab-research-card__link"
-        >
-          {{- t.home.learn_more }}
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-    <div class="lab-research-card">
-      <div class="lab-research-card__banner">
-        <img src="{{ '/assets/img/research_inflammatory.svg' | relative_url }}" alt="Inflammatory Skin">
-      </div>
-      <div class="lab-research-card__content">
-        <h3 class="lab-research-card__title">{{ t.research.inflammatory_title }}</h3>
-        <p class="lab-research-card__desc">{{ t.research.inflammatory_desc }}</p>
         <a
           href="{% if lang == 'zh' %}{{ '/zh/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}"
           class="lab-research-card__link"

@@ -31,20 +31,15 @@ home:
   address_line4: Changsha, Hunan, China 410008
 
 research:
+  pilosebaceous_title: Pilosebaceous Unit Diseases
+  pilosebaceous_desc: >
+    Integrating clinical resources with hair follicle organ culture models and animal models to study
+    the pathogenesis of alopecia, hair graying, rosacea, and acne, and develop targeted therapeutic
+    strategies including stem cell-based hair follicle reconstruction technologies.
   skin_aging_title: Skin Aging
   skin_aging_desc: >
     Investigating the mechanisms of skin aging using longevity cohorts, animal models, and cell models,
     with targeted anti-aging drug design and development for key molecular targets.
-  hair_follicle_title: Hair Diseases & Hair Regeneration
-  hair_follicle_desc: >
-    Integrating clinical resources with human hair follicle organ culture models to study
-    the pathogenesis of alopecia and hair graying, develop targeted therapeutics, and establish
-    stem cell-based hair follicle reconstruction technologies.
-  inflammatory_title: Inflammatory Skin Diseases
-  inflammatory_desc: >
-    Integrating clinical resources with animal and cell models to investigate the pathogenesis
-    of inflammatory skin diseases — particularly disfiguring conditions such as rosacea and acne —
-    and developing targeted therapeutic drugs for key molecular pathways.
 
 people:
   page_title: Meet the Team
