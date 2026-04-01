@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_pilosebaceous/</loc>
-<lastmod>2026-04-01T02:27:59+00:00</lastmod>
+<lastmod>2026-04-01T09:54:13+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_skin_aging/</loc>
-<lastmod>2026-04-01T02:27:59+00:00</lastmod>
+<lastmod>2026-04-01T09:54:13+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/zh/</loc>
@@ -45,6 +45,15 @@
 <loc>https://xy-aginglab.github.io/v1/zh/people/</loc>
 </url>
 <url>
+<loc>https://xy-aginglab.github.io/v3/projects/pilosebaceous-unit-diseases/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/projects/pilosebaceous-unit-diseases/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v1/zh/projects/pilosebaceous-unit-diseases/</loc>
+</url>
+<url>
 <loc>https://xy-aginglab.github.io/v1/people/</loc>
 </url>
 <url>
@@ -70,6 +79,15 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/publications/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/projects/skin-aging/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v3/zh/projects/skin-aging/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/v1/zh/projects/skin-aging/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v3/zh/team/</loc>
