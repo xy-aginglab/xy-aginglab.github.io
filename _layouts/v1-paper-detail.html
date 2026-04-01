@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    {% assign publication_venue = page.entry.journal | default: page.entry.booktitle %}
+    {% if publication_venue or page.entry.year %}
+      <p class="post-description" style="margin-bottom:0.3rem;">
+        {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
+        {% if publication_venue and page.entry.year %} · {% endif %}
+        {% if page.entry.year %}{{ page.entry.year }}{% endif %}
+      </p>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article>
+    {% if page.entry.author %}
+      <p style="color:#555;line-height:1.8;">{{ page.entry.author }}</p>
+    {% endif %}
+
+    {% if page.entry.doi %}
+      <p>
+        <a href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">doi:{{ page.entry.doi }}</a>
+      </p>
+    {% endif %}
+
+    {% if page.entry.abstract %}
+      <hr style="margin:1.5rem 0;">
+      <h2>Abstract</h2>
+      <p style="line-height:1.9;color:#444;">{{ page.entry.abstract }}</p>
+    {% endif %}
+
+    <p style="margin-top:2rem;">
+      <a href="#" onclick="event.preventDefault(); if(document.referrer && document.referrer.includes(location.hostname)){history.back();}else{location.href='{{ '/v1/publications/' | relative_url }}';}" style="font-weight:600;">&larr; Back to publications</a>
+    </p>
+  </article>
+</div>

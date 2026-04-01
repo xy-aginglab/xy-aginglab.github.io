@@ -10,8 +10,9 @@ show_lead: false
 
 <div class="v3-program-stack">
   {% for project in projects %}
-    <article id="{{ project.title | slugify }}" class="v3-program-entry">
-      <h2>{{ project.title_zh | default: project.title }}</h2>
+    {% assign slug = project.title | slugify %}
+    <article id="{{ slug }}" class="v3-program-entry">
+      <h2><a href="{{ '/v3/zh/projects/' | append: slug | append: '/' | relative_url }}">{{ project.title_zh | default: project.title }}</a></h2>
       <div class="v3-program-entry__media">
         <img src="{{ project.img | replace: '.svg', '.png' | prepend: '/assets/img/' | relative_url }}" alt="{{ project.title_zh | default: project.title }}">
       </div>
