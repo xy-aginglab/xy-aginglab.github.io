@@ -23,8 +23,8 @@ description: Use when working in the xy-aginglab.github.io repository for the Hu
 
 ## Current Product Shape
 
-- `/` is the primary public entry and should route visitors into the chosen `v3` experience.
-- `/versions/` is the comparison surface for version previews.
+- `/` is the primary public entry and displays the version chooser so visitors can pick a version.
+- `/versions/` also renders the same chooser layout and remains a valid alias.
 - `/v1/` is the fuller institutional surface:
   - branded and section-driven
   - bilingual (`en` plus `zh`)

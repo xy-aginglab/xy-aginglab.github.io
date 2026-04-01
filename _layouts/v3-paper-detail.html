@@ -34,6 +34,6 @@ layout: v3
   {% endif %}
 
   <p class="v3-paper__back">
-    <a href="{{ '/v3/publications/' | relative_url }}">Back to publications</a>
+    <a href="{{ '/v3/publications/' | relative_url }}" onclick="if(document.referrer && document.referrer.includes(location.hostname)){event.preventDefault();history.back();}">Back to publications</a>
   </p>
 </article>
