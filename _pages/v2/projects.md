@@ -16,12 +16,12 @@ sitemap: false
   <!-- .research-aims pb-8 -->
   <div class="research-aims pb-8">
 
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Pilosebaceous Unit Diseases</h2>
+    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Pilosebaceous-Related Diseases</h2>
 
-    <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="Pilosebaceous Unit Diseases Research" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
+    <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="Pilosebaceous-Related Diseases Research" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
 
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of <strong>pilosebaceous unit diseases</strong> — including alopecia, hair graying, rosacea, and acne — and develop targeted therapeutic strategies.
+      We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of <strong>pilosebaceous-related diseases</strong> — including alopecia, hair graying, rosacea, and acne — and develop targeted therapeutic strategies.
     </p>
     <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
       Our hair research elucidates the pathogenesis of alopecia and hair graying, develops targeted small-molecule drugs for hair regrowth and graying reversal, and establishes hair follicle reconstruction based on human follicle stem cells and mesenchymal stem cells. Our inflammatory skin disease research characterizes immune-microbial-neurogenic interactions, identifies key inflammatory pathways and therapeutic targets, and designs targeted drugs for rosacea, acne, and related conditions.

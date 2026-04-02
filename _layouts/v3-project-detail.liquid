@@ -5,23 +5,13 @@ layout: v3
 <article class="v3-page">
   <div class="v3-page__masthead">
     <header class="v3-page__header">
-      <p class="v3-page__eyebrow">
-        {% if lang == 'zh' %}
-          <a href="{{ '/v3/zh/projects/' | relative_url }}">科研方向</a>
-        {% else %}
-          <a href="{{ '/v3/projects/' | relative_url }}">Research</a>
-        {% endif %}
-      </p>
       <h1>{{ page.title }}</h1>
-      {% if page.description %}
-        <p class="v3-page__lead">{{ page.description }}</p>
-      {% endif %}
     </header>
   </div>
 
   <div class="v3-page__content v3-rich">
     {% if page.img %}
-      <img src="{{ page.img | prepend: '/assets/img/' | relative_url }}" alt="{{ page.title }}" style="width:min(100%,32rem);border-radius:16px;margin-bottom:1.5rem;">
+      <img src="{{ page.img | replace: '.svg', '.png' | prepend: '/assets/img/' | relative_url }}" alt="{{ page.title }}" style="width:min(100%,32rem);border-radius:16px;margin-bottom:1.5rem;">
     {% endif %}
 
     {{ content }}

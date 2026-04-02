@@ -9,7 +9,6 @@ show_lead: false
 
 <div class="v3-program-stack">
   {% for project in projects %}
-    {% assign project_overview = project.content | split: '<p><strong>Key Areas:</strong></p>' | first %}
     {% assign slug = project.title | slugify %}
     <article id="{{ slug }}" class="v3-program-entry">
       <h2><a href="{{ '/v3/projects/' | append: slug | append: '/' | relative_url }}">{{ project.title }}</a></h2>
@@ -17,10 +16,10 @@ show_lead: false
         <img src="{{ project.img | replace: '.svg', '.png' | prepend: '/assets/img/' | relative_url }}" alt="{{ project.title }}">
       </div>
       <div class="v3-program-entry__content">
-        {{ project_overview }}
-        {% if project.overview_detail %}
-          <p>{{ project.overview_detail }}</p>
-        {% endif %}
+        {{ project.overview_detail }}
+        <div class="v3-program-entry__more">
+          <a href="{{ '/v3/projects/' | append: slug | append: '/' | relative_url }}">View publications & details →</a>
+        </div>
       </div>
     </article>
   {% endfor %}

@@ -6,16 +6,12 @@ description: Investigating mechanisms of skin aging using longevity cohorts and 
 img: research_skin_aging.svg
 ---
 
-We investigate the mechanisms of skin aging using **longevity population cohorts**, animal models, and cell models, with targeted anti-aging drug design and development for key molecular targets.
+We investigate the fundamental mechanisms of skin aging by integrating data from longevity population cohorts with advanced animal and cellular models. Utilizing multi-omics approaches, we aim to decipher the role of cellular senescence and identify key aging biomarkers within the skin microenvironment.
 
-**Key Areas:**
-
-- Characterizing aging mechanisms through longevity cohort multi-omics
-- Exploring the role of cellular senescence in the skin microenvironment
-- Designing and developing anti-aging drugs targeting key molecular pathways
+Building upon these foundational discoveries, we drive the rational design and development of targeted anti-aging therapeutics. Our focus is to translate these key molecular insights into effective clinical interventions.
 
 ## Related Publications
 
 <div class="publications">
-{% bibliography --query @*[category=skin_aging] %}
+{% bibliography --query @*[category=skin_aging && basic=true] %}
 </div>

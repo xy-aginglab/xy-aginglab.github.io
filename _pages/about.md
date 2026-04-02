@@ -6,7 +6,7 @@ subtitle: >
   Xiangya Hospital, Central South University · Department of Dermatology
 
 tagline: >
-  Bridging clinical dermatology with molecular biology to uncover the mechanisms of pilosebaceous unit diseases and skin aging.
+  Bridging clinical dermatology with molecular biology to uncover the mechanisms of pilosebaceous-related diseases and skin aging.
 
 profile:
   align: right
@@ -18,7 +18,7 @@ profile:
     <p>Changsha, Hunan, China</p>
 
 research_areas:
-  - title: Pilosebaceous Unit Diseases
+  - title: Pilosebaceous-Related Diseases
     icon: fa-microscope
     description: >
       Integrating clinical resources with hair follicle organ culture models and animal models to study the pathogenesis of alopecia, hair graying, rosacea, and acne, and develop targeted therapeutic strategies.

@@ -12,13 +12,14 @@ hide_publication_thumbnails: true
   <section class="v3-section">
     <div class="v3-section__intro">
       <h2>代表性论文</h2>
+      <p>代表实验室当前核心研究方向的关键论文。</p>
     </div>
-    <div class="v3-surface v3-publication-surface">
-      <div class="publications">
-        {% bibliography --group_by none --query @*[selected=true]* %}
-      </div>
+    <div class="v3-pub-featured">
+      {% bibliography --group_by none --query @*[selected=true]* %}
     </div>
   </section>
+
+  <hr class="v3-divider">
 
   <section class="v3-section">
     <div class="v3-section__intro">

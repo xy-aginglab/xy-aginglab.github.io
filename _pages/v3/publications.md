@@ -11,13 +11,14 @@ hide_publication_thumbnails: true
   <section class="v3-section">
     <div class="v3-section__intro">
       <h2>Selected papers</h2>
+      <p>Key publications that define the lab's current research directions.</p>
     </div>
-    <div class="v3-surface v3-publication-surface">
-      <div class="publications">
-        {% bibliography --group_by none --query @*[selected=true]* %}
-      </div>
+    <div class="v3-pub-featured">
+      {% bibliography --group_by none --query @*[selected=true]* %}
     </div>
   </section>
+
+  <hr class="v3-divider">
 
   <section class="v3-section">
     <div class="v3-section__intro">

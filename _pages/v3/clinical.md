@@ -30,3 +30,14 @@ content_offset_right: true
     <p>For collaboration related to cohorts, samples, or translational dermatology studies, contact <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>.</p>
   </section>
 </div>
+
+<section class="v3-section" style="margin-top:2rem;">
+  <div class="v3-section__intro">
+    <h2>Related publications</h2>
+  </div>
+  <div class="v3-surface v3-publication-surface">
+    <div class="publications">
+      {% bibliography --query @*[clinical=true]* %}
+    </div>
+  </div>
+</section>

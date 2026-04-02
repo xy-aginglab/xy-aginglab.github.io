@@ -31,3 +31,14 @@ content_offset_right: true
     <p>如需队列、样本或转化皮肤病学研究合作，请联系 <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>。</p>
   </section>
 </div>
+
+<section class="v3-section" style="margin-top:2rem;">
+  <div class="v3-section__intro">
+    <h2>相关论文</h2>
+  </div>
+  <div class="v3-surface v3-publication-surface">
+    <div class="publications">
+      {% bibliography --query @*[clinical=true]* %}
+    </div>
+  </div>
+</section>

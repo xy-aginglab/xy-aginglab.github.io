@@ -18,3 +18,9 @@ Leveraging the extensive clinical resources of **Xiangya Hospital**, our laborat
 ### Clinical Resources
 
 Our team has access to the rich patient population and infrastructure of Xiangya Hospital's Department of Dermatology, enabling large-scale clinical studies and rapid translational validation.
+
+## Related Publications
+
+<div class="publications">
+{% bibliography --query @*[clinical=true] %}
+</div>
