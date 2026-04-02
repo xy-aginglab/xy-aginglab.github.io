@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         charIndex -= 1;
-        el.textContent = item.text.substring(0, charIndex);
+        el.textContent = item.text.substring(0, charIndex) || "\u200b";
         if (charIndex === 0) {
           deleting = false;
           index = (index + 1) % items.length;
@@ -167,4 +167,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tick();
   });
+
+  /* Featured publications: rebuild into clean 2-col grid.
+     jekyll-scholar emits empty <li> spacers that break CSS grid,
+     so we extract real entries and place them in a fresh container. */
+  document.querySelectorAll(".v3-pub-featured").forEach(function (wrapper) {
+    var entries = wrapper.querySelectorAll("li.bib-entry");
+    if (!entries.length) return;
+    var grid = document.createElement("div");
+    grid.className = "v3-pub-grid";
+    entries.forEach(function (li) {
+      grid.appendChild(li);
+    });
+    wrapper.innerHTML = "";
+    wrapper.appendChild(grid);
+  });
+
+  /* Sticky nav scroll shadow */
+  if (nav) {
+    var scrolled = false;
+    window.addEventListener("scroll", function () {
+      var shouldBeScrolled = window.scrollY > 10;
+      if (shouldBeScrolled !== scrolled) {
+        scrolled = shouldBeScrolled;
+        nav.classList.toggle("is-scrolled", scrolled);
+      }
+    }, { passive: true });
+  }
 });

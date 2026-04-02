@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_pilosebaceous/</loc>
-<lastmod>2026-04-01T11:54:15+00:00</lastmod>
+<lastmod>2026-04-02T19:02:20+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_skin_aging/</loc>
-<lastmod>2026-04-01T11:54:15+00:00</lastmod>
+<lastmod>2026-04-02T19:02:20+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/zh/</loc>
@@ -45,7 +45,7 @@
 <loc>https://xy-aginglab.github.io/v1/zh/people/</loc>
 </url>
 <url>
-<loc>https://xy-aginglab.github.io/v3/projects/pilosebaceous-unit-diseases/</loc>
+<loc>https://xy-aginglab.github.io/v3/projects/pilosebaceous-related-diseases/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v3/zh/projects/pilosebaceous-unit-diseases/</loc>
@@ -118,9 +118,6 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/huang2026jcutmedsurg/</loc>
-</url>
-<url>
-<loc>https://xy-aginglab.github.io/bibliography/li2025nataging/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/zhong2025research/</loc>
