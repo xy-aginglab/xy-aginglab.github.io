@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_pilosebaceous/</loc>
-<lastmod>2026-04-03T13:20:51+00:00</lastmod>
+<lastmod>2026-04-03T14:49:59+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_skin_aging/</loc>
-<lastmod>2026-04-03T13:20:51+00:00</lastmod>
+<lastmod>2026-04-03T14:49:59+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/zh/</loc>
@@ -180,6 +180,18 @@
 <loc>https://xy-aginglab.github.io/bibliography/huang2025jcosmetdermatol/</loc>
 </url>
 <url>
+<loc>https://xy-aginglab.github.io/bibliography/long2024immuninflamdis/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/bibliography/qi2024foodfunct/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/bibliography/dirr2024jamadermatol/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/bibliography/hu2024expdermatol_pyroptosis/</loc>
+</url>
+<url>
 <loc>https://xy-aginglab.github.io/bibliography/liang2024jdermatol/</loc>
 </url>
 <url>
@@ -271,6 +283,9 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/huang2023agingdis/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/bibliography/hu2022heliyon/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/xiao2022bbadis/</loc>
