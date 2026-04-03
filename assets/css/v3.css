@@ -1,3 +1,4 @@
+/* ── Design Tokens ── */
 :root {
   color-scheme: light;
   --font-serif: "Lora", "Newsreader", "Noto Serif SC", "Songti SC", STSong, serif;
@@ -28,6 +29,7 @@
   --v3-page-offset: clamp(2rem, 4.5vw, 4.75rem);
 }
 
+/* ── Reset & Base ── */
 *,
 *::before,
 *::after {
@@ -66,6 +68,7 @@ img {
   min-height: 100vh;
 }
 
+/* ── Navigation ── */
 .v3-nav {
   position: sticky;
   top: 0;
@@ -174,6 +177,7 @@ img {
   border-bottom-color: var(--v3-ink);
 }
 
+/* ── Main Content & Footer ── */
 .v3-main {
   max-width: var(--v3-max);
   margin: 0 auto;
@@ -223,6 +227,7 @@ img {
   font-weight: 600;
 }
 
+/* ── Page Layout ── */
 .v3-page,
 .v3-home,
 .v3-stack,
@@ -296,6 +301,7 @@ img {
   max-width: calc(100% - var(--v3-page-offset));
 }
 
+/* ── Rich Text Content ── */
 .v3-rich {
   display: grid;
   gap: 1.1rem;
@@ -367,6 +373,7 @@ img {
   display: block;
 }
 
+/* ── Cards & Surfaces ── */
 .v3-surface,
 .v3-person-card,
 .v3-program-entry,
@@ -392,6 +399,7 @@ img {
   line-height: 1.8;
 }
 
+/* ── Hero ── */
 .v3-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
@@ -832,6 +840,7 @@ img {
   box-shadow: 0 0 0 4px rgba(45, 109, 119, 0.09);
 }
 
+/* ── Research Program Entries ── */
 .v3-program-entry {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -909,6 +918,7 @@ img {
   margin: 0.9rem 0 0;
 }
 
+/* ── People & Team ── */
 .v3-people {
   padding-top: 0.2rem;
   gap: 2rem;
@@ -1074,42 +1084,7 @@ img {
   font-size: 0.92rem;
 }
 
-.news .table-responsive {
-  overflow-x: auto;
-}
-
-.news .table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.news .table th,
-.news .table td {
-  padding: 1rem 0;
-  border-top: 1px solid var(--v3-line);
-  vertical-align: top;
-}
-
-.news .table th {
-  width: 160px;
-  color: var(--v3-muted);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-align: left;
-}
-
-.news .table td {
-  color: var(--v3-ink);
-}
-
-.news .table td a.news-title {
-  text-decoration: none;
-  color: var(--v3-ink);
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  letter-spacing: -0.02em;
-}
-
+/* ── Responsive: 980px ── */
 @media (max-width: 980px) {
   .v3-page--offset .v3-page__header,
   .v3-page--offset .v3-page__content,
@@ -1129,6 +1104,7 @@ img {
 
 }
 
+/* ── Responsive: 860px (mobile nav + layout) ── */
 @media (max-width: 860px) {
   .v3-nav__toggle {
     display: inline-flex;
@@ -1301,28 +1277,7 @@ img {
 
 }
 
-@media (max-width: 560px) {
-  .v3-main {
-    padding-top: 1.2rem;
-  }
-
-  .v3-nav__inner,
-  .v3-main,
-  .v3-footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .v3-hero__actions {
-    flex-direction: column;
-  }
-
-  .v3-button {
-    width: 100%;
-  }
-
-}
-
+/* ── Home Page ── */
 .v3-home {
   max-width: var(--v3-max);
   margin: 0 auto;
@@ -1408,6 +1363,7 @@ img {
   margin-top: 1.6rem;
 }
 
+/* ── Utility Pages (Clinical, Careers) ── */
 .v3-utility {
   display: grid;
   gap: 0;
@@ -1505,6 +1461,7 @@ img {
   font-size: 0.94rem;
 }
 
+/* ── Responsive: 720px ── */
 @media (max-width: 720px) {
   .v3-nav,
   .v3-main,
@@ -1540,12 +1497,25 @@ img {
 
 }
 
+/* ── Responsive: 560px (small screens) ── */
 @media (max-width: 560px) {
   .v3-nav__inner,
   .v3-main,
   .v3-footer {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .v3-main {
+    padding-top: 1.2rem;
+  }
+
+  .v3-hero__actions {
+    flex-direction: column;
+  }
+
+  .v3-button {
+    width: 100%;
   }
 
   .v3-page__header h1 {
