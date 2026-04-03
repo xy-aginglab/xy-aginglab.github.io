@@ -6,12 +6,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.entry.abstract | strip_html | truncatewords: 50 }}" />
   <script>
     // Route to correct version based on referrer
     (function() {
       var ref = document.referrer || '';
       if (ref.includes('/v3/')) {
-        // Came from V3 — render V3 style
         document.documentElement.setAttribute('data-paper-version', 'v3');
       } else if (ref.includes('/v2/')) {
         document.documentElement.setAttribute('data-paper-version', 'v2');
@@ -34,11 +34,24 @@
     {% endif %}
     <link rel="icon" href="{{ favicon_href }}">
   {% endif %}
-  <!-- V3 fonts & styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "custom-orange": "#a24f39",
+            "custom-soft": "#f5efe7"
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
   <style>
     /* V1 style (default, hidden when v3) */
@@ -62,9 +75,10 @@
   </style>
 </head>
 <body>
+  {% assign publication_venue = page.entry.journal | default: page.entry.booktitle %}
+
   <!-- V1/V2 rendering -->
   <div class="paper-v1">
-    {% assign publication_venue = page.entry.journal | default: page.entry.booktitle %}
     {% if publication_venue or page.entry.year %}
       <p class="meta">
         {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
@@ -92,7 +106,7 @@
     </p>
   </div>
 
-  <!-- V3 rendering -->
+  <!-- V3 rendering (identical nav/footer structure to v3.liquid) -->
   <div class="paper-v3">
     <div class="v3-shell">
       <nav class="v3-nav" data-v3-nav>
@@ -117,6 +131,7 @@
           </div>
         </div>
       </nav>
+
       <main class="v3-main">
         <article class="v3-paper">
           {% if publication_venue or page.entry.year %}
@@ -149,14 +164,34 @@
           </p>
         </article>
       </main>
+
       <footer class="v3-footer">
         <div class="v3-footer__inner">
           <div class="v3-footer__copy">
             <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}.</p>
           </div>
+          <div class="v3-footer__meta">
+            <div class="v3-footer__contact">
+              {% if site.data.socials.email %}
+                <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+              {% endif %}
+              {% if site.data.socials.github %}
+                <a href="https://github.com/{{ site.data.socials.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+              {% endif %}
+              {% if site.data.socials.researchgate %}
+                <a href="https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+              {% endif %}
+            </div>
+            <div class="v3-footer__links">
+              <a href="{{ '/v1/' | relative_url }}">Version A</a>
+              <a href="{{ '/v2/' | relative_url }}">Version B</a>
+              <a href="{{ '/versions/' | relative_url }}">Versions</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
+
     <script src="{{ '/assets/js/v3.js?v=' | append: asset_version | relative_url }}"></script>
   </div>
 </body>
