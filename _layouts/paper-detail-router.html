@@ -37,7 +37,7 @@
   <!-- V3 fonts & styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
   <style>
@@ -100,13 +100,16 @@
           <a class="v3-brand" href="{{ '/v3/' | relative_url }}" aria-label="Li Lab">
             <span class="v3-brand__title">Li Lab</span>
           </a>
-          <div class="v3-nav__menu">
+          <button class="v3-nav__toggle" type="button" aria-controls="v3-primary-nav" aria-expanded="false" aria-label="Toggle site navigation" data-v3-nav-toggle>
+            Menu
+          </button>
+          <div class="v3-nav__menu" id="v3-primary-nav" data-v3-nav-menu>
             <div class="v3-nav__menu-main">
               <a href="{{ '/v3/projects/' | relative_url }}">Research</a>
               <a href="{{ '/v3/publications/' | relative_url }}" class="is-active">Publications</a>
               <a href="{{ '/v3/team/' | relative_url }}">Team</a>
             </div>
-            <div class="v3-nav__utility">
+            <div class="v3-nav__utility" aria-label="Additional pages">
               <a href="{{ '/v3/clinical/' | relative_url }}">Clinical</a>
               <a href="{{ '/v3/careers/' | relative_url }}">Careers</a>
               <a href="{{ '/v3/zh/' | relative_url }}">中文</a>
