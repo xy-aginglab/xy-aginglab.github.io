@@ -822,22 +822,55 @@ img {
   margin-top: 0.45rem;
 }
 
-#bibsearch {
+.bib-filters {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.bib-filters__search {
   width: 100%;
   max-width: 420px;
-  padding: 0.95rem 1rem;
+  padding: 0.85rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--v3-line);
   background: rgba(255, 255, 255, 0.82);
   color: var(--v3-ink);
   font: inherit;
   outline: none;
-  margin: 0.5rem 0 1rem;
 }
 
-#bibsearch:focus {
+.bib-filters__search:focus {
   border-color: rgba(45, 109, 119, 0.35);
   box-shadow: 0 0 0 4px rgba(45, 109, 119, 0.09);
+}
+
+.bib-filters__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bib-filters__select {
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--v3-line);
+  background: #fff;
+  color: var(--v3-ink);
+  font: inherit;
+  font-size: 0.88rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.bib-filters__select:focus {
+  border-color: rgba(45, 109, 119, 0.35);
+}
+
+.bib-filters__status {
+  font-size: 0.85rem;
+  color: var(--v3-muted);
+  min-height: 1.2em;
 }
 
 /* ── Research Program Entries ── */
@@ -1586,12 +1619,18 @@ img {
     width: 76px;
   }
 
-  #bibsearch {
+  .bib-filters__search {
     max-width: none;
-    margin-top: 0.2rem;
-    margin-bottom: 0.85rem;
     padding: 0.82rem 0.95rem;
     border-radius: 18px;
+  }
+
+  .bib-filters__row {
+    flex-direction: column;
+  }
+
+  .bib-filters__select {
+    width: 100%;
   }
 
 }
