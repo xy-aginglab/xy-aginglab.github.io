@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>mTORC1-Mediated Angiogenesis is Required for the Development of Rosacea | Li Lab</title>
+  <meta name="description" content="Although multiple evidences suggest that angiogenesis is associated with the pathophysiology of rosacea, its role is still in debate. Here, we showed that angiogenesis was enhanced in skin lesions of both rosacea patients and LL37-induced rosacea-like mice. Inhibition of angiogenesis alleviated LL37-induced rosacea-like features in mice. Mechanistically, we showed that...">
   <script>
     // Route to correct version based on referrer
     (function() {
       var ref = document.referrer || '';
       if (ref.includes('/v3/')) {
-        // Came from V3 — render V3 style
         document.documentElement.setAttribute('data-paper-version', 'v3');
       } else if (ref.includes('/v2/')) {
         document.documentElement.setAttribute('data-paper-version', 'v2');
@@ -25,12 +25,25 @@
     
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E%F0%9F%94%AC%3C/text%3E%3C/svg%3E">
   
-  <!-- V3 fonts & styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "custom-orange": "#a24f39",
+            "custom-soft": "#f5efe7"
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:ital,wght@0,500;0,700;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:opsz,wght@6..72,500;6..72,700&amp;family=Fira+Code:wght@400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/v3.css?v=1775238936">
+  <link rel="stylesheet" href="/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/v3.css?v=1775239462">
   <style>
     /* V1 style (default, hidden when v3) */
     .paper-v1 { max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
@@ -53,9 +66,10 @@
   </style>
 </head>
 <body>
+  
+
   <!-- V1/V2 rendering -->
   <div class="paper-v1">
-    
     
       <p class="meta">
         <em>Frontiers in cell and developmental biology</em>
@@ -83,7 +97,7 @@
     </p>
   </div>
 
-  <!-- V3 rendering -->
+  <!-- V3 rendering (identical nav/footer structure to v3.liquid) -->
   <div class="paper-v3">
     <div class="v3-shell">
       <nav class="v3-nav" data-v3-nav>
@@ -108,6 +122,7 @@
           </div>
         </div>
       </nav>
+
       <main class="v3-main">
         <article class="v3-paper">
           
@@ -140,15 +155,35 @@
           </p>
         </article>
       </main>
+
       <footer class="v3-footer">
         <div class="v3-footer__inner">
           <div class="v3-footer__copy">
             <p>© 2026 Li Lab.</p>
           </div>
+          <div class="v3-footer__meta">
+            <div class="v3-footer__contact">
+              
+                <a href="mailto:liji_xy@csu.edu.cn">liji_xy@csu.edu.cn</a>
+              
+              
+                <a href="https://github.com/xy-aginglab" target="_blank" rel="noopener noreferrer">GitHub</a>
+              
+              
+                <a href="https://www.researchgate.net/profile/Ji-Li-130" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+              
+            </div>
+            <div class="v3-footer__links">
+              <a href="/v1/">Version A</a>
+              <a href="/v2/">Version B</a>
+              <a href="/versions/">Versions</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
-    <script src="/assets/js/v3.js?v=1775238936"></script>
+
+    <script src="/assets/js/v3.js?v=1775239462"></script>
   </div>
 </body>
 </html>
