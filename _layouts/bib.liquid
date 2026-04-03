@@ -38,7 +38,7 @@
 {% endif %}
 {% assign entrytype_text = entrytype | strip_html | strip %}
 
-<li class="bib-entry">
+<li class="bib-entry" data-year="{{ entry.year }}" data-category="{{ entry.category }}" data-subcategory="{{ entry.subcategory }}" data-type="{{ entry.publication_type }}" data-clinical="{{ entry.clinical }}" data-basic="{{ entry.basic }}" data-if="{{ entry.impact_factor }}" data-jcr="{{ entry.jcr_quartile }}">
   <div class="bib-row{% unless has_preview %} bib-row--no-preview{% endunless %}">
     {% if has_preview %}
       <div class="bib-thumb">
