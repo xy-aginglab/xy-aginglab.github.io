@@ -8,7 +8,9 @@ const initBibSearch = () => {
   const filterNature = document.getElementById("bibfilter-nature");
   const statusEl = document.getElementById("bibfilter-status");
 
-  const groups = Array.from(document.querySelectorAll(".publications ol.bibliography"));
+  // Only target the .publications container that is a sibling of the filter UI
+  const filterParent = input.closest(".v3-publication-surface") || input.closest(".v3-surface") || document.body;
+  const groups = Array.from(filterParent.querySelectorAll(".publications ol.bibliography"));
   if (!groups.length) return;
 
   const cache = groups.map((group) => {
