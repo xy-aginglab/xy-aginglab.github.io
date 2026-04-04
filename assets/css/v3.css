@@ -306,12 +306,12 @@ img {
   letter-spacing: -0.03em;
 }
 
-/* Section & card headings — Manrope 700 */
+/* Section & card headings — Lora 700 */
 .v3-section__intro h2,
 .v3-group__title,
 .v3-surface h2 {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
   letter-spacing: -0.03em;
 }
@@ -1086,7 +1086,6 @@ img {
 }
 
 .v3-group__title {
-  font-family: var(--font-serif);
   font-size: clamp(1.65rem, 1.5rem + 0.45vw, 2rem);
 }
 
@@ -1505,7 +1504,7 @@ img {
 
 .v3-utility-section h2 {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: clamp(1.3rem, 1.18rem + 0.4vw, 1.52rem);
   font-weight: 700;
   letter-spacing: -0.02em;
