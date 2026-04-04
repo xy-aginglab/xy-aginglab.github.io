@@ -1,12 +1,18 @@
 ---
 layout: v3-page
 permalink: /v3/zh/contact/
-title: 联系我们
+title: 关于与联系
 lang: zh
-description: 欢迎与李实验室取得联系。
+description: 关于李实验室及联系方式。
 show_lead: false
 ---
 <div class="v3-utility">
+  <section class="v3-utility-section">
+    <h2>关于实验室</h2>
+    <p>李实验室依托<strong>衰老生物学湖南省重点实验室</strong>，位于中南大学湘雅医院。研究方向涵盖皮肤衰老、毛囊皮脂腺相关疾病和炎症性皮肤病，致力于临床皮肤科学与分子生物学的交叉融合。</p>
+    <p>实验室由李吉教授领衔，整合长寿人群队列、多组学分析、器官培养模型和转化临床研究，推动基础发现向临床应用的转化。</p>
+  </section>
+
   <section class="v3-utility-section">
     <h2>电子邮件</h2>
     <p><a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a></p>
