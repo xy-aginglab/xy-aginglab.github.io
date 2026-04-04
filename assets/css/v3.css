@@ -727,9 +727,9 @@ img {
 }
 
 .publications h2.bibliography {
-  margin: 0 0 1rem;
-  padding-top: 1.2rem;
-  border-top: 2.5px solid var(--v3-accent);
+  margin: 2rem 0 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2.5px solid var(--v3-accent);
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 1.06rem + 0.28vw, 1.35rem);
   line-height: 1.15;
