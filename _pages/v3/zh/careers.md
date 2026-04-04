@@ -14,10 +14,10 @@ show_lead: false
 
   <section class="v3-utility-section">
     <h2>地址</h2>
-    <p>皮肤科<br>
+    <p><a href="https://uri.amap.com/search?keyword=中南大学湘雅医院&city=长沙" target="_blank" rel="noopener noreferrer">皮肤科<br>
     中南大学湘雅医院<br>
     湖南省长沙市开福区湘雅路87号<br>
-    邮编：410008</p>
+    邮编：410008</a></p>
   </section>
 
   {% if site.data.socials.github or site.data.socials.researchgate %}

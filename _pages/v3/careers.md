@@ -13,10 +13,10 @@ show_lead: false
 
   <section class="v3-utility-section">
     <h2>Address</h2>
-    <p>Department of Dermatology<br>
+    <p><a href="https://www.google.com/maps/search/Xiangya+Hospital,+Central+South+University,+87+Xiangya+Road,+Changsha" target="_blank" rel="noopener noreferrer">Department of Dermatology<br>
     Xiangya Hospital, Central South University<br>
     87 Xiangya Road, Kaifu District<br>
-    Changsha, Hunan, China 410008</p>
+    Changsha, Hunan, China 410008</a></p>
   </section>
 
   {% if site.data.socials.github or site.data.socials.researchgate %}
