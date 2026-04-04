@@ -145,22 +145,15 @@
     </div>
   </div>
 
-  {% if site.enable_publication_badges %}
-    {% assign entry_has_google_scholar_badge = false %}
-    {% if entry.google_scholar_id and site.data.socials.scholar_userid %}
-      {% assign entry_has_google_scholar_badge = true %}
-    {% endif %}
-    {% if entry_has_google_scholar_badge %}
-      <div class="bib-badges">
-        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}" aria-label="Google Scholar" role="button">
-          {% assign citation_count = 0 %}
-          {% assign publication_key = entry.google_scholar_id %}
-          {% if site.data.citations.papers[publication_key] %}
-            {% assign citation_count = site.data.citations.papers[publication_key].citations %}
-          {% endif %}
-          <img src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige" alt="{{ citation_count }} citations">
-        </a>
-      </div>
-    {% endif %}
+  {% assign citation_count = 0 %}
+  {% if site.data.citations[entry.key] %}
+    {% assign citation_count = site.data.citations[entry.key].citations %}
+  {% endif %}
+  {% if citation_count > 0 %}
+    <div class="bib-badges">
+      <span class="bib-citation-badge" title="{{ citation_count }} citations">
+        <i class="fas fa-quote-right"></i> {{ citation_count }}
+      </span>
+    </div>
   {% endif %}
 </li>
