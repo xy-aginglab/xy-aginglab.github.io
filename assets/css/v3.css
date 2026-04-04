@@ -1086,6 +1086,7 @@ img {
 }
 
 .v3-group__title {
+  font-family: var(--font-serif);
   font-size: clamp(1.65rem, 1.5rem + 0.45vw, 2rem);
 }
 
