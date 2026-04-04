@@ -986,7 +986,7 @@ img {
   margin: 0 0 0.6rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.72rem, 1.54rem + 0.64vw, 2.08rem);
+  font-size: clamp(1.3rem, 1.18rem + 0.42vw, 1.58rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: var(--v3-ink);
@@ -1656,7 +1656,7 @@ img {
   }
 
   .v3-program-entry > h2 {
-    font-size: clamp(1.46rem, 1.34rem + 0.45vw, 1.62rem);
+    font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.38rem);
     line-height: 1.1;
   }
 
