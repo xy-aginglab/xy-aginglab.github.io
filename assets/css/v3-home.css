@@ -25,8 +25,8 @@
   background-size: 64px 64px;
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(ellipse 70% 70% at 80% 40%, black 0%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 80% 40%, black 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse 120% 120% at 75% 35%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.15) 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 120% at 75% 35%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.15) 40%, transparent 80%);
 }
 
 .v3-hero::after {
