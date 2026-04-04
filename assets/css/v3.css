@@ -204,10 +204,14 @@ img {
 }
 
 .v3-nav__menu a:hover,
-.v3-nav__menu a.is-active,
-.v3-nav__utility a:hover,
-.v3-nav__utility a.is-active {
+.v3-nav__utility a:hover {
   color: var(--v3-ink);
+  background: transparent;
+}
+
+.v3-nav__menu a.is-active,
+.v3-nav__utility a.is-active {
+  color: var(--v3-accent);
   background: transparent;
 }
 
@@ -1502,10 +1506,10 @@ img {
   margin: 0;
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--v3-muted);
+  color: var(--v3-ink);
 }
 
 .v3-utility-section p {
