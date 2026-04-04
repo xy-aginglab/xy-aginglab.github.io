@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
 
       - name: Run citation updater
-        run: python scripts/update_citations.py
+        run: python scripts/update_citations.py || true
 
       - name: Check for changes
         id: check
