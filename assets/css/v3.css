@@ -1084,6 +1084,22 @@ img {
   gap: 0.45rem;
 }
 
+.bib-citation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--v3-accent);
+  background: var(--v3-accent-soft);
+  border-radius: 6px;
+}
+
+.bib-citation-badge i {
+  font-size: 0.65rem;
+}
+
 .v3-publication-surface .publications .bib-thumb {
   display: none;
 }
