@@ -1,7 +1,7 @@
 ---
 layout: v3-page
 permalink: /v3/publications/
-title: Publications
+title: Our Publications
 description: Selected and complete publications from the Li Lab.
 show_eyebrow: false
 show_lead: false
