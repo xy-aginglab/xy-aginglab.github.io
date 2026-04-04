@@ -1526,7 +1526,7 @@ img {
     padding-top: 0.55rem;
     margin-top: 0.25rem;
     border-left: 0;
-    border-top: 1px solid var(--v3-line);
+    border-top: 0;
   }
 
   .v3-nav.is-open {
