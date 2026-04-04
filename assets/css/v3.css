@@ -66,6 +66,8 @@ img {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ── Navigation ── */
@@ -199,12 +201,15 @@ img {
 
 /* ── Main Content & Footer ── */
 .v3-main {
+  flex: 1;
+  width: 100%;
   max-width: var(--v3-max);
   margin: 0 auto;
   padding: 1.7rem 1.5rem 4rem;
 }
 
 .v3-footer {
+  width: 100%;
   max-width: var(--v3-max);
   margin: 0 auto;
   padding: 0 1.5rem 1.2rem;
@@ -1355,7 +1360,6 @@ img {
 }
 
 .v3-home .v3-hero {
-  min-height: calc(100vh - 170px);
   display: flex;
   align-items: center;
   padding: 4.5rem 0 6rem;
