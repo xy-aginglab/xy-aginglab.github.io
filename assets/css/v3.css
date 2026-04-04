@@ -1260,9 +1260,14 @@ img {
 .v3-program-entry__content {
   max-width: 100%;
   display: block;
-  font-size: 0.92rem;
+  font-size: var(--v3-body-size);
   line-height: 1.7;
   color: var(--v3-muted);
+}
+
+/* Dense card: shrink text when content is long */
+.v3-program-entry:first-child .v3-program-entry__content {
+  font-size: 0.88rem;
 }
 
 .v3-program-entry__content p,
