@@ -4,7 +4,6 @@ permalink: /v3/clinical/
 title: Clinical Research
 description: Clinical programs that connect Xiangya Hospital resources to mechanistic discovery and intervention design.
 show_lead: false
-content_offset_right: true
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">

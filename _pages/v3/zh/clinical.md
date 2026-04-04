@@ -5,7 +5,6 @@ title: 临床研究
 lang: zh
 description: 连接湘雅医院临床资源与机制发现和干预设计的临床项目。
 show_lead: false
-content_offset_right: true
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">

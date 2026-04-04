@@ -4,7 +4,6 @@ permalink: /v3/careers/
 title: Careers
 description: Opportunities for researchers who want to work at the interface of dermatology, aging biology, and translational science.
 show_lead: false
-content_offset_right: true
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">

@@ -5,7 +5,6 @@ title: 招聘信息
 lang: zh
 description: 面向皮肤科学、衰老生物学与转化研究领域研究者的机会。
 show_lead: false
-content_offset_right: true
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">
