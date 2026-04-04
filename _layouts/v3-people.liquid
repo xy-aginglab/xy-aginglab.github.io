@@ -72,7 +72,8 @@ layout: v3
           <article class="v3-pi-card">
             <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
             <div class="v3-pi-card__content">
-              <h3 class="v3-pi-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+              {% assign member_slug = member.name_en | slugify %}
+              <h3 class="v3-pi-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
               <p class="v3-pi-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
               {% if member.bio %}
                 <div class="v3-pi-card__bio">
@@ -115,7 +116,8 @@ layout: v3
               <article class="v3-person-card">
                 <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
@@ -142,7 +144,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}
@@ -176,7 +179,8 @@ layout: v3
               <article class="v3-person-card">
                 <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
@@ -203,7 +207,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}
@@ -237,7 +242,8 @@ layout: v3
               <article class="v3-person-card">
                 <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
                 <div class="v3-person-card__body">
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                   {% if has_member_links %}
                     <div class="v3-person-links">
@@ -264,7 +270,8 @@ layout: v3
             {% unless show_photo %}
               <article class="v3-person-row">
                 <div>
-                  <h3 class="v3-person-card__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+                  {% assign member_slug = member.name_en | slugify %}
+                  <h3 class="v3-person-card__name"><a href="{% if lang == 'zh' %}{{ '/v3/zh/team/' | append: member_slug | append: '/' | relative_url }}{% else %}{{ '/v3/team/' | append: member_slug | append: '/' | relative_url }}{% endif %}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
                   <p class="v3-person-card__meta">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
                 </div>
                 {% if has_member_links %}

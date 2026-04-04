@@ -1,0 +1,75 @@
+---
+layout: v3
+---
+{% assign lang = page.lang | default: 'en' %}
+{% assign member = nil %}
+{% for m in site.data.members %}
+  {% if m.name_en == page.member_key %}
+    {% assign member = m %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if member %}
+<section class="v3-page">
+  <div class="v3-page__masthead v3-reveal">
+    <header class="v3-page__header">
+      <h1>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h1>
+      <p class="v3-page__lead">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
+    </header>
+  </div>
+
+  <article class="v3-page__content v3-reveal">
+    <div class="v3-member-profile">
+      {% assign show_photo = true %}
+      {% if member.photo == nil or member.photo contains 'placeholder' %}
+        {% assign show_photo = false %}
+      {% endif %}
+      {% if show_photo %}
+      <div class="v3-member-profile__photo">
+        <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}" loading="lazy">
+      </div>
+      {% endif %}
+
+      <div class="v3-member-profile__info">
+        {% if lang == 'zh' and member.name_en %}
+          <p class="v3-member-profile__alt-name">{{ member.name_en }}</p>
+        {% elsif lang != 'zh' and member.name != member.name_en %}
+          <p class="v3-member-profile__alt-name">{{ member.name }}</p>
+        {% endif %}
+
+        {% if member.department %}
+          <p class="v3-member-profile__dept">{% if lang == 'zh' %}{{ member.department }}{% else %}{{ member.department_en | default: member.department }}{% endif %}</p>
+        {% endif %}
+
+        {% if member.email or member.scholar or member.orcid or member.researchgate %}
+        <div class="v3-member-profile__links">
+          {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i> {{ member.email }}</a>{% endif %}
+          {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i> Google Scholar</a>{% endif %}
+          {% if member.orcid and member.orcid != '0000-0002-0000-0000' %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="ai ai-orcid"></i> ORCID</a>{% endif %}
+          {% if member.researchgate %}<a href="https://www.researchgate.net/profile/{{ member.researchgate }}" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="ai ai-researchgate"></i> ResearchGate</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if lang == 'zh' and member.bio_zh %}
+      <div class="v3-member-profile__bio">
+        {{ member.bio_zh }}
+      </div>
+    {% elsif member.bio %}
+      <div class="v3-member-profile__bio">
+        {{ member.bio }}
+      </div>
+    {% endif %}
+
+    <p class="v3-paper__back" style="margin-top:2rem;">
+      {% if lang == 'zh' %}
+        <a href="{{ '/v3/zh/team/' | relative_url }}">← 返回团队</a>
+      {% else %}
+        <a href="{{ '/v3/team/' | relative_url }}">← Back to team</a>
+      {% endif %}
+    </p>
+  </article>
+</section>
+{% endif %}
