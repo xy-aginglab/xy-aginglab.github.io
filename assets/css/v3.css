@@ -1510,8 +1510,8 @@ img {
 
 .v3-utility-section p {
   margin: 0.5rem 0 0;
-  color: var(--v3-muted);
-  line-height: 1.72;
+  color: var(--v3-copy);
+  line-height: 1.6;
 }
 
 .v3-utility-list {
