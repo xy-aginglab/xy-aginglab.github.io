@@ -8,7 +8,6 @@ show_lead: false
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">
-    <h2>在研临床项目</h2>
     <div class="v3-utility-list">
       <article>
         <h3>皮肤衰老队列</h3>

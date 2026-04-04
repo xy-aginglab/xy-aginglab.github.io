@@ -8,7 +8,6 @@ show_lead: false
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">
-    <h2>招聘岗位</h2>
     <div class="v3-utility-list">
       <article>
         <h3>博士后</h3>

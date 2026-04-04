@@ -7,7 +7,6 @@ show_lead: false
 ---
 <div class="v3-utility">
   <section class="v3-utility-section">
-    <h2>Current clinical interfaces</h2>
     <div class="v3-utility-list">
       <article>
         <h3>Skin aging cohorts</h3>
