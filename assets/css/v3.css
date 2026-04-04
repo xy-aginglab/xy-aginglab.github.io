@@ -1504,11 +1504,10 @@ img {
 
 .v3-utility-section h2 {
   margin: 0;
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.02rem + 0.28vw, 1.28rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
   color: var(--v3-ink);
 }
 
@@ -1675,7 +1674,7 @@ img {
   }
 
   .v3-utility-section h2 {
-    font-size: 0.8rem;
+    font-size: clamp(1rem, 0.94rem + 0.24vw, 1.12rem);
   }
 
   .v3-utility-list {
