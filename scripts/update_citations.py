@@ -188,7 +188,7 @@ def main():
         print(f"  {p['citations']:>5}  {p['key']}")
 
     print(f"\n{'=' * 60}")
-    return 1 if updated_count > 0 else 0
+    return 0
 
 
 if __name__ == "__main__":
