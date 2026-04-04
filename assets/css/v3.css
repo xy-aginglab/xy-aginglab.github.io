@@ -293,19 +293,26 @@ img {
   gap: 0.72rem;
 }
 
-/* Page & section headings — Manrope display font */
+/* Page titles — Lora serif for editorial feel */
 .v3-page__header h1,
+.v3-pi-card__name {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Section & card headings — Manrope 700 */
 .v3-section__intro h2,
-.v3-pi-card__name,
 .v3-group__title,
 .v3-surface h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.03em;
 }
 
-/* Homepage hero stays Lora for editorial feel */
+/* Homepage hero — Lora */
 .v3-hero__title {
   margin: 0;
   font-family: var(--font-serif);
@@ -974,7 +981,7 @@ img {
   grid-column: 1 / -1;
   margin: 0 0 0.6rem;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(1.72rem, 1.54rem + 0.64vw, 2.08rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
