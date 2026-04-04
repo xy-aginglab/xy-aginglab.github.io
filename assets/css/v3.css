@@ -31,6 +31,124 @@
   --v3-page-offset: clamp(2rem, 4.5vw, 4.75rem);
 }
 
+/* ── Dark Mode Tokens ── */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --v3-bg: #191a1e;
+  --v3-panel: #232428;
+  --v3-panel-strong: #2a2b30;
+  --v3-ink: #e2e3e7;
+  --v3-muted: #9ca3af;
+  --v3-copy: #b0b8c1;
+  --v3-line: rgba(255, 255, 255, 0.12);
+  --v3-line-subtle: rgba(255, 255, 255, 0.07);
+  --v3-accent: #c4735e;
+  --v3-accent-soft: rgba(196, 115, 94, 0.12);
+  --v3-secondary: #7a9bac;
+  --v3-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(180deg, #1d1e22 0%, var(--v3-bg) 100%);
+}
+
+[data-theme="dark"] .v3-nav {
+  background: rgba(25, 26, 30, 0.85);
+}
+
+[data-theme="dark"] .v3-nav.is-scrolled {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .v3-brand__title {
+  color: var(--v3-accent);
+}
+
+[data-theme="dark"] .v3-button--primary {
+  background: var(--v3-ink);
+  color: var(--v3-bg);
+}
+
+[data-theme="dark"] .v3-button--ghost {
+  background: var(--v3-panel);
+  color: var(--v3-ink);
+}
+
+[data-theme="dark"] .v3-surface,
+[data-theme="dark"] .v3-person-card,
+[data-theme="dark"] .v3-program-entry,
+[data-theme="dark"] .v3-pi-card {
+  background: var(--v3-panel);
+}
+
+[data-theme="dark"] .v3-pub-grid > .bib-entry {
+  background: var(--v3-panel);
+}
+
+[data-theme="dark"] .v3-pub-grid > .bib-entry:hover,
+[data-theme="dark"] .v3-program-entry:hover {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .v3-program-entry__more a {
+  border-color: var(--v3-line);
+  color: var(--v3-ink);
+}
+
+[data-theme="dark"] .v3-program-entry__more a:hover {
+  background: var(--v3-ink);
+  color: var(--v3-bg);
+  border-color: var(--v3-ink);
+}
+
+[data-theme="dark"] .v3-logos__inner img {
+  opacity: 0.45;
+  filter: grayscale(40%) brightness(1.5);
+}
+
+[data-theme="dark"] .v3-logos__inner img:hover {
+  opacity: 0.9;
+  filter: grayscale(0%) brightness(1.3);
+}
+
+[data-theme="dark"] .bib-filters__search,
+[data-theme="dark"] .bib-filters__select {
+  background: var(--v3-panel);
+  color: var(--v3-ink);
+}
+
+@media (max-width: 860px) {
+  [data-theme="dark"] .v3-nav__menu {
+    background: rgba(25, 26, 30, 0.98);
+  }
+}
+
+/* Theme toggle button */
+.v3-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  color: var(--v3-muted);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.v3-theme-toggle:hover {
+  color: var(--v3-accent);
+}
+
+/* Smooth transition between themes */
+html.v3-theme-transition,
+html.v3-theme-transition *,
+html.v3-theme-transition *::before,
+html.v3-theme-transition *::after {
+  transition: background 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease !important;
+}
+
 /* ── Reset & Base ── */
 *,
 *::before,
