@@ -44,6 +44,17 @@
   <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v3-home.css?v=' | append: asset_version | relative_url }}" />
+  <script>
+    (function(){
+      var s = localStorage.getItem('v3-theme');
+      if (s !== 'dark' && s !== 'light') s = 'system';
+      var t = s;
+      if (s === 'system') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
 </head>
 <body>
   {% assign current_url = page.url | default: '' %}
@@ -74,6 +85,7 @@
             <a href="{{ '/v3/zh/clinical/' | relative_url }}"{% if current_url contains '/v3/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
             <a href="{{ '/v3/zh/contact/' | relative_url }}"{% if current_url contains '/v3/zh/contact' %} class="is-active"{% endif %}>联系我们</a>
             <a href="{{ '/v3/' | relative_url }}">EN</a>
+            <button type="button" class="v3-theme-toggle" data-v3-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-circle-half-stroke"></i></button>
           </div>
           {% else %}
           <div class="v3-nav__menu-main">
@@ -85,6 +97,7 @@
             <a href="{{ '/v3/clinical/' | relative_url }}"{% if current_url contains '/v3/clinical' %} class="is-active"{% endif %}>Clinical</a>
             <a href="{{ '/v3/contact/' | relative_url }}"{% if current_url contains '/v3/contact' %} class="is-active"{% endif %}>Contact</a>
             <a href="{{ '/v3/zh/' | relative_url }}">中文</a>
+            <button type="button" class="v3-theme-toggle" data-v3-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-circle-half-stroke"></i></button>
           </div>
           {% endif %}
         </div>
@@ -94,6 +107,15 @@
     <main class="v3-main">
       {{ content }}
     </main>
+
+    <div class="v3-logos">
+      <div class="v3-logos__inner">
+        <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University" loading="lazy">
+        <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital" loading="lazy">
+        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab" loading="lazy">
+        <img src="{{ '/assets/img/logos/research_center.png' | relative_url }}" alt="Skin Aging and Hair Regeneration Research Center" loading="lazy">
+      </div>
+    </div>
 
     <footer class="v3-footer">
       <div class="v3-footer__inner">
