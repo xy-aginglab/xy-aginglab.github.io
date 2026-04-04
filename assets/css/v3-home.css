@@ -7,40 +7,13 @@
 /* ── Hero ── */
 
 .v3-hero {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2.5rem 0 2rem;
 }
 
-/* Grid lines + radial glow */
-.v3-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--v3-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--v3-line) 1px, transparent 1px);
-  background-size: 64px 64px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.v3-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 70% at 85% 20%, rgba(138, 75, 58, 0.1) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(65, 90, 103, 0.08) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
-}
-
 .v3-hero__copy {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 72rem;
   margin-left: clamp(4.85rem, 7.8vw, 9.1rem);
