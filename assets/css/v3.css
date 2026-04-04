@@ -1536,7 +1536,7 @@ img {
 
 .v3-utility-list h3 {
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-size: clamp(1.08rem, 1.04rem + 0.18vw, 1.18rem);
   font-weight: 700;
   letter-spacing: -0.01em;
