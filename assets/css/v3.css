@@ -85,6 +85,12 @@
   background: var(--v3-panel);
 }
 
+[data-theme="dark"] .v3-publication-surface {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
 [data-theme="dark"] .v3-pub-grid > .bib-entry:hover,
 [data-theme="dark"] .v3-program-entry:hover {
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
