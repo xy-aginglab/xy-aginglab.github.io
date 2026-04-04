@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://xy-aginglab.github.io/projects/1_pilosebaceous/</loc>
-<lastmod>2026-04-04T20:56:41+00:00</lastmod>
+<lastmod>2026-04-04T21:01:56+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/projects/2_skin_aging/</loc>
-<lastmod>2026-04-04T20:56:41+00:00</lastmod>
+<lastmod>2026-04-04T21:01:56+00:00</lastmod>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/v1/zh/</loc>
@@ -442,6 +442,9 @@
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/zhu2022frontcelldevbiol/</loc>
+</url>
+<url>
+<loc>https://xy-aginglab.github.io/bibliography/cma2021rosacea_guideline/</loc>
 </url>
 <url>
 <loc>https://xy-aginglab.github.io/bibliography/deng2021embomolmed/</loc>
