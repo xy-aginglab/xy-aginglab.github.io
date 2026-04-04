@@ -1260,13 +1260,16 @@ img {
 .v3-program-entry__content {
   max-width: 100%;
   display: block;
+  font-size: var(--v3-body-size);
+  line-height: 1.82;
+  color: var(--v3-muted);
 }
 
 .v3-program-entry__content p,
 .v3-program-entry__content li {
-  font-size: var(--v3-body-size);
-  line-height: 1.82;
-  color: var(--v3-muted);
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 .v3-program-entry__content p {
