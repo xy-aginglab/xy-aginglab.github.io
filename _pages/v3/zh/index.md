@@ -15,9 +15,9 @@ description: Li Lab 官方网站。
           <span
             class="v3-rotator"
             data-v3-rotator="毛囊皮脂腺相关疾病|皮肤衰老|玫瑰痤疮"
-            data-v3-rotator-colors="#a72126|#15803d|#2563eb"
-            data-v3-rotator-backgrounds="rgba(167,33,38,0.1)|rgba(22,163,74,0.1)|rgba(37,99,235,0.1)"
-            style="color:#a72126;background:rgba(167,33,38,0.1)"
+            data-v3-rotator-colors="#9b4340|#4a7c59|#4a6d8c"
+            data-v3-rotator-backgrounds="rgba(155,67,64,0.1)|rgba(74,124,89,0.1)|rgba(74,109,140,0.1)"
+            style="color:#9b4340;background:rgba(155,67,64,0.1)"
             aria-live="polite"
           >毛囊皮脂腺相关疾病</span>
         </span>
