@@ -232,6 +232,50 @@ img {
   padding: 1.7rem 1.5rem 4rem;
 }
 
+/* ── Logo Bar ── */
+.v3-logos {
+  border-top: 1px solid var(--v3-line);
+  padding: 1.8rem 1.5rem;
+}
+
+.v3-logos__inner {
+  max-width: var(--v3-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.v3-logos__inner img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(40%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.v3-logos__inner img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 560px) {
+  .v3-logos {
+    padding: 1.4rem 1rem;
+  }
+
+  .v3-logos__inner {
+    gap: 1.5rem;
+  }
+
+  .v3-logos__inner img {
+    height: 34px;
+  }
+}
+
 .v3-footer {
   width: 100%;
   max-width: var(--v3-max);
@@ -631,12 +675,13 @@ img {
   padding: 1.5rem 1.6rem;
   background: var(--v3-panel);
   box-shadow: var(--v3-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .v3-pub-grid > .bib-entry:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(24, 34, 39, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(24, 34, 39, 0.1);
+  border-color: var(--v3-accent);
 }
 
 /* Reset bib-row inner padding */
@@ -956,6 +1001,13 @@ img {
   background: var(--v3-panel);
   box-shadow: var(--v3-shadow);
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.v3-program-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(24, 34, 39, 0.1);
+  border-color: var(--v3-accent);
 }
 
 
@@ -1001,12 +1053,22 @@ img {
   text-decoration: none;
 }
 
+.v3-program-entry__media {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 .v3-program-entry__media img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 12px;
+  transition: transform 0.35s ease;
+}
+
+.v3-program-entry:hover .v3-program-entry__media img {
+  transform: scale(1.03);
 }
 
 .v3-program-entry__content {
