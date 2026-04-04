@@ -29,7 +29,9 @@ show_lead: false
   </section>
 </div>
 
-<section class="v3-section" style="margin-top:2rem;">
+<hr class="v3-divider">
+
+<section class="v3-section">
   <div class="v3-section__intro">
     <h2>Related publications</h2>
   </div>

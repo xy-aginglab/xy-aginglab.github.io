@@ -10,6 +10,8 @@ We investigate the fundamental mechanisms of skin aging by integrating data from
 
 Building upon these foundational discoveries, we drive the rational design and development of targeted anti-aging therapeutics. Our focus is to translate these key molecular insights into effective clinical interventions.
 
+<hr class="v3-divider">
+
 ## Related Publications
 
 <div class="publications">

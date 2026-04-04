@@ -15,6 +15,8 @@ img: research_skin_aging.svg
 - 探索细胞衰老在皮肤微环境中的作用
 - 设计开发针对关键分子通路的抗衰老药物
 
+<hr class="v3-divider">
+
 ## 相关论文
 
 <div class="publications">

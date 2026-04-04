@@ -20,6 +20,8 @@ img: research_hair_follicle.svg
 - 表征毛囊皮脂腺炎症中的免疫-微生物-神经源性相互作用
 - 建立和优化基于人源毛囊干细胞和间充质干细胞的毛囊重建技术
 
+<hr class="v3-divider">
+
 ## 相关论文
 
 <div class="publications">

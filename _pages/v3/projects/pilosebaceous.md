@@ -12,6 +12,8 @@ Within hair follicle biology, we elucidate the mechanisms driving alopecia and h
 
 Concurrently, we characterize the complex immune-microbial-neurogenic interactions underlying skin inflammation. By identifying key inflammatory pathways and therapeutic targets, we design novel, targeted interventions for rosacea, acne, and related conditions.
 
+<hr class="v3-divider">
+
 ## Related Publications
 
 <div class="publications">
