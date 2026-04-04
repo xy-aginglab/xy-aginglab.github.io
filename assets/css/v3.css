@@ -1265,9 +1265,11 @@ img {
   color: var(--v3-muted);
 }
 
-/* Dense card: shrink text when content is long */
-.v3-program-entry:first-child .v3-program-entry__content {
-  font-size: 0.88rem;
+/* Dense card: shrink text only on desktop when cards sit side-by-side */
+@media (min-width: 861px) {
+  .v3-program-entry:first-child .v3-program-entry__content {
+    font-size: 0.88rem;
+  }
 }
 
 .v3-program-entry__content p,
