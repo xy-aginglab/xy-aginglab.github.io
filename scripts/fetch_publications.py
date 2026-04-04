@@ -39,7 +39,7 @@ AFFILIATIONS = [
     "Central South University",
 ]
 
-MIN_YEAR = 2020
+MIN_YEAR = 2026
 
 
 # ── Helpers ──
