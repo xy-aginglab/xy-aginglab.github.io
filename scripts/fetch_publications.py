@@ -121,8 +121,12 @@ def normalize_name(name):
     return re.sub(r"[^a-z]", "", name.lower())
 
 
-# Terms that confirm the author belongs to our lab (not a namesake elsewhere)
-LAB_AFFILIATION_TERMS = ["dermatol", "skin", "aging", "hair"]
+# Affiliation patterns that confirm the author belongs to our lab.
+# At least one must match. Each pattern is a list of terms that must ALL appear.
+LAB_AFFILIATION_PATTERNS = [
+    ["hunan key laboratory", "aging biology"],      # 重点实验室
+    ["dermatol", "xiangya"],                         # 湘雅皮肤科
+]
 
 
 def member_is_key_author(authors, member_name):
@@ -142,15 +146,16 @@ def member_is_key_author(authors, member_name):
         if author_last == member_last and (
             author_fore.startswith(member_first) or member_first.startswith(author_fore)
         ):
-            # Verify affiliation if available
+            # Verify affiliation matches our lab specifically
             affil = author.get("affiliations", "")
             if affil:
-                if any(term in affil for term in LAB_AFFILIATION_TERMS):
-                    return True
-                # If affiliation exists but doesn't match our lab, skip
+                for pattern in LAB_AFFILIATION_PATTERNS:
+                    if all(term in affil for term in pattern):
+                        return True
+                # Affiliation exists but doesn't match our lab — skip
                 continue
-            # No affiliation data — accept (PubMed sometimes omits it)
-            return True
+            # No affiliation data — skip (too risky for common names)
+            continue
     return False
 
 
