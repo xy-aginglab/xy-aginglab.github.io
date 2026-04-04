@@ -397,6 +397,13 @@ img {
   filter: grayscale(0%);
 }
 
+.v3-logos__copy {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: var(--v3-meta-size);
+  color: var(--v3-muted);
+}
+
 @media (max-width: 560px) {
   .v3-logos {
     padding: 1.4rem 1rem;
