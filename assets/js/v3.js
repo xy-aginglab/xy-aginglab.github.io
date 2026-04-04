@@ -244,4 +244,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, { passive: true });
   }
+
+  /* Scroll reveal — fade in elements as they enter viewport */
+  var reveals = document.querySelectorAll(".v3-reveal");
+  if (reveals.length && "IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    reveals.forEach(function (el) { observer.observe(el); });
+  } else {
+    // Fallback: show everything immediately
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
 });
