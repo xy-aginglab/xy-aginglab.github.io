@@ -12,6 +12,7 @@
   --v3-muted: #5f6a70;
   --v3-copy: #46535a;
   --v3-line: rgba(24, 34, 39, 0.13);
+  --v3-line-subtle: rgba(24, 34, 39, 0.08);
   --v3-accent: #8a4b3a;
   --v3-accent-soft: rgba(138, 75, 58, 0.08);
   --v3-secondary: #415a67;
@@ -331,7 +332,7 @@ img {
 }
 
 .v3-section__intro h2 {
-  font-size: clamp(1.55rem, 1.4rem + 0.5vw, 1.85rem);
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
   line-height: 1.1;
 }
 
@@ -392,11 +393,11 @@ img {
 }
 
 .v3-rich h2 {
-  font-size: clamp(1.4rem, 1.28rem + 0.4vw, 1.7rem);
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
 }
 
 .v3-rich h3 {
-  font-size: 1.2rem;
+  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
 }
 
 /* Publications inside project detail pages */
@@ -451,9 +452,12 @@ img {
   padding: 1.35rem;
 }
 
-.v3-surface h2,
+.v3-surface h2 {
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
+}
+
 .v3-surface h3 {
-  font-size: clamp(1.55rem, 1.4rem + 0.5vw, 2rem);
+  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
 }
 
 .v3-surface p {
@@ -557,7 +561,7 @@ img {
 
 .v3-section {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .v3-section__intro {
@@ -569,7 +573,7 @@ img {
 .v3-section__intro p {
   margin: 0;
   color: var(--v3-muted);
-  font-size: 1.03rem;
+  font-size: var(--v3-body-size);
   line-height: 1.8;
 }
 
@@ -580,7 +584,7 @@ img {
 
 .v3-person-card__name {
   font-family: var(--font-serif);
-  font-size: 1.58rem;
+  font-size: clamp(1.22rem, 1.14rem + 0.32vw, 1.42rem);
   letter-spacing: -0.02em;
 }
 
@@ -735,7 +739,7 @@ img {
   padding-bottom: 0.5rem;
   border-bottom: 2.5px solid var(--v3-accent);
   font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 1.06rem + 0.28vw, 1.35rem);
+  font-size: clamp(1.25rem, 1.16rem + 0.3vw, 1.45rem);
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--v3-accent);
@@ -984,9 +988,9 @@ img {
 .v3-program-entry > h2 {
   grid-column: 1 / -1;
   margin: 0 0 0.6rem;
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(1.3rem, 1.18rem + 0.42vw, 1.58rem);
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: var(--v3-ink);
@@ -1086,7 +1090,7 @@ img {
 }
 
 .v3-group__title {
-  font-size: clamp(1.65rem, 1.5rem + 0.45vw, 2rem);
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
 }
 
 .v3-team-page .v3-person-grid {
@@ -1172,7 +1176,7 @@ img {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.8rem 0;
-  border-top: 1px solid rgba(24, 34, 39, 0.08);
+  border-top: 1px solid var(--v3-line-subtle);
 }
 
 .v3-person-row:first-child {
@@ -1324,7 +1328,7 @@ img {
   }
 
   .v3-group__title {
-    font-size: clamp(1.42rem, 1.28rem + 0.5vw, 1.72rem);
+    font-size: clamp(1.32rem, 1.2rem + 0.42vw, 1.58rem);
   }
 
   .v3-people {
@@ -1494,18 +1498,18 @@ img {
 }
 
 .v3-utility-section {
-  padding: 1.1rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid var(--v3-line);
 }
 
 .v3-utility-section:first-child {
-  padding-top: 1.2rem;
+  padding-top: 0.5rem;
 }
 
 .v3-utility-section h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 1.18rem + 0.4vw, 1.52rem);
+  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--v3-ink);
@@ -1526,7 +1530,7 @@ img {
 
 .v3-utility-list article {
   padding: 0.82rem 0;
-  border-top: 1px solid rgba(24, 34, 39, 0.08);
+  border-top: 1px solid var(--v3-line-subtle);
 }
 
 .v3-utility-list article:first-child {
@@ -1537,7 +1541,7 @@ img {
 .v3-utility-list h3 {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: clamp(1.08rem, 1.04rem + 0.18vw, 1.18rem);
+  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -1652,12 +1656,12 @@ img {
   }
 
   .v3-section__intro h2 {
-    font-size: clamp(1.5rem, 1.38rem + 0.5vw, 1.68rem);
+    font-size: clamp(1.32rem, 1.24rem + 0.45vw, 1.55rem);
     line-height: 1.08;
   }
 
   .v3-program-entry > h2 {
-    font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.38rem);
+    font-size: clamp(1.25rem, 1.16rem + 0.35vw, 1.45rem);
     line-height: 1.1;
   }
 
@@ -1676,7 +1680,7 @@ img {
   }
 
   .v3-utility-section h2 {
-    font-size: clamp(1rem, 0.94rem + 0.24vw, 1.12rem);
+    font-size: clamp(1.18rem, 1.1rem + 0.3vw, 1.32rem);
   }
 
   .v3-utility-list {
