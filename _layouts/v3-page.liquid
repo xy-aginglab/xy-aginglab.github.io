@@ -18,7 +18,7 @@ layout: v3
   {% assign page_shift_class = ' v3-page--offset' %}
 {% endif %}
 <section class="v3-page{{ page_shift_class }}">
-  <div class="v3-page__masthead">
+  <div class="v3-page__masthead v3-reveal">
     <header class="v3-page__header">
       {% if show_page_eyebrow and page.eyebrow %}
         <p class="v3-page__eyebrow">{{ page.eyebrow }}</p>
@@ -48,7 +48,7 @@ layout: v3
     </header>
   </div>
 
-  <article class="v3-page__content v3-rich">
+  <article class="v3-page__content v3-rich v3-reveal">
     {{ content }}
   </article>
 </section>

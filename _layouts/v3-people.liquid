@@ -25,7 +25,7 @@ layout: v3
 {% endif %}
 
 <section class="v3-page v3-team-page{{ page_shift_class }}">
-  <div class="v3-page__masthead">
+  <div class="v3-page__masthead v3-reveal">
     <header class="v3-page__header">
       {% if show_page_eyebrow and page.eyebrow %}
         <p class="v3-page__eyebrow">{{ page.eyebrow }}</p>
@@ -67,7 +67,7 @@ layout: v3
         {% if member.email or member.scholar or member.orcid or member.researchgate %}
           {% assign has_pi_links = true %}
         {% endif %}
-        <section class="v3-person-group">
+        <section class="v3-person-group v3-reveal">
           <h2 class="v3-group__title">{{ t.people.pi }}</h2>
           <article class="v3-pi-card">
             <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}" loading="lazy">
@@ -99,7 +99,7 @@ layout: v3
     {% endif %}
 
     {% if basic.size > 0 %}
-      <section class="v3-person-group">
+      <section class="v3-person-group v3-reveal">
         <h2 class="v3-group__title">{{ t.people.basic_researchers }}</h2>
         <div class="v3-person-grid">
           {% for member in basic %}
@@ -160,7 +160,7 @@ layout: v3
     {% endif %}
 
     {% if clinical.size > 0 %}
-      <section class="v3-person-group">
+      <section class="v3-person-group v3-reveal">
         <h2 class="v3-group__title">{{ t.people.clinical_researchers }}</h2>
         <div class="v3-person-grid">
           {% for member in clinical %}
@@ -221,7 +221,7 @@ layout: v3
     {% endif %}
 
     {% if techs.size > 0 %}
-      <section class="v3-person-group">
+      <section class="v3-person-group v3-reveal">
         <h2 class="v3-group__title">{{ t.people.technicians }}</h2>
         <div class="v3-person-grid">
           {% for member in techs %}
