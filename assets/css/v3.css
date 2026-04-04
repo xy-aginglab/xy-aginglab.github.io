@@ -1260,8 +1260,8 @@ img {
 .v3-program-entry__content {
   max-width: 100%;
   display: block;
-  font-size: var(--v3-body-size);
-  line-height: 1.82;
+  font-size: 0.92rem;
+  line-height: 1.7;
   color: var(--v3-muted);
 }
 
