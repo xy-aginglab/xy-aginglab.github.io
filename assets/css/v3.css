@@ -968,10 +968,26 @@ img {
 
 .publications ol.bibliography > li {
   border-top: 1px solid var(--v3-line);
+  transition: background 0.2s ease, opacity 0.2s ease;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  border-radius: 8px;
 }
 
 .publications ol.bibliography > li:first-child {
   border-top: 0;
+}
+
+/* Spotlight: hover highlights one entry, dims siblings */
+.publications ol.bibliography:hover > li {
+  opacity: 0.5;
+}
+
+.publications ol.bibliography > li:hover {
+  opacity: 1;
+  background: var(--v3-accent-soft);
 }
 
 .publications .bib-row {
