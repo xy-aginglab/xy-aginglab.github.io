@@ -1505,7 +1505,7 @@ img {
 .v3-utility-section h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 1.02rem + 0.28vw, 1.28rem);
+  font-size: clamp(1.3rem, 1.18rem + 0.4vw, 1.52rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--v3-ink);
@@ -1514,6 +1514,7 @@ img {
 .v3-utility-section p {
   margin: 0.5rem 0 0;
   color: var(--v3-copy);
+  font-size: 0.97rem;
   line-height: 1.6;
 }
 
@@ -1535,14 +1536,15 @@ img {
 
 .v3-utility-list h3 {
   margin: 0;
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.08rem, 1.04rem + 0.18vw, 1.18rem);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .v3-utility-list p {
   margin: 0.22rem 0 0;
+  font-size: 0.97rem;
 }
 
 @keyframes v3-rotator-caret {
