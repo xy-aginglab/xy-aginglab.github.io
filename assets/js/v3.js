@@ -214,10 +214,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function toggle() {
-      var s = getSetting();
-      if (s === "system") apply("light");
-      else if (s === "light") apply("dark");
-      else apply("system");
+      // Toggle based on current visual state, not stored setting
+      var current = getComputed(getSetting());
+      apply(current === "light" ? "dark" : "light");
     }
 
     document.querySelectorAll("[data-v3-theme-toggle]").forEach(function (btn) {
