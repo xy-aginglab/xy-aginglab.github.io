@@ -53,6 +53,13 @@
           {% else %}
             <span>{{ entry.title }}</span>
           {% endif %}
+          {% assign citation_count = 0 %}
+          {% if site.data.citations[entry.key] %}
+            {% assign citation_count = site.data.citations[entry.key].citations %}
+          {% endif %}
+          {% if citation_count > 0 %}
+            <span class="bib-citation-badge" title="{{ citation_count }} citations"><i class="fas fa-quote-right"></i> {{ citation_count }}</span>
+          {% endif %}
         </h2>
 
         <div class="bib-authors">
@@ -134,13 +141,6 @@
 
         <div class="bib-meta">
           {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}.{% endif %}{{ entryyear }}.{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}
-          {% assign citation_count = 0 %}
-          {% if site.data.citations[entry.key] %}
-            {% assign citation_count = site.data.citations[entry.key].citations %}
-          {% endif %}
-          {% if citation_count > 0 %}
-            <span class="bib-citation-badge" title="{{ citation_count }} citations"><i class="fas fa-quote-right"></i> {{ citation_count }}</span>
-          {% endif %}
         </div>
       </div>
 
