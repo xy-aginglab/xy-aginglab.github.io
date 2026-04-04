@@ -14,8 +14,8 @@
   --v3-line: rgba(24, 34, 39, 0.13);
   --v3-line-subtle: rgba(24, 34, 39, 0.08);
   --v3-accent: #8a4b3a;
+  --v3-accent-hover: #7d3c2b;
   --v3-accent-soft: rgba(138, 75, 58, 0.08);
-  --v3-secondary: #415a67;
   --v3-shadow: 0 8px 24px rgba(24, 34, 39, 0.04);
   --v3-radius: 14px;
   --v3-radius-sm: 12px;
@@ -34,35 +34,32 @@
 /* ── Dark Mode Tokens ── */
 [data-theme="dark"] {
   color-scheme: dark;
-  --v3-bg: #191a1e;
-  --v3-panel: #232428;
-  --v3-panel-strong: #2a2b30;
+  --v3-bg: #1b1a17;
+  --v3-panel: #24231f;
+  --v3-panel-strong: #2b2a25;
   --v3-ink: #e2e3e7;
   --v3-muted: #9ca3af;
   --v3-copy: #b0b8c1;
   --v3-line: rgba(255, 255, 255, 0.12);
   --v3-line-subtle: rgba(255, 255, 255, 0.07);
   --v3-accent: #c4735e;
+  --v3-accent-hover: #d4876f;
   --v3-accent-soft: rgba(196, 115, 94, 0.12);
-  --v3-secondary: #7a9bac;
   --v3-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 [data-theme="dark"] body {
-  background: linear-gradient(180deg, #1d1e22 0%, var(--v3-bg) 100%);
+  background: linear-gradient(180deg, #1e1d1a 0%, var(--v3-bg) 100%);
 }
 
 [data-theme="dark"] .v3-nav {
-  background: rgba(25, 26, 30, 0.85);
+  background: rgba(27, 26, 23, 0.85);
 }
 
 [data-theme="dark"] .v3-nav.is-scrolled {
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
 }
 
-[data-theme="dark"] .v3-brand__title {
-  color: var(--v3-accent);
-}
 
 [data-theme="dark"] .v3-button--primary {
   background: var(--v3-ink);
@@ -125,7 +122,7 @@
 
 @media (max-width: 860px) {
   [data-theme="dark"] .v3-nav__menu {
-    background: rgba(25, 26, 30, 0.98);
+    background: rgba(27, 26, 23, 0.98);
   }
 }
 
@@ -183,6 +180,20 @@ a {
   color: inherit;
 }
 
+/* Content links — subtle accent for discoverability */
+.v3-rich a,
+.v3-utility-section a,
+.v3-paper__doi a {
+  color: var(--v3-accent);
+  transition: color 0.2s ease;
+}
+
+.v3-rich a:hover,
+.v3-utility-section a:hover,
+.v3-paper__doi a:hover {
+  color: var(--v3-accent-hover);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -226,7 +237,7 @@ img {
 .v3-brand {
   text-decoration: none;
   min-width: 0;
-  color: #a24f39;
+  color: var(--v3-accent);
   transition: color 0.2s ease;
 }
 
@@ -242,7 +253,7 @@ img {
 }
 
 .v3-brand:hover {
-  color: #7d3c2b;
+  color: var(--v3-accent-hover);
 }
 
 .v3-nav__toggle {
@@ -668,7 +679,7 @@ img {
   min-width: 12ch;
   margin-left: 0.18rem;
   padding-bottom: 0.08rem;
-  border-bottom: 2px solid rgba(138, 75, 58, 0.22);
+  border-bottom: 2px solid var(--v3-accent-soft);
   color: var(--v3-ink);
   transition:
     opacity 0.22s ease,
@@ -1658,8 +1669,8 @@ img {
   border-radius: 0;
   transition: none;
   white-space: nowrap;
-  background: var(--v3-rotator-bg, rgba(167, 33, 38, 0.1));
-  color: var(--v3-rotator-color, #a72126);
+  background: var(--v3-rotator-bg, rgba(155, 67, 64, 0.1));
+  color: var(--v3-rotator-color, #9b4340);
   font-weight: 500;
   font-style: italic;
   -webkit-box-decoration-break: clone;
