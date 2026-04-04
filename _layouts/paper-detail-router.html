@@ -53,6 +53,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
+  <script>
+    (function(){
+      var s = localStorage.getItem('v3-theme');
+      if (s !== 'dark' && s !== 'light') s = 'system';
+      var t = s;
+      if (s === 'system') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
   <style>
     /* V1 style (default, hidden when v3) */
     .paper-v1 { max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
@@ -125,8 +136,9 @@
             </div>
             <div class="v3-nav__utility" aria-label="Additional pages">
               <a href="{{ '/v3/clinical/' | relative_url }}">Clinical</a>
-              <a href="{{ '/v3/careers/' | relative_url }}">Careers</a>
+              <a href="{{ '/v3/contact/' | relative_url }}">Contact</a>
               <a href="{{ '/v3/zh/' | relative_url }}">中文</a>
+              <button type="button" class="v3-theme-toggle" data-v3-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-circle-half-stroke"></i></button>
             </div>
           </div>
         </div>
@@ -164,6 +176,15 @@
           </p>
         </article>
       </main>
+
+      <div class="v3-logos">
+        <div class="v3-logos__inner">
+          <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University" loading="lazy">
+          <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital" loading="lazy">
+          <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab" loading="lazy">
+          <img src="{{ '/assets/img/logos/research_center.png' | relative_url }}" alt="Skin Aging and Hair Regeneration Research Center" loading="lazy">
+        </div>
+      </div>
 
       <footer class="v3-footer">
         <div class="v3-footer__inner">
