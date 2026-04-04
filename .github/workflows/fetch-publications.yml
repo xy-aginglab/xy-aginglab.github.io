@@ -69,5 +69,6 @@ jobs:
               repo: context.repo.repo,
               title: `📄 New publications auto-fetched from PubMed`,
               body: body,
-              labels: ['publications', 'automated']
+              labels: ['publications', 'automated'],
+              assignees: ['Wu-Zzz']
             });
