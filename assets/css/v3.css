@@ -172,17 +172,29 @@ img {
 
 .v3-nav__menu a,
 .v3-nav__utility a {
+  position: relative;
   display: block;
   text-decoration: none;
   color: var(--v3-muted);
   padding: 0.32rem 0;
   border-radius: 0;
-  border-bottom: 1px solid transparent;
   font-size: var(--v3-nav-size);
   font-weight: 600;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.v3-nav__menu a::after,
+.v3-nav__utility a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--v3-ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .v3-nav__utility a {
@@ -196,7 +208,13 @@ img {
 .v3-nav__utility a.is-active {
   color: var(--v3-ink);
   background: transparent;
-  border-bottom-color: var(--v3-ink);
+}
+
+.v3-nav__menu a:hover::after,
+.v3-nav__menu a.is-active::after,
+.v3-nav__utility a:hover::after,
+.v3-nav__utility a.is-active::after {
+  transform: scaleX(1);
 }
 
 /* ── Main Content & Footer ── */
@@ -695,7 +713,7 @@ img {
 .publications h2.bibliography {
   margin: 0 0 1rem;
   padding-top: 1.2rem;
-  border-top: 1px solid var(--v3-line);
+  border-top: 2.5px solid var(--v3-accent);
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 1.06rem + 0.28vw, 1.35rem);
   line-height: 1.15;
@@ -749,10 +767,11 @@ img {
 
 .publications .bib-title {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.55rem, 1.35rem + 0.6vw, 2.05rem);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 0.96rem + 0.32vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .publications .bib-title a,
@@ -1212,10 +1231,15 @@ img {
     gap: 0;
   }
 
-  .v3-nav__menu a {
+  .v3-nav__menu a,
+  .v3-nav__utility a {
     padding: 0.7rem 0;
-    border-bottom: none;
     font-size: 1rem;
+  }
+
+  .v3-nav__menu a::after,
+  .v3-nav__utility a::after {
+    display: none;
   }
 
   .v3-nav__utility {
@@ -1489,9 +1513,10 @@ img {
 
 .v3-utility-list h3 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 1.22rem;
-  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .v3-utility-list p {
