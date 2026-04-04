@@ -57,10 +57,12 @@ def load_member_names():
     return names
 
 
-def load_existing_pmids():
-    """Extract all PMIDs already in the .bib file."""
+def load_existing_ids():
+    """Extract all PMIDs and DOIs already in the .bib file."""
     text = BIB_FILE.read_text(encoding="utf-8")
-    return set(re.findall(r"pmid\s*=\s*\{(\d+)\}", text))
+    pmids = set(re.findall(r"pmid\s*=\s*\{(\d+)\}", text))
+    dois = set(d.lower() for d in re.findall(r"doi\s*=\s*\{([^}]+)\}", text))
+    return pmids, dois
 
 
 def pubmed_search(query, retmax=2000):
@@ -159,10 +161,11 @@ def member_is_key_author(authors, member_name):
     return False
 
 
-def extract_paper_data(article):
-    """Extract structured data from a PubMed XML article."""
-    # Basic metadata
-    pmid = article.findtext(".//PMID", "")
+def extract_paper_data(pubmed_article):
+    """Extract structured data from a PubMed XML PubmedArticle element."""
+    # PMID is at the MedlineCitation level, not inside Article
+    pmid = pubmed_article.findtext(".//MedlineCitation/PMID", "")
+    article = pubmed_article.find(".//Article")
     title = article.findtext(".//ArticleTitle", "")
     abstract = article.findtext(".//AbstractText", "")
     journal = article.findtext(".//Journal/Title", "")
@@ -276,9 +279,9 @@ def main():
 
     # Load data
     members = load_member_names()
-    existing_pmids = load_existing_pmids()
+    existing_pmids, existing_dois = load_existing_ids()
     print(f"\nLab members: {len(members)}")
-    print(f"Existing papers in .bib: {len(existing_pmids)}")
+    print(f"Existing papers in .bib: {len(existing_pmids)} PMIDs, {len(existing_dois)} DOIs")
 
     # Build PubMed query
     affil_query = " OR ".join(f'"{a}"[Affiliation]' for a in AFFILIATIONS)
@@ -307,8 +310,12 @@ def main():
         root = pubmed_fetch(batch)
         time.sleep(0.5)  # Be nice to NCBI
 
-        for article in root.findall(".//PubmedArticle"):
-            paper = extract_paper_data(article.find(".//Article"))
+        for pubmed_article in root.findall(".//PubmedArticle"):
+            paper = extract_paper_data(pubmed_article)
+
+            # Skip if DOI already exists in .bib (catches papers added without PMID)
+            if paper["doi"] and paper["doi"].lower() in existing_dois:
+                continue
 
             # Filter: lab member must be first or corresponding author
             matched_member = None
