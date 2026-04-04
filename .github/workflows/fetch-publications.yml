@@ -1,0 +1,73 @@
+name: Fetch new publications
+
+on:
+  schedule:
+    # Run every Monday at 09:00 UTC (17:00 CST)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run publication fetcher
+        id: fetch
+        run: |
+          python scripts/fetch_publications.py
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Check for new papers
+        id: check
+        run: |
+          if git diff --quiet _bibliography/papers.bib; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No new papers found."
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "New papers detected!"
+          fi
+
+      - name: Commit and push new papers
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _bibliography/papers.bib
+          git commit -m "feat(auto): add new publications from PubMed
+
+          Automatically fetched by fetch-publications workflow."
+          git push
+
+      - name: Create notification issue
+        if: steps.check.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = 'New publications were automatically fetched from PubMed and added to the bibliography.\n\n';
+            try {
+              body += fs.readFileSync('scripts/new_papers_summary.md', 'utf8');
+            } catch (e) {
+              body += 'See the latest commit for details.';
+            }
+            body += '\n\n---\n*Please review the new entries and add missing fields (`category`, `subcategory`, `selected`, `preview`, etc.) as needed.*';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📄 New publications auto-fetched from PubMed`,
+              body: body,
+              labels: ['publications', 'automated']
+            });
