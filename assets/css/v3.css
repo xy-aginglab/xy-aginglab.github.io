@@ -546,7 +546,7 @@ img {
 }
 
 .v3-section__intro h2 {
-  font-size: clamp(1.45rem, 1.32rem + 0.45vw, 1.75rem);
+  font-size: clamp(1.55rem, 1.4rem + 0.5vw, 1.85rem);
   line-height: 1.1;
 }
 
@@ -611,7 +611,7 @@ img {
 }
 
 .v3-rich h3 {
-  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
+  font-size: clamp(1.2rem, 1.12rem + 0.3vw, 1.4rem);
 }
 
 /* Publications inside project detail pages */
@@ -671,7 +671,7 @@ img {
 }
 
 .v3-surface h3 {
-  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
+  font-size: clamp(1.2rem, 1.12rem + 0.3vw, 1.4rem);
 }
 
 .v3-surface p {
@@ -1843,10 +1843,10 @@ img {
 
 .v3-utility-list h3 {
   margin: 0;
-  font-family: var(--font-sans);
-  font-size: clamp(1.15rem, 1.08rem + 0.28vw, 1.32rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.12rem + 0.3vw, 1.4rem);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .v3-utility-list p {
@@ -1995,10 +1995,10 @@ img {
   }
 
   .v3-utility-list h3 {
-    font-family: var(--font-sans);
-    font-size: 1.08rem;
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     line-height: 1.25;
   }
 

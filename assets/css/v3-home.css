@@ -60,11 +60,12 @@
   display: inline-block;
   flex: 0 0 auto;
   min-width: 1ch;
-  padding: 0.06em 0.18em;
-  border-radius: 4px;
+  padding: 0.06em 0.22em;
+  border-radius: 5px;
   white-space: nowrap;
-  font-style: italic;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
   background: var(--v3-rotator-bg, rgba(167, 33, 38, 0.1));
   color: var(--v3-rotator-color, #a72126);
   transition: background 0.35s ease, color 0.35s ease;
