@@ -3,7 +3,7 @@
   color-scheme: light;
   --font-serif: "Lora", "Newsreader", "Noto Serif SC", "Songti SC", STSong, serif;
   --font-display: "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: "Open Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "Fira Code", "Roboto Mono", monospace;
   --v3-bg: #f7f5f1;
   --v3-panel: #ffffff;
