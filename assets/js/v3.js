@@ -77,6 +77,16 @@ document.addEventListener("DOMContentLoaded", function () {
       .map(function (item) {
         return item.trim();
       });
+    var darkColors = (el.getAttribute("data-v3-rotator-colors-dark") || "")
+      .split("|")
+      .map(function (item) {
+        return item.trim();
+      });
+    var darkBackgrounds = (el.getAttribute("data-v3-rotator-backgrounds-dark") || "")
+      .split("|")
+      .map(function (item) {
+        return item.trim();
+      });
 
     if (!phrases.length) return;
 
@@ -85,6 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
         text: text,
         color: colors[index] || "",
         background: backgrounds[index] || "",
+        darkColor: darkColors[index] || "",
+        darkBackground: darkBackgrounds[index] || "",
       };
     });
 
@@ -116,14 +128,41 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    function applyTheme(item) {
-      el.style.setProperty("--v3-rotator-color", item.color);
-      el.style.setProperty("--v3-rotator-bg", item.background);
-      el.style.color = item.color;
-      el.style.background = item.background;
+    function currentTheme() {
+      return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
     }
 
-    applyTheme(items[0]);
+    function applyThemeAt(idx) {
+      var item = items[idx];
+      if (!item) return;
+      var theme = currentTheme();
+      var color =
+        theme === "dark"
+          ? item.darkColor || item.color
+          : item.color || item.darkColor;
+      var background =
+        theme === "dark"
+          ? item.darkBackground || item.background
+          : item.background || item.darkBackground;
+
+      if (color) {
+        el.style.setProperty("--v3-rotator-color", color);
+        el.style.color = color;
+      } else {
+        el.style.removeProperty("--v3-rotator-color");
+        el.style.color = "";
+      }
+
+      if (background) {
+        el.style.setProperty("--v3-rotator-bg", background);
+        el.style.background = background;
+      } else {
+        el.style.removeProperty("--v3-rotator-bg");
+        el.style.background = "";
+      }
+    }
+
+    applyThemeAt(0);
     el.textContent = items[0].text;
 
     if (items.length < 2 || prefersReducedMotion) {
@@ -143,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       var item = items[index];
-      applyTheme(item);
+      applyThemeAt(index);
 
       if (!deleting) {
         charIndex += 1;
@@ -158,12 +197,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (charIndex === 0) {
           deleting = false;
           index = (index + 1) % items.length;
-          applyTheme(items[index]);
+          applyThemeAt(index);
         }
       }
 
       window.setTimeout(tick, deleting ? 30 : 60);
     }
+
+    document.addEventListener("v3-theme-change", function () {
+      applyThemeAt(index);
+    });
 
     tick();
   });
@@ -208,6 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         document.documentElement.removeAttribute("data-theme");
       }
+      document.dispatchEvent(
+        new CustomEvent("v3-theme-change", {
+          detail: { theme: theme, setting: setting },
+        })
+      );
       setTimeout(function () {
         document.documentElement.classList.remove("v3-theme-transition");
       }, 450);
