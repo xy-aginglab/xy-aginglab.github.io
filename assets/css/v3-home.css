@@ -23,27 +23,27 @@
   margin: 0;
   max-width: 11.2ch;
   font-family: var(--font-serif);
-  font-size: clamp(5.8rem, 4.8rem + 4.2vw, 8rem);
+  font-size: clamp(4.45rem, 3.4rem + 3.9vw, 6.6rem);
   font-weight: 700;
-  line-height: 0.91;
+  line-height: 0.94;
   letter-spacing: -0.04em;
   text-wrap: pretty;
 }
 
 .v3-hero__dynamic {
-  display: flex;
-  flex-wrap: nowrap;
+  display: inline-flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.22ch;
+  gap: 0.4ch;
   width: fit-content;
-  margin: 2rem 0 0;
+  margin: 1.5rem 0 0;
   color: var(--v3-ink);
   font-family: var(--font-serif);
-  font-size: clamp(1.95rem, 1.6rem + 1vw, 2.4rem);
-  font-weight: 400;
-  line-height: 1.3;
+  font-size: clamp(1.48rem, 1.28rem + 0.9vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.28;
   letter-spacing: -0.02em;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .v3-hero__dynamic-prefix {
@@ -60,22 +60,22 @@
   display: inline-block;
   flex: 0 0 auto;
   min-width: 1ch;
-  padding: 0.06em 0.22em;
-  border-radius: 5px;
+  padding: 0.08em 0.35em 0.08em 0.22em;
+  border-radius: 6px;
   white-space: nowrap;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-style: normal;
   font-weight: 600;
-  background: var(--v3-rotator-bg, rgba(167, 33, 38, 0.1));
-  color: var(--v3-rotator-color, #a72126);
+  background: var(--v3-rotator-bg, rgba(138, 75, 58, 0.12));
+  color: var(--v3-rotator-color, var(--v3-accent));
   transition: background 0.35s ease, color 0.35s ease;
 }
 
 .v3-hero__lead {
-  max-width: 65ch;
-  margin: 2.2rem 0 0;
+  max-width: 60ch;
+  margin: 1.85rem 0 0;
   color: var(--v3-copy);
-  font-size: clamp(1.22rem, 1.12rem + 0.35vw, 1.42rem);
+  font-size: clamp(1.24rem, 1.12rem + 0.38vw, 1.5rem);
   line-height: 1.75;
   letter-spacing: -0.01em;
 }
@@ -84,7 +84,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
 }
 
 .v3-hero__actions .v3-button {
@@ -100,25 +100,20 @@
   }
 
   .v3-hero__title {
-    max-width: 8.6ch;
-    font-size: clamp(3.35rem, 2.9rem + 4.8vw, 4.5rem);
+    max-width: 9ch;
+    font-size: clamp(3.35rem, 2.9rem + 4.4vw, 4.75rem);
   }
 
   .v3-hero__copy {
     max-width: 100%;
     margin-left: 0;
+    margin-right: 0;
   }
 
   .v3-hero__dynamic {
     display: block;
-    white-space: normal;
-    font-size: clamp(1.34rem, 1.18rem + 0.8vw, 1.58rem);
+    font-size: clamp(1.34rem, 1.2rem + 0.8vw, 1.72rem);
     line-height: 1.34;
-    min-height: calc(2 * 1.34em);
-  }
-
-  .v3-hero__dynamic-prefix {
-    display: block;
   }
 
   .v3-rotator-slot {
@@ -133,10 +128,10 @@
   }
 
   .v3-hero__lead {
-    max-width: 32rem;
-    margin-top: 0.95rem;
-    font-size: 1rem;
-    line-height: 1.6;
+    max-width: 34rem;
+    margin-top: 0.9rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
   }
 }
 
@@ -149,20 +144,18 @@
 
   .v3-hero__title {
     max-width: 8.2ch;
-    font-size: clamp(3rem, 2.6rem + 3.8vw, 3.9rem);
-    line-height: 0.95;
+    font-size: clamp(3.15rem, 2.6rem + 3.4vw, 4.05rem);
+    line-height: 0.97;
   }
 
   .v3-hero__dynamic {
     margin-top: 0.85rem;
-    font-size: clamp(1.22rem, 1.1rem + 0.6vw, 1.42rem);
-    min-height: calc(2 * 1.34em);
+    font-size: clamp(1.24rem, 1.1rem + 0.65vw, 1.48rem);
   }
 
   .v3-hero__lead {
-    margin-top: 0.85rem;
-    font-size: 0.98rem;
-    line-height: 1.55;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
-

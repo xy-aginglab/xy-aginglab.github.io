@@ -1,9 +1,9 @@
 /* ── Design Tokens ── */
 :root {
   color-scheme: light;
-  --font-serif: "Lora", "Newsreader", "Noto Serif SC", "Songti SC", STSong, serif;
-  --font-display: "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: "Open Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Newsreader", "Lora", "Noto Serif SC", "Songti SC", STSong, serif;
+  --font-display: "Newsreader", "Lora", "Noto Serif SC", "Songti SC", STSong, serif;
+  --font-sans: "Manrope", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "Fira Code", "Roboto Mono", monospace;
   --v3-bg: #f7f5f1;
   --v3-panel: #ffffff;
@@ -20,13 +20,13 @@
   --v3-radius: 14px;
   --v3-radius-sm: 12px;
   --v3-max: 1180px;
-  --v3-brand-size: clamp(1.28rem, 1.16rem + 0.35vw, 1.42rem);
-  --v3-nav-size: 0.95rem;
+  --v3-brand-size: clamp(1.18rem, 1.08rem + 0.28vw, 1.34rem);
+  --v3-nav-size: 0.96rem;
   --v3-utility-size: var(--v3-nav-size);
-  --v3-page-title-size: clamp(2.2rem, 1.9rem + 1.1vw, 2.8rem);
-  --v3-page-lead-size: clamp(1.08rem, 1.02rem + 0.24vw, 1.2rem);
-  --v3-body-size: clamp(1.04rem, 1rem + 0.18vw, 1.12rem);
-  --v3-meta-size: 0.9rem;
+  --v3-page-title-size: clamp(3.3rem, 2.4rem + 1.6vw, 4rem);
+  --v3-page-lead-size: clamp(1.2rem, 1.12rem + 0.35vw, 1.45rem);
+  --v3-body-size: clamp(1.12rem, 1.04rem + 0.28vw, 1.22rem);
+  --v3-meta-size: 0.92rem;
   --v3-button-size: 0.98rem;
   --v3-page-offset: clamp(2rem, 4.5vw, 4.75rem);
 }
@@ -40,11 +40,11 @@
   --v3-ink: #e2e3e7;
   --v3-muted: #9ca3af;
   --v3-copy: #b0b8c1;
-  --v3-line: rgba(255, 255, 255, 0.12);
-  --v3-line-subtle: rgba(255, 255, 255, 0.07);
+  --v3-line: rgba(255, 255, 255, 0.18);
+  --v3-line-subtle: rgba(255, 255, 255, 0.1);
   --v3-accent: #c4735e;
   --v3-accent-hover: #d4876f;
-  --v3-accent-soft: rgba(196, 115, 94, 0.12);
+  --v3-accent-soft: rgba(196, 115, 94, 0.2);
   --v3-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -73,7 +73,6 @@
 
 [data-theme="dark"] .v3-surface,
 [data-theme="dark"] .v3-person-card,
-[data-theme="dark"] .v3-program-entry,
 [data-theme="dark"] .v3-pi-card {
   background: var(--v3-panel);
 }
@@ -88,20 +87,8 @@
   box-shadow: none;
 }
 
-[data-theme="dark"] .v3-pub-grid > .bib-entry:hover,
-[data-theme="dark"] .v3-program-entry:hover {
+[data-theme="dark"] .v3-pub-grid > .bib-entry:hover {
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .v3-program-entry__more a {
-  border-color: var(--v3-line);
-  color: var(--v3-ink);
-}
-
-[data-theme="dark"] .v3-program-entry__more a:hover {
-  background: var(--v3-ink);
-  color: var(--v3-bg);
-  border-color: var(--v3-ink);
 }
 
 [data-theme="dark"] .v3-logos__inner img {
@@ -745,8 +732,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.15rem;
-  padding: 0.92rem 1.22rem;
+  min-height: 2.85rem;
+  padding: 0.75rem 1.1rem;
   border-radius: 10px;
   text-decoration: none;
   font-size: var(--v3-button-size);
@@ -980,14 +967,16 @@ img {
   border-top: 0;
 }
 
-/* Spotlight: hover highlights one entry, dims siblings */
-.publications ol.bibliography:hover > li {
-  opacity: 0.5;
-}
+@media (hover: hover) and (pointer: fine) {
+  /* Spotlight: hover highlights one entry, dims siblings */
+  .publications ol.bibliography:hover > li {
+    opacity: 0.5;
+  }
 
-.publications ol.bibliography > li:hover {
-  opacity: 1;
-  background: var(--v3-accent-soft);
+  .publications ol.bibliography > li:hover {
+    opacity: 1;
+    background: var(--v3-accent-soft);
+  }
 }
 
 .publications .bib-row {
@@ -1220,23 +1209,20 @@ img {
 .v3-program-entry__more a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--v3-line);
-  border-radius: 8px;
-  background: var(--v3-bg);
-  color: var(--v3-ink);
+  gap: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--v3-accent);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+  transition: color 0.2s ease, gap 0.2s ease;
 }
 
 .v3-program-entry__more a:hover {
-  background: var(--v3-ink);
-  color: var(--v3-bg);
-  border-color: var(--v3-ink);
-  gap: 0.65rem;
+  color: var(--v3-ink);
+  gap: 0.55rem;
 }
 
 .v3-program-entry > h2 {
