@@ -29,9 +29,14 @@ description: Use when working in the xy-aginglab.github.io repository for the Hu
   - branded and section-driven
   - bilingual (`en` plus `zh`)
   - Jekyll/al-folio based with a custom SCSS design system
-- `/v2/` is a retained legacy experiment:
-  - visible on the version-comparison surface for direct evaluation
-  - kept routable for reference, comparison, or migration work
+- `/v2/` is a research-narrative surface built on the v3 design system:
+  - shares v3 typography, color tokens, dark mode, and base CSS
+  - has its own `v2-*` layout files (copied from v3, URLs adjusted) for version isolation
+  - homepage features detailed research-direction narratives with inline high-impact-factor paper citations (inspired by qichen-lab.info)
+  - homepage structure: hero + research highlights (2 directions with paper evidence) + research direction summary cards
+  - research narrative content lives in `_data/research_directions.yml` (bilingual)
+  - interior pages reuse the same content patterns as v3 with v2-prefixed layouts
+  - all Bloom-specific naming (`bloom*`) is retired; no Tailwind CDN dependency
 - `/v3/` is the canonical final-design branch behind the primary public entry:
   - content-first and typography-led
   - must be visually distinct from Bloom Lab even if it preserves a calm academic homepage feel

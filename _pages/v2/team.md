@@ -1,6 +1,6 @@
 ---
-layout: bloom-people
+layout: v2-people
 permalink: /v2/team/
-title: Team
-sitemap: false
+title: Our Team
+show_lead: false
 ---

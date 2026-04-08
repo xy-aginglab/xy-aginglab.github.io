@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  {% assign asset_version = site.time | date: '%s' %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | truncatewords: 50 }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  {% if site.icon %}
+    {% assign icon_value = site.icon | strip %}
+    {% if icon_value contains '://' %}{% assign favicon_href = icon_value %}
+    {% elsif icon_value contains '/' or icon_value contains '.' %}{% assign favicon_href = icon_value | relative_url %}
+    {% else %}{% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}{% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg | uri_escape %}{% endif %}
+    <link rel="icon" href="{{ favicon_href }}">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/v2-home.css?v=' | append: asset_version | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/v2-pages.css?v=' | append: asset_version | relative_url }}" />
+</head>
+<body class="v2-body">
+  {% assign current_url = page.url | default: '' %}
+  {% assign lang = page.lang | default: 'en' %}
+
+  <header class="v2-topbar">
+    <div class="v2-topbar__inner">
+      {% if lang == 'zh' %}
+      <a class="v2-topbar__brand" href="{{ '/v2/zh/' | relative_url }}">Li Lab</a>
+      {% else %}
+      <a class="v2-topbar__brand" href="{{ '/v2/' | relative_url }}">Li Lab</a>
+      {% endif %}
+      <nav class="v2-topbar__nav">
+        {% if lang == 'zh' %}
+        <a href="{{ '/v2/zh/projects/' | relative_url }}"{% if current_url contains '/v2/zh/projects' %} class="is-active"{% endif %}>科研方向</a>
+        <a href="{{ '/v2/zh/publications/' | relative_url }}"{% if current_url contains '/v2/zh/publications' %} class="is-active"{% endif %}>论文发表</a>
+        <a href="{{ '/v2/zh/team/' | relative_url }}"{% if current_url contains '/v2/zh/team' %} class="is-active"{% endif %}>团队成员</a>
+        <a href="{{ '/v2/zh/clinical/' | relative_url }}"{% if current_url contains '/v2/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
+        <a href="{{ '/v2/' | relative_url }}">EN</a>
+        {% else %}
+        <a href="{{ '/v2/projects/' | relative_url }}"{% if current_url contains '/v2/projects' %} class="is-active"{% endif %}>Research</a>
+        <a href="{{ '/v2/publications/' | relative_url }}"{% if current_url contains '/v2/publications' %} class="is-active"{% endif %}>Publications</a>
+        <a href="{{ '/v2/team/' | relative_url }}"{% if current_url contains '/v2/team' %} class="is-active"{% endif %}>Team</a>
+        <a href="{{ '/v2/clinical/' | relative_url }}"{% if current_url contains '/v2/clinical' %} class="is-active"{% endif %}>Clinical</a>
+        <a href="{{ '/v2/zh/' | relative_url }}">中文</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="v2-site-footer">
+    <div class="v2-site-footer__inner">
+      <div class="v2-site-footer__logos">
+        <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University">
+        <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital">
+        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab">
+      </div>
+      <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; Xiangya Hospital, Central South University</p>
+    </div>
+  </footer>
+</body>
+</html>

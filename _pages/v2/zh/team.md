@@ -1,7 +1,7 @@
 ---
-layout: bloom-people
+layout: v2-people
 permalink: /v2/zh/team/
 title: 团队成员
 lang: zh
-sitemap: false
+show_lead: false
 ---

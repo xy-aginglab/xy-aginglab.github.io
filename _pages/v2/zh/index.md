@@ -1,72 +1,73 @@
 ---
-layout: bloom
+layout: v2-home
 title: Li Lab
 permalink: /v2/zh/
 lang: zh
-sitemap: false
+description: 湖南省衰老生物学重点实验室 — 中南大学湘雅医院。
 ---
+<div class="v2-home">
 
-<div class="mx-auto max-w-4xl px-4 text-left flex flex-col">
-  <div class="flex-grow">
-    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-800 select-none">
-      欢迎来到 <span class="block font-bold">Li Lab</span>
-    </h1>
-    <p class="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mt-2 lg:mt-4 select-none sm:whitespace-nowrap">
-      我们研究
-      <span id="rotating-text" class="italic" style="color:#a72126;background:rgba(167,33,38,0.1)">毛囊皮脂腺相关疾病</span>
-      的机制
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-4 md:mt-6 lg:mt-12">
-      <strong>Li Lab</strong> 聚焦毛囊皮脂腺相关疾病和皮肤衰老，利用实验与计算技术探究毛发疾病、炎症性皮肤病和衰老的分子机制，并将成果转化为临床应用。
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      实验室隶属于<a href="https://www.csu.edu.cn/">中南大学</a><a href="https://www.xiangya.com.cn/">湘雅医院皮肤科</a>，同时依托国家老年疾病临床医学研究中心。实验室主任为李吉教授。
-    </p>
+  <div class="v2-lab-header">
+    <div>
+      <h1 class="v2-lab-header__name">Li Lab</h1>
+    </div>
+    <div class="v2-lab-header__logo">
+      <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="湘雅医院">
+      <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="中南大学">
+    </div>
   </div>
-  <div class="text-center mt-8 md:mt-12 mb-2">
-    <a href="/v2/zh/projects/"
-      class="no-underline text-gray-600 hover:text-gray-600 hover:shadow-md hover:shadow-custom-orange rounded-lg bg-custom-soft p-2 overflow-hidden transition-shadow duration-200 ease-in-out text-sm md:text-base lg:text-lg">了解更多科研方向</a>
+
+  <div class="v2-about">
+    <div class="v2-about__mission">
+      <p>本实验室立足<strong>临床皮肤病学</strong>与<strong>分子生物学</strong>的交叉领域，系统解码毛囊皮脂腺相关疾病（玫瑰痤疮、脱发、白发）的发病机制，并探索皮肤衰老的基本规律。通过整合患者队列、多组学分析、疾病模型与转化实验，开发靶向治疗策略，实现从基础发现到临床应用的转化。</p>
+      <p>在 <em>Cell</em>、<em>Nature Medicine</em>、<em>Nature Communications</em>、<em>Science Advances</em>、<em>JAAD</em> 等期刊发表的高影响力论文，推动了我们在两大研究方向上从分子机制到临床干预的系统性进展。</p>
+    </div>
+    <div class="v2-about__pi">
+      <img src="{{ '/assets/img/members/lj.png' | relative_url }}" alt="李吉教授">
+      <div>
+        <p class="v2-about__pi-name">李吉 教授</p>
+        <p class="v2-about__pi-title">Li Lab 主任</p>
+      </div>
+    </div>
   </div>
+
+  {% for dir in site.data.research_directions %}
+  <div class="v2-topic v2-clearfix" id="{{ dir.id }}">
+    <div class="v2-topic__header">
+      <h2 class="v2-topic__title">{{ dir.title_zh }}</h2>
+    </div>
+    {% if dir.id == 'pilosebaceous' %}
+    <div class="v2-topic__figure">
+      <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="毛囊皮脂腺相关疾病研究">
+    </div>
+    {% elsif dir.id == 'skin-aging' %}
+    <div class="v2-topic__figure">
+      <img src="{{ '/assets/img/research_skin_aging.png' | relative_url }}" alt="皮肤衰老研究">
+    </div>
+    {% endif %}
+    <div class="v2-topic__body">
+      {{ dir.narrative_zh }}
+    </div>
+    <a class="v2-readmore" href="{{ dir.link | relative_url }}">了解更多 &rarr;</a>
+  </div>
+  {% endfor %}
+
+  <div class="v2-dir-overview">
+    <h2 class="v2-dir-overview__title">当前研究方向</h2>
+    <div class="v2-dir-grid">
+      {% for dir in site.data.research_directions %}
+      <div class="v2-dir-card">
+        <h3>{{ dir.title_zh }}</h3>
+        <p>{{ dir.summary_zh }}</p>
+        <a href="{{ dir.link | relative_url }}">查看详情 &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="v2-footer-info">
+    <div>中南大学湘雅医院皮肤科<br>湖南省长沙市开福区湘雅路87号 410008</div>
+    <div>邮箱：<a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a></div>
+  </div>
+
 </div>
-
-<script>
-(function() {
-  var items = [
-    { text: '毛囊皮脂腺相关疾病', color: '#a72126', bg: 'rgba(167,33,38,0.1)' },
-    { text: '皮肤衰老', color: '#15803d', bg: 'rgba(22,163,74,0.1)' }
-  ];
-  var el = document.getElementById('rotating-text');
-  if (!el) return;
-  var index = 0;
-  var charIndex = 0;
-  var deleting = false;
-  var pauseEnd = 0;
-
-  function tick() {
-    var now = Date.now();
-    if (now < pauseEnd) { requestAnimationFrame(tick); return; }
-
-    var item = items[index];
-    if (!deleting) {
-      charIndex++;
-      el.textContent = item.text.substring(0, charIndex);
-      el.style.color = item.color;
-      el.style.background = item.bg;
-      if (charIndex === item.text.length) {
-        deleting = true;
-        pauseEnd = now + 2000;
-      }
-    } else {
-      charIndex--;
-      el.textContent = item.text.substring(0, charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        index = (index + 1) % items.length;
-      }
-    }
-    setTimeout(tick, deleting ? 30 : 60);
-  }
-  pauseEnd = Date.now() + 1500;
-  tick();
-})();
-</script>

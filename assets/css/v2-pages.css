@@ -1,0 +1,496 @@
+/* ============================================================================
+   V2 Interior Pages — shares tokens from v2-home.css
+   Covers: page shell, team, publications, projects, clinical
+   ============================================================================ */
+
+/* ── Global base size for v2 body ── */
+body.v2-body {
+  font-size: 17px;
+}
+
+/* ── Page Shell ── */
+.v2-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.v2-page__header {
+  padding: 2rem 0 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.v2-page__title {
+  font-family: var(--v2-font-serif);
+  font-size: clamp(1.8rem, 1.5rem + 0.9vw, 2.5rem);
+  font-weight: 800;
+  color: var(--v2-ink);
+  margin: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.v2-page__lead {
+  font-family: var(--v2-font-body);
+  font-size: 1rem;
+  color: var(--v2-muted);
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+}
+
+/* ── Page Content (rich text) ── */
+.v2-page__content {
+  font-family: var(--v2-font-body) !important;
+  font-size: 1rem !important;
+  color: var(--v2-body);
+  line-height: 1.8;
+}
+.v2-page__content h2 {
+  font-family: var(--v2-font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 2rem 0 0.8rem;
+}
+/* Only section intro h2 gets accent underline */
+.v2-section__intro h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--v2-accent);
+}
+.v2-page__content h3 {
+  font-family: var(--v2-font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 1.5rem 0 0.5rem;
+}
+.v2-page__content p { margin: 0 0 0.8rem; }
+.v2-page__content ul, .v2-page__content ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+.v2-page__content li { margin-bottom: 0.4rem; }
+.v2-page__content a { color: var(--v2-accent); }
+.v2-page__content a:hover { color: var(--v2-accent-hover); }
+.v2-page__content strong { color: var(--v2-ink); }
+.v2-page__content hr {
+  border: none;
+  border-top: 1px solid var(--v2-line);
+  margin: 2rem 0;
+}
+
+/* ── Section pattern (publications, clinical) ── */
+.v2-section {
+  margin-bottom: 2rem;
+}
+.v2-section__intro {
+  margin-bottom: 1rem;
+}
+.v2-section__intro h2 {
+  font-family: var(--v2-font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 0 0 0.3rem;
+}
+.v2-section__intro p {
+  font-size: 0.95rem;
+  color: var(--v2-muted);
+  margin: 0;
+}
+
+/* ── Utility list (clinical programs) ── */
+.v2-utility-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.v2-utility-card {
+  padding: 1.2rem;
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+}
+.v2-utility-card h3 {
+  font-family: var(--v2-font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 0 0 0.4rem;
+}
+.v2-utility-card p {
+  font-size: 0.93rem;
+  color: var(--v2-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Projects / Research direction entries ── */
+.v2-program-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--v2-line-light);
+  overflow: hidden;
+}
+.v2-program-entry:last-child { border-bottom: none; }
+
+.v2-program-entry h2 {
+  font-family: var(--v2-font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 0 0 0.8rem;
+}
+.v2-program-entry h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+.v2-program-entry h2 a:hover { color: var(--v2-accent); }
+
+.v2-program-entry__media {
+  float: right;
+  width: 240px;
+  margin: 0 0 0.8rem 1.5rem;
+  border-radius: var(--v2-radius);
+  overflow: hidden;
+  border: 1px solid var(--v2-line);
+}
+.v2-program-entry__media img { display: block; width: 100%; }
+@media (max-width: 640px) {
+  .v2-program-entry__media { float: none; width: 100%; margin: 0 0 1rem 0; }
+}
+
+.v2-program-entry__content {
+  font-family: var(--v2-font-body);
+  font-size: 0.95rem;
+  color: var(--v2-body);
+  line-height: 1.8;
+}
+.v2-program-entry__content p { margin: 0 0 0.6rem; }
+.v2-program-entry__more {
+  margin-top: 0.6rem;
+}
+.v2-program-entry__more a {
+  color: var(--v2-accent);
+  font-family: var(--v2-font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.v2-program-entry__more a:hover { text-decoration: underline; }
+
+/* ── Team ── */
+.v2-team__group {
+  margin-bottom: 2rem;
+}
+.v2-team__group-title {
+  font-family: var(--v2-font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--v2-accent);
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--v2-accent);
+  display: inline-block;
+}
+
+/* PI card */
+.v2-pi-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.v2-pi-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--v2-line);
+}
+.v2-pi-card__info h3 {
+  font-family: var(--v2-font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--v2-ink);
+  margin: 0 0 0.2rem;
+}
+.v2-pi-card__title {
+  font-size: 0.92rem;
+  color: var(--v2-muted);
+  margin: 0 0 0.6rem;
+}
+.v2-pi-card__bio {
+  font-family: var(--v2-font-body);
+  font-size: 0.95rem;
+  color: var(--v2-body);
+  line-height: 1.7;
+}
+.v2-pi-card__bio p { margin: 0 0 0.5rem; }
+@media (max-width: 580px) {
+  .v2-pi-card { grid-template-columns: 100px 1fr; gap: 1rem; }
+  .v2-pi-card img { width: 100px; height: 100px; }
+}
+
+/* Member grid */
+.v2-member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.v2-member-card {
+  display: flex;
+  gap: 0.8rem;
+  align-items: start;
+  padding: 0.8rem;
+  border: 1px solid var(--v2-line-light);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+  transition: border-color 0.2s;
+}
+.v2-member-card:hover { border-color: var(--v2-accent); }
+.v2-member-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.v2-member-card__info h3 {
+  font-family: var(--v2-font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--v2-ink);
+  margin: 0 0 0.15rem;
+}
+.v2-member-card__info p {
+  font-size: 0.85rem;
+  color: var(--v2-muted);
+  margin: 0 0 0.3rem;
+  line-height: 1.4;
+}
+
+/* Member links (shared) */
+.v2-member-links {
+  display: flex;
+  gap: 0.5rem;
+}
+.v2-member-links a {
+  color: var(--v2-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.v2-member-links a:hover { color: var(--v2-accent); }
+
+/* ── Publications (Jekyll Scholar output) ── */
+.v2-page__content .publications {
+  font-family: var(--v2-font-sans);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.v2-page__content .publications ol {
+  padding-left: 0;
+  list-style: none;
+}
+.v2-page__content .publications ol li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--v2-line-light);
+}
+.v2-page__content .publications ol li:last-child { border-bottom: none; }
+
+/* Featured publications */
+.v2-pub-featured .publications ol li {
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+  border-bottom: 1px solid var(--v2-line);
+}
+
+/* Search box */
+.v2-page__content input[type="search"],
+.v2-page__content input[type="text"] {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+  color: var(--v2-ink);
+  margin-bottom: 1rem;
+  font-family: var(--v2-font-sans);
+}
+.v2-page__content input:focus {
+  outline: none;
+  border-color: var(--v2-accent);
+}
+
+/* ── Bibliography entries ── */
+
+/* Reset bib h2 title — no border, no big margin */
+.v2-page__content h2.bib-title,
+.v2-pub-featured h2.bib-title {
+  font-family: var(--v2-font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--v2-ink);
+  margin: 0 0 0.25rem;
+  padding: 0;
+  border: none;
+  line-height: 1.4;
+}
+.v2-page__content h2.bib-title a,
+.v2-pub-featured h2.bib-title a {
+  color: var(--v2-ink);
+  text-decoration: none;
+}
+.v2-page__content h2.bib-title a:hover,
+.v2-pub-featured h2.bib-title a:hover {
+  color: var(--v2-accent);
+}
+
+/* Row layout: thumb + content side by side */
+.v2-page__content .bib-row,
+.v2-pub-featured .bib-row {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.7rem 0;
+  align-items: flex-start;
+  font-family: var(--v2-font-sans);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+/* Featured cards get a border */
+.v2-pub-featured .bib-row {
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+}
+
+/* Thumbnail */
+.v2-page__content .bib-thumb,
+.v2-pub-featured .bib-thumb {
+  flex-shrink: 0;
+  width: 60px;
+}
+.v2-page__content .bib-thumb img,
+.v2-pub-featured .bib-thumb img {
+  width: 60px;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--v2-line-light);
+}
+.bib-row--no-preview .bib-thumb { display: none; }
+
+/* Content */
+.v2-page__content .bib-content,
+.v2-pub-featured .bib-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.v2-page__content .bib-authors,
+.v2-pub-featured .bib-authors {
+  font-size: 0.88rem;
+  color: var(--v2-muted);
+  margin-bottom: 0.1rem;
+}
+
+.v2-page__content .bib-meta,
+.v2-pub-featured .bib-meta {
+  font-size: 0.88rem;
+  color: var(--v2-body);
+}
+.v2-page__content .bib-meta .bib-journal,
+.v2-pub-featured .bib-meta .bib-journal {
+  font-style: italic;
+}
+
+.v2-page__content .bib-actions,
+.v2-pub-featured .bib-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+.v2-page__content .bib-actions .bib-link,
+.v2-pub-featured .bib-actions .bib-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.12em 0.45em;
+  border: 1px solid var(--v2-line);
+  border-radius: 3px;
+  color: var(--v2-accent);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.v2-page__content .bib-actions .bib-link:hover,
+.v2-pub-featured .bib-actions .bib-link:hover {
+  background: var(--v2-accent-soft);
+}
+
+/* Hide citation badges */
+.v2-page__content .bib-citation-badge,
+.v2-pub-featured .bib-citation-badge { display: none; }
+
+/* Override bibliography list style */
+.v2-page__content .bibliography,
+.v2-pub-featured .bibliography {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+.v2-page__content .bibliography > li.bib-entry,
+.v2-pub-featured .bibliography > li.bib-entry {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+/* Hide the details anchor that adds blank space */
+.v2-page__content .bibliography > li.bib-entry > a.details,
+.v2-pub-featured .bibliography > li.bib-entry > a.details {
+  display: none;
+}
+/* Year group headings from Jekyll Scholar — must be clearly bigger than bib titles */
+.v2-page__content .publications > h2,
+.v2-pub-featured .publications > h2,
+.v2-page__content .bibliography + h2 {
+  font-family: var(--v2-font-serif) !important;
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: var(--v2-ink) !important;
+  margin: 2rem 0 0.6rem !important;
+  padding: 0 !important;
+  border: none !important;
+  letter-spacing: -0.02em;
+}
+
+/* Bib search/filter */
+.v2-page__content .bib-filters {
+  margin-bottom: 1rem;
+}
+.v2-page__content .bib-filters__search input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+  font-family: var(--v2-font-sans);
+}
+.v2-page__content .bib-filters__search input:focus {
+  outline: none;
+  border-color: var(--v2-accent);
+}
+
+/* Active nav indicator */
+.v2-topbar__nav a.is-active {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+}

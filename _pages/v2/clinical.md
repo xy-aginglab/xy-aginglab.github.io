@@ -1,19 +1,36 @@
 ---
-layout: bloom-page
+layout: v2-page
 permalink: /v2/clinical/
 title: Clinical Research
-description: Translating molecular discoveries into diagnostic tools and therapeutic strategies.
-sitemap: false
+description: Clinical programs connecting Xiangya Hospital resources to mechanistic discovery.
+show_lead: false
 ---
+<div class="v2-utility-list">
+  <div class="v2-utility-card">
+    <h3>Skin aging cohorts</h3>
+    <p>Longitudinal phenotyping linked to molecular profiling, biomarker discovery, and aging-clock development.</p>
+  </div>
+  <div class="v2-utility-card">
+    <h3>Hair disorders</h3>
+    <p>Clinical material paired with organ culture and regenerative strategies for alopecia and hair graying.</p>
+  </div>
+  <div class="v2-utility-card">
+    <h3>Inflammatory skin disease</h3>
+    <p>Patient-derived samples and disease-facing studies focused on rosacea, acne, and related conditions.</p>
+  </div>
+</div>
 
-Leveraging the extensive clinical resources of **Xiangya Hospital**, our laboratory bridges bench research with bedside applications.
+### Clinical collaboration
 
-### Ongoing Programs
+For collaboration related to cohorts, samples, or translational dermatology studies, contact [{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }}).
 
-- **Skin Aging Cohort Studies** — Long-term follow-up of aging skin phenotypes in diverse populations, integrating clinical assessments with multi-omics profiling.
-- **Hair Loss Clinical Trials** — Evaluating novel therapeutic interventions for alopecia, including targeted small molecules and biologics.
-- **Rosacea & Acne Translational Studies** — Investigating biomarkers and targeted therapies for inflammatory skin conditions through patient-derived samples and clinical trials.
+<hr>
 
-### Clinical Resources
-
-Our team has access to the rich patient population and infrastructure of Xiangya Hospital's Department of Dermatology, enabling large-scale clinical studies and rapid translational validation.
+<div class="v2-section">
+  <div class="v2-section__intro">
+    <h2>Related publications</h2>
+  </div>
+  <div class="publications">
+    {% bibliography --query @*[clinical=true]* %}
+  </div>
+</div>

@@ -1,21 +1,30 @@
 ---
-layout: bloom-page
-permalink: /v2/zh/careers/
-title: 招聘信息
+layout: v2-page
+permalink: /v2/zh/contact/
+title: 关于与联系
 lang: zh
-sitemap: false
+description: 关于 Li Lab 及联系方式。
+show_lead: false
 ---
 
-我们始终欢迎有才华、有热情的研究者加入团队。如果您对衰老生物学、皮肤科学或相关领域充满热情，欢迎申请。
+### 关于实验室
 
-### 招聘岗位
+**湖南省衰老生物学重点实验室**依托中南大学湘雅医院。研究方向涵盖临床皮肤病学与分子生物学的交叉领域，主要包括两大方向：毛囊皮脂腺相关疾病和皮肤衰老。
 
-- **博士后** — 诚聘分子生物学、细胞生物学、生物信息学等相关方向博士后研究人员。
-- **博士研究生** — 欢迎通过中南大学研究生招生渠道报考我们实验室。
-- **科研助理** — 提供技术人员和科研助理岗位。
+实验室由李吉教授领衔，整合长寿人群队列、多组学方法、器官培养模型和转化临床研究。
 
-### 申请方式
+### 邮箱
 
-请将简历、简要研究计划和2-3位推荐人联系方式发送至 **李吉教授** 邮箱（详见[联系页面](/v2/zh/)）。
+[{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})
 
-我们在国内顶尖医学院提供合作支持的科研环境。
+### 地址
+
+中南大学湘雅医院皮肤科
+湖南省长沙市开福区湘雅路87号 410008
+
+{% if site.data.socials.github or site.data.socials.researchgate %}
+### 在线
+
+{% if site.data.socials.github %}- **GitHub**: [github.com/{{ site.data.socials.github }}](https://github.com/{{ site.data.socials.github }}){% endif %}
+{% if site.data.socials.researchgate %}- **ResearchGate**: [ResearchGate 主页](https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}){% endif %}
+{% endif %}

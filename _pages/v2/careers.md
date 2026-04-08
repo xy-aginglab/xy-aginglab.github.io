@@ -1,21 +1,29 @@
 ---
-layout: bloom-page
-permalink: /v2/careers/
-title: Careers
-description: Join our team at the Li Lab.
-sitemap: false
+layout: v2-page
+permalink: /v2/contact/
+title: About & Contact
+description: About the Li Lab and how to get in touch.
+show_lead: false
 ---
 
-We are always looking for talented and motivated researchers to join our team. If you are passionate about aging biology, skin science, or related fields, we welcome your application.
+### About the Lab
 
-### Open Positions
+The Li Lab is based at the **Hunan Key Laboratory of Aging Biology**, Xiangya Hospital, Central South University. Our research sits at the intersection of clinical dermatology and molecular biology, with two major directions: pilosebaceous-related diseases and skin aging.
 
-- **Postdoctoral Fellows** — We seek postdocs with backgrounds in molecular biology, cell biology, bioinformatics, or related disciplines.
-- **PhD Students** — We welcome applications from prospective PhD students through Central South University's graduate admissions.
-- **Research Assistants** — Positions are available for skilled technicians and research assistants.
+Led by Prof. Ji Li, the lab integrates longevity population cohorts, multi-omics approaches, organ culture models, and translational clinical studies.
 
-### How to Apply
+### Email
 
-Please send your CV, a brief research statement, and contact information for 2–3 references to **Prof. Ji Li** at the email address listed on our [Contact page](/v2/).
+[{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})
 
-We offer a collaborative and supportive research environment at one of China's top medical institutions.
+### Address
+
+Department of Dermatology, Xiangya Hospital, Central South University
+87 Xiangya Road, Kaifu District, Changsha, Hunan, China 410008
+
+{% if site.data.socials.github or site.data.socials.researchgate %}
+### Online
+
+{% if site.data.socials.github %}- **GitHub**: [github.com/{{ site.data.socials.github }}](https://github.com/{{ site.data.socials.github }}){% endif %}
+{% if site.data.socials.researchgate %}- **ResearchGate**: [ResearchGate profile](https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}){% endif %}
+{% endif %}

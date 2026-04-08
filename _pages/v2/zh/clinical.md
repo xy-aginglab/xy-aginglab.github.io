@@ -1,19 +1,37 @@
 ---
-layout: bloom-page
+layout: v2-page
 permalink: /v2/zh/clinical/
 title: 临床研究
 lang: zh
-sitemap: false
+description: 连接湘雅医院临床资源与机制发现的临床项目。
+show_lead: false
 ---
+<div class="v2-utility-list">
+  <div class="v2-utility-card">
+    <h3>皮肤衰老队列</h3>
+    <p>结合分子谱分析、生物标志物发现和衰老时钟开发的纵向表型追踪。</p>
+  </div>
+  <div class="v2-utility-card">
+    <h3>毛发疾病</h3>
+    <p>临床材料与器官培养和再生策略相结合，研究脱发和白发问题。</p>
+  </div>
+  <div class="v2-utility-card">
+    <h3>炎症性皮肤病</h3>
+    <p>基于患者来源样本，聚焦玫瑰痤疮、痤疮等炎症性皮肤病研究。</p>
+  </div>
+</div>
 
-依托**湘雅医院**丰富的临床资源，实验室将基础研究与临床应用紧密结合。
+### 临床合作
 
-### 在研项目
+如需就队列、样本或转化皮肤病学研究进行合作，请联系 [{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})。
 
-- **皮肤衰老队列研究** — 对多样化人群的皮肤衰老表型进行长期随访，结合临床评估与多组学分析。
-- **脱发临床试验** — 评估针对脱发的新型治疗干预，包括靶向小分子药物与生物制剂。
-- **玫瑰痤疮与痤疮转化研究** — 利用患者来源样本和临床试验，研究炎症性皮肤病的生物标志物与靶向治疗策略。
+<hr>
 
-### 临床资源
-
-团队依托湘雅医院皮肤科丰富的患者资源和临床基础设施，能够开展大规模临床研究和快速转化验证。
+<div class="v2-section">
+  <div class="v2-section__intro">
+    <h2>相关论文</h2>
+  </div>
+  <div class="publications">
+    {% bibliography --query @*[clinical=true]* %}
+  </div>
+</div>

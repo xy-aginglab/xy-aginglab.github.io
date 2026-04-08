@@ -1,45 +1,24 @@
 ---
-layout: bloom
+layout: v2-page
 permalink: /v2/projects/
-title: Research
-sitemap: false
+title: Our Research
+description: Pilosebaceous unit diseases and skin aging.
+show_lead: false
 ---
+{% assign projects = site.projects | sort: 'importance' %}
 
-<!-- Research.vue: mx-auto max-w-4xl divide-y divide-gray-200 -->
-<div class="mx-auto max-w-4xl divide-y divide-gray-200">
-  <!-- Header: pt-6 pb-8 space-y-2 md:space-y-5 -->
-  <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-    <h1 class="text-3xl leading-9 font-bold text-gray-800 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-      Our Research
-    </h1>
-  </div>
-  <!-- .research-aims pb-8 -->
-  <div class="research-aims pb-8">
-
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Pilosebaceous-Related Diseases</h2>
-
-    <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="Pilosebaceous-Related Diseases Research" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
-
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      We integrate clinical resources, human hair follicle organ transplantation/culture models, and animal models to study the pathogenesis of <strong>pilosebaceous-related diseases</strong> — including alopecia, hair graying, rosacea, and acne — and develop targeted therapeutic strategies.
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      Our hair research elucidates the pathogenesis of alopecia and hair graying, develops targeted small-molecule drugs for hair regrowth and graying reversal, and establishes hair follicle reconstruction based on human follicle stem cells and mesenchymal stem cells. Our inflammatory skin disease research characterizes immune-microbial-neurogenic interactions, identifies key inflammatory pathways and therapeutic targets, and designs targeted drugs for rosacea, acne, and related conditions.
-    </p>
-
-    <div style="clear:both"></div>
-
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">Skin Aging</h2>
-
-    <img src="{{ '/assets/img/research_skin_aging.png' | relative_url }}" alt="Skin Aging Research" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
-
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      We investigate the mechanisms of skin aging using <strong>longevity population cohorts</strong>, animal models, and cell models, with targeted anti-aging drug design and development for key molecular targets.
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      Our research characterizes aging mechanisms through longevity cohort multi-omics, explores the role of cellular senescence in the skin microenvironment, and designs and develops anti-aging drugs targeting key molecular pathways.
-    </p>
-
-    <div style="clear:both"></div>
-  </div>
-</div>
+{% for project in projects %}
+  {% assign slug = project.title | slugify %}
+  <article class="v2-program-entry" id="{{ slug }}">
+    <h2>{{ project.title }}</h2>
+    <div class="v2-program-entry__media">
+      <img src="{{ project.img | replace: '.svg', '.png' | prepend: '/assets/img/' | relative_url }}" alt="{{ project.title }}">
+    </div>
+    <div class="v2-program-entry__content">
+      {{ project.overview_detail }}
+      <div class="v2-program-entry__more">
+        <a href="{{ '/v2/projects/' | append: slug | append: '/' | relative_url }}">View publications & details &rarr;</a>
+      </div>
+    </div>
+  </article>
+{% endfor %}
