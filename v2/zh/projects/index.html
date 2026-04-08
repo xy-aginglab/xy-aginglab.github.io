@@ -2,131 +2,98 @@
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>科研方向</title>
+  <title>科研方向 | Li Lab</title>
   <meta name="description" content="Li Lab — Xiangya Hospital, Central South University. Research in pilosebaceous-related diseases and skin aging.
 ">
-  <!-- Tailwind CSS CDN for the legacy v2 surface -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'custom-orange': '#a72126',
-            'custom-soft': '#f6f6f7',
-          },
-          fontWeight: {
-            'extra-light': 200,
-            light: 300,
-          },
-        },
-      },
-    }
-  </script>
-  <!-- Inter + Space Grotesk fonts -->
+  <link rel="canonical" href="https://xy-aginglab.github.io/v2/zh/projects/">
+  
+    
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
-  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <!-- Legacy v2 overrides for Jekyll-generated components -->
-  <link rel="stylesheet" href="/assets/css/bloom.css">
-  <style>
-    :root { color-scheme: light !important; }
-    body {
-      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-    h1, h2, h3, h4, h5, h6, li, p { overflow-wrap: break-word; }
-    a { text-decoration: underline; transition: color 0.25s; }
-    a:hover { color: #a72126; }
-    .bloom-nav a { text-decoration: none; }
-    .bloom-logo-text { font-family: 'Space Grotesk', sans-serif; }
-    .bloom-mobile-menu { display: none; }
-    .bloom-mobile-menu.is-open { display: flex; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/v2-home.css?v=1775643104">
+  <link rel="stylesheet" href="/assets/css/v2-pages.css?v=1775643104">
 </head>
-<body>
+<body class="v2-body">
   
   
 
-  <div id="app" class="flex flex-col min-h-screen">
+  <header class="v2-topbar">
+    <div class="v2-topbar__inner">
+      
+      <a class="v2-topbar__brand" href="/v2/zh/">Li Lab</a>
+      
+      <nav class="v2-topbar__nav">
+        
+        <a href="/v2/zh/projects/" class="is-active">科研方向</a>
+        <a href="/v2/zh/publications/">论文发表</a>
+        <a href="/v2/zh/team/">团队成员</a>
+        <a href="/v2/zh/clinical/">临床研究</a>
+        <a href="/v2/">EN</a>
+        
+      </nav>
+    </div>
+  </header>
 
-    <nav class="bloom-nav p-4">
-      <div class="flex justify-between items-center w-full px-4 select-none">
-        <a href="/v2/zh/" class="flex items-center no-underline">
-          <span class="bloom-logo-text text-lg font-bold text-custom-orange">
-            Li Lab
-          </span>
-        </a>
-        <button class="flex md:hidden text-gray-600" onclick="document.getElementById('bloom-menu').classList.toggle('is-open')">
-          <i class="fas fa-bars h-6 w-6"></i>
-        </button>
-        <div id="bloom-menu" class="bloom-mobile-menu bg-custom-soft backdrop-blur-md md:backdrop-blur-none flex-col md:flex-row bg-opacity-75 md:bg-transparent md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute md:w-auto w-full md:h-auto h-full md:pt-0 pt-10 top-14 z-50 left-0">
-          
-            <a href="/v2/zh/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-custom-orange">科研方向</a>
-            <a href="/v2/zh/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">论文发表</a>
-            <a href="/v2/zh/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">临床研究</a>
-            <a href="/v2/zh/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">团队成员</a>
-            <a href="/v2/zh/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">招聘信息</a>
-            <a href="/v2/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-400">EN</a>
-          
-        </div>
+  <main>
+    <div class="v2-page">
+  <header class="v2-page__header">
+    <h1 class="v2-page__title">科研方向</h1>
+    
+  </header>
+  <article class="v2-page__content">
+    
+<article class="v2-program-entry" id="pilosebaceous-related-diseases">
+    <h2>毛囊皮脂腺相关疾病</h2>
+    <div class="v2-program-entry__media">
+      <img src="/assets/img/research_hair_follicle.png" alt="Pilosebaceous-Related Diseases">
+    </div>
+    <div class="v2-program-entry__content">
+      我们致力于研究毛囊皮脂腺疾病的发病机制，研究范围涵盖脱发、白发、玫瑰痤疮及痤疮等领域。通过整合临床队列、人毛囊器官培养技术、动物模型以及单细胞组学，我们将机制层面的基础发现转化为靶向治疗策略。<br><br>在毛囊生物学研究中，我们深入解析驱动脱发与白发发生的内在机制。我们的转化研究重点聚焦于开发促进毛发再生与逆转白发的靶向小分子药物，并致力于建立基于人毛囊干细胞与间充质干细胞的毛囊重建技术。<br><br>与此同时，我们系统表征了皮肤炎症背后的"免疫-微生物-神经"复杂互作网络。通过精准鉴定关键炎症通路与治疗靶点，我们为玫瑰痤疮、痤疮及相关炎症性疾病设计并开发新型靶向干预方案。
+
+      <div class="v2-program-entry__more">
+        <a href="/v2/zh/projects/pilosebaceous-related-diseases/">查看论文与详情 →</a>
       </div>
-    </nav>
+    </div>
+  </article>
 
-    <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl xl:px-0 w-full">
-      <div class="mx-auto max-w-4xl divide-y divide-gray-200">
-  <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-    <h1 class="text-3xl leading-9 font-bold text-gray-800 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-      科研方向
-    </h1>
-  </div>
-  <div class="research-aims pb-8">
+<article class="v2-program-entry" id="skin-aging">
+    <h2>皮肤衰老</h2>
+    <div class="v2-program-entry__media">
+      <img src="/assets/img/research_skin_aging.png" alt="Skin Aging">
+    </div>
+    <div class="v2-program-entry__content">
+      我们通过整合长寿人群队列数据与先进的动物及细胞模型，深入探究皮肤衰老的根本机制。借助多组学研究手段，我们旨在破译细胞衰老在其中扮演的角色，并精准鉴定皮肤微环境中的关键衰老生物标志物。<br><br>基于这些基础性的研究发现，我们大力推动靶向抗衰老药物的理性设计与研发。我们的核心目标是，将这些关键的分子层面见解切实转化为行之有效的临床干预手段。
 
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">毛囊皮脂腺相关疾病</h2>
+      <div class="v2-program-entry__more">
+        <a href="/v2/zh/projects/skin-aging/">查看论文与详情 →</a>
+      </div>
+    </div>
+  </article>
 
-    <img src="/assets/img/research_hair_follicle.png" alt="毛囊皮脂腺相关疾病" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
 
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      整合临床资源、人源毛囊器官培养模型与动物模型，研究<strong>脱发、白发、玫瑰痤疮、痤疮</strong>等毛囊皮脂腺单位疾病的发病机制，开发靶向治疗药物。
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      毛发研究方面：阐明脱发与白发疾病发病机制，开发促生发与逆转白发的小分子靶向药物，建立基于人毛囊干细胞与间充质干细胞的毛囊重建技术。炎症性皮肤病研究方面：揭示皮肤炎症中免疫-微生物-神经源性相互作用机制，识别关键炎症通路和治疗靶点，开发针对玫瑰痤疮、痤疮等疾病的靶向药物。
-    </p>
-
-    <div style="clear:both"></div>
-
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-600 mt-4 md:mt-6 lg:mt-12 mb-2 select-none underline font-semibold">皮肤衰老</h2>
-
-    <img src="/assets/img/research_skin_aging.png" alt="皮肤衰老" class="mx-auto md:float-left md:mr-6 my-4 w-full md:w-1/2 rounded-lg">
-
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      利用<strong>长寿人群队列</strong>、动物模型及细胞模型研究皮肤衰老的发生机制，并针对关键分子靶点进行抗衰老药物设计及研发。
-    </p>
-    <p class="text-sm md:text-base lg:text-lg text-gray-500 mt-2 md:mt-4 lg:mt-6">
-      通过长寿人群队列多组学分析揭示衰老机制，探索细胞衰老在皮肤微环境中的作用，设计开发针对关键分子通路的抗衰老药物。
-    </p>
-
-    <div style="clear:both"></div>
-  </div>
+  </article>
 </div>
 
-    </main>
+  </main>
 
-    <footer class="w-full p-4 bg-white text-center text-gray-400 text-sm">
-      <p>© 2026 Li Lab</p>
-      <p class="text-xs mt-1">
-        
-          <a href="/v1/" class="text-gray-400 hover:text-custom-orange">切换到版本 A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">查看版本</a>
-        
-      </p>
-    </footer>
-  </div>
+  <footer class="v2-site-footer">
+    <div class="v2-site-footer__inner">
+      <div class="v2-site-footer__logos">
+        <img src="/assets/img/logos/csu.png" alt="Central South University">
+        <img src="/assets/img/logos/xiangya.png" alt="Xiangya Hospital">
+        <img src="/assets/img/logos/aging_lab.png" alt="Li Lab">
+      </div>
+      <p>© 2026 Li Lab · Xiangya Hospital, Central South University</p>
+    </div>
+  </footer>
 </body>
 </html>

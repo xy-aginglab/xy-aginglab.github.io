@@ -2,529 +2,400 @@
 <html lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>团队成员</title>
+  <title>团队成员 | Li Lab</title>
   <meta name="description" content="Li Lab — Xiangya Hospital, Central South University. Research in pilosebaceous-related diseases and skin aging.
 ">
-  <!-- Tailwind CSS CDN for the legacy v2 surface -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'custom-orange': '#a72126',
-            'custom-soft': '#f6f6f7',
-          },
-          fontWeight: {
-            'extra-light': 200,
-            light: 300,
-          },
-        },
-      },
-    }
-  </script>
-  <!-- Inter + Space Grotesk fonts -->
+  <link rel="canonical" href="https://xy-aginglab.github.io/v2/zh/team/">
+  
+    
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
-  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <!-- Legacy v2 overrides for Jekyll-generated components -->
-  <link rel="stylesheet" href="/assets/css/bloom.css">
-  <style>
-    :root { color-scheme: light !important; }
-    body {
-      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-    h1, h2, h3, h4, h5, h6, li, p { overflow-wrap: break-word; }
-    a { text-decoration: underline; transition: color 0.25s; }
-    a:hover { color: #a72126; }
-    .bloom-nav a { text-decoration: none; }
-    .bloom-logo-text { font-family: 'Space Grotesk', sans-serif; }
-    .bloom-mobile-menu { display: none; }
-    .bloom-mobile-menu.is-open { display: flex; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/v2-home.css?v=1775643104">
+  <link rel="stylesheet" href="/assets/css/v2-pages.css?v=1775643104">
 </head>
-<body>
+<body class="v2-body">
   
   
 
-  <div id="app" class="flex flex-col min-h-screen">
+  <header class="v2-topbar">
+    <div class="v2-topbar__inner">
+      
+      <a class="v2-topbar__brand" href="/v2/zh/">Li Lab</a>
+      
+      <nav class="v2-topbar__nav">
+        
+        <a href="/v2/zh/projects/">科研方向</a>
+        <a href="/v2/zh/publications/">论文发表</a>
+        <a href="/v2/zh/team/" class="is-active">团队成员</a>
+        <a href="/v2/zh/clinical/">临床研究</a>
+        <a href="/v2/">EN</a>
+        
+      </nav>
+    </div>
+  </header>
 
-    <nav class="bloom-nav p-4">
-      <div class="flex justify-between items-center w-full px-4 select-none">
-        <a href="/v2/zh/" class="flex items-center no-underline">
-          <span class="bloom-logo-text text-lg font-bold text-custom-orange">
-            Li Lab
-          </span>
-        </a>
-        <button class="flex md:hidden text-gray-600" onclick="document.getElementById('bloom-menu').classList.toggle('is-open')">
-          <i class="fas fa-bars h-6 w-6"></i>
-        </button>
-        <div id="bloom-menu" class="bloom-mobile-menu bg-custom-soft backdrop-blur-md md:backdrop-blur-none flex-col md:flex-row bg-opacity-75 md:bg-transparent md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute md:w-auto w-full md:h-auto h-full md:pt-0 pt-10 top-14 z-50 left-0">
-          
-            <a href="/v2/zh/projects/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">科研方向</a>
-            <a href="/v2/zh/publications/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">论文发表</a>
-            <a href="/v2/zh/clinical/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">临床研究</a>
-            <a href="/v2/zh/team/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-custom-orange">团队成员</a>
-            <a href="/v2/zh/careers/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-600">招聘信息</a>
-            <a href="/v2/" class="text-xl md:text-lg px-4 py-4 md:py-2 flex items-center justify-center md:flex-none md:items-stretch md:justify-start text-gray-400">EN</a>
-          
-        </div>
-      </div>
-    </nav>
+  <main>
+    
 
-    <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-5xl xl:px-0 w-full">
+
+
+
+
+
+<div class="v2-page">
+  <header class="v2-page__header">
+    <h1 class="v2-page__title">团队成员</h1>
+  </header>
+
+  <div class="v2-team">
+    
+      
+        
+        <section class="v2-team__group">
+          <h2 class="v2-team__group-title">实验室主任</h2>
+          <div class="v2-pi-card">
+            <img src="/assets/img/members/lj.png" alt="李吉">
+            <div class="v2-pi-card__info">
+              <h3>李吉</h3>
+              <p class="v2-pi-card__title">主任医师，教授，博士生导师</p>
+              
+                <div class="v2-pi-card__bio">
+                  
+                    
+                    <p>中南大学湘雅医院副院长，衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤衰老与毛发再生研究中心主任。</p>
+                  
+                </div>
+              
+              <div class="v2-member-links">
+                <a href="mailto:liji_xy@csu.edu.cn" title="Email"><i class="fas fa-envelope"></i></a>
+                
+                
+                <a href="https://www.researchgate.net/profile/Ji-Li-130" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+    
+
+    
+    
       
 
+      
+        <section class="v2-team__group">
+          <h2 class="v2-team__group-title">基础研究人员</h2>
+          <div class="v2-member-grid">
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/dzl.png" alt="邓智利">
+                
+                <div class="v2-member-card__info">
+                  <h3>邓智利</h3>
+                  <p>副研究员，硕士生导师</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/zyy.png" alt="张亦雅">
+                
+                <div class="v2-member-card__info">
+                  <h3>张亦雅</h3>
+                  <p>副研究员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>毛锐</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>陈梦婷</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>李果</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>杨李</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>初艳吉</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>谢煜骅</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>肖文沁</h3>
+                  <p>研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+          </div>
+        </section>
+      
+    
+      
 
-<div class="pt-6 pb-8 space-y-2 md:space-y-5">
-  <h1 class="text-3xl leading-9 font-bold text-gray-800 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-    团队介绍
-  </h1>
+      
+        <section class="v2-team__group">
+          <h2 class="v2-team__group-title">临床研究人员</h2>
+          <div class="v2-member-grid">
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/xhf.png" alt="谢红付">
+                
+                <div class="v2-member-card__info">
+                  <h3>谢红付</h3>
+                  <p>教授，博士生导师，一级主任医师</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/jd.png" alt="简丹">
+                
+                <div class="v2-member-card__info">
+                  <h3>简丹</h3>
+                  <p>主任医师，博士生导师</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/ty.png" alt="唐言">
+                
+                <div class="v2-member-card__info">
+                  <h3>唐言</h3>
+                  <p>主治医师，博士</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                  <img src="/assets/img/members/lff.png" alt="刘芳芬">
+                
+                <div class="v2-member-card__info">
+                  <h3>刘芳芬</h3>
+                  <p>主治医师，博士</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>汪犇</h3>
+                  <p>临床研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>赵志祥</h3>
+                  <p>临床研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>施为</h3>
+                  <p>临床研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+              
+              
+              <article class="v2-member-card">
+                
+                <div class="v2-member-card__info">
+                  <h3>黄莹雪</h3>
+                  <p>临床研究人员</p>
+                  <div class="v2-member-links">
+                    
+                    
+                    
+                  </div>
+                </div>
+              </article>
+            
+          </div>
+        </section>
+      
+    
+      
+
+      
+    
+  </div>
 </div>
-<div class="w-full border-t border-gray-200"></div>
 
-<!-- PI Section -->
+  </main>
 
-
-  <div class="category-section my-6">
-    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-        实验室主任
-      </h1>
-    </div>
-    
-      <div class="flex flex-col sm:flex-row gap-8 items-start">
-        <div class="flex-shrink-0 w-44">
-          <img src="/assets/img/members/lj.png" alt="李吉" class="w-full rounded-lg" loading="lazy">
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-800 mb-1">
-            李吉
-          </h3>
-          <p class="text-sm text-gray-600 mb-3">
-            主任医师，教授，博士生导师
-          </p>
-          <p class="text-sm text-gray-500 leading-7">
-            中南大学湘雅医院副院长，衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤衰老与毛发再生研究中心主任。<br><br> 美国南加州大学博士后。国家杰出青年基金获得者，教育部青年长江学者，湖南省杰出青年基金获得者。<br><br> 现任中华医学会皮肤性病学分会毛发学组副组长、中华医学会皮肤性病学分会玫瑰痤疮研究协作组首席科学家、中国医药教育协会皮肤病与健康促进专业委员会副主任委员等。<br><br> 近年来一直从事皮肤衰老与毛发再生、炎症性皮肤病的临床与科研工作。主持科技部重点研发课题1项、国家自然科学基金7项及多项省厅级科研课题。以第一作者/通讯作者在Cell, BMJ, Nat Commun, Dev Cell, Sci Adv, EMBO J, JAMA Dermatol, JAAD, JID等杂志上发表SCI论文100余篇。<br><br> 获"华夏医学科技奖一等奖"（排名第二，2021）、"湖南省科学技术进步一等奖"（排名第二，2021）、"五洲女子科技奖"及"中国皮肤科优秀中青年医师奖"，获得国家发明专利5项。
-
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="mailto:liji_xy@csu.edu.cn" class="text-gray-500 hover:text-custom-orange no-underline text-lg"><i class="fas fa-envelope"></i></a>
-            
-            
-          </div>
-        </div>
+  <footer class="v2-site-footer">
+    <div class="v2-site-footer__inner">
+      <div class="v2-site-footer__logos">
+        <img src="/assets/img/logos/csu.png" alt="Central South University">
+        <img src="/assets/img/logos/xiangya.png" alt="Xiangya Hospital">
+        <img src="/assets/img/logos/aging_lab.png" alt="Li Lab">
       </div>
-    
-  </div>
-
-
-
-
-  <div class="category-section my-6">
-    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-        基础研究人员
-      </h1>
+      <p>© 2026 Li Lab · Xiangya Hospital, Central South University</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/dzl.png" alt="邓智利" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                邓智利
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                副研究员，硕士生导师
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/zyy.png" alt="张亦雅" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                张亦雅
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                副研究员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="毛锐" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                毛锐
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="陈梦婷" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                陈梦婷
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="李果" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                李果
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="杨李" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                杨李
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="初艳吉" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                初艳吉
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="谢煜骅" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                谢煜骅
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="肖文沁" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                肖文沁
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-    </div>
-  </div>
-
-
-
-
-  <div class="category-section my-6">
-    <div class="pt-6 pb-8 space-y-2 md:space-y-5">
-      <h1 class="text-xl leading-9 font-bold text-gray-800 tracking-tight text-center md:text-left sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-        临床研究人员
-      </h1>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/xhf.png" alt="谢红付" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                谢红付
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                教授，博士生导师，一级主任医师
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/jd.png" alt="简丹" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                简丹
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                主任医师，博士生导师
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/ty.png" alt="唐言" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                唐言
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                主治医师，博士
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/lff.png" alt="刘芳芬" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                刘芳芬
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                主治医师，博士
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="汪犇" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                汪犇
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                临床研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="赵志祥" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                赵志祥
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                临床研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="施为" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                施为
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                临床研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-        <article class="hover:shadow-lg hover:shadow-custom-orange flex flex-col gap-px rounded-lg w-full h-full overflow-hidden transition-shadow duration-300 ease-in-out">
-          <div class="py-6 px-4 sm:py-8 sm:px-6 flex-grow bg-custom-soft cursor-pointer">
-            <figure class="relative shrink-0 mx-auto w-36 h-36 rounded-full overflow-hidden shadow">
-              <img class="absolute inset-0 w-full h-full object-cover" src="/assets/img/members/placeholder.png" alt="黄莹雪" loading="lazy">
-            </figure>
-            <div class="text-center pt-6">
-              <h1 class="m-0 text-gray-800 font-semibold tracking-wide leading-7 text-lg ease-in-out">
-                黄莹雪
-              </h1>
-              <p class="m-0 font-medium text-gray-600 pt-1 text-base">
-                临床研究人员
-              </p>
-              <div class="flex justify-center h-14 pt-4 px-3">
-                
-                
-                
-              </div>
-            </div>
-          </div>
-        </article>
-      
-    </div>
-  </div>
-
-
-
-
-
-    </main>
-
-    <footer class="w-full p-4 bg-white text-center text-gray-400 text-sm">
-      <p>© 2026 Li Lab</p>
-      <p class="text-xs mt-1">
-        
-          <a href="/v1/" class="text-gray-400 hover:text-custom-orange">切换到版本 A</a> · <a href="/versions/" class="text-gray-400 hover:text-custom-orange">查看版本</a>
-        
-      </p>
-    </footer>
-  </div>
+  </footer>
 </body>
 </html>
