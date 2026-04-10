@@ -304,7 +304,7 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
   display: inline-block;
 }
 .v2-topic__body h3:first-child { margin-top: 0; }
-.v2-topic__body p { margin: 0 0 0.55rem; }
+.v2-topic__body p { margin: 0 0 0.7rem; }
 .v2-topic__body p:last-child { margin-bottom: 0; }
 
 .v2-readmore {
