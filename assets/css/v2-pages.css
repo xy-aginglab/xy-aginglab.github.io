@@ -621,7 +621,6 @@ body.v2-body {
   text-align: justify;
   line-height: 1.9;
 }
-:lang(zh) .v2-page__content > p,
 :lang(zh) .v2-program-entry__content > p {
   text-indent: 2em;
 }
