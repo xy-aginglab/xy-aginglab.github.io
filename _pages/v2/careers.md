@@ -11,8 +11,10 @@ show_lead: false
 
 ### Address
 
-Department of Dermatology, Xiangya Hospital, Central South University
-87 Xiangya Road, Kaifu District, Changsha, Hunan, China 410008
+Department of Dermatology<br>
+Xiangya Hospital, Central South University<br>
+87 Xiangya Road, Kaifu District<br>
+Changsha, Hunan, China 410008
 
 <a href="https://maps.apple.com/?q=28.2028,112.9690" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-location-dot"></i> View on Map</a>
 
