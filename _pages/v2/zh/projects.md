@@ -21,5 +21,5 @@ show_lead: false
       {{ dir.narrative_zh }}
     </div>
   </article>
-  {% unless forloop.last %}<hr style="margin:1.5rem 0;">{% endunless %}
+  {% unless forloop.last %}<hr>{% endunless %}
 {% endfor %}
