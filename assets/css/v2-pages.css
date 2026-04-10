@@ -193,16 +193,11 @@ body.v2-body {
   margin-bottom: 2rem;
 }
 .v2-team__group-title {
-  font-family: var(--v2-font-sans);
-  font-size: 0.88rem;
+  font-family: var(--v2-font-serif);
+  font-size: 1.3rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--v2-accent);
+  color: var(--v2-ink);
   margin: 0 0 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--v2-accent);
-  display: inline-block;
   border-bottom: 2px solid var(--v2-accent);
   display: inline-block;
 }

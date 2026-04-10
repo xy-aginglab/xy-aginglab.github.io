@@ -324,7 +324,7 @@ a:hover { color: var(--v2-accent-hover); }
 /* ── Research Directions Overview ── */
 .v2-dir-overview {
   padding: 1.3rem 0 0;
-  border-top: 3px solid var(--v2-navy);
+  border-top: 3px solid var(--v2-accent);
   margin-top: 0.5rem;
 }
 .v2-dir-overview__title {
