@@ -659,7 +659,8 @@ body.v2-body {
   text-align: justify;
   line-height: 1.9;
 }
-:lang(zh) .v2-program-entry__content > p {
+:lang(zh) .v2-program-entry__content > p,
+:lang(zh) .v2-research-block__text > p {
   text-indent: 2em;
 }
 :lang(zh) .v2-page__title,
