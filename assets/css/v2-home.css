@@ -27,7 +27,8 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; }
-html { overflow-x: clip; touch-action: manipulation; }
+html { overflow-x: clip; touch-action: manipulation; -ms-touch-action: manipulation; }
+body, body * { touch-action: manipulation; }
 body.v2-body {
   margin: 0;
   font-family: var(--v2-font-sans);
