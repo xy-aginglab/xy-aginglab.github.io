@@ -1,30 +1,32 @@
 ---
 layout: v2-page
-permalink: /v2/zh/contact/
-title: 关于与联系
+permalink: /zh/contact/
+title: 联系我们
 lang: zh
-description: 关于 Li Lab 及联系方式。
 show_lead: false
 ---
 
-### 关于实验室
-
-**湖南省衰老生物学重点实验室**依托中南大学湘雅医院。研究方向涵盖临床皮肤病学与分子生物学的交叉领域，主要包括两大方向：毛囊皮脂腺相关疾病和皮肤衰老。
-
-实验室由李吉教授领衔，整合长寿人群队列、多组学方法、器官培养模型和转化临床研究。
-
-### 邮箱
-
-[{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})
-
-### 地址
-
-中南大学湘雅医院皮肤科
-湖南省长沙市开福区湘雅路87号 410008
-
-{% if site.data.socials.github or site.data.socials.researchgate %}
-### 在线
-
-{% if site.data.socials.github %}- **GitHub**: [github.com/{{ site.data.socials.github }}](https://github.com/{{ site.data.socials.github }}){% endif %}
-{% if site.data.socials.researchgate %}- **ResearchGate**: [ResearchGate 主页](https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}){% endif %}
-{% endif %}
+<div class="v2-contact-grid">
+  <div class="v2-contact-card">
+    <h3><i class="fas fa-envelope"></i> 邮箱</h3>
+    <p><a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a></p>
+  </div>
+  <div class="v2-contact-card">
+    <h3><i class="fas fa-location-dot"></i> 地址</h3>
+    <p>
+      中南大学湘雅医院皮肤科<br>
+      湖南省长沙市开福区湘雅路87号<br>
+      410008
+    </p>
+    <a href="https://maps.apple.com/?q=28.2028,112.9690" target="_blank" rel="noopener noreferrer" class="v2-contact-map-link"><i class="fas fa-map-location-dot"></i> 查看地图</a>
+  </div>
+  {% if site.data.socials.github or site.data.socials.researchgate %}
+  <div class="v2-contact-card">
+    <h3><i class="fas fa-globe"></i> 在线</h3>
+    <p>
+      {% if site.data.socials.github %}<a href="https://github.com/{{ site.data.socials.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a><br>{% endif %}
+      {% if site.data.socials.researchgate %}<a href="https://www.researchgate.net/profile/{{ site.data.socials.researchgate }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-researchgate"></i> ResearchGate</a>{% endif %}
+    </p>
+  </div>
+  {% endif %}
+</div>

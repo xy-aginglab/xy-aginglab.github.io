@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /v2/clinical/
+permalink: /clinical/
 title: Clinical Research
 description: Clinical programs connecting Xiangya Hospital resources to mechanistic discovery.
 show_lead: false
@@ -30,6 +30,7 @@ For collaboration related to cohorts, samples, or translational dermatology stud
   <div class="v2-section__intro">
     <h2>Related publications</h2>
   </div>
+  {% include bib_search.liquid %}
   <div class="publications">
     {% bibliography --query @*[clinical=true]* %}
   </div>

@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /v2/publications/
+permalink: /publications/
 title: Our Publications
 description: Selected and complete publications from the Li Lab.
 show_lead: false

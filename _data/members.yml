@@ -12,36 +12,40 @@
   email: liji_xy@csu.edu.cn
   researchgate: Ji-Li-130
   bio: >
-    Vice President of Xiangya Hospital, Central South University. Director of Hunan Key Laboratory of Aging Biology. Director of the Center for Skin Aging and Hair Regeneration Research, Xiangya Hospital.<br><br>
-    Postdoctoral fellow at University of Southern California. Recipient of the National Science Fund for Distinguished Young Scholars, MOE Young Changjiang Scholar, and Hunan Outstanding Youth Fund.<br><br>
-    Currently serves as Deputy Chair of the Trichology Group, CMA Dermatology; Chief Scientist of the Rosacea Research Collaborative, CMA Dermatology; and Vice Chair of the CMEA Dermatology & Health Promotion Committee.<br><br>
-    Published 100+ SCI papers as first/corresponding author in Cell, BMJ, Nat Commun, Dev Cell, Sci Adv, EMBO J, JAMA Dermatol, JAAD, JID, etc. Led 1 National Key R&D Program and 7 NSFC projects.<br><br>
-    Recipient of the Huaxia Medical Science & Technology Award (1st Prize, 2021) and the Hunan Science & Technology Progress Award (1st Prize, 2021). Holder of 5 national invention patents.
+    Vice President of Xiangya Hospital, Central South University. Director of Hunan Key Laboratory of Aging Biology. Postdoctoral fellow at University of Southern California. Recipient of the National Science Fund for Distinguished Young Scholars, MOE Young Changjiang Scholar.<br><br>
+    Currently serves as Chair of the Rosacea Group, Chinese Medical Doctor Association Dermatology; Deputy Chair of the Trichology Group, CMA Dermatology; Vice Chair of the CMDA Postgraduate Medical Education Standards Committee; and Chair-Elect of the Hunan Medical Association Committee on Medicine & Aesthetics.<br><br>
+    Research focus on pilosebaceous-related diseases (rosacea, alopecia) and skin aging — basic, clinical, and translational research. Led 1 National Key R&D Program and 6 NSFC projects. Published 120+ SCI papers as first/corresponding author in Cell, BMJ, Sci Adv, Dev Cell, EMBO J, JAAD, JAMA Dermatol, JID, etc. Led the first Chinese Expert Consensus and Guidelines on Rosacea. Holder of 5 national invention patents.<br><br>
+    Deputy Editor-in-Chief of the National Standardized Residency Training Textbook "Dermatology and Venereology" (3rd ed.), Associate Editor of Sensory Neuroscience.<br><br>
+    Recipient of the Hunan Science & Technology Progress Award (1st Prize, 2021), Huaxia Medical Science & Technology Award (1st Prize, 2021), CMA Medical Science & Technology Award (1st Prize, 2023), and the Wuzhou Women's Science & Technology Award.
   bio_zh: >
-    中南大学湘雅医院副院长，衰老生物学湖南省重点实验室主任，中南大学湘雅医院皮肤衰老与毛发再生研究中心主任。<br><br>
-    美国南加州大学博士后。国家杰出青年基金获得者，教育部青年长江学者，湖南省杰出青年基金获得者。<br><br>
-    现任中华医学会皮肤性病学分会毛发学组副组长、中华医学会皮肤性病学分会玫瑰痤疮研究协作组首席科学家、中国医药教育协会皮肤病与健康促进专业委员会副主任委员等。<br><br>
-    近年来一直从事皮肤衰老与毛发再生、炎症性皮肤病的临床与科研工作。主持科技部重点研发课题1项、国家自然科学基金7项及多项省厅级科研课题。以第一作者/通讯作者在Cell, BMJ, Nat Commun, Dev Cell, Sci Adv, EMBO J, JAMA Dermatol, JAAD, JID等杂志上发表SCI论文100余篇。<br><br>
-    获"华夏医学科技奖一等奖"（排名第二，2021）、"湖南省科学技术进步一等奖"（排名第二，2021）、"五洲女子科技奖"及"中国皮肤科优秀中青年医师奖"，获得国家发明专利5项。
+    中南大学湘雅医院副院长，衰老生物学湖南省重点实验室主任。美国南加州大学博士后。国家杰出青年基金获得者，教育部青年长江学者。<br><br>
+    现兼任中国医师协会皮肤科医师分会玫瑰痤疮学组组长、中华医学会皮肤性病学分会毛发学组副组长、中国医师协会毕业后医学教育标准指南工作委员会副主任委员、湖南省医学会医学与美容专业委员会候任主任委员等。<br><br>
+    主要从事毛囊皮脂腺相关疾病（玫瑰痤疮与脱发性疾病等）及皮肤衰老的基础临床与转化研究工作。主持科技部重点研发课题1项、国家自然科学基金6项及多项省厅级科研课题。以第一作者/通讯作者在Cell、BMJ、Sci Adv、Dev Cell、EMBO J、JAAD、JAMA Dermatol、JID等杂志上发表SCI论文120余篇。牵头制定首个《中国玫瑰痤疮诊疗专家共识》及《中国玫瑰痤疮诊疗指南》。获国家发明专利5项。<br><br>
+    担任国家卫生健康委员会住院医师规范化培训规划教材《皮肤性病学》（第3版）副主编、Sensory Neuroscience杂志副主编。<br><br>
+    获2021年湖南省科技进步一等奖（排名第二）、2021年华夏医学科技奖一等奖（排名第二）、2023年中华医学科技奖一等奖（排名第五）及"五洲女子科技奖"。
 
 - name: 邓智利
+  sort_key: deng
   name_en: Zhili Deng
   role: basic_researcher
-  title: 副研究员，硕士生导师
-  title_en: Associate Research Fellow
+  title: 研究员，特聘教授，博士生导师，国家优青
+  title_en: Research Fellow, Distinguished Professor, Doctoral Supervisor, NSFC Excellent Young Scholar
   photo: /assets/img/members/dzl.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    Research focus on skin appendage aging and regeneration.
-    Achieved original breakthroughs in rosacea and androgenetic alopecia mechanisms.
-    Published 17 SCI papers in EMBO Molecular Medicine, JID, etc.
-  bio_zh: >-
-    主要研究皮肤及附属器官衰老与再生，
-    在玫瑰痤疮和雄秃发病机制上取得原创性成果。
-    在 EMBO Molecular Medicine, JID 等发表 SCI 论文17篇。
+  bio: >
+    Executive Deputy Director of Hunan Key Laboratory of Aging Biology. Recipient of the NSFC Excellent Young Scholars Fund.<br><br>
+    Research focus on pilosebaceous-related diseases (hair disorders, rosacea) and skin aging — basic and translational research.<br><br>
+    Member of CMA Dermatology Genetics Group, CRMA Dermatology Hair Rehabilitation Group, and Standing Committee Member of CMEA Dermatology & Health Promotion Committee.<br><br>
+    Published 20+ SCI papers as first/corresponding author in Cell, Nat Commun (3 papers), Sci Adv, EMBO Mol Med, Adv Sci, JID, etc. Led 4 NSFC projects. Holder of 2 national invention patents.
+  bio_zh: >
+    衰老生物学湖南省重点实验室常务副主任。国家优秀青年基金获得者。<br><br>
+    研究方向：毛囊皮脂腺相关疾病（毛发疾病、玫瑰痤疮等）及皮肤衰老的基础与转化研究。<br><br>
+    中华医学会皮肤性病学分会遗传学组委员、中国康复医学会皮肤病康复专业委员会毛发康复学组委员、中国医药教育协会皮肤病与健康促进专业委员会常务委员。<br><br>
+    近五年以第一/通讯作者在Cell、Nat Commun（3篇）、Sci Adv、EMBO Mol Med、Adv Sci、JID等杂志发表SCI论文20余篇，主持国家自然科学基金项目4项，获国家发明专利2项。
 
 - name: 张亦雅
+  sort_key: zhang
   name_en: Yiya Zhang
   role: basic_researcher
   title: 副研究员
@@ -57,6 +61,7 @@
     在 Pharmacol Res, Front Pharmacol, J Biol Chem 等发表 SCI 论文20余篇。
 
 - name: 毛锐
+  sort_key: mao
   name_en: Rui Mao
   role: basic_researcher
   title: 研究人员
@@ -66,6 +71,7 @@
   department_en: Department of Dermatology
 
 - name: 陈梦婷
+  sort_key: chen
   name_en: Mengting Chen
   role: basic_researcher
   title: 研究人员
@@ -75,6 +81,7 @@
   department_en: Department of Dermatology
 
 - name: 李果
+  sort_key: li
   name_en: Guo Li
   role: basic_researcher
   title: 研究人员
@@ -84,6 +91,7 @@
   department_en: Department of Dermatology
 
 - name: 杨李
+  sort_key: yang
   name_en: Li Yang
   role: basic_researcher
   title: 研究人员
@@ -93,6 +101,7 @@
   department_en: Department of Dermatology
 
 - name: 初艳吉
+  sort_key: chu
   name_en: Yanji Chu
   role: basic_researcher
   title: 研究人员
@@ -102,6 +111,7 @@
   department_en: Department of Dermatology
 
 - name: 谢煜骅
+  sort_key: xie_yuhua
   name_en: Yuhua Xie
   role: basic_researcher
   title: 研究人员
@@ -111,6 +121,7 @@
   department_en: Department of Dermatology
 
 - name: 肖文沁
+  sort_key: xiao
   name_en: Wenqin Xiao
   role: basic_researcher
   title: 研究人员
@@ -120,6 +131,7 @@
   department_en: Department of Dermatology
 
 - name: 谢红付
+  sort_key: 00_xie_hongfu
   name_en: Hongfu Xie
   role: clinical_researcher
   title: 教授，博士生导师，一级主任医师
@@ -138,6 +150,7 @@
     主持国家自然科学基金4项，发表论文86篇。
 
 - name: 简丹
+  sort_key: jian
   name_en: Dan Jian
   role: clinical_researcher
   title: 主任医师，博士生导师
@@ -154,6 +167,7 @@
     损容性皮肤病发病及治疗机制、色素性皮肤病光电治疗。
 
 - name: 唐言
+  sort_key: tang
   name_en: Yan Tang
   role: clinical_researcher
   title: 主治医师，博士
@@ -169,6 +183,7 @@
     主持国家自然科学基金2项，发表 SCI 论文15篇。
 
 - name: 刘芳芬
+  sort_key: liu
   name_en: Fangfen Liu
   role: clinical_researcher
   title: 主治医师，博士
@@ -184,6 +199,7 @@
     熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。
 
 - name: 汪犇
+  sort_key: wang
   name_en: Ben Wang
   role: clinical_researcher
   title: 临床研究人员
@@ -193,6 +209,7 @@
   department_en: Department of Dermatology
 
 - name: 赵志祥
+  sort_key: zhao
   name_en: Zhixiang Zhao
   role: clinical_researcher
   title: 临床研究人员
@@ -202,6 +219,7 @@
   department_en: Department of Dermatology
 
 - name: 施为
+  sort_key: shi
   name_en: Wei Shi
   role: clinical_researcher
   title: 临床研究人员
@@ -211,6 +229,7 @@
   department_en: Department of Dermatology
 
 - name: 黄莹雪
+  sort_key: huang
   name_en: Yingxue Huang
   role: clinical_researcher
   title: 临床研究人员

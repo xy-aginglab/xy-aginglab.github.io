@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /v2/zh/publications/
+permalink: /zh/publications/
 title: 论文发表
 lang: zh
 show_lead: false

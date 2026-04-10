@@ -6,7 +6,22 @@
   title_zh: "皮脂腺相关疾病"
   summary: "Decoding the pathogenic mechanisms of rosacea, alopecia, and hair graying to develop targeted therapies through multi-omics, disease models, and clinical trials."
   summary_zh: "通过多组学、疾病模型与临床试验，解码玫瑰痤疮、脱发及白发的发病机制，开发靶向治疗策略。"
-  link: "/v2/projects/"
+  intro: |
+    <ul>
+      <li>Identified &alpha;-ketoglutarate as a rosacea metabolite that activates OXGR1; developed the selective agonist A-1 for erythema treatment (<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>).</li>
+      <li>Single-cell atlas revealed CTS hypercontractility&ndash;PIEZO1 axis driving androgenetic alopecia; MLCK inhibitor ML-7 restores hair growth (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>).</li>
+      <li>Established neuro-immune CGRP&ndash;RAMP1 circuit and pro-inflammatory fibroblast PTGDS pathway in rosacea (<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>; <a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>).</li>
+      <li>Hedgehog-driven SCUBE3 signaling induces de novo hair growth from dermal papilla niche (<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>).</li>
+    </ul>
+  intro_zh: |
+    <ul>
+      <li>发现&alpha;-酮戊二酸（&alpha;-KG）为玫瑰痤疮相关代谢物，激活OXGR1受体；开发选择性激动剂A-1用于红斑治疗（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。</li>
+      <li>单细胞图谱揭示结缔组织鞘过度收缩&ndash;PIEZO1轴驱动雄激素性脱发；MLCK抑制剂ML-7恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。</li>
+      <li>建立玫瑰痤疮中CGRP&ndash;RAMP1神经免疫回路及促炎成纤维细胞PTGDS通路（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>；<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。</li>
+      <li>Hedgehog驱动的SCUBE3信号从毛乳头龛诱导新毛发生长（<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>）。</li>
+    </ul>
+  link: "/projects/#pilosebaceous"
+  link_zh: "/zh/projects/#pilosebaceous"
   narrative: |
     <h3>Rosacea &amp; Inflammatory Skin Diseases</h3>
     <p>
@@ -63,7 +78,22 @@
   title_zh: "皮肤衰老"
   summary: "Investigating the fundamental mechanisms of skin aging through longevity cohorts, multi-omics, and translational models to develop anti-aging interventions."
   summary_zh: "通过长寿队列、多组学和转化模型研究皮肤衰老的基本机制，开发抗衰老干预策略。"
-  link: "/v2/projects/"
+  intro: |
+    <ul>
+      <li>Core member of the national Aging Biomarker Consortium establishing standardized aging biomarkers across organ systems (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>).</li>
+      <li>Longevity cohort transcriptomics revealed ETS1 governs healthy aging by downregulating ribosomal biogenesis as an adaptive energy-saving mechanism (<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>).</li>
+      <li>FTO depletion drives heterochromatin loss via KAT8/RSF1 cascade, linking RNA m<sup>6</sup>A modification to chromatin remodeling in skin aging (<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>).</li>
+      <li>HOXC10 delays fibroblast senescence via FZD6/Wnt/&beta;-catenin; simvastatin identified as functional mimic (<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>).</li>
+    </ul>
+  intro_zh: |
+    <ul>
+      <li>作为国家衰老生物标志物联盟核心成员，建立跨器官系统标准化衰老生物标志物（<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>）。</li>
+      <li>长寿队列转录组学揭示ETS1通过下调核糖体生物合成调控健康衰老（<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>）。</li>
+      <li>FTO缺失通过KAT8/RSF1级联驱动异染色质丢失，将RNA m<sup>6</sup>A修饰与皮肤衰老染色质重塑相联系（<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>）。</li>
+      <li>HOXC10通过FZD6/Wnt/&beta;-catenin通路延缓成纤维细胞衰老；辛伐他汀被鉴定为功能模拟物（<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>）。</li>
+    </ul>
+  link: "/projects/#skin-aging"
+  link_zh: "/zh/projects/#skin-aging"
   narrative: |
     <p>
       Aging is a complex, multifactorial process that affects every organ, with the skin serving as one of the most visible and accessible models for studying its biology. Our laboratory investigates the fundamental mechanisms of skin aging through an integrated approach combining longevity population cohorts, multi-omics technologies, and advanced cellular and animal models.

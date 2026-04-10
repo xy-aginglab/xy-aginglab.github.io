@@ -1,6 +1,6 @@
 ---
 layout: v2-people
-permalink: /v2/team/
+permalink: /team/
 title: Our Team
 show_lead: false
 ---

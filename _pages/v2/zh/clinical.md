@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /v2/zh/clinical/
+permalink: /zh/clinical/
 title: 临床研究
 lang: zh
 description: 连接湘雅医院临床资源与机制发现的临床项目。
@@ -31,6 +31,7 @@ show_lead: false
   <div class="v2-section__intro">
     <h2>相关论文</h2>
   </div>
+  {% include bib_search.liquid %}
   <div class="publications">
     {% bibliography --query @*[clinical=true]* %}
   </div>

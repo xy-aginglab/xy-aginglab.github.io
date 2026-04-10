@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v2-home.css?v=' | append: asset_version | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/v2-pages.css?v=' | append: asset_version | relative_url }}" />
+  <script src="{{ '/assets/js/v2-nav.js' | relative_url }}" defer></script>
 </head>
 <body class="v2-body">
   {% assign current_url = page.url | default: '' %}
@@ -29,23 +30,28 @@
   <header class="v2-topbar">
     <div class="v2-topbar__inner">
       {% if lang == 'zh' %}
-      <a class="v2-topbar__brand" href="{{ '/v2/zh/' | relative_url }}">Li Lab</a>
+      <a class="v2-topbar__brand" href="{{ '/zh/' | relative_url }}">Li Lab</a>
       {% else %}
-      <a class="v2-topbar__brand" href="{{ '/v2/' | relative_url }}">Li Lab</a>
+      <a class="v2-topbar__brand" href="{{ '/' | relative_url }}">Li Lab</a>
       {% endif %}
+      <button class="v2-topbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="v2-topbar__nav">
         {% if lang == 'zh' %}
-        <a href="{{ '/v2/zh/projects/' | relative_url }}"{% if current_url contains '/v2/zh/projects' %} class="is-active"{% endif %}>科研方向</a>
-        <a href="{{ '/v2/zh/publications/' | relative_url }}"{% if current_url contains '/v2/zh/publications' %} class="is-active"{% endif %}>论文发表</a>
-        <a href="{{ '/v2/zh/team/' | relative_url }}"{% if current_url contains '/v2/zh/team' %} class="is-active"{% endif %}>团队成员</a>
-        <a href="{{ '/v2/zh/clinical/' | relative_url }}"{% if current_url contains '/v2/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
-        <a href="{{ '/v2/' | relative_url }}">EN</a>
+        <a href="{{ '/zh/projects/' | relative_url }}"{% if current_url contains '/zh/projects' %} class="is-active"{% endif %}>科研方向</a>
+        <a href="{{ '/zh/publications/' | relative_url }}"{% if current_url contains '/zh/publications' %} class="is-active"{% endif %}>论文发表</a>
+        <a href="{{ '/zh/team/' | relative_url }}"{% if current_url contains '/zh/team' %} class="is-active"{% endif %}>团队成员</a>
+        <a href="{{ '/zh/clinical/' | relative_url }}"{% if current_url contains '/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
+        <a href="{{ '/zh/contact/' | relative_url }}"{% if current_url contains '/zh/contact' %} class="is-active"{% endif %}>联系我们</a>
+        <a href="{{ '/' | relative_url }}">EN</a>
         {% else %}
-        <a href="{{ '/v2/projects/' | relative_url }}"{% if current_url contains '/v2/projects' %} class="is-active"{% endif %}>Research</a>
-        <a href="{{ '/v2/publications/' | relative_url }}"{% if current_url contains '/v2/publications' %} class="is-active"{% endif %}>Publications</a>
-        <a href="{{ '/v2/team/' | relative_url }}"{% if current_url contains '/v2/team' %} class="is-active"{% endif %}>Team</a>
-        <a href="{{ '/v2/clinical/' | relative_url }}"{% if current_url contains '/v2/clinical' %} class="is-active"{% endif %}>Clinical</a>
-        <a href="{{ '/v2/zh/' | relative_url }}">中文</a>
+        <a href="{{ '/projects/' | relative_url }}"{% if current_url contains '/projects' %} class="is-active"{% endif %}>Research</a>
+        <a href="{{ '/publications/' | relative_url }}"{% if current_url contains '/publications' %} class="is-active"{% endif %}>Publications</a>
+        <a href="{{ '/team/' | relative_url }}"{% if current_url contains '/team' %} class="is-active"{% endif %}>Team</a>
+        <a href="{{ '/clinical/' | relative_url }}"{% if current_url contains '/clinical' %} class="is-active"{% endif %}>Clinical</a>
+        <a href="{{ '/contact/' | relative_url }}"{% if current_url contains '/contact' %} class="is-active"{% endif %}>Contact</a>
+        <a href="{{ '/zh/' | relative_url }}">中文</a>
         {% endif %}
       </nav>
     </div>

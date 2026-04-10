@@ -3,10 +3,9 @@ layout: v2
 ---
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
+{% if lang == 'zh' %}{% assign lang_prefix = 'zh/' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
 {% assign pi = site.data.members | where: 'role', 'pi' %}
-{% assign basic = site.data.members | where: 'role', 'basic_researcher' %}
-{% assign clinical = site.data.members | where: 'role', 'clinical_researcher' %}
-{% assign techs = site.data.members | where: 'role', 'technician' %}
+{% assign others = site.data.members | where_exp: 'm', "m.role != 'pi'" | sort: 'sort_key' %}
 
 <div class="v2-page">
   <header class="v2-page__header">
@@ -26,7 +25,8 @@ layout: v2
           <div class="v2-pi-card">
             <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}">
             <div class="v2-pi-card__info">
-              <h3>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
+              {% assign slug = member.name_en | slugify %}
+              <h3><a href="{{ '/' | append: lang_prefix | append: 'team/' | append: slug | append: '/' | relative_url }}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
               <p class="v2-pi-card__title">{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
               {% if member.bio %}
                 <div class="v2-pi-card__bio">
@@ -48,37 +48,31 @@ layout: v2
       {% endfor %}
     {% endif %}
 
-    {% assign groups = "basic,clinical,techs" | split: "," %}
-    {% for grp in groups %}
-      {% if grp == "basic" %}{% assign members = basic %}{% assign label = t.people.basic_researchers %}
-      {% elsif grp == "clinical" %}{% assign members = clinical %}{% assign label = t.people.clinical_researchers %}
-      {% else %}{% assign members = techs %}{% assign label = t.people.technicians %}{% endif %}
-
-      {% if members.size > 0 %}
-        <section class="v2-team__group">
-          <h2 class="v2-team__group-title">{{ label }}</h2>
-          <div class="v2-member-grid">
-            {% for member in members %}
-              {% assign show_photo = true %}
-              {% if member.photo == nil or member.photo contains 'placeholder.png' %}{% assign show_photo = false %}{% endif %}
-              <article class="v2-member-card">
-                {% if show_photo %}
-                  <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}">
-                {% endif %}
-                <div class="v2-member-card__info">
-                  <h3>{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</h3>
-                  <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
-                  <div class="v2-member-links">
-                    {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
-                    {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-                    {% if member.orcid and member.orcid != '0000-0002-0000-0000' %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
-                  </div>
+    {% if others.size > 0 %}
+      <section class="v2-team__group">
+        <h2 class="v2-team__group-title">{% if lang == 'zh' %}研究人员{% else %}Researchers{% endif %}</h2>
+        <div class="v2-member-grid">
+          {% for member in others %}
+            {% assign show_photo = true %}
+            {% if member.photo == nil or member.photo contains 'placeholder.png' %}{% assign show_photo = false %}{% endif %}
+            <article class="v2-member-card">
+              {% if show_photo %}
+                <img src="{{ member.photo | relative_url }}" alt="{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}">
+              {% endif %}
+              <div class="v2-member-card__info">
+                {% assign slug = member.name_en | slugify %}
+                <h3><a href="{{ '/' | append: lang_prefix | append: 'team/' | append: slug | append: '/' | relative_url }}">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en | default: member.name }}{% endif %}</a></h3>
+                <p>{% if lang == 'zh' %}{{ member.title }}{% else %}{{ member.title_en | default: member.title }}{% endif %}</p>
+                <div class="v2-member-links">
+                  {% if member.email %}<a href="mailto:{{ member.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+                  {% if member.scholar %}<a href="https://scholar.google.com/citations?user={{ member.scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+                  {% if member.orcid and member.orcid != '0000-0002-0000-0000' %}<a href="https://orcid.org/{{ member.orcid }}" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
                 </div>
-              </article>
-            {% endfor %}
-          </div>
-        </section>
-      {% endif %}
-    {% endfor %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
   </div>
 </div>

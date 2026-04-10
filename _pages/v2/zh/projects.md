@@ -1,24 +1,25 @@
 ---
 layout: v2-page
-permalink: /v2/zh/projects/
+permalink: /zh/projects/
 title: 科研方向
 lang: zh
 show_lead: false
 ---
-{% assign projects = site.projects | sort: 'importance' %}
-
-{% for project in projects %}
-  {% assign slug = project.title | slugify %}
-  <article class="v2-program-entry" id="{{ slug }}">
-    <h2>{% if project.title_zh %}{{ project.title_zh }}{% else %}{{ project.title }}{% endif %}</h2>
+{% for dir in site.data.research_directions %}
+  <article class="v2-program-entry" id="{{ dir.id }}">
+    <h2>{{ dir.title_zh }}</h2>
+    {% if dir.id == 'pilosebaceous' %}
     <div class="v2-program-entry__media">
-      <img src="{{ project.img | replace: '.svg', '.png' | prepend: '/assets/img/' | relative_url }}" alt="{{ project.title }}">
+      <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="{{ dir.title_zh }}">
     </div>
+    {% elsif dir.id == 'skin-aging' %}
+    <div class="v2-program-entry__media">
+      <img src="{{ '/assets/img/research_skin_aging.png' | relative_url }}" alt="{{ dir.title_zh }}">
+    </div>
+    {% endif %}
     <div class="v2-program-entry__content">
-      {% if project.overview_detail_zh %}{{ project.overview_detail_zh }}{% else %}{{ project.overview_detail }}{% endif %}
-      <div class="v2-program-entry__more">
-        <a href="{{ '/v2/zh/projects/' | append: slug | append: '/' | relative_url }}">查看论文与详情 &rarr;</a>
-      </div>
+      {{ dir.narrative_zh }}
     </div>
   </article>
+  {% unless forloop.last %}<hr style="margin:1.5rem 0;">{% endunless %}
 {% endfor %}
