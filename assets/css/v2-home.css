@@ -34,10 +34,16 @@ body.v2-body {
   background: var(--v2-bg);
   color: var(--v2-body);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: clip;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+p {
+  orphans: 2;
+  widows: 2;
+  text-wrap: pretty;
 }
 img { max-width: 100%; height: auto; }
 main { flex: 1; }
@@ -193,6 +199,7 @@ a:hover { color: var(--v2-accent-hover); }
 }
 .v2-about__mission {
   font-family: var(--v2-font-body);
+  font-variant-numeric: oldstyle-nums;
   font-size: 1.05rem;
   color: var(--v2-ink);
   line-height: 1.8;
@@ -279,6 +286,7 @@ a:hover { color: var(--v2-accent-hover); }
 
 .v2-topic__body {
   font-family: var(--v2-font-body);
+  font-variant-numeric: oldstyle-nums;
   color: var(--v2-body);
   font-size: 0.95rem;
   line-height: 1.8;

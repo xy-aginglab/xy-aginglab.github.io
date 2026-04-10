@@ -41,6 +41,7 @@ body.v2-body {
 /* ── Page Content (rich text) ── */
 .v2-page__content {
   font-family: var(--v2-font-body) !important;
+  font-variant-numeric: oldstyle-nums;
   font-size: 1rem !important;
   color: var(--v2-body);
   line-height: 1.8;
@@ -175,6 +176,7 @@ body.v2-body {
 
 .v2-program-entry__content {
   font-family: var(--v2-font-body);
+  font-variant-numeric: oldstyle-nums;
   font-size: 0.95rem;
   color: var(--v2-body);
   text-align: justify;
