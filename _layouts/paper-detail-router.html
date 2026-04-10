@@ -14,7 +14,7 @@
     <div class="v2-page">
       <article class="v2-page__content">
         {% if publication_venue or page.entry.year %}
-          <p style="color:var(--v2-muted);font-style:italic;margin-bottom:0.3rem;">
+          <p style="color:var(--v2-muted);font-style:italic;margin-bottom:0.3rem;margin-top:1rem;">
             {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
             {% if publication_venue and page.entry.year %} · {% endif %}
             {% if page.entry.year %}{{ page.entry.year }}{% endif %}
@@ -30,7 +30,7 @@
           </p>
         {% endif %}
         {% if page.entry.abstract %}
-          <div style="margin-top:1.5rem;border-top:1px solid var(--v2-line);padding-top:1.5rem;">
+          <div style="margin-top:1rem;border-top:1px solid var(--v2-line);padding-top:0.8rem;">
             <h2>Abstract</h2>
             <p>{{ page.entry.abstract }}</p>
           </div>
