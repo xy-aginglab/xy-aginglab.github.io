@@ -3,46 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% assign asset_version = site.time | date: '%s' %}
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.entry.abstract | strip_html | truncatewords: 50 }}" />
-  {% if site.icon %}
-    {% assign icon_value = site.icon | strip %}
-    {% if icon_value contains '://' %}{% assign favicon_href = icon_value %}
-    {% elsif icon_value contains '/' or icon_value contains '.' %}{% assign favicon_href = icon_value | relative_url %}
-    {% else %}{% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}{% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg | uri_escape %}{% endif %}
-    <link rel="icon" href="{{ favicon_href }}">
-  {% endif %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/v2-home.css?v=' | append: asset_version | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/v2-pages.css?v=' | append: asset_version | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/v2-print.css?v=' | append: asset_version | relative_url }}" media="print" />
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCX316G25G"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCX316G25G');</script>
+  {% include head.liquid extra_css="/assets/css/academicons.min.css,/assets/css/v2-pages.css" %}
 </head>
 <body class="v2-body">
   {% assign publication_venue = page.entry.journal | default: page.entry.booktitle %}
 
-  <header class="v2-topbar">
-    <div class="v2-topbar__inner">
-      <a class="v2-topbar__brand" href="{{ '/' | relative_url }}">Li Lab</a>
-      <nav class="v2-topbar__nav">
-        <a href="{{ '/projects/' | relative_url }}">Research</a>
-        <a href="{{ '/publications/' | relative_url }}" class="is-active">Publications</a>
-        <a href="{{ '/team/' | relative_url }}">Team</a>
-        <a href="{{ '/clinical/' | relative_url }}">Clinical</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
-        <a href="{{ '/zh/' | relative_url }}">中文</a>
-      </nav>
-    </div>
-  </header>
+  {% include nav.liquid %}
 
   <main>
     <div class="v2-page">
@@ -76,15 +42,6 @@
     </div>
   </main>
 
-  <footer class="v2-site-footer">
-    <div class="v2-site-footer__inner">
-      <div class="v2-site-footer__logos">
-        <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University">
-        <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital">
-        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab">
-      </div>
-      <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; Xiangya Hospital, Central South University</p>
-    </div>
-  </footer>
+  {% include footer.liquid %}
 </body>
 </html>

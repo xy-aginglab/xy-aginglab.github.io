@@ -1,0 +1,20 @@
+{% assign lang = page.lang | default: 'en' %}
+<footer class="v2-site-footer">
+  <div class="v2-site-footer__inner">
+    <div class="v2-site-footer__logos">
+      <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University">
+      <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital">
+      <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab">
+    </div>
+    {% if lang == 'zh' %}
+    <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; 中南大学湘雅医院</p>
+    {% else %}
+    <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; Xiangya Hospital, Central South University</p>
+    {% endif %}
+  </div>
+</footer>
+
+<button class="v2-back-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script>
+(function(){var b=document.querySelector('.v2-back-top');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('is-visible',window.scrollY>300)},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+</script>
