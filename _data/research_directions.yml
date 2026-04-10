@@ -29,7 +29,7 @@
   narrative: |
     <h3>Rosacea &amp; Inflammatory Skin Diseases</h3>
     <div class="v2-program-entry__media v2-program-entry__media--inline">
-      <img src="/assets/img/fx1_lrg.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema">
+      <img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema">
     </div>
     <p>
       Rosacea is a chronic inflammatory skin disorder that significantly impacts quality of life, yet its pathogenesis remains incompletely understood. Our laboratory has established a comprehensive research framework spanning metabolomics, single-cell transcriptomics, neurogenic signaling, and genetics to uncover the multi-dimensional mechanisms underlying this disease.
@@ -45,6 +45,9 @@
     </p>
 
     <h3>Hair Disorders &amp; Regeneration</h3>
+    <div class="v2-program-entry__media v2-program-entry__media--inline">
+      <img src="/assets/img/devcell2022_scube3.jpg" alt="Dev Cell 2022 — Hedgehog/SCUBE3 drives hair follicle regeneration">
+    </div>
     <p>
       Androgenetic alopecia (AGA) manifests as progressive hair follicle miniaturization, yet its cellular drivers have remained elusive. Our single-cell transcriptomic atlas of human AGA anagen follicles revealed that hypercontractility of the connective tissue sheath (CTS) activates the mechanosensitive channel PIEZO1, inducing ectopic apoptosis of progenitor cells and driving progressive miniaturization. Pharmacological inhibition via the MLCK inhibitor ML-7 restored hair growth in patient-derived ex vivo models and humanized mice (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>). Metabolic profiling further identified arginine deficiency as a core pathogenic driver: downregulation of the transporter SLC7A1 and upregulation of ARG2 trigger ROS accumulation and mTOR inactivation, while microneedle-based arginine replenishment restores hair growth (<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>).
     </p>
@@ -57,7 +60,7 @@
   narrative_zh: |
     <h3>玫瑰痤疮与炎症性皮肤病</h3>
     <div class="v2-program-entry__media v2-program-entry__media--inline">
-      <img src="/assets/img/fx1_lrg.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑">
+      <img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑">
     </div>
     <p>
       玫瑰痤疮是一种严重影响生活质量的慢性炎症性皮肤病，其发病机制尚未完全阐明。实验室建立了涵盖代谢组学、单细胞转录组学、神经源性信号与遗传学的综合研究体系，从多个维度系统揭示该疾病的发病机制。
@@ -73,6 +76,9 @@
     </p>
 
     <h3>毛发疾病与再生</h3>
+    <div class="v2-program-entry__media v2-program-entry__media--inline">
+      <img src="/assets/img/devcell2022_scube3.jpg" alt="Dev Cell 2022 — Hedgehog/SCUBE3 驱动毛囊再生">
+    </div>
     <p>
       雄激素性秃发（AGA）表现为毛囊渐进性微型化，但其细胞层面的驱动机制长期不明。团队构建的人类 AGA 生长期毛囊单细胞转录组图谱揭示，结缔组织鞘（CTS）过度收缩激活机械敏感通道 PIEZO1，诱导祖细胞异位凋亡，驱动毛囊微型化进程。MLCK 抑制剂 ML-7 在患者来源的离体模型和人源化小鼠中均可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。代谢谱分析进一步发现精氨酸缺乏是 AGA 的核心致病因素：转运体 SLC7A1 下调与 ARG2 上调导致 ROS 蓄积和 mTOR 失活，微针递送精氨酸方案可恢复毛发生长（<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。
     </p>
