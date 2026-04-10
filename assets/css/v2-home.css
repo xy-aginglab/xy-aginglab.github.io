@@ -33,8 +33,13 @@ body.v2-body {
   background: var(--v2-bg);
   color: var(--v2-body);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 img { max-width: 100%; height: auto; }
+main { flex: 1; }
 a { color: var(--v2-accent); transition: color 0.15s; }
 a:hover { color: var(--v2-accent-hover); }
 
