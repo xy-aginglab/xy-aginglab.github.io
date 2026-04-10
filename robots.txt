@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://xy-aginglab.github.io/sitemap.xml
+Sitemap: https://xy-lilab.github.io/sitemap.xml
