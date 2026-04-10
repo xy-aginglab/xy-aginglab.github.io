@@ -31,35 +31,31 @@
     <p>
       Rosacea is a chronic inflammatory skin disorder that significantly impacts quality of life, yet its pathogenesis remains incompletely understood. Our laboratory has established a comprehensive research framework spanning metabolomics, single-cell transcriptomics, neurogenic signaling, and genetics to uncover the multi-dimensional mechanisms underlying this disease.
     </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--left">
-      <img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema"></div>
+      <div class="v2-research-block__text"><p>A landmark study identified alpha-ketoglutarate (&alpha;-KG) as a rosacea-associated metabolite that activates the vascular smooth muscle receptor OXGR1, promoting vasoconstriction and limiting pathological vasodilation. Cryo-electron microscopy structures of the OXGR1&ndash;Gq complex guided the development of A-1, a synthetic selective agonist that mitigates erythema with efficacy comparable to first-line therapy (<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>). At the cellular level, single-cell transcriptomics revealed that pro-inflammatory fibroblasts are the leading source of vasodilative signals in rosacea lesions, with PTGDS depletion blocking disease development in mice (<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>). Complementing this, we demonstrated that high-sensitivity sensory neurons activate &gamma;&delta; T cells via a CGRP&ndash;RAMP1 axis, establishing a neuro-immune circuit that drives facial hypersensitivity (<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>).</p></div>
     </div>
-    <p>
-      A landmark study identified alpha-ketoglutarate (&alpha;-KG) as a rosacea-associated metabolite that activates the vascular smooth muscle receptor OXGR1, promoting vasoconstriction and limiting pathological vasodilation. Cryo-electron microscopy structures of the OXGR1&ndash;Gq complex guided the development of A-1, a synthetic selective agonist that mitigates erythema with efficacy comparable to first-line therapy (<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>). At the cellular level, single-cell transcriptomics revealed that pro-inflammatory fibroblasts are the leading source of vasodilative signals in rosacea lesions, with PTGDS depletion blocking disease development in mice (<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>). Complementing this, we demonstrated that high-sensitivity sensory neurons activate &gamma;&delta; T cells via a CGRP&ndash;RAMP1 axis, establishing a neuro-immune circuit that drives facial hypersensitivity (<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>).
-    </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 drives ROS-mediated inflammation in skin">
+    <div class="v2-research-block v2-research-block--reverse">
+      <div class="v2-research-block__img"><img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 drives ROS-mediated inflammation in skin"></div>
+      <div class="v2-research-block__text"><p>Genetically, whole-genome sequencing of rosacea families identified rare variants in LRRC4, SH3PXD2A, and SLC26A8 that converge on neural synaptic processes and promote excessive neuropeptide release (<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>). Serum proteomic profiling further resolved two distinct molecular endotypes&mdash;inflammatory-predominant and neurogenic-metabolic&mdash;providing a molecular foundation for personalized treatment (<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>). Key inflammatory pathways including STAT3/IL-36G (<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>), KRT6A/JAK1-STAT3 (<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>), and Nav1.8-mediated ROS signaling (<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>) have been dissected, while novel nanozyme-based ROS scavengers offer new therapeutic paradigms (<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>).</p></div>
     </div>
-    <p>
-      Genetically, whole-genome sequencing of rosacea families identified rare variants in LRRC4, SH3PXD2A, and SLC26A8 that converge on neural synaptic processes and promote excessive neuropeptide release (<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>). Serum proteomic profiling further resolved two distinct molecular endotypes&mdash;inflammatory-predominant and neurogenic-metabolic&mdash;providing a molecular foundation for personalized treatment (<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>). Key inflammatory pathways including STAT3/IL-36G (<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>), KRT6A/JAK1-STAT3 (<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>), and Nav1.8-mediated ROS signaling (<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>) have been dissected, while novel nanozyme-based ROS scavengers offer new therapeutic paradigms (<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>).
-    </p>
     <p>
       These mechanistic insights have been translated into clinical practice through multicenter randomized controlled trials, demonstrating that gabapentin improves rosacea flushing (<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>), paroxetine effectively treats refractory erythema (<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>), and hydroxychloroquine is a safe and efficacious treatment option for rosacea (<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>).
     </p>
 
     <h3>Hair Disorders &amp; Regeneration</h3>
-    <p>
-      Androgenetic alopecia (AGA) manifests as progressive hair follicle miniaturization, yet its cellular drivers have remained elusive. Our single-cell transcriptomic atlas of human AGA anagen follicles revealed that hypercontractility of the connective tissue sheath (CTS) activates the mechanosensitive channel PIEZO1, inducing ectopic apoptosis of progenitor cells and driving progressive miniaturization. Pharmacological inhibition via the MLCK inhibitor ML-7 restored hair growth in patient-derived ex vivo models and humanized mice (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>). Metabolic profiling further identified arginine deficiency as a core pathogenic driver: downregulation of the transporter SLC7A1 and upregulation of ARG2 trigger ROS accumulation and mTOR inactivation, while microneedle-based arginine replenishment restores hair growth (<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>).
-    </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS hypercontractility–PIEZO1 axis in androgenetic alopecia">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS hypercontractility–PIEZO1 axis in androgenetic alopecia"></div>
+      <div class="v2-research-block__text"><p>Androgenetic alopecia (AGA) manifests as progressive hair follicle miniaturization, yet its cellular drivers have remained elusive. Our single-cell transcriptomic atlas of human AGA anagen follicles revealed that hypercontractility of the connective tissue sheath (CTS) activates the mechanosensitive channel PIEZO1, inducing ectopic apoptosis of progenitor cells and driving progressive miniaturization. Pharmacological inhibition via the MLCK inhibitor ML-7 restored hair growth in patient-derived ex vivo models and humanized mice (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>).</p></div>
     </div>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--left">
-      <img src="/assets/img/advsci2025_arginine_aga.jpg" alt="Adv Sci 2025 — Arginine metabolic disruption in androgenetic alopecia">
+    <div class="v2-research-block v2-research-block--reverse">
+      <div class="v2-research-block__img"><img src="/assets/img/advsci2025_arginine_aga.jpg" alt="Adv Sci 2025 — Arginine metabolic disruption in androgenetic alopecia"></div>
+      <div class="v2-research-block__text"><p>Metabolic profiling further identified arginine deficiency as a core pathogenic driver: downregulation of the transporter SLC7A1 and upregulation of ARG2 trigger ROS accumulation and mTOR inactivation, while microneedle-based arginine replenishment restores hair growth (<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>).</p></div>
     </div>
-    <p>
-      In hair pigmentation and regeneration, skin organoids derived from melanocyte progenitors revealed a two-step patterning mechanism: COL6A3&ndash;CD44 signaling maintains organotypic melanocytes during culture, while SEMA3C&ndash;NRP1 signaling guides their migration to the bulge niche during morphogenesis (<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>). Foundational work on dermal papilla niche signaling showed that Hedgehog overactivation reprograms niche fibroblasts to produce SCUBE3, a TGF-&beta; ligand sufficient to induce new hair growth (<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>).
-    </p>
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/devcell2022_scube3.jpg" alt="Dev Cell 2022 — Hedgehog/SCUBE3 drives hair follicle regeneration"></div>
+      <div class="v2-research-block__text"><p>In hair pigmentation and regeneration, skin organoids derived from melanocyte progenitors revealed a two-step patterning mechanism: COL6A3&ndash;CD44 signaling maintains organotypic melanocytes during culture, while SEMA3C&ndash;NRP1 signaling guides their migration to the bulge niche during morphogenesis (<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>). Foundational work on dermal papilla niche signaling showed that Hedgehog overactivation reprograms niche fibroblasts to produce SCUBE3, a TGF-&beta; ligand sufficient to induce new hair growth (<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>).</p></div>
+    </div>
     <p>
       For alopecia areata, a series of real-world clinical studies have established JAK inhibitor&ndash;based management strategies: ritlecitinib demonstrated robust efficacy across different anatomical sites, in adolescent populations, and in patients refractory to prior JAK inhibitor therapy, while a patient-centered tofacitinib dose-tapering protocol sustained treatment response without compromising efficacy (<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>; <a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>).
     </p>
@@ -68,35 +64,31 @@
     <p>
       玫瑰痤疮是一种严重影响生活质量的慢性炎症性皮肤病，其发病机制尚未完全阐明。实验室建立了涵盖代谢组学、单细胞转录组学、神经源性信号与遗传学的综合研究体系，从多个维度系统揭示该疾病的发病机制。
     </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--left">
-      <img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑"></div>
+      <div class="v2-research-block__text"><p>团队发现 &alpha;-酮戊二酸（&alpha;-KG）是玫瑰痤疮相关代谢物，可激活血管平滑肌受体 OXGR1，促进血管收缩并限制病理性血管扩张。基于 OXGR1-Gq 复合物的冷冻电镜结构，开发了选择性激动剂 A-1，其改善红斑的疗效与一线治疗相当（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。在细胞水平，单细胞转录组学揭示促炎成纤维细胞是玫瑰痤疮病变中血管扩张信号的主要来源，敲除 PTGDS 可抑制小鼠疾病进展（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。此外，团队证实高敏感觉神经元通过 CGRP-RAMP1 轴直接激活 &gamma;&delta; T 细胞，揭示了驱动面部超敏反应的神经免疫回路（<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。</p></div>
     </div>
-    <p>
-      团队发现 &alpha;-酮戊二酸（&alpha;-KG）是玫瑰痤疮相关代谢物，可激活血管平滑肌受体 OXGR1，促进血管收缩并限制病理性血管扩张。基于 OXGR1-Gq 复合物的冷冻电镜结构，开发了选择性激动剂 A-1，其改善红斑的疗效与一线治疗相当（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。在细胞水平，单细胞转录组学揭示促炎成纤维细胞是玫瑰痤疮病变中血管扩张信号的主要来源，敲除 PTGDS 可抑制小鼠疾病进展（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。此外，团队证实高敏感觉神经元通过 CGRP-RAMP1 轴直接激活 &gamma;&delta; T 细胞，揭示了驱动面部超敏反应的神经免疫回路（<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。
-    </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 驱动 ROS 介导的皮肤炎症">
+    <div class="v2-research-block v2-research-block--reverse">
+      <div class="v2-research-block__img"><img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 驱动 ROS 介导的皮肤炎症"></div>
+      <div class="v2-research-block__text"><p>在遗传学层面，玫瑰痤疮家系全基因组测序发现 LRRC4、SH3PXD2A 和 SLC26A8 的罕见变异均涉及神经突触相关通路，导致神经肽过度释放（<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>）。血清蛋白质组学进一步解析出炎症主导型和神经源性-代谢型两种分子亚型，为个性化治疗提供了分子基础（<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>）。STAT3/IL-36G（<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>）、KRT6A/JAK1-STAT3（<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>）及 Nav1.8 介导的 ROS 信号通路（<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>）等关键炎症通路均已系统阐明，新型纳米酶 ROS 清除剂则为治疗提供了新思路（<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>）。</p></div>
     </div>
-    <p>
-      在遗传学层面，玫瑰痤疮家系全基因组测序发现 LRRC4、SH3PXD2A 和 SLC26A8 的罕见变异均涉及神经突触相关通路，导致神经肽过度释放（<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>）。血清蛋白质组学进一步解析出炎症主导型和神经源性-代谢型两种分子亚型，为个性化治疗提供了分子基础（<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>）。STAT3/IL-36G（<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>）、KRT6A/JAK1-STAT3（<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>）及 Nav1.8 介导的 ROS 信号通路（<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>）等关键炎症通路均已系统阐明，新型纳米酶 ROS 清除剂则为治疗提供了新思路（<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>）。
-    </p>
     <p>
       上述机制研究成果已通过多中心随机对照试验转化为临床实践，证实加巴喷丁可有效改善玫瑰痤疮潮红（<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>），帕罗西汀可有效治疗难治性红斑（<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>），羟氯喹可安全有效地治疗玫瑰痤疮（<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>）。
     </p>
 
     <h3>毛发疾病与再生</h3>
-    <p>
-      雄激素性秃发（AGA）表现为毛囊渐进性微型化，但其细胞层面的驱动机制长期不明。团队构建的人类 AGA 生长期毛囊单细胞转录组图谱揭示，结缔组织鞘（CTS）过度收缩激活机械敏感通道 PIEZO1，诱导祖细胞异位凋亡，驱动毛囊微型化进程。MLCK 抑制剂 ML-7 在患者来源的离体模型和人源化小鼠中均可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。代谢谱分析进一步发现精氨酸缺乏是 AGA 的核心致病因素：转运体 SLC7A1 下调与 ARG2 上调导致 ROS 蓄积和 mTOR 失活，微针递送精氨酸方案可恢复毛发生长（<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。
-    </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS-PIEZO1 轴驱动雄激素性秃发">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS-PIEZO1 轴驱动雄激素性秃发"></div>
+      <div class="v2-research-block__text"><p>雄激素性秃发（AGA）表现为毛囊渐进性微型化，但其细胞层面的驱动机制长期不明。团队构建的人类 AGA 生长期毛囊单细胞转录组图谱揭示，结缔组织鞘（CTS）过度收缩激活机械敏感通道 PIEZO1，诱导祖细胞异位凋亡，驱动毛囊微型化进程。MLCK 抑制剂 ML-7 在患者来源的离体模型和人源化小鼠中均可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。</p></div>
     </div>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--left">
-      <img src="/assets/img/advsci2025_arginine_aga.jpg" alt="Adv Sci 2025 — 精氨酸代谢紊乱与雄激素性秃发">
+    <div class="v2-research-block v2-research-block--reverse">
+      <div class="v2-research-block__img"><img src="/assets/img/advsci2025_arginine_aga.jpg" alt="Adv Sci 2025 — 精氨酸代谢紊乱与雄激素性秃发"></div>
+      <div class="v2-research-block__text"><p>代谢谱分析进一步发现精氨酸缺乏是 AGA 的核心致病因素：转运体 SLC7A1 下调与 ARG2 上调导致 ROS 蓄积和 mTOR 失活，微针递送精氨酸方案可恢复毛发生长（<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。</p></div>
     </div>
-    <p>
-      在毛发色素与再生领域，利用黑色素细胞祖细胞构建的皮肤类器官揭示了两步调控机制：体外培养阶段 COL6A3-CD44 信号维持类器官中的黑色素细胞，形态发生阶段 SEMA3C-NRP1 信号引导其迁移至隆突干细胞龛（<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。在毛乳头微环境信号研究中，团队发现 Hedgehog 信号过度激活可重编程微环境成纤维细胞产生 SCUBE3（一种 TGF-&beta; 配体），足以诱导新毛发生长（<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>）。
-    </p>
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/devcell2022_scube3.jpg" alt="Dev Cell 2022 — Hedgehog/SCUBE3 驱动毛囊再生"></div>
+      <div class="v2-research-block__text"><p>在毛发色素与再生领域，利用黑色素细胞祖细胞构建的皮肤类器官揭示了两步调控机制：体外培养阶段 COL6A3-CD44 信号维持类器官中的黑色素细胞，形态发生阶段 SEMA3C-NRP1 信号引导其迁移至隆突干细胞龛（<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。在毛乳头微环境信号研究中，团队发现 Hedgehog 信号过度激活可重编程微环境成纤维细胞产生 SCUBE3（一种 TGF-&beta; 配体），足以诱导新毛发生长（<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>）。</p></div>
+    </div>
     <p>
       针对斑秃，一系列真实世界临床研究建立了基于 JAK 抑制剂的管理策略：利特昔替尼在不同解剖部位、青少年群体及既往 JAK 抑制剂难治患者中均展现出显著疗效，托法替尼的个体化减量方案可在不影响疗效的前提下维持治疗应答（<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>；<a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>）。
     </p>
@@ -126,12 +118,10 @@
     <p>
       Aging is a complex, multifactorial process that affects every organ, with the skin serving as one of the most visible and accessible models for studying its biology. Our laboratory investigates the fundamental mechanisms of skin aging through an integrated approach combining longevity population cohorts, multi-omics technologies, and advanced cellular and animal models.
     </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 regulates healthy aging via ribosomal activity">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 regulates healthy aging via ribosomal activity"></div>
+      <div class="v2-research-block__text"><p>As a core member of the Aging Biomarker Consortium&mdash;a national initiative to establish standardized aging biomarkers across organ systems in China (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>)&mdash;we leverage large-scale cohort data to decode aging trajectories. A key discovery from longevity cohort transcriptomics revealed that ETS1 governs healthy aging by downregulating ribosomal protein gene expression, reducing energy-intensive ribosomal biogenesis as an adaptive energy-saving mechanism (<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>).</p></div>
     </div>
-    <p>
-      As a core member of the Aging Biomarker Consortium&mdash;a national initiative to establish standardized aging biomarkers across organ systems in China (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>)&mdash;we leverage large-scale cohort data to decode aging trajectories. A key discovery from longevity cohort transcriptomics revealed that ETS1 governs healthy aging by downregulating ribosomal protein gene expression, reducing energy-intensive ribosomal biogenesis as an adaptive energy-saving mechanism (<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>).
-    </p>
     <p>
       At the epigenetic level, we uncovered that depletion of the m<sup>6</sup>A demethylase FTO drives heterochromatin loss through a KAT8/RSF1 acetylation cascade, directly linking RNA modification to chromatin remodeling in skin aging (<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>). The transcription factor regulatory network has been further elucidated with the discovery that HOXC10 delays fibroblast senescence via the FZD6/Wnt/&beta;-catenin pathway, with simvastatin identified as a functional mimic through Connectivity Map screening (<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>).
     </p>
@@ -142,12 +132,10 @@
     <p>
       衰老是涉及全身各个器官系统的复杂多因素生物学过程。皮肤因其直观性和易获取性，是研究衰老生物学的理想模型。实验室综合运用长寿人群队列、多组学技术及细胞与动物模型，系统研究皮肤衰老的核心机制。
     </p>
-    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
-      <img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 调控健康衰老">
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 调控健康衰老"></div>
+      <div class="v2-research-block__text"><p>实验室是衰老生物标志物联盟（Aging Biomarker Consortium）的核心成员，该联盟旨在建立中国跨器官系统的标准化衰老生物标志物体系（<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>）。基于长寿队列转录组学分析，团队发现 ETS1 通过下调核糖体蛋白基因表达抑制高能耗的核糖体生物合成过程，构成一种适应性能量代谢调控机制，从而调控健康衰老（<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>）。</p></div>
     </div>
-    <p>
-      实验室是衰老生物标志物联盟（Aging Biomarker Consortium）的核心成员，该联盟旨在建立中国跨器官系统的标准化衰老生物标志物体系（<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>）。基于长寿队列转录组学分析，团队发现 ETS1 通过下调核糖体蛋白基因表达抑制高能耗的核糖体生物合成过程，构成一种适应性能量代谢调控机制，从而调控健康衰老（<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>）。
-    </p>
     <p>
       在表观遗传水平，团队发现 m<sup>6</sup>A 去甲基化酶 FTO 缺失可通过 KAT8/RSF1 乙酰化级联反应驱动异染色质丢失，揭示了 RNA 修饰与皮肤衰老中染色质重塑的直接关联（<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>）。在转录因子调控网络方面，HOXC10 通过 FZD6/Wnt/&beta;-catenin 通路延缓成纤维细胞衰老，经 Connectivity Map 筛选发现辛伐他汀可作为其功能类似物（<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>）。
     </p>
