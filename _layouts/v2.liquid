@@ -44,14 +44,14 @@
         <a href="{{ '/zh/team/' | relative_url }}"{% if current_url contains '/zh/team' %} class="is-active"{% endif %}>团队成员</a>
         <a href="{{ '/zh/clinical/' | relative_url }}"{% if current_url contains '/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
         <a href="{{ '/zh/contact/' | relative_url }}"{% if current_url contains '/zh/contact' %} class="is-active"{% endif %}>联系我们</a>
-        <a href="{{ '/' | relative_url }}" class="v2-lang-switch">EN</a>
+        <a href="{{ '/' | relative_url }}">English</a>
         {% else %}
         <a href="{{ '/projects/' | relative_url }}"{% if current_url contains '/projects' %} class="is-active"{% endif %}>Research</a>
         <a href="{{ '/publications/' | relative_url }}"{% if current_url contains '/publications' %} class="is-active"{% endif %}>Publications</a>
         <a href="{{ '/team/' | relative_url }}"{% if current_url contains '/team' %} class="is-active"{% endif %}>Team</a>
         <a href="{{ '/clinical/' | relative_url }}"{% if current_url contains '/clinical' %} class="is-active"{% endif %}>Clinical</a>
         <a href="{{ '/contact/' | relative_url }}"{% if current_url contains '/contact' %} class="is-active"{% endif %}>Contact</a>
-        <a href="{{ '/zh/' | relative_url }}" class="v2-lang-switch">中文</a>
+        <a href="{{ '/zh/' | relative_url }}">中文</a>
         {% endif %}
       </nav>
     </div>
