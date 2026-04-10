@@ -28,6 +28,9 @@
   link_zh: "/zh/projects/#pilosebaceous"
   narrative: |
     <h3>Rosacea &amp; Inflammatory Skin Diseases</h3>
+    <div class="v2-program-entry__media v2-program-entry__media--inline">
+      <img src="/assets/img/fx1_lrg.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema">
+    </div>
     <p>
       Rosacea is a chronic inflammatory skin disorder that significantly impacts quality of life, yet its pathogenesis remains incompletely understood. Our laboratory has established a comprehensive research framework spanning metabolomics, single-cell transcriptomics, neurogenic signaling, and genetics to uncover the multi-dimensional mechanisms underlying this disease.
     </p>
@@ -53,6 +56,9 @@
     </p>
   narrative_zh: |
     <h3>玫瑰痤疮与炎症性皮肤病</h3>
+    <div class="v2-program-entry__media v2-program-entry__media--inline">
+      <img src="/assets/img/fx1_lrg.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑">
+    </div>
     <p>
       玫瑰痤疮是一种严重影响生活质量的慢性炎症性皮肤病，其发病机制尚未完全阐明。实验室建立了涵盖代谢组学、单细胞转录组学、神经源性信号与遗传学的综合研究体系，从多个维度系统揭示该疾病的发病机制。
     </p>
