@@ -163,8 +163,8 @@ a:hover { color: var(--v2-accent-hover); }
 }
 .v2-lab-header__logo img { height: 44px; width: auto; }
 @media (max-width: 600px) {
-  .v2-lab-header { grid-template-columns: 1fr auto; gap: 0.5rem; }
-  .v2-lab-header__logo img { height: 28px; }
+  .v2-lab-header { grid-template-columns: 1fr; gap: 0.8rem; }
+  .v2-lab-header__logo img { height: 32px; }
 }
 
 /* ── About: mission + PI ── */
@@ -211,7 +211,7 @@ a:hover { color: var(--v2-accent-hover); }
 }
 @media (max-width: 640px) {
   .v2-about { grid-template-columns: 1fr; }
-  .v2-about__pi { display: flex; align-items: center; gap: 1rem; text-align: left; order: -1; }
+  .v2-about__pi { display: flex; align-items: center; gap: 1rem; text-align: left; }
   .v2-about__pi img { width: 72px; margin-bottom: 0; }
 }
 
