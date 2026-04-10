@@ -12,6 +12,9 @@ layout: v2
 
 {% if member %}
 <div class="v2-page">
+  <header class="v2-page__header">
+    <h1 class="v2-page__title">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h1>
+  </header>
   <article class="v2-page__content">
     <div class="v2-member-detail">
       {% assign show_photo = true %}
@@ -24,7 +27,6 @@ layout: v2
       </div>
       {% endif %}
       <div class="v2-member-detail__header">
-        <h1 class="v2-member-detail__name">{% if lang == 'zh' %}{{ member.name }}{% else %}{{ member.name_en }}{% endif %}</h1>
         {% if lang == 'zh' and member.name_en %}
           <p class="v2-member-detail__alt">{{ member.name_en }}</p>
         {% elsif lang != 'zh' and member.name != member.name_en %}
