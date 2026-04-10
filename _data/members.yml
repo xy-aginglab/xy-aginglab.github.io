@@ -4,7 +4,7 @@
 - name: 李吉
   name_en: Ji Li
   role: pi
-  title: 主任医师，教授，博士生导师
+  title: 主任医师、教授、博士生导师
   title_en: Vice President of Xiangya Hospital, Professor, Doctoral Supervisor
   photo: /assets/img/members/lj.png
   department: 皮肤科
@@ -28,7 +28,7 @@
   sort_key: "04"
   name_en: Zhili Deng
   role: basic_researcher
-  title: 研究员，特聘教授，博士生导师，国家优青
+  title: 研究员、特聘教授、博士生导师、国家优青
   title_en: Research Fellow, Distinguished Professor, Doctoral Supervisor, NSFC Excellent Young Scholar
   photo: /assets/img/members/dzl.png
   department: 皮肤科
@@ -58,7 +58,7 @@
     Published 20+ SCI papers in Pharmacol Res, Front Pharmacol, J Biol Chem, etc.
   bio_zh: >-
     主要从事炎症性皮肤病及皮肤衰老的机制研究。
-    在 Pharmacol Res, Front Pharmacol, J Biol Chem 等发表 SCI 论文20余篇。
+    在 Pharmacol Res、Front Pharmacol、J Biol Chem 等期刊发表 SCI 论文 20 余篇。
 
 - name: 毛锐
   sort_key: "17"
@@ -134,7 +134,7 @@
   sort_key: "01"
   name_en: Hongfu Xie
   role: clinical_researcher
-  title: 教授，博士生导师，一级主任医师
+  title: 一级主任医师、教授、博士生导师
   title_en: Professor, Dermatologist
   photo: /assets/img/members/xhf.png
   department: 皮肤科
@@ -145,15 +145,15 @@
     Chief Expert at the Rosacea Research Center, Chinese Medical Association.
     Led 4 NSFC projects. Published 86 papers.
   bio_zh: >-
-    首届中南大学"湘雅名医"，湘雅医院皮肤科主任。
-    中华医学会皮肤性病学分会玫瑰痤疮硏究中心首席专家。
-    主持国家自然科学基金4项，发表论文86篇。
+    首届中南大学"湘雅名医"、湘雅医院皮肤科主任。
+    中华医学会皮肤性病学分会玫瑰痤疮研究中心首席专家。
+    主持国家自然科学基金项目 4 项，发表论文 86 篇。
 
 - name: 简丹
   sort_key: "03"
   name_en: Dan Jian
   role: clinical_researcher
-  title: 主任医师，博士生导师
+  title: 主任医师、博士生导师
   title_en: Professor, Dermatologist
   photo: /assets/img/members/jd.png
   department: 皮肤科
@@ -164,13 +164,13 @@
     and photoelectric therapy for pigmentary disorders.
   bio_zh: >-
     美国南加州大学访问学者。主要研究方向为皮肤衰老机制、
-    损容性皮肤病发病及治疗机制、色素性皮肤病光电治疗。
+    损容性皮肤病的发病及治疗机制、色素性皮肤病的光电治疗。
 
 - name: 唐言
   sort_key: "08"
   name_en: Yan Tang
   role: clinical_researcher
-  title: 主治医师，博士
+  title: 主治医师、博士
   title_en: Attending Physician, Dermatologist
   photo: /assets/img/members/ty.png
   department: 皮肤科
@@ -179,14 +179,14 @@
     Visiting Scholar at Emory University. Specializes in hair disorders, rosacea,
     and other disfiguring skin diseases. Led 2 NSFC projects. Published 15 SCI papers.
   bio_zh: >-
-    美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤疾病。
-    主持国家自然科学基金2项，发表 SCI 论文15篇。
+    美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤病。
+    主持国家自然科学基金项目 2 项，发表 SCI 论文 15 篇。
 
 - name: 刘芳芬
   sort_key: "06"
   name_en: Fangfen Liu
   role: clinical_researcher
-  title: 主治医师，博士
+  title: 主治医师、博士
   title_en: Attending Physician, Dermatologist
   photo: /assets/img/members/lff.png
   department: 皮肤科
@@ -195,8 +195,8 @@
     Specializes in clinical diagnosis and basic research of alopecia.
     Experienced in FUT/FUE hair transplant surgery. Led/participated in 4 NSFC projects.
   bio_zh: >-
-    擅长脱发疾病的临床诊治及基础研究，
-    熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。
+    擅长脱发的临床诊治及基础研究，
+    熟练掌握 FUT/FUE 植发手术。主持国家自然科学基金项目 4 项。
 
 - name: 汪犇
   sort_key: "05"
@@ -222,7 +222,7 @@
   sort_key: "02"
   name_en: Wei Shi
   role: clinical_researcher
-  title: 主任医师，教授，博士研究生导师
+  title: 主任医师、教授、博士生导师
   title_en: Professor, Dermatologist, Doctoral Supervisor
   photo: /assets/img/members/sw.jpg
   department: 皮肤科
