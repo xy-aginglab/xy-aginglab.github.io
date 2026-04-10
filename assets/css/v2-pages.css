@@ -452,13 +452,19 @@ body.v2-body {
   padding-left: 0 !important;
   margin: 0 !important;
 }
-.v2-pub-featured .bibliography {
+.v2-pub-featured {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
   gap: 0.8rem !important;
 }
+.v2-pub-featured .bibliography {
+  display: contents !important;
+}
+.v2-pub-featured .bibliography > li:not(.bib-entry) {
+  display: none !important;
+}
 @media (max-width: 640px) {
-  .v2-pub-featured .bibliography { grid-template-columns: 1fr !important; }
+  .v2-pub-featured { grid-template-columns: 1fr !important; }
 }
 .v2-page__content .bibliography > li.bib-entry,
 .v2-pub-featured .bibliography > li.bib-entry {
@@ -487,21 +493,57 @@ body.v2-body {
 }
 
 /* Bib search/filter */
-.v2-page__content .bib-filters {
-  margin-bottom: 1rem;
+.bib-filters {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: var(--v2-bg);
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
 }
+.bib-filters__search {
+  margin-bottom: 0.6rem;
+}
+.bib-filters__search input,
 .v2-page__content .bib-filters__search input {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.85rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
   border: 1px solid var(--v2-line);
   border-radius: var(--v2-radius);
   background: var(--v2-surface);
   font-family: var(--v2-font-sans);
+  color: var(--v2-ink);
 }
+.bib-filters__search input:focus,
 .v2-page__content .bib-filters__search input:focus {
   outline: none;
   border-color: var(--v2-accent);
+}
+.bib-filters__row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.bib-filters__select {
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+  font-family: var(--v2-font-sans);
+  border: 1px solid var(--v2-line);
+  border-radius: var(--v2-radius);
+  background: var(--v2-surface);
+  color: var(--v2-body);
+  cursor: pointer;
+  flex: 1;
+  min-width: 140px;
+}
+.bib-filters__select:focus {
+  outline: none;
+  border-color: var(--v2-accent);
+}
+.bib-filters__status {
+  font-size: 0.82rem;
+  color: var(--v2-muted);
+  margin-top: 0.5rem;
 }
 
 /* ── Contact Page ── */
