@@ -22,7 +22,7 @@
   --v2-font-sans: "Source Sans 3", "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --v2-font-serif: "Playfair Display", "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
   --v2-font-body: "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
-  --v2-max: 960px;
+  --v2-max: 1100px;
 }
 
 /* ── Reset ── */
@@ -178,14 +178,17 @@ a:hover { color: var(--v2-accent-hover); }
 
 /* ── About: mission + PI ── */
 .v2-about {
-  display: grid;
-  grid-template-columns: 1fr 160px;
-  gap: 1.5rem;
   padding: 1.5rem;
   margin-bottom: 0.5rem;
   background: var(--v2-surface);
   border: 1px solid var(--v2-navy);
   border-radius: 8px;
+  overflow: hidden;
+}
+.v2-about__pi {
+  float: right;
+  text-align: center;
+  margin: 0 0 0.8rem 1.5rem;
 }
 .v2-about__mission {
   font-family: var(--v2-font-body);
@@ -198,7 +201,6 @@ a:hover { color: var(--v2-accent-hover); }
 .v2-about__mission p:last-child { margin-bottom: 0; }
 .v2-about__mission strong { font-weight: 700; }
 .v2-about__mission em { color: var(--v2-accent); font-style: italic; }
-.v2-about__pi { text-align: center; }
 .v2-about__pi img {
   width: 130px;
   border-radius: 8px;
@@ -219,8 +221,7 @@ a:hover { color: var(--v2-accent-hover); }
   line-height: 1.35;
 }
 @media (max-width: 640px) {
-  .v2-about { grid-template-columns: 1fr; }
-  .v2-about__pi { display: flex; align-items: center; gap: 1rem; text-align: left; order: -1; }
+  .v2-about__pi { float: none; display: flex; align-items: center; gap: 1rem; text-align: left; margin: 0 0 0.8rem 0; }
   .v2-about__pi img { width: 72px; margin-bottom: 0; }
 }
 

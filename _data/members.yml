@@ -25,7 +25,7 @@
     获2021年湖南省科技进步一等奖（排名第二）、2021年华夏医学科技奖一等奖（排名第二）、2023年中华医学科技奖一等奖（排名第五）及"五洲女子科技奖"。
 
 - name: 邓智利
-  sort_key: deng
+  sort_key: "04"
   name_en: Zhili Deng
   role: basic_researcher
   title: 研究员，特聘教授，博士生导师，国家优青
@@ -45,7 +45,7 @@
     近五年以第一/通讯作者在Cell、Nat Commun（3篇）、Sci Adv、EMBO Mol Med、Adv Sci、JID等杂志发表SCI论文20余篇，主持国家自然科学基金项目4项，获国家发明专利2项。
 
 - name: 张亦雅
-  sort_key: zhang
+  sort_key: "07"
   name_en: Yiya Zhang
   role: basic_researcher
   title: 副研究员
@@ -61,7 +61,7 @@
     在 Pharmacol Res, Front Pharmacol, J Biol Chem 等发表 SCI 论文20余篇。
 
 - name: 毛锐
-  sort_key: mao
+  sort_key: "17"
   name_en: Rui Mao
   role: basic_researcher
   title: 研究人员
@@ -71,7 +71,7 @@
   department_en: Department of Dermatology
 
 - name: 陈梦婷
-  sort_key: chen
+  sort_key: "11"
   name_en: Mengting Chen
   role: basic_researcher
   title: 研究人员
@@ -81,7 +81,7 @@
   department_en: Department of Dermatology
 
 - name: 李果
-  sort_key: li
+  sort_key: "12"
   name_en: Guo Li
   role: basic_researcher
   title: 研究人员
@@ -91,7 +91,7 @@
   department_en: Department of Dermatology
 
 - name: 杨李
-  sort_key: yang
+  sort_key: "13"
   name_en: Li Yang
   role: basic_researcher
   title: 研究人员
@@ -101,7 +101,7 @@
   department_en: Department of Dermatology
 
 - name: 初艳吉
-  sort_key: chu
+  sort_key: "14"
   name_en: Yanji Chu
   role: basic_researcher
   title: 研究人员
@@ -111,7 +111,7 @@
   department_en: Department of Dermatology
 
 - name: 谢煜骅
-  sort_key: xie_yuhua
+  sort_key: "15"
   name_en: Yuhua Xie
   role: basic_researcher
   title: 研究人员
@@ -121,7 +121,7 @@
   department_en: Department of Dermatology
 
 - name: 肖文沁
-  sort_key: xiao
+  sort_key: "16"
   name_en: Wenqin Xiao
   role: basic_researcher
   title: 研究人员
@@ -131,11 +131,11 @@
   department_en: Department of Dermatology
 
 - name: 谢红付
-  sort_key: 00_xie_hongfu
+  sort_key: "01"
   name_en: Hongfu Xie
   role: clinical_researcher
   title: 教授，博士生导师，一级主任医师
-  title_en: Professor
+  title_en: Professor, Dermatologist
   photo: /assets/img/members/xhf.png
   department: 皮肤科
   department_en: Department of Dermatology
@@ -150,11 +150,11 @@
     主持国家自然科学基金4项，发表论文86篇。
 
 - name: 简丹
-  sort_key: jian
+  sort_key: "03"
   name_en: Dan Jian
   role: clinical_researcher
   title: 主任医师，博士生导师
-  title_en: Associate Professor
+  title_en: Professor, Dermatologist
   photo: /assets/img/members/jd.png
   department: 皮肤科
   department_en: Department of Dermatology
@@ -167,11 +167,11 @@
     损容性皮肤病发病及治疗机制、色素性皮肤病光电治疗。
 
 - name: 唐言
-  sort_key: tang
+  sort_key: "08"
   name_en: Yan Tang
   role: clinical_researcher
   title: 主治医师，博士
-  title_en: Attending Physician
+  title_en: Attending Physician, Dermatologist
   photo: /assets/img/members/ty.png
   department: 皮肤科
   department_en: Department of Dermatology
@@ -183,11 +183,11 @@
     主持国家自然科学基金2项，发表 SCI 论文15篇。
 
 - name: 刘芳芬
-  sort_key: liu
+  sort_key: "06"
   name_en: Fangfen Liu
   role: clinical_researcher
   title: 主治医师，博士
-  title_en: Attending Physician
+  title_en: Attending Physician, Dermatologist
   photo: /assets/img/members/lff.png
   department: 皮肤科
   department_en: Department of Dermatology
@@ -199,41 +199,41 @@
     熟悉 FUT/FUE 植发手术。主持及参与国家自然科学基金4项。
 
 - name: 汪犇
-  sort_key: wang
+  sort_key: "05"
   name_en: Ben Wang
   role: clinical_researcher
   title: 临床研究人员
-  title_en: Clinical Researcher
+  title_en: Clinical Researcher, Dermatologist
   photo: /assets/img/members/placeholder.png
   department: 皮肤科
   department_en: Department of Dermatology
 
 - name: 赵志祥
-  sort_key: zhao
+  sort_key: "10"
   name_en: Zhixiang Zhao
   role: clinical_researcher
   title: 临床研究人员
-  title_en: Clinical Researcher
+  title_en: Clinical Researcher, Dermatologist
   photo: /assets/img/members/placeholder.png
   department: 皮肤科
   department_en: Department of Dermatology
 
 - name: 施为
-  sort_key: shi
+  sort_key: "02"
   name_en: Wei Shi
   role: clinical_researcher
-  title: 临床研究人员
-  title_en: Clinical Researcher
+  title: 主任医师，教授
+  title_en: Professor, Dermatologist
   photo: /assets/img/members/placeholder.png
   department: 皮肤科
   department_en: Department of Dermatology
 
 - name: 黄莹雪
-  sort_key: huang
+  sort_key: "09"
   name_en: Yingxue Huang
   role: clinical_researcher
   title: 临床研究人员
-  title_en: Clinical Researcher
+  title_en: Clinical Researcher, Dermatologist
   photo: /assets/img/members/placeholder.png
   department: 皮肤科
   department_en: Department of Dermatology
