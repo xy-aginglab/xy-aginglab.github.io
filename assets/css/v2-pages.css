@@ -627,9 +627,11 @@ body.v2-body {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 @media (hover: hover) {
-  .bib-filters:hover {
+  .bib-filters__select:hover {
     border-color: var(--v2-accent);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .bib-filters__search input:hover {
+    border-color: var(--v2-accent);
   }
 }
 .bib-filters__search {
