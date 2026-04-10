@@ -650,6 +650,30 @@ body.v2-body {
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
   font-weight: 700;
 }
+/* Chinese spacing: interior pages */
+:lang(zh) .v2-page__content p {
+  margin-bottom: 1rem;
+}
+:lang(zh) .v2-page__content ul li,
+:lang(zh) .v2-page__content ol li {
+  margin-bottom: 0.6rem;
+  line-height: 1.85;
+}
+:lang(zh) .v2-program-entry {
+  padding: 1rem 0;
+}
+:lang(zh) .v2-program-entry + hr {
+  margin: 1.5rem 0;
+}
+:lang(zh) .v2-program-entry__content {
+  line-height: 1.9;
+}
+:lang(zh) .v2-utility-card {
+  padding: 1.4rem;
+}
+:lang(zh) .v2-utility-card p {
+  line-height: 1.75;
+}
 
 /* ── Member Detail Page ── */
 .v2-member-detail {
