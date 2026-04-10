@@ -457,9 +457,6 @@ body.v2-body {
   grid-template-columns: repeat(2, 1fr) !important;
   gap: 0.8rem !important;
 }
-.v2-pub-featured .bibliography > li:not(.bib-entry) {
-  display: none !important;
-}
 @media (max-width: 640px) {
   .v2-pub-featured .bibliography { grid-template-columns: 1fr !important; }
 }

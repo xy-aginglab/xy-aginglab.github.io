@@ -218,8 +218,10 @@ a:hover { color: var(--v2-accent-hover); }
 /* ── Research Topic ── */
 .v2-topic {
   padding: 1.3rem 0;
+  border-bottom: 1px solid var(--v2-line-light);
   overflow: hidden;
 }
+.v2-topic:last-of-type { border-bottom: none; }
 
 .v2-topic__header {
   display: flex;
