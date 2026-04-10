@@ -27,6 +27,7 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; }
 body.v2-body {
   margin: 0;
   font-family: var(--v2-font-sans);
@@ -108,12 +109,12 @@ a:hover { color: var(--v2-accent-hover); }
 }
 @media (max-width: 640px) {
   .v2-topbar__toggle { display: flex; }
-  .v2-topbar__inner { position: relative; }
+  .v2-topbar { position: relative; }
   .v2-topbar__nav {
     position: absolute;
     top: 52px;
-    left: -1.5rem;
-    right: -1.5rem;
+    left: 0;
+    right: 0;
     background: var(--v2-navy);
     flex-direction: column;
     padding: 0 1.5rem;
