@@ -88,6 +88,24 @@ a:hover { color: var(--v2-accent-hover); }
   background: rgba(255,255,255,0.1);
 }
 
+/* Language switch — pill button */
+.v2-lang-switch {
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.6rem !important;
+  border: 1.5px solid rgba(255,255,255,0.3) !important;
+  border-radius: 5px;
+  color: rgba(255,255,255,0.6) !important;
+  background: transparent !important;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.v2-lang-switch:hover {
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.7) !important;
+  background: rgba(255,255,255,0.1) !important;
+}
+
 /* ── Mobile Nav Toggle ── */
 .v2-topbar__toggle {
   display: none;
@@ -130,6 +148,12 @@ a:hover { color: var(--v2-accent-hover); }
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
   .v2-topbar__nav a:last-child { border-bottom: none; }
+  .v2-lang-switch {
+    width: fit-content;
+    margin-top: 0.3rem;
+    font-size: 0.88rem !important;
+    padding: 0.3rem 0.7rem !important;
+  }
   .v2-topbar__toggle[aria-expanded="true"] span:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
   }
