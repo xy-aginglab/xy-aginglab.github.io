@@ -427,6 +427,7 @@ a:hover { color: var(--v2-accent-hover); }
 .v2-clearfix::after { content: ""; display: table; clear: both; }
 
 /* ── CJK Typography ── */
+/* Serif (Noto Serif SC) for titles/headings; Sans (Noto Sans SC) for body */
 :lang(zh) .v2-about__mission,
 :lang(zh) .v2-topic__body,
 :lang(zh) .v2-footer-info {
@@ -434,20 +435,22 @@ a:hover { color: var(--v2-accent-hover); }
   line-height: 1.9;
 }
 :lang(zh) .v2-topic__title,
-:lang(zh) .v2-lab-header__name,
 :lang(zh) .v2-dir-overview__title {
-  font-family: var(--v2-font-sans);
-  letter-spacing: 0;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  letter-spacing: 0.02em;
+  font-weight: 700;
 }
 :lang(zh) .v2-dir-card h3 {
-  font-family: var(--v2-font-sans);
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-weight: 700;
 }
 :lang(zh) .v2-dir-card p,
 :lang(zh) .v2-about__pi-title {
   letter-spacing: 0.02em;
 }
 :lang(zh) .v2-about__pi-name {
-  font-family: var(--v2-font-sans);
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-weight: 700;
 }
 :lang(zh) .v2-site-footer p {
   letter-spacing: 0.02em;

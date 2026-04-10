@@ -612,31 +612,43 @@ body.v2-body {
 }
 
 /* ── CJK Typography for interior pages ── */
+/* Chinese font hierarchy:
+   Serif (Noto Serif SC)  → page titles, section headings, group titles — matches Playfair Display role
+   Sans  (Noto Sans SC)   → body text, member names, meta — matches Source Sans 3 role */
 :lang(zh) .v2-page__content {
   text-align: justify;
   line-height: 1.9;
 }
 :lang(zh) .v2-page__title,
 :lang(zh) .v2-team__group-title,
-:lang(zh) .v2-section__intro h2 {
-  font-family: var(--v2-font-sans);
-  letter-spacing: 0;
+:lang(zh) .v2-section__intro h2,
+:lang(zh) .v2-program-entry h2 {
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  letter-spacing: 0.02em;
+  font-weight: 700;
 }
 :lang(zh) .v2-pi-card__bio {
   text-align: justify;
   line-height: 1.8;
 }
-:lang(zh) .v2-pi-card h3,
+:lang(zh) .v2-pi-card h3 {
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-weight: 700;
+}
 :lang(zh) .v2-member-card h3 {
   font-family: var(--v2-font-sans);
 }
 :lang(zh) .v2-member-detail__name {
-  font-family: var(--v2-font-sans);
-  letter-spacing: 0;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  letter-spacing: 0.02em;
 }
 :lang(zh) .v2-member-detail__bio {
   text-align: justify;
   line-height: 1.9;
+}
+:lang(zh) .v2-utility-card h3 {
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-weight: 700;
 }
 
 /* ── Member Detail Page ── */
