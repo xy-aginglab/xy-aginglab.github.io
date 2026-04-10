@@ -225,6 +225,7 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
   margin: 0;
 }
 .v2-about__pi-title {
+  font-family: var(--v2-font-body);
   font-size: 0.85rem;
   color: var(--v2-muted);
   margin: 0.1rem 0 0;
