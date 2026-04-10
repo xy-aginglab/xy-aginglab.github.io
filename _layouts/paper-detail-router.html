@@ -3,191 +3,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% assign asset_version = site.time | date: '%s' %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ page.entry.abstract | strip_html | truncatewords: 50 }}" />
-  <script>
-    // Route to correct version based on referrer
-    (function() {
-      var ref = document.referrer || '';
-      if (ref.includes('/v3/')) {
-        document.documentElement.setAttribute('data-paper-version', 'v3');
-      } else if (ref.includes('/v2/')) {
-        document.documentElement.setAttribute('data-paper-version', 'v2');
-      } else {
-        document.documentElement.setAttribute('data-paper-version', 'v1');
-      }
-    })();
-  </script>
-  {% assign asset_version = site.time | date: '%s' %}
   {% if site.icon %}
     {% assign icon_value = site.icon | strip %}
-    {% if icon_value contains '://' %}
-      {% assign favicon_href = icon_value %}
-    {% elsif icon_value contains '/' or icon_value contains '.' %}
-      {% assign favicon_href = icon_value | relative_url %}
-    {% else %}
-      {% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}
-      {% assign emoji_svg_escaped = emoji_svg | uri_escape %}
-      {% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg_escaped %}
-    {% endif %}
+    {% if icon_value contains '://' %}{% assign favicon_href = icon_value %}
+    {% elsif icon_value contains '/' or icon_value contains '.' %}{% assign favicon_href = icon_value | relative_url %}
+    {% else %}{% capture emoji_svg %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">{{ icon_value }}</text></svg>{% endcapture %}{% assign favicon_href = 'data:image/svg+xml,' | append: emoji_svg | uri_escape %}{% endif %}
     <link rel="icon" href="{{ favicon_href }}">
   {% endif %}
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "custom-orange": "#a24f39",
-            "custom-soft": "#f5efe7"
-          }
-        }
-      }
-    };
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/v3.css?v=' | append: asset_version | relative_url }}" />
-  <script>
-    (function(){
-      var s = localStorage.getItem('v3-theme');
-      if (s !== 'dark' && s !== 'light') s = 'system';
-      var t = s;
-      if (s === 'system') {
-        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    })();
-  </script>
-  <style>
-    /* V1 style (default, hidden when v3) */
-    .paper-v1 { max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .paper-v1 h1 { font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin: 0.5rem 0 1rem; }
-    .paper-v1 .meta { color: #666; font-style: italic; margin-bottom: 0.3rem; }
-    .paper-v1 .authors { color: #555; line-height: 1.8; }
-    .paper-v1 .doi a { text-decoration: underline; }
-    .paper-v1 .abstract { margin-top: 1.5rem; border-top: 1px solid #e5e5e5; padding-top: 1.5rem; }
-    .paper-v1 .abstract p { line-height: 1.9; color: #444; }
-    .paper-v1 .back { margin-top: 2rem; }
-    .paper-v1 .back a { font-weight: 600; }
-
-    /* V2 style - same as V1 but different accent */
-    html[data-paper-version="v2"] .paper-v1 .back a { color: #a72126; }
-
-    /* Show/hide logic */
-    .paper-v3 { display: none; }
-    html[data-paper-version="v3"] .paper-v1 { display: none; }
-    html[data-paper-version="v3"] .paper-v3 { display: block; }
-  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/v2-home.css?v=' | append: asset_version | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/v2-pages.css?v=' | append: asset_version | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/v2-print.css?v=' | append: asset_version | relative_url }}" media="print" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCX316G25G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCX316G25G');</script>
 </head>
-<body>
+<body class="v2-body">
   {% assign publication_venue = page.entry.journal | default: page.entry.booktitle %}
 
-  <!-- V1/V2 rendering -->
-  <div class="paper-v1">
-    {% if publication_venue or page.entry.year %}
-      <p class="meta">
-        {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
-        {% if publication_venue and page.entry.year %} · {% endif %}
-        {% if page.entry.year %}{{ page.entry.year }}{% endif %}
-      </p>
-    {% endif %}
-    <h1>{{ page.title }}</h1>
-    {% if page.entry.author %}
-      <p class="authors">{{ page.entry.author }}</p>
-    {% endif %}
-    {% if page.entry.doi %}
-      <p class="doi">
-        <a href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener noreferrer">doi:{{ page.entry.doi }}</a>
-      </p>
-    {% endif %}
-    {% if page.entry.abstract %}
-      <div class="abstract">
-        <h2>Abstract</h2>
-        <p>{{ page.entry.abstract }}</p>
-      </div>
-    {% endif %}
-    <p class="back">
-      <a href="#" onclick="event.preventDefault(); if(document.referrer && document.referrer.includes(location.hostname)){history.back();}else{location.href='{{ '/v1/publications/' | relative_url }}';}">&larr; Back to publications</a>
-    </p>
-  </div>
-
-  <!-- V3 rendering (identical nav/footer structure to v3.liquid) -->
-  <div class="paper-v3">
-    <div class="v3-shell">
-      <nav class="v3-nav" data-v3-nav>
-        <div class="v3-nav__inner">
-          <a class="v3-brand" href="{{ '/v3/' | relative_url }}" aria-label="Li Lab">
-            <span class="v3-brand__title">Li Lab</span>
-          </a>
-          <button class="v3-nav__toggle" type="button" aria-controls="v3-primary-nav" aria-expanded="false" aria-label="Toggle site navigation" data-v3-nav-toggle>
-            <span></span><span></span><span></span>
-          </button>
-          <div class="v3-nav__menu" id="v3-primary-nav" data-v3-nav-menu>
-            <div class="v3-nav__menu-main">
-              <a href="{{ '/v3/projects/' | relative_url }}">Research</a>
-              <a href="{{ '/v3/publications/' | relative_url }}" class="is-active">Publications</a>
-              <a href="{{ '/v3/team/' | relative_url }}">Team</a>
-            </div>
-            <div class="v3-nav__utility" aria-label="Additional pages">
-              <a href="{{ '/v3/clinical/' | relative_url }}">Clinical</a>
-              <a href="{{ '/v3/contact/' | relative_url }}">Contact</a>
-              <a href="{{ '/v3/zh/' | relative_url }}">中文</a>
-              <button type="button" class="v3-theme-toggle" data-v3-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-circle-half-stroke"></i></button>
-            </div>
-          </div>
-        </div>
+  <header class="v2-topbar">
+    <div class="v2-topbar__inner">
+      <a class="v2-topbar__brand" href="{{ '/' | relative_url }}">Li Lab</a>
+      <nav class="v2-topbar__nav">
+        <a href="{{ '/projects/' | relative_url }}">Research</a>
+        <a href="{{ '/publications/' | relative_url }}" class="is-active">Publications</a>
+        <a href="{{ '/team/' | relative_url }}">Team</a>
+        <a href="{{ '/clinical/' | relative_url }}">Clinical</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <a href="{{ '/zh/' | relative_url }}">中文</a>
       </nav>
-
-      <main class="v3-main">
-        <article class="v3-paper">
-          {% if publication_venue or page.entry.year %}
-            <div class="v3-paper__meta">
-              {% if publication_venue %}
-                <span class="v3-paper__venue">{{ publication_venue }}</span>
-              {% endif %}
-              {% if page.entry.year %}
-                <span>{{ page.entry.year }}</span>
-              {% endif %}
-            </div>
-          {% endif %}
-          <h1 class="v3-paper__title">{{ page.title }}</h1>
-          {% if page.entry.author %}
-            <p class="v3-paper__authors">{{ page.entry.author }}</p>
-          {% endif %}
-          {% if page.entry.doi %}
-            <p class="v3-paper__doi">
-              <a href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener noreferrer">doi:{{ page.entry.doi }}</a>
-            </p>
-          {% endif %}
-          {% if page.entry.abstract %}
-            <section class="v3-paper__abstract">
-              <h2>Abstract</h2>
-              <p>{{ page.entry.abstract }}</p>
-            </section>
-          {% endif %}
-          <p class="v3-paper__back">
-            <a href="#" onclick="event.preventDefault(); if(document.referrer && document.referrer.includes(location.hostname)){history.back();}else{location.href='{{ '/v3/publications/' | relative_url }}';}">Back to publications</a>
-          </p>
-        </article>
-      </main>
-
-      <footer class="v3-logos">
-        <div class="v3-logos__inner">
-          <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University" loading="lazy">
-          <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital" loading="lazy">
-          <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab" loading="lazy">
-          <img src="{{ '/assets/img/logos/research_center.png' | relative_url }}" alt="Skin Aging and Hair Regeneration Research Center" loading="lazy">
-        </div>
-      </footer>
     </div>
+  </header>
 
-    <script src="{{ '/assets/js/v3.js?v=' | append: asset_version | relative_url }}"></script>
-  </div>
+  <main>
+    <div class="v2-page">
+      <article class="v2-page__content">
+        {% if publication_venue or page.entry.year %}
+          <p style="color:var(--v2-muted);font-style:italic;margin-bottom:0.3rem;">
+            {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
+            {% if publication_venue and page.entry.year %} · {% endif %}
+            {% if page.entry.year %}{{ page.entry.year }}{% endif %}
+          </p>
+        {% endif %}
+        <h1 style="font-family:var(--v2-font-serif);font-size:1.6rem;font-weight:700;line-height:1.3;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">{{ page.title }}</h1>
+        {% if page.entry.author %}
+          <p style="color:var(--v2-body);line-height:1.8;">{{ page.entry.author }}</p>
+        {% endif %}
+        {% if page.entry.doi %}
+          <p>
+            <a href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener noreferrer">doi:{{ page.entry.doi }}</a>
+          </p>
+        {% endif %}
+        {% if page.entry.abstract %}
+          <div style="margin-top:1.5rem;border-top:1px solid var(--v2-line);padding-top:1.5rem;">
+            <h2>Abstract</h2>
+            <p>{{ page.entry.abstract }}</p>
+          </div>
+        {% endif %}
+        <p style="margin-top:2rem;">
+          <a href="#" onclick="event.preventDefault(); if(document.referrer && document.referrer.includes(location.hostname)){history.back();}else{location.href='{{ '/publications/' | relative_url }}';}">&larr; Back to publications</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="v2-site-footer">
+    <div class="v2-site-footer__inner">
+      <div class="v2-site-footer__logos">
+        <img src="{{ '/assets/img/logos/csu.png' | relative_url }}" alt="Central South University">
+        <img src="{{ '/assets/img/logos/xiangya.png' | relative_url }}" alt="Xiangya Hospital">
+        <img src="{{ '/assets/img/logos/aging_lab.png' | relative_url }}" alt="Li Lab">
+      </div>
+      <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; Xiangya Hospital, Central South University</p>
+    </div>
+  </footer>
 </body>
 </html>

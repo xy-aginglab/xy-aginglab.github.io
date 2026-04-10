@@ -23,29 +23,19 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 
 ## Current Product Shape
 
-- `/` is the primary public entry and displays the version chooser so visitors can pick a version.
-- `/versions/` also renders the same chooser layout and remains a valid alias.
-- `/v1/` is the fuller institutional surface:
-  - branded and section-driven
+- `/` is the primary public entry (English homepage).
+- `/zh/` is the Chinese homepage.
+- The site is a single-version production surface (formerly "V2"), now the sole public version:
   - bilingual (`en` plus `zh`)
-  - Jekyll/al-folio based with a custom SCSS design system
-- `/v2/` is a research-narrative surface built on the v3 design system:
-  - shares v3 typography, color tokens, dark mode, and base CSS
-  - has its own `v2-*` layout files (copied from v3, URLs adjusted) for version isolation
-  - homepage features detailed research-direction narratives with inline high-impact-factor paper citations (inspired by qichen-lab.info)
-  - homepage structure: hero + research highlights (2 directions with paper evidence) + research direction summary cards
+  - Jekyll-based with custom CSS design system (v2-home.css, v2-pages.css)
+  - homepage features PI intro, detailed research-direction narratives with inline paper citations
   - research narrative content lives in `_data/research_directions.yml` (bilingual)
-  - interior pages reuse the same content patterns as v3 with v2-prefixed layouts
-  - all Bloom-specific naming (`bloom*`) is retired; no Tailwind CDN dependency
-- `/v3/` is the canonical final-design branch behind the primary public entry:
-  - content-first and typography-led
-  - must be visually distinct from Bloom Lab even if it preserves a calm academic homepage feel
-  - may reuse lightweight utility styling, but must not preserve Bloom-specific page skeletons, naming, or component mimicry
-  - is the preferred end-state public direction and should receive the highest design and product-quality investment
-  - its homepage should now follow the former `v4` implementation in full, with only one approved exception: keep the bug-free `v3` typewriter behavior
-  - `v3` and the former `v4` homepage experiment should not be treated as parallel public options anymore
-- `v1` can remain publicly accessible during transition work, but new design-level decisions should default toward strengthening `v3` unless the user explicitly asks for `v1`
-- Preserve this split unless the user explicitly requests a product-level consolidation and the skill is updated first.
+  - layout files: `v2.liquid`, `v2-home.liquid`, `v2-page.liquid`, `v2-people.liquid`, `v2-member-detail.liquid`
+  - fonts: Playfair Display + Source Serif 4 (English), Noto Serif SC + Noto Sans SC (Chinese)
+  - Google Analytics (GA4) integrated
+  - Open Graph + Twitter Card meta tags for social sharing
+  - JSON-LD structured data for search engines
+- V1, V3, and Bloom versions have been archived to `xy-lilab/site-archive` (private repo) and removed from this codebase.
 
 ## Required Workflow
 
