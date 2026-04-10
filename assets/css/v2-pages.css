@@ -198,8 +198,6 @@ body.v2-body {
   font-weight: 700;
   color: var(--v2-ink);
   margin: 0 0 1rem;
-  border-bottom: 2px solid var(--v2-accent);
-  display: inline-block;
 }
 
 /* PI card */
@@ -221,6 +219,11 @@ body.v2-body {
   color: var(--v2-ink);
   margin: 0 0 0.2rem;
 }
+.v2-pi-card__info h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.v2-pi-card__info h3 a:hover { color: var(--v2-accent); }
 .v2-pi-card__title {
   font-size: 0.92rem;
   color: var(--v2-muted);
@@ -245,6 +248,7 @@ body.v2-body {
   gap: 1rem;
 }
 .v2-member-card {
+  position: relative;
   display: flex;
   gap: 0.8rem;
   align-items: start;
@@ -253,6 +257,7 @@ body.v2-body {
   border-radius: var(--v2-radius);
   background: var(--v2-surface);
   transition: border-color 0.2s;
+  cursor: pointer;
 }
 .v2-member-card:hover { border-color: var(--v2-accent); }
 .v2-member-card img {
@@ -267,6 +272,16 @@ body.v2-body {
   color: var(--v2-ink);
   margin: 0 0 0.15rem;
 }
+.v2-member-card__info h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.v2-member-card__info h3 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.v2-member-card__info h3 a:hover { color: var(--v2-accent); }
 .v2-member-card__info p {
   font-size: 0.85rem;
   color: var(--v2-muted);
@@ -276,6 +291,8 @@ body.v2-body {
 
 /* Member links (shared) */
 .v2-member-links {
+  position: relative;
+  z-index: 1;
   display: flex;
   gap: 0.5rem;
 }
