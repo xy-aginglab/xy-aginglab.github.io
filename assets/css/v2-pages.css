@@ -10,7 +10,7 @@ body.v2-body {
 
 /* ── Page Shell ── */
 .v2-page {
-  max-width: 960px;
+  max-width: var(--v2-max, 1020px);
   margin: 0 auto;
   padding: 0 1.5rem 3rem;
 }
