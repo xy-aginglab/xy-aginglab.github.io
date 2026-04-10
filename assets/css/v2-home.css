@@ -164,6 +164,7 @@ a:hover { color: var(--v2-accent-hover); }
 .v2-lab-header__logo img { height: 44px; width: auto; }
 @media (max-width: 600px) {
   .v2-lab-header { grid-template-columns: 1fr auto; gap: 0.5rem; }
+  .v2-lab-header__name { font-size: 1.6rem; }
   .v2-lab-header__logo img { height: 28px; }
 }
 
