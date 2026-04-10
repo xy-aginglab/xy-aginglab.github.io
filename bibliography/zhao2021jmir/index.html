@@ -2,183 +2,86 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A Novel Convolutional Neural Network for the Diagnosis and Classification of Rosacea: Usability Study | Li Lab</title>
   <meta name="description" content="BACKGROUND: Rosacea is a chronic inflammatory disease with variable clinical presentations, including transient flushing, fixed erythema, papules, pustules, and phymatous changes on the central face. Owing to the diversity in the clinical manifestations of rosacea, the lack of objective biochemical examinations, and nonspecificity in histopathological findings, accurate identification of rosacea...">
-  <script>
-    // Route to correct version based on referrer
-    (function() {
-      var ref = document.referrer || '';
-      if (ref.includes('/v3/')) {
-        document.documentElement.setAttribute('data-paper-version', 'v3');
-      } else if (ref.includes('/v2/')) {
-        document.documentElement.setAttribute('data-paper-version', 'v2');
-      } else {
-        document.documentElement.setAttribute('data-paper-version', 'v1');
-      }
-    })();
-  </script>
-  
   
     
     
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E">
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "custom-orange": "#a24f39",
-            "custom-soft": "#f5efe7"
-          }
-        }
-      }
-    };
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,700&amp;family=Fira+Code:wght@400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;family=Noto+Serif+SC:wght@500;700&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
-  <link rel="stylesheet" href="/assets/css/v3.css?v=1775842093">
-  <script>
-    (function(){
-      var s = localStorage.getItem('v3-theme');
-      if (s !== 'dark' && s !== 'light') s = 'system';
-      var t = s;
-      if (s === 'system') {
-        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    })();
-  </script>
-  <style>
-    /* V1 style (default, hidden when v3) */
-    .paper-v1 { max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    .paper-v1 h1 { font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin: 0.5rem 0 1rem; }
-    .paper-v1 .meta { color: #666; font-style: italic; margin-bottom: 0.3rem; }
-    .paper-v1 .authors { color: #555; line-height: 1.8; }
-    .paper-v1 .doi a { text-decoration: underline; }
-    .paper-v1 .abstract { margin-top: 1.5rem; border-top: 1px solid #e5e5e5; padding-top: 1.5rem; }
-    .paper-v1 .abstract p { line-height: 1.9; color: #444; }
-    .paper-v1 .back { margin-top: 2rem; }
-    .paper-v1 .back a { font-weight: 600; }
-
-    /* V2 style - same as V1 but different accent */
-    html[data-paper-version="v2"] .paper-v1 .back a { color: #a72126; }
-
-    /* Show/hide logic */
-    .paper-v3 { display: none; }
-    html[data-paper-version="v3"] .paper-v1 { display: none; }
-    html[data-paper-version="v3"] .paper-v3 { display: block; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/v2-home.css?v=1775842568">
+  <link rel="stylesheet" href="/assets/css/v2-pages.css?v=1775842568">
+  <link rel="stylesheet" href="/assets/css/v2-print.css?v=1775842568" media="print">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCX316G25G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MCX316G25G');</script>
 </head>
-<body>
+<body class="v2-body">
   
 
-  <!-- V1/V2 rendering -->
-  <div class="paper-v1">
-    
-      <p class="meta">
-        <em>JMIR medical informatics</em>
-         · 
-        2021
-      </p>
-    
-    <h1>A Novel Convolutional Neural Network for the Diagnosis and Classification of Rosacea: Usability Study</h1>
-    
-      <p class="authors">Zhao, Z. and Wu, C. and Zhang, S. and He, F. and Liu, F. and Wang, B. and Huang, Y. and Shi, W. and Jian, D. and Xie, H. and Yeh, C. and Li, J.</p>
-    
-    
-      <p class="doi">
-        <a href="https://doi.org/10.2196/23415" target="_blank" rel="noopener noreferrer">doi:10.2196/23415</a>
-      </p>
-    
-    
-      <div class="abstract">
-        <h2>Abstract</h2>
-        <p>BACKGROUND: Rosacea is a chronic inflammatory disease with variable clinical presentations, including transient flushing, fixed erythema, papules, pustules, and phymatous changes on the central face. Owing to the diversity in the clinical manifestations of rosacea, the lack of objective biochemical examinations, and nonspecificity in histopathological findings, accurate identification of rosacea is a big challenge. Artificial intelligence has emerged as a potential tool in the identification and evaluation of some skin diseases such as melanoma, basal cell carcinoma, and psoriasis. OBJECTIVE: The objective of our study was to utilize a convolutional neural network (CNN) to differentiate the clinical photos of patients with rosacea (taken from 3 different angles) from those of patients with other skin diseases such as acne, seborrheic dermatitis, and eczema that could be easily confused with rosacea. METHODS: In this study, 24,736 photos comprising of 18,647 photos of patients with rosacea and 6089 photos of patients with other skin diseases such as acne, facial seborrheic dermatitis, and eczema were included and analyzed by our CNN model based on ResNet-50. RESULTS: The CNN in our study achieved an overall accuracy and precision of 0.914 and 0.898, with an area under the receiver operating characteristic curve of 0.972 for the detection of rosacea. The accuracy of classifying 3 subtypes of rosacea, that is, erythematotelangiectatic rosacea, papulopustular rosacea, and phymatous rosacea was 83.9%, 74.3%, and 80.0%, respectively. Moreover, the accuracy and precision of our CNN to distinguish rosacea from acne reached 0.931 and 0.893, respectively. For the differentiation between rosacea, seborrheic dermatitis, and eczema, the overall accuracy of our CNN was 0.757 and the precision was 0.667. Finally, by comparing the CNN diagnosis with the diagnoses by dermatologists of different expertise levels, we found that our CNN system is capable of identifying rosacea with a performance superior to that of resident doctors or attending physicians and comparable to that of experienced dermatologists. CONCLUSIONS: The findings of our study showed that by assessing clinical images, the CNN system in our study could identify rosacea with accuracy and precision comparable to that of an experienced dermatologist.</p>
-      </div>
-    
-    <p class="back">
-      <a href="#" onclick="event.preventDefault(); if(document.referrer &amp;&amp; document.referrer.includes(location.hostname)){history.back();}else{location.href='/v1/publications/';}">← Back to publications</a>
-    </p>
-  </div>
-
-  <!-- V3 rendering (identical nav/footer structure to v3.liquid) -->
-  <div class="paper-v3">
-    <div class="v3-shell">
-      <nav class="v3-nav" data-v3-nav>
-        <div class="v3-nav__inner">
-          <a class="v3-brand" href="/v3/" aria-label="Li Lab">
-            <span class="v3-brand__title">Li Lab</span>
-          </a>
-          <button class="v3-nav__toggle" type="button" aria-controls="v3-primary-nav" aria-expanded="false" aria-label="Toggle site navigation" data-v3-nav-toggle>
-            <span></span><span></span><span></span>
-          </button>
-          <div class="v3-nav__menu" id="v3-primary-nav" data-v3-nav-menu>
-            <div class="v3-nav__menu-main">
-              <a href="/v3/projects/">Research</a>
-              <a href="/v3/publications/" class="is-active">Publications</a>
-              <a href="/v3/team/">Team</a>
-            </div>
-            <div class="v3-nav__utility" aria-label="Additional pages">
-              <a href="/v3/clinical/">Clinical</a>
-              <a href="/v3/contact/">Contact</a>
-              <a href="/v3/zh/">中文</a>
-              <button type="button" class="v3-theme-toggle" data-v3-theme-toggle aria-label="Toggle dark mode"><i class="fas fa-circle-half-stroke"></i></button>
-            </div>
-          </div>
-        </div>
+  <header class="v2-topbar">
+    <div class="v2-topbar__inner">
+      <a class="v2-topbar__brand" href="/">Li Lab</a>
+      <nav class="v2-topbar__nav">
+        <a href="/projects/">Research</a>
+        <a href="/publications/" class="is-active">Publications</a>
+        <a href="/team/">Team</a>
+        <a href="/clinical/">Clinical</a>
+        <a href="/contact/">Contact</a>
+        <a href="/zh/">中文</a>
       </nav>
-
-      <main class="v3-main">
-        <article class="v3-paper">
-          
-            <div class="v3-paper__meta">
-              
-                <span class="v3-paper__venue">JMIR medical informatics</span>
-              
-              
-                <span>2021</span>
-              
-            </div>
-          
-          <h1 class="v3-paper__title">A Novel Convolutional Neural Network for the Diagnosis and Classification of Rosacea: Usability Study</h1>
-          
-            <p class="v3-paper__authors">Zhao, Z. and Wu, C. and Zhang, S. and He, F. and Liu, F. and Wang, B. and Huang, Y. and Shi, W. and Jian, D. and Xie, H. and Yeh, C. and Li, J.</p>
-          
-          
-            <p class="v3-paper__doi">
-              <a href="https://doi.org/10.2196/23415" target="_blank" rel="noopener noreferrer">doi:10.2196/23415</a>
-            </p>
-          
-          
-            <section class="v3-paper__abstract">
-              <h2>Abstract</h2>
-              <p>BACKGROUND: Rosacea is a chronic inflammatory disease with variable clinical presentations, including transient flushing, fixed erythema, papules, pustules, and phymatous changes on the central face. Owing to the diversity in the clinical manifestations of rosacea, the lack of objective biochemical examinations, and nonspecificity in histopathological findings, accurate identification of rosacea is a big challenge. Artificial intelligence has emerged as a potential tool in the identification and evaluation of some skin diseases such as melanoma, basal cell carcinoma, and psoriasis. OBJECTIVE: The objective of our study was to utilize a convolutional neural network (CNN) to differentiate the clinical photos of patients with rosacea (taken from 3 different angles) from those of patients with other skin diseases such as acne, seborrheic dermatitis, and eczema that could be easily confused with rosacea. METHODS: In this study, 24,736 photos comprising of 18,647 photos of patients with rosacea and 6089 photos of patients with other skin diseases such as acne, facial seborrheic dermatitis, and eczema were included and analyzed by our CNN model based on ResNet-50. RESULTS: The CNN in our study achieved an overall accuracy and precision of 0.914 and 0.898, with an area under the receiver operating characteristic curve of 0.972 for the detection of rosacea. The accuracy of classifying 3 subtypes of rosacea, that is, erythematotelangiectatic rosacea, papulopustular rosacea, and phymatous rosacea was 83.9%, 74.3%, and 80.0%, respectively. Moreover, the accuracy and precision of our CNN to distinguish rosacea from acne reached 0.931 and 0.893, respectively. For the differentiation between rosacea, seborrheic dermatitis, and eczema, the overall accuracy of our CNN was 0.757 and the precision was 0.667. Finally, by comparing the CNN diagnosis with the diagnoses by dermatologists of different expertise levels, we found that our CNN system is capable of identifying rosacea with a performance superior to that of resident doctors or attending physicians and comparable to that of experienced dermatologists. CONCLUSIONS: The findings of our study showed that by assessing clinical images, the CNN system in our study could identify rosacea with accuracy and precision comparable to that of an experienced dermatologist.</p>
-            </section>
-          
-          <p class="v3-paper__back">
-            <a href="#" onclick="event.preventDefault(); if(document.referrer &amp;&amp; document.referrer.includes(location.hostname)){history.back();}else{location.href='/v3/publications/';}">Back to publications</a>
-          </p>
-        </article>
-      </main>
-
-      <footer class="v3-logos">
-        <div class="v3-logos__inner">
-          <img src="/assets/img/logos/csu.png" alt="Central South University" loading="lazy">
-          <img src="/assets/img/logos/xiangya.png" alt="Xiangya Hospital" loading="lazy">
-          <img src="/assets/img/logos/aging_lab.png" alt="Li Lab" loading="lazy">
-          <img src="/assets/img/logos/research_center.png" alt="Skin Aging and Hair Regeneration Research Center" loading="lazy">
-        </div>
-      </footer>
     </div>
+  </header>
 
-    <script src="/assets/js/v3.js?v=1775842093"></script>
-  </div>
+  <main>
+    <div class="v2-page">
+      <article class="v2-page__content">
+        
+          <p style="color:var(--v2-muted);font-style:italic;margin-bottom:0.3rem;">
+            <em>JMIR medical informatics</em>
+             · 
+            2021
+          </p>
+        
+        <h1 style="font-family:var(--v2-font-serif);font-size:1.6rem;font-weight:700;line-height:1.3;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">A Novel Convolutional Neural Network for the Diagnosis and Classification of Rosacea: Usability Study</h1>
+        
+          <p style="color:var(--v2-body);line-height:1.8;">Zhao, Z. and Wu, C. and Zhang, S. and He, F. and Liu, F. and Wang, B. and Huang, Y. and Shi, W. and Jian, D. and Xie, H. and Yeh, C. and Li, J.</p>
+        
+        
+          <p>
+            <a href="https://doi.org/10.2196/23415" target="_blank" rel="noopener noreferrer">doi:10.2196/23415</a>
+          </p>
+        
+        
+          <div style="margin-top:1.5rem;border-top:1px solid var(--v2-line);padding-top:1.5rem;">
+            <h2>Abstract</h2>
+            <p>BACKGROUND: Rosacea is a chronic inflammatory disease with variable clinical presentations, including transient flushing, fixed erythema, papules, pustules, and phymatous changes on the central face. Owing to the diversity in the clinical manifestations of rosacea, the lack of objective biochemical examinations, and nonspecificity in histopathological findings, accurate identification of rosacea is a big challenge. Artificial intelligence has emerged as a potential tool in the identification and evaluation of some skin diseases such as melanoma, basal cell carcinoma, and psoriasis. OBJECTIVE: The objective of our study was to utilize a convolutional neural network (CNN) to differentiate the clinical photos of patients with rosacea (taken from 3 different angles) from those of patients with other skin diseases such as acne, seborrheic dermatitis, and eczema that could be easily confused with rosacea. METHODS: In this study, 24,736 photos comprising of 18,647 photos of patients with rosacea and 6089 photos of patients with other skin diseases such as acne, facial seborrheic dermatitis, and eczema were included and analyzed by our CNN model based on ResNet-50. RESULTS: The CNN in our study achieved an overall accuracy and precision of 0.914 and 0.898, with an area under the receiver operating characteristic curve of 0.972 for the detection of rosacea. The accuracy of classifying 3 subtypes of rosacea, that is, erythematotelangiectatic rosacea, papulopustular rosacea, and phymatous rosacea was 83.9%, 74.3%, and 80.0%, respectively. Moreover, the accuracy and precision of our CNN to distinguish rosacea from acne reached 0.931 and 0.893, respectively. For the differentiation between rosacea, seborrheic dermatitis, and eczema, the overall accuracy of our CNN was 0.757 and the precision was 0.667. Finally, by comparing the CNN diagnosis with the diagnoses by dermatologists of different expertise levels, we found that our CNN system is capable of identifying rosacea with a performance superior to that of resident doctors or attending physicians and comparable to that of experienced dermatologists. CONCLUSIONS: The findings of our study showed that by assessing clinical images, the CNN system in our study could identify rosacea with accuracy and precision comparable to that of an experienced dermatologist.</p>
+          </div>
+        
+        <p style="margin-top:2rem;">
+          <a href="#" onclick="event.preventDefault(); if(document.referrer &amp;&amp; document.referrer.includes(location.hostname)){history.back();}else{location.href='/publications/';}">← Back to publications</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="v2-site-footer">
+    <div class="v2-site-footer__inner">
+      <div class="v2-site-footer__logos">
+        <img src="/assets/img/logos/csu.png" alt="Central South University">
+        <img src="/assets/img/logos/xiangya.png" alt="Xiangya Hospital">
+        <img src="/assets/img/logos/aging_lab.png" alt="Li Lab">
+      </div>
+      <p>© 2026 Li Lab · Xiangya Hospital, Central South University</p>
+    </div>
+  </footer>
 </body>
 </html>
