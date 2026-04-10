@@ -377,6 +377,10 @@ a:hover { color: var(--v2-accent-hover); }
   margin-bottom: 0.8rem;
 }
 .v2-site-footer__logos img { height: 36px; width: auto; opacity: 0.6; filter: brightness(0) invert(1); }
+@media (max-width: 600px) {
+  .v2-site-footer__logos { gap: 0.8rem; flex-wrap: wrap; }
+  .v2-site-footer__logos img { height: 28px; }
+}
 .v2-site-footer p { margin: 0; }
 
 /* ── Page Container ── */
