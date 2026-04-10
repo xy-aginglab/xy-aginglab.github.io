@@ -87,7 +87,7 @@ body.v2-body {
 .v2-page__content hr {
   border: none;
   border-top: 1px solid var(--v2-line);
-  margin: 2rem 0;
+  margin: 1.2rem 0;
 }
 
 /* ── Section pattern (publications, clinical) ── */
