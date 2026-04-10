@@ -3,7 +3,7 @@ layout: v3-page
 permalink: /v3/zh/publications/
 title: 论文发表
 lang: zh
-description: Li Lab 发表论文列表。
+description: Li Lab 发表论文。
 show_eyebrow: false
 show_lead: false
 hide_publication_thumbnails: true
@@ -12,7 +12,7 @@ hide_publication_thumbnails: true
   <section class="v3-section">
     <div class="v3-section__intro">
       <h2>代表性论文</h2>
-      <p>代表实验室当前核心研究方向的关键论文。</p>
+      <p>代表实验室核心研究方向的重要论文。</p>
     </div>
     <div class="v3-pub-featured">
       {% bibliography --group_by none --query @*[selected=true]* %}

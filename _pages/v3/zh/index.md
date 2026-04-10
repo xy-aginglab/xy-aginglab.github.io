@@ -10,7 +10,7 @@ description: Li Lab 官方网站。
     <div class="v3-hero__copy">
       <h1 class="v3-hero__title">Li Lab.</h1>
       <p class="v3-hero__dynamic">
-        <span class="v3-hero__dynamic-prefix">我们研究</span>
+        <span class="v3-hero__dynamic-prefix">聚焦</span>
         <span class="v3-rotator-slot">
           <span
             class="v3-rotator"
@@ -22,10 +22,10 @@ description: Li Lab 官方网站。
             aria-live="polite"
           >毛囊皮脂腺相关疾病</span>
         </span>
-        <span class="v3-hero__dynamic-prefix">的机制</span>
+        <span class="v3-hero__dynamic-prefix">的机制与转化研究</span>
       </p>
       <p class="v3-hero__lead">
-        依托中南大学湘雅医院，我们通过患者队列、疾病模型和转化实验研究毛囊皮脂腺相关疾病与皮肤衰老。
+        依托中南大学湘雅医院，通过患者队列、疾病模型与转化实验，系统研究毛囊皮脂腺相关疾病与皮肤衰老的发病机制。
       </p>
       <div class="v3-hero__actions">
         <a class="v3-button v3-button--primary" href="{{ '/v3/zh/projects/' | relative_url }}">了解科研方向</a>

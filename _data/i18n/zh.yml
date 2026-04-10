@@ -10,12 +10,12 @@ nav:
 
 hero:
   subtitle: "中南大学湘雅医院 · 皮肤科"
-  tagline: "本实验室依托中南大学湘雅医院丰富的临床资源，致力于临床皮肤科学与分子生物学的交叉融合研究。在李吉教授的带领下，团队聚焦皮肤健康的生物学标志物发现与下一代干预策略的开发。"
+  tagline: "依托中南大学湘雅医院丰富的临床资源，实验室致力于临床皮肤科学与分子生物学的交叉融合研究。在李吉教授带领下，团队聚焦皮肤健康相关的生物标志物发现与新型干预策略开发。"
 
 home:
   about_body: >
-    本实验室依托**中南大学湘雅医院**丰富的临床资源，致力于**临床皮肤科学**与**分子生物学**
-    的交叉融合研究。在**李吉教授**的带领下，团队聚焦皮肤健康的生物学标志物发现与下一代干预策略的开发。
+    依托**中南大学湘雅医院**丰富的临床资源，实验室致力于**临床皮肤科学**与**分子生物学**
+    的交叉融合研究。在**李吉教授**带领下，团队聚焦皮肤健康相关的生物标志物发现与新型干预策略开发。
   research_heading: 研究方向
   selected_pubs_heading: 代表性论文
   contact_heading: 联系我们
@@ -37,7 +37,7 @@ research:
 
 people:
   page_title: 团队介绍
-  page_desc: Li Lab成员
+  page_desc: Li Lab 成员
   pi: 实验室主任
   basic_researchers: 基础研究人员
   clinical_researchers: 临床研究人员
@@ -45,11 +45,11 @@ people:
 
 publications:
   page_title: 论文发表
-  page_desc: 按时间倒序排列的论文列表，由 jekyll-scholar 自动生成。
+  page_desc: 按时间倒序排列的论文列表。
 
 projects:
   page_title: 科研方向
-  page_desc: Li Lab研究方向
+  page_desc: Li Lab 研究方向
 
 footer:
   powered_by: "技术支持"

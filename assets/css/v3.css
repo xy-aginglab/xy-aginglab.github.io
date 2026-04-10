@@ -373,6 +373,41 @@ img {
   transform: scaleX(1);
 }
 
+/* Language switch — pill button */
+.v3-lang-switch {
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.62rem !important;
+  border: 1.5px solid var(--v3-line);
+  border-radius: 6px;
+  color: var(--v3-muted) !important;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.v3-lang-switch::after {
+  display: none !important;
+}
+
+.v3-lang-switch:hover {
+  color: var(--v3-ink) !important;
+  border-color: var(--v3-ink);
+  background: var(--v3-accent-soft);
+}
+
+/* ── Chinese Typography Adjustments ── */
+html[lang="zh"] {
+  letter-spacing: 0;
+}
+
+html[lang="zh"] .v3-hero__dynamic {
+  letter-spacing: 0;
+}
+
+html[lang="zh"] .v3-hero__lead {
+  letter-spacing: 0.02em;
+}
+
 /* ── Main Content & Footer ── */
 .v3-main {
   flex: 1;
@@ -1532,6 +1567,13 @@ img {
   .v3-nav__utility a {
     padding: 0.7rem 0;
     font-size: 1rem;
+  }
+
+  .v3-lang-switch {
+    width: fit-content;
+    margin-top: 0.3rem;
+    font-size: 0.88rem !important;
+    padding: 0.28rem 0.7rem !important;
   }
 
   .v3-nav__menu a::after,

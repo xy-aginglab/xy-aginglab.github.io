@@ -3,7 +3,7 @@ layout: v3-page
 permalink: /v3/zh/clinical/
 title: 临床研究
 lang: zh
-description: 连接湘雅医院临床资源与机制发现和干预设计的临床项目。
+description: 依托湘雅医院临床资源，开展机制探索与干预策略研究。
 show_lead: false
 ---
 <div class="v3-utility">
@@ -11,22 +11,22 @@ show_lead: false
     <div class="v3-utility-list">
       <article>
         <h3>皮肤衰老队列</h3>
-        <p>结合分子分析、生物标志物发现和衰老时钟开发的纵向表型研究。</p>
+        <p>基于长寿人群的纵向表型研究，结合分子分析与生物标志物发现，推动衰老时钟的开发与验证。</p>
       </article>
       <article>
         <h3>毛发疾病</h3>
-        <p>临床样本结合器官培养和再生策略，研究脱发与白发。</p>
+        <p>整合临床样本、器官培养与再生策略，系统研究脱发及白发的发病机制与治疗方案。</p>
       </article>
       <article>
         <h3>炎症性皮肤病</h3>
-        <p>聚焦玫瑰痤疮、痤疮等损容性皮肤病的患者来源样本与疾病导向研究。</p>
+        <p>以患者来源样本为基础，围绕玫瑰痤疮、痤疮等损容性皮肤病开展疾病导向的机制与转化研究。</p>
       </article>
     </div>
   </section>
 
   <section class="v3-utility-section">
     <h2>临床合作</h2>
-    <p>如需队列、样本或转化皮肤病学研究合作，请联系 <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>。</p>
+    <p>如有队列、样本或转化皮肤病学方面的合作意向，欢迎联系 <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>。</p>
   </section>
 </div>
 
