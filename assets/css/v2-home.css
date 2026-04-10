@@ -69,7 +69,6 @@ a:hover { color: var(--v2-accent-hover); }
 }
 .v2-topbar__brand:hover {
   color: #fff;
-  letter-spacing: -0.02em;
 }
 .v2-topbar__nav {
   display: flex;
