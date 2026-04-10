@@ -12,17 +12,19 @@
 
   <main>
     <div class="v2-page">
-      <article class="v2-page__content">
+      <header class="v2-page__header">
         {% if publication_venue or page.entry.year %}
-          <p style="color:var(--v2-muted);font-style:italic;margin-bottom:0.3rem;margin-top:1rem;">
+          <p class="v2-page__lead">
             {% if publication_venue %}<em>{{ publication_venue }}</em>{% endif %}
             {% if publication_venue and page.entry.year %} · {% endif %}
             {% if page.entry.year %}{{ page.entry.year }}{% endif %}
           </p>
         {% endif %}
-        <h1 style="font-family:var(--v2-font-serif);font-size:1.6rem;font-weight:700;line-height:1.3;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">{{ page.title }}</h1>
+        <h1 class="v2-page__title">{{ page.title }}</h1>
+      </header>
+      <article class="v2-page__content">
         {% if page.entry.author %}
-          <p style="color:var(--v2-body);line-height:1.8;">{{ page.entry.author }}</p>
+          <p>{{ page.entry.author }}</p>
         {% endif %}
         {% if page.entry.doi %}
           <p>
@@ -30,12 +32,11 @@
           </p>
         {% endif %}
         {% if page.entry.abstract %}
-          <div style="margin-top:1rem;border-top:1px solid var(--v2-line);padding-top:0.8rem;">
-            <h2>Abstract</h2>
-            <p>{{ page.entry.abstract }}</p>
-          </div>
+          <hr>
+          <h2>Abstract</h2>
+          <p>{{ page.entry.abstract }}</p>
         {% endif %}
-        <p style="margin-top:2rem;">
+        <p class="v2-member-detail__back">
           <a href="#" onclick="event.preventDefault(); if(document.referrer && document.referrer.includes(location.hostname)){history.back();}else{location.href='{{ '/publications/' | relative_url }}';}">&larr; Back to publications</a>
         </p>
       </article>
