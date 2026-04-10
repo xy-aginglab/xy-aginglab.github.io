@@ -222,11 +222,17 @@
   sort_key: "02"
   name_en: Wei Shi
   role: clinical_researcher
-  title: 主任医师，教授
-  title_en: Professor, Dermatologist
+  title: 主任医师，教授，博士研究生导师
+  title_en: Professor, Dermatologist, Doctoral Supervisor
   photo: /assets/img/members/placeholder.png
   department: 皮肤科
   department_en: Department of Dermatology
+  bio: >
+    Visiting Scholar at Department of Pathology, Tulane University and South Carolina Dermatology Group.<br><br>
+    Currently serves as Member of the Dermatopathology Committee, CMA Dermatology; Deputy Chair of the Hair Medicine & Scalp Health Management Committee, CAIM; Member of the Dermatopathology Group, CRMA Dermatology; Head of the Trichology Group and Deputy Head of the Pathology Group, Hunan Medical Association Dermatology.<br><br>
+  bio_zh: >
+    美国Tulane大学病理系、南卡罗纳州皮肤病集团医院访问学者。<br><br>
+    现兼任中华医学会皮肤科分会病理专业委员会委员、红斑狼疮研究协作组委员，中国中西医结合学会医学美容专委会毛发医学与头皮健康管理专委会副主任委员，中国康复医学会皮肤科分会皮肤病理学组委员，中国中西医结合学会皮肤病专委会皮肤病理学组委员，中国罕见病联盟皮肤病专委会委员，湖南省医学会皮肤病学会委员、毛发学组组长、病理学组副组长，湖南省医学会变态反应学会常委。
 
 - name: 黄莹雪
   sort_key: "09"
