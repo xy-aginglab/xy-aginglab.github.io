@@ -1,6 +1,6 @@
 # Repository Agent Instructions
 
-This repository keeps its operating contract in the project-local skill at `.codex/skills/xy-aginglab-site-governance/SKILL.md`.
+This repository keeps its operating contract in the project-local skill at `.codex/skills/xy-lilab-site-governance/SKILL.md`.
 
 - Before any implementation, refactor, content edit, design change, or code review in this repo, open that `SKILL.md` and follow it.
 - Re-open the skill from disk for every task. Do not rely on memory, because the skill is meant to be updated in-repo at runtime.

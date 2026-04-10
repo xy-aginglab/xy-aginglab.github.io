@@ -1,6 +1,6 @@
 ---
-name: xy-aginglab-site-governance
-description: Use when working in the xy-aginglab.github.io repository for the Hunan Key Laboratory of Aging Biology. Covers project goals, governance rules, version strategy, bilingual content behavior, and module ownership for layout, style, data, and publication changes.
+name: xy-lilab-site-governance
+description: Use when working in the xy-lilab.github.io repository for the Hunan Key Laboratory of Aging Biology. Covers project goals, governance rules, version strategy, bilingual content behavior, and module ownership for layout, style, data, and publication changes.
 ---
 
 # XY AgingLab Site Governance

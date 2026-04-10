@@ -1,7 +1,7 @@
 interface:
   display_name: "XY AgingLab Governance"
   short_description: "Governance rules for the Aging Biology Lab site."
-  default_prompt: "Use $xy-aginglab-site-governance to align a change in xy-aginglab.github.io with the project's design, feature, and module rules."
+  default_prompt: "Use $xy-lilab-site-governance to align a change in xy-lilab.github.io with the project's design, feature, and module rules."
 
 policy:
   allow_implicit_invocation: true
