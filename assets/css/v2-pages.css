@@ -23,7 +23,7 @@ body.v2-body {
 .v2-page__title {
   font-family: var(--v2-font-serif);
   font-size: clamp(1.8rem, 1.5rem + 0.9vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 900;
   color: var(--v2-ink);
   margin: 0;
   letter-spacing: -0.03em;
@@ -511,7 +511,7 @@ body.v2-body {
 .v2-page__content .bibliography + h2 {
   font-family: var(--v2-font-serif) !important;
   font-size: 1.6rem !important;
-  font-weight: 800 !important;
+  font-weight: 900 !important;
   color: var(--v2-ink) !important;
   margin: 2rem 0 0.6rem !important;
   padding: 0 !important;
@@ -679,7 +679,7 @@ body.v2-body {
 .v2-member-detail__name {
   font-family: var(--v2-font-serif);
   font-size: clamp(1.6rem, 1.3rem + 0.8vw, 2.2rem);
-  font-weight: 800;
+  font-weight: 900;
   color: var(--v2-ink);
   margin: 0 0 0.2rem;
   letter-spacing: -0.02em;
