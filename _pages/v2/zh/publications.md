@@ -8,7 +8,7 @@ show_lead: false
 <div class="v2-section">
   <div class="v2-section__intro">
     <h2>代表性论文</h2>
-    <p>定义实验室当前研究方向的关键论文。</p>
+    <p>以下为实验室各研究方向的代表性成果。</p>
   </div>
   <div class="v2-pub-featured">
     {% bibliography --group_by none --query @*[selected=true]* %}

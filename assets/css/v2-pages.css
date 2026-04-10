@@ -599,12 +599,27 @@ body.v2-body {
   text-align: justify;
   line-height: 1.9;
 }
-:lang(zh) .v2-page__title {
+:lang(zh) .v2-page__title,
+:lang(zh) .v2-team__group-title,
+:lang(zh) .v2-section__intro h2 {
   font-family: var(--v2-font-sans);
+  letter-spacing: 0;
 }
 :lang(zh) .v2-pi-card__bio {
   text-align: justify;
   line-height: 1.8;
+}
+:lang(zh) .v2-pi-card h3,
+:lang(zh) .v2-member-card h3 {
+  font-family: var(--v2-font-sans);
+}
+:lang(zh) .v2-member-detail__name {
+  font-family: var(--v2-font-sans);
+  letter-spacing: 0;
+}
+:lang(zh) .v2-member-detail__bio {
+  text-align: justify;
+  line-height: 1.9;
 }
 
 /* ── Member Detail Page ── */
