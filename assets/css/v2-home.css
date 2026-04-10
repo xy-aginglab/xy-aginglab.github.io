@@ -455,6 +455,30 @@ a:hover { color: var(--v2-accent-hover); }
 :lang(zh) .v2-site-footer p {
   letter-spacing: 0.02em;
 }
+/* Chinese spacing: more breathing room between sections and list items */
+:lang(zh) .v2-topic {
+  padding: 1.8rem 0;
+}
+:lang(zh) .v2-topic + .v2-topic {
+  border-top: 1px solid var(--v2-line);
+}
+:lang(zh) .v2-topic__body ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.85;
+}
+:lang(zh) .v2-dir-overview {
+  margin-top: 1rem;
+  padding-top: 1.8rem;
+}
+:lang(zh) .v2-dir-grid {
+  gap: 1rem;
+}
+:lang(zh) .v2-dir-card {
+  padding: 1.2rem;
+}
+:lang(zh) .v2-dir-card p {
+  line-height: 1.65;
+}
 @media (max-width: 640px) {
   :lang(zh) .v2-about__mission { text-align: justify; }
 }
