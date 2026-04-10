@@ -457,7 +457,8 @@ body.v2-body {
 .v2-pub-featured .bibliography {
   display: contents !important;
 }
-.v2-pub-featured .bibliography > li:not(.bib-entry) {
+.v2-pub-featured .bibliography > li:not(.bib-entry),
+.v2-pub-featured .bibliography > a.details {
   display: none !important;
 }
 @media (max-width: 640px) {
