@@ -151,6 +151,7 @@ body.v2-body {
   margin: 0 0 0.8rem;
 }
 .v2-program-entry__content h3 {
+  clear: both;
   font-family: var(--v2-font-sans);
   font-size: 0.88rem;
   font-weight: 700;
@@ -179,7 +180,6 @@ body.v2-body {
 }
 .v2-program-entry__media img { display: block; width: 100%; }
 .v2-program-entry__media--inline {
-  clear: both;
   width: 280px;
   border-radius: var(--v2-radius);
   overflow: hidden;
