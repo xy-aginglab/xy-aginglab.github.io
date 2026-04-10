@@ -488,5 +488,11 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
   line-height: 1.65;
 }
 @media (max-width: 640px) {
+  /* English: left-align on mobile to avoid large word gaps */
+  :lang(en) .v2-about__mission,
+  :lang(en) .v2-topic__body {
+    text-align: left;
+  }
+  /* Chinese: keep justify — CJK characters justify well at any width */
   :lang(zh) .v2-about__mission { text-align: justify; }
 }
