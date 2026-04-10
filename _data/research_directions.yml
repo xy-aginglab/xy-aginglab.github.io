@@ -28,7 +28,7 @@
   link_zh: "/zh/projects/#pilosebaceous"
   narrative: |
     <h3>Rosacea &amp; Inflammatory Skin Diseases</h3>
-    <div class="v2-program-entry__media v2-program-entry__media--inline">
+    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--left">
       <img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG activates OXGR1 to suppress rosacea erythema">
     </div>
     <p>
@@ -45,7 +45,7 @@
     </p>
 
     <h3>Hair Disorders &amp; Regeneration</h3>
-    <div class="v2-program-entry__media v2-program-entry__media--inline">
+    <div class="v2-program-entry__media v2-program-entry__media--inline v2-program-entry__media--right">
       <img src="/assets/img/devcell2022_scube3.jpg" alt="Dev Cell 2022 — Hedgehog/SCUBE3 drives hair follicle regeneration">
     </div>
     <p>
