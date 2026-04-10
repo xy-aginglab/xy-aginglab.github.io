@@ -1,7 +1,7 @@
 ---
 layout: v2-page
 permalink: /contact/
-title: Contact
+title: Contact Us
 show_lead: false
 ---
 
