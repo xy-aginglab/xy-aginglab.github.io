@@ -178,8 +178,18 @@ body.v2-body {
   border: 1px solid var(--v2-line);
 }
 .v2-program-entry__media img { display: block; width: 100%; }
+.v2-program-entry__media--inline {
+  float: right;
+  width: 280px;
+  margin: 0.2rem 0 0.8rem 1.5rem;
+  border-radius: var(--v2-radius);
+  overflow: hidden;
+  border: 1px solid var(--v2-line);
+}
+.v2-program-entry__media--inline img { display: block; width: 100%; }
 @media (max-width: 640px) {
-  .v2-program-entry__media { float: none; width: 100%; margin: 0 0 1rem 0; }
+  .v2-program-entry__media,
+  .v2-program-entry__media--inline { float: none; width: 100%; margin: 0 0 1rem 0; }
 }
 
 .v2-program-entry__content {
