@@ -573,49 +573,6 @@ body.v2-body {
   margin-top: 0.5rem;
 }
 
-/* ── Contact Page ── */
-.v2-contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.v2-contact-card {
-  padding: 1.5rem;
-  border: 1px solid var(--v2-line);
-  border-radius: var(--v2-radius);
-  background: var(--v2-surface);
-}
-.v2-contact-card h3 {
-  font-family: var(--v2-font-sans);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--v2-ink);
-  margin: 0 0 0.6rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.v2-contact-card h3 i { color: var(--v2-accent); }
-.v2-contact-card p {
-  font-size: 0.95rem;
-  color: var(--v2-body);
-  line-height: 1.7;
-  margin: 0 0 0.5rem;
-}
-.v2-contact-card p:last-child { margin-bottom: 0; }
-.v2-contact-card a { color: var(--v2-accent); text-decoration: none; }
-.v2-contact-card a:hover { text-decoration: underline; }
-.v2-contact-map-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--v2-accent);
-  text-decoration: none;
-  margin-top: 0.3rem;
-}
-.v2-contact-map-link:hover { text-decoration: underline; }
 
 /* Active nav indicator */
 .v2-topbar__nav a.is-active {
