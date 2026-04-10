@@ -1,7 +1,7 @@
 ---
 layout: v2-page
 permalink: /zh/projects/
-title: 科研方向
+title: 研究方向
 lang: zh
 description: 聚焦毛囊皮脂腺相关疾病与皮肤衰老的基础、临床与转化研究。
 show_lead: false

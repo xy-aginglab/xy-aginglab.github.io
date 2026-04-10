@@ -1,7 +1,7 @@
 # 中文 UI 字符串
 nav:
   home: 首页
-  projects: 科研方向
+  projects: 研究方向
   publications: 论文发表
   people: 团队成员
   clinical: 临床研究
@@ -47,7 +47,7 @@ publications:
   page_desc: 实验室发表论文。
 
 projects:
-  page_title: 科研方向
+  page_title: 研究方向
   page_desc: Li Lab 研究方向
 
 footer:
