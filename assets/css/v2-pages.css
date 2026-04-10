@@ -17,7 +17,7 @@ body.v2-body {
 
 .v2-page__header {
   padding: 2rem 0 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .v2-page__title {
@@ -87,7 +87,7 @@ body.v2-body {
   margin-bottom: 2rem;
 }
 .v2-section__intro {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .v2-section__intro h2 {
   font-family: var(--v2-font-serif);
@@ -131,7 +131,7 @@ body.v2-body {
 
 /* ── Projects / Research direction entries ── */
 .v2-program-entry {
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
   overflow: hidden;
 }
 
@@ -200,14 +200,14 @@ body.v2-body {
 
 /* ── Team ── */
 .v2-team__group {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 .v2-team__group-title {
   font-family: var(--v2-font-serif);
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--v2-ink);
-  margin: 0 0 1rem;
+  margin: 0 0 0.8rem;
   padding-bottom: 0.4rem;
   border-bottom: 2px solid var(--v2-accent);
 }
