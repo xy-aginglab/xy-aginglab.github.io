@@ -179,26 +179,26 @@ body.v2-body {
 }
 .v2-program-entry__media img { display: block; width: 100%; }
 .v2-program-entry__media--inline {
+  clear: both;
   width: 280px;
   border-radius: var(--v2-radius);
   overflow: hidden;
   border: 1px solid var(--v2-line);
 }
-/* Odd inline images float right, even float left — creates alternating layout */
-.v2-program-entry__media--inline:nth-of-type(odd) {
-  float: right;
-  margin: 0.2rem 0 0.8rem 1.5rem;
-}
-.v2-program-entry__media--inline:nth-of-type(even) {
+.v2-program-entry__media--inline img { display: block; width: 100%; }
+.v2-program-entry__media--left {
   float: left;
   margin: 0.2rem 1.5rem 0.8rem 0;
 }
-.v2-program-entry__media--inline img { display: block; width: 100%; }
+.v2-program-entry__media--right {
+  float: right;
+  margin: 0.3rem 0 0.8rem 1.5rem;
+}
 @media (max-width: 640px) {
   .v2-program-entry__media,
   .v2-program-entry__media--inline,
-  .v2-program-entry__media--inline:nth-of-type(odd),
-  .v2-program-entry__media--inline:nth-of-type(even) { float: none; width: 100%; margin: 0 0 1rem 0; }
+  .v2-program-entry__media--left,
+  .v2-program-entry__media--right { float: none; width: 100%; margin: 0 0 1rem 0; }
 }
 
 .v2-program-entry__content {
