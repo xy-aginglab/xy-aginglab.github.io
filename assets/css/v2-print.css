@@ -1,0 +1,106 @@
+/* ============================================================================
+   V2 Print Stylesheet
+   Optimized for printing academic lab pages: clean, ink-friendly, no UI chrome.
+   ============================================================================ */
+
+@media print {
+  /* Hide non-content elements */
+  .v2-topbar,
+  .v2-topbar__toggle,
+  .v2-back-top,
+  .v2-site-footer__logos,
+  .bib-filters,
+  .bib-actions,
+  .v2-member-links,
+  .v2-pi-card__links {
+    display: none !important;
+  }
+
+  /* Reset backgrounds and colors for ink saving */
+  body.v2-body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Show link URLs after link text */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555 !important;
+    word-break: break-all;
+  }
+
+  /* Don't show URL for internal/anchor/email links */
+  a[href^="#"]::after,
+  a[href^="mailto:"]::after,
+  a[href^="javascript:"]::after,
+  .v2-topbar a::after,
+  .v2-pi-card__info h3 a::after,
+  .v2-member-card__info h3 a::after {
+    content: "" !important;
+  }
+
+  /* Page layout */
+  .v2-page {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Prevent page breaks inside important blocks */
+  .v2-pi-card,
+  .v2-member-card,
+  .v2-utility-card,
+  .v2-program-entry,
+  .v2-dir-card,
+  .bib-row {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Page breaks before major sections */
+  .v2-team__group,
+  .v2-section {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  /* Borders: use thin lines instead of colored ones */
+  .v2-utility-card,
+  .v2-member-card,
+  .v2-dir-card {
+    border: 0.5pt solid #ccc !important;
+  }
+
+  .v2-team__group-title,
+  .v2-section__intro h2 {
+    border-bottom-color: #000 !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    filter: grayscale(100%);
+  }
+
+  .v2-pi-card img,
+  .v2-member-card img {
+    filter: none;
+  }
+
+  /* Footer — minimal print version */
+  .v2-site-footer {
+    border-top: 0.5pt solid #ccc;
+    padding: 0.5rem 0;
+    font-size: 9pt;
+  }
+}
