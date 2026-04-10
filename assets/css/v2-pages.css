@@ -621,6 +621,10 @@ body.v2-body {
   text-align: justify;
   line-height: 1.9;
 }
+:lang(zh) .v2-page__content > p,
+:lang(zh) .v2-program-entry__content > p {
+  text-indent: 2em;
+}
 :lang(zh) .v2-page__title,
 :lang(zh) .v2-team__group-title,
 :lang(zh) .v2-section__intro h2,
@@ -632,6 +636,9 @@ body.v2-body {
 :lang(zh) .v2-pi-card__bio {
   text-align: justify;
   line-height: 1.8;
+}
+:lang(zh) .v2-pi-card__bio > p {
+  text-indent: 2em;
 }
 :lang(zh) .v2-pi-card h3 {
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
@@ -647,6 +654,9 @@ body.v2-body {
 :lang(zh) .v2-member-detail__bio {
   text-align: justify;
   line-height: 1.9;
+}
+:lang(zh) .v2-member-detail__bio > p {
+  text-indent: 2em;
 }
 :lang(zh) .v2-utility-card h3 {
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
