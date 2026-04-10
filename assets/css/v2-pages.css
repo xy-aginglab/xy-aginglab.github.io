@@ -78,7 +78,7 @@ body.v2-body {
   color: var(--v2-ink);
   margin: 1.5rem 0 0.5rem;
 }
-.v2-page__content p { margin: 0 0 0.8rem; }
+.v2-page__content p { margin: 0 0 0.7rem; }
 .v2-page__content ul, .v2-page__content ol { margin: 0 0 1rem; padding-left: 1.5rem; }
 .v2-page__content li { margin-bottom: 0.4rem; }
 .v2-page__content a { color: var(--v2-accent); }
@@ -92,7 +92,7 @@ body.v2-body {
 
 /* ── Section pattern (publications, clinical) ── */
 .v2-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 .v2-section__intro {
   margin-bottom: 0.8rem;
@@ -193,7 +193,7 @@ body.v2-body {
   overflow-wrap: break-word;
   line-height: 1.8;
 }
-.v2-program-entry__content p { margin: 0 0 0.6rem; }
+.v2-program-entry__content p { margin: 0 0 0.7rem; }
 .v2-program-entry__more {
   margin-top: 0.6rem;
 }
@@ -255,7 +255,7 @@ body.v2-body {
   color: var(--v2-body);
   line-height: 1.7;
 }
-.v2-pi-card__bio p { margin: 0 0 0.5rem; }
+.v2-pi-card__bio p { margin: 0 0 0.7rem; }
 @media (max-width: 580px) {
   .v2-pi-card { grid-template-columns: 100px 1fr; gap: 1rem; }
   .v2-pi-card img { width: 100px; }
@@ -272,7 +272,7 @@ body.v2-body {
   display: flex;
   gap: 0.8rem;
   align-items: start;
-  padding: 0.8rem;
+  padding: 1rem;
   border: 1px solid var(--v2-line-light);
   border-radius: var(--v2-radius);
   background: var(--v2-surface);
@@ -731,7 +731,7 @@ body.v2-body {
   color: var(--v2-body);
   line-height: 1.8;
 }
-.v2-member-detail__bio p { margin: 0 0 0.6rem; }
+.v2-member-detail__bio p { margin: 0 0 0.7rem; }
 .v2-member-detail__back {
   margin-top: 2rem;
 }
