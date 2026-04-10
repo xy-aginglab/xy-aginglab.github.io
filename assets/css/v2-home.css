@@ -72,6 +72,7 @@ a:hover { color: var(--v2-accent-hover); }
 }
 .v2-topbar__nav {
   display: flex;
+  align-items: center;
   gap: 0.1rem;
 }
 .v2-topbar__nav a {
