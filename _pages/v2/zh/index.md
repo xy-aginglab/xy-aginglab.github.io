@@ -3,7 +3,7 @@ layout: v2-home
 title: Li Lab
 permalink: /zh/
 lang: zh
-description: 湖南省衰老生物学重点实验室 — 中南大学湘雅医院。
+description: Li Lab — 中南大学湘雅医院皮肤科。毛囊皮脂腺相关疾病与皮肤衰老研究。
 ---
 <div class="v2-home">
 
