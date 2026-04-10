@@ -69,5 +69,10 @@
       <p>&copy; {{ 'now' | date: "%Y" }} Li Lab &middot; Xiangya Hospital, Central South University</p>
     </div>
   </footer>
+
+  <button class="v2-back-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script>
+  (function(){var b=document.querySelector('.v2-back-top');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('is-visible',window.scrollY>300)},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+  </script>
 </body>
 </html>
