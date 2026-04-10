@@ -26,7 +26,7 @@ show_lead: false
 
 ### 临床合作
 
-欢迎就队列资源、样本共享或转化皮肤病学研究进行合作，请联系 [{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})。
+欢迎在队列资源、样本共享或转化皮肤病学研究方面开展合作，请联系 [{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})。
 
 <hr>
 
