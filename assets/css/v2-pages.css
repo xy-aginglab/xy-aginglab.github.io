@@ -179,6 +179,7 @@ body.v2-body {
 }
 .v2-program-entry__media img { display: block; width: 100%; }
 .v2-program-entry__media--inline {
+  clear: both;
   width: 280px;
   border-radius: var(--v2-radius);
   overflow: hidden;
