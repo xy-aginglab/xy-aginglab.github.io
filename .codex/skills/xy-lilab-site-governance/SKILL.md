@@ -41,9 +41,8 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 
 1. Re-open this `SKILL.md`.
 2. Read only the reference file(s) needed for the task:
-   - design, branding, tone, version direction: `references/design-philosophy.md`
+   - design, branding, tone: `references/design-philosophy.md`
    - page purpose, feature behavior, UX expectations: `references/feature-design.md`
-   - `v3` homepage and visual-system decisions: `references/v3-homepage-blueprint.md`
    - file ownership, module boundaries, source-of-truth mapping: `references/module-map.md`
 3. If the task changes any documented rule in those references, update the reference file first.
 4. Implement the code or content change.
@@ -88,5 +87,4 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 
 - `references/design-philosophy.md`
 - `references/feature-design.md`
-- `references/v3-homepage-blueprint.md`
 - `references/module-map.md`
