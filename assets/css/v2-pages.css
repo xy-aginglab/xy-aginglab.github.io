@@ -44,6 +44,10 @@ body.v2-body {
   font-size: 1rem !important;
   color: var(--v2-body);
   line-height: 1.8;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .v2-page__content h2 {
   font-family: var(--v2-font-serif);
@@ -173,6 +177,10 @@ body.v2-body {
   font-family: var(--v2-font-body);
   font-size: 0.95rem;
   color: var(--v2-body);
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
   line-height: 1.8;
 }
 .v2-program-entry__content p { margin: 0 0 0.6rem; }

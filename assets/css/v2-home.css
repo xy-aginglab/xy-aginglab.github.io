@@ -198,6 +198,9 @@ a:hover { color: var(--v2-accent-hover); }
   line-height: 1.8;
   font-weight: 400;
   text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .v2-about__mission p { margin: 0 0 0.7rem; }
 .v2-about__mission p:last-child { margin-bottom: 0; }
@@ -279,6 +282,10 @@ a:hover { color: var(--v2-accent-hover); }
   color: var(--v2-body);
   font-size: 0.95rem;
   line-height: 1.8;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 .v2-topic__body ul {
   margin: 0;
@@ -432,6 +439,8 @@ a:hover { color: var(--v2-accent-hover); }
 :lang(zh) .v2-topic__body,
 :lang(zh) .v2-footer-info {
   text-align: justify;
+  overflow-wrap: break-word;
+  word-break: break-word;
   line-height: 1.9;
 }
 :lang(zh) .v2-about__mission > p,
