@@ -9,7 +9,7 @@ const initBibSearch = () => {
   const statusEl = document.getElementById("bibfilter-status");
 
   // Only target the .publications container that is a sibling of the filter UI
-  const filterParent = input.closest(".v3-publication-surface") || input.closest(".v3-surface") || document.body;
+  const filterParent = input.closest(".v2-section") || input.closest(".v2-page__content") || input.closest(".v3-publication-surface") || input.closest(".v3-surface") || document.body;
   const groups = Array.from(filterParent.querySelectorAll(".publications ol.bibliography"));
   if (!groups.length) return;
 
