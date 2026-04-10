@@ -434,6 +434,10 @@ a:hover { color: var(--v2-accent-hover); }
   text-align: justify;
   line-height: 1.9;
 }
+:lang(zh) .v2-about__mission > p,
+:lang(zh) .v2-topic__body > p {
+  text-indent: 2em;
+}
 :lang(zh) .v2-topic__title,
 :lang(zh) .v2-dir-overview__title {
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
