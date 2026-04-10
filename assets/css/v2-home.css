@@ -49,6 +49,10 @@ img { max-width: 100%; height: auto; }
 main { flex: 1; }
 a { color: var(--v2-accent); transition: color 0.15s; }
 a:hover { color: var(--v2-accent-hover); }
+a[href^="mailto:"] { text-decoration: none; }
+a[href^="mailto:"]:hover { text-decoration: none; }
+a[href^="mailto:"] { text-decoration: none; }
+a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
 
 /* ── Top Bar ── */
 .v2-topbar {
@@ -165,12 +169,6 @@ a:hover { color: var(--v2-accent-hover); }
   letter-spacing: -0.03em;
   line-height: 1.05;
 }
-.v2-lab-header__inst {
-  font-size: 0.92rem;
-  color: var(--v2-muted);
-  margin: 0.3rem 0 0;
-  line-height: 1.4;
-}
 .v2-lab-header__logo {
   display: flex;
   gap: 0.7rem;
@@ -258,17 +256,6 @@ a:hover { color: var(--v2-accent-hover); }
   margin: 0;
   line-height: 1.15;
   letter-spacing: -0.02em;
-}
-.v2-topic__badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.15em 0.55em;
-  border-radius: 3px;
-  background: var(--v2-accent-soft);
-  color: var(--v2-accent);
-  white-space: nowrap;
 }
 
 .v2-topic__figure {
