@@ -8,7 +8,7 @@ show_lead: false
 
 ### 邮箱
 
-[{{ site.data.socials.email }}](mailto:{{ site.data.socials.email }})
+<a href="mailto:{{ site.data.socials.email }}" style="text-decoration:none;">{{ site.data.socials.email }}</a>
 
 ### 地址
 
