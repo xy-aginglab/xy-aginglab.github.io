@@ -5,7 +5,7 @@
   title: "Pilosebaceous-Related Diseases"
   title_zh: "毛囊皮脂腺相关疾病"
   summary: "Decoding the pathogenic mechanisms of rosacea, hair loss, and hair graying to develop targeted therapies through multi-omics, disease models, and clinical trials."
-  summary_zh: "通过多组学、疾病模型与临床试验，解码玫瑰痤疮、脱发及白发的发病机制，开发靶向治疗策略。"
+  summary_zh: "通过多组学、疾病模型与临床试验，阐明玫瑰痤疮、脱发及白发的发病机制，开发靶向治疗策略。"
   intro: |
     <ul>
       <li>Identified &alpha;-ketoglutarate as a rosacea-associated metabolite that activates OXGR1 to suppress pathological vasodilation; developed the selective agonist A-1 for rosacea erythema treatment (<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>).</li>
@@ -81,7 +81,7 @@
   title: "Skin Aging"
   title_zh: "皮肤衰老"
   summary: "Investigating the fundamental mechanisms of skin aging through longevity cohorts, multi-omics, and translational models to develop anti-aging interventions."
-  summary_zh: "通过长寿队列、多组学和转化模型研究皮肤衰老的基本机制，开发抗衰老干预策略。"
+  summary_zh: "基于长寿队列、多组学与转化模型，研究皮肤衰老的核心机制，开发抗衰老干预策略。"
   intro: |
     <ul>
       <li>Core member of the national Aging Biomarker Consortium establishing standardized aging biomarkers across organ systems (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>).</li>
