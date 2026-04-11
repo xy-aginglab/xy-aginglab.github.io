@@ -10,16 +10,16 @@ Leveraging the extensive clinical resources and patient cohorts of the Departmen
 
 <div class="v2-utility-list">
   <div class="v2-utility-card">
-    <h3>Skin aging cohorts</h3>
-    <p>Longitudinal follow-up cohorts of long-lived populations, integrating multi-omics molecular profiling, aging biomarker screening, and aging-clock model development to explore the molecular basis of healthy aging.</p>
+    <h3>Inflammatory skin disease</h3>
+    <p>Centered on rosacea, conducting pathogenesis and therapeutic strategy research based on patient-derived samples, and leading multicenter randomized controlled trials of gabapentin, paroxetine, hydroxychloroquine, and other agents.</p>
   </div>
   <div class="v2-utility-card">
     <h3>Hair disorder clinical research</h3>
     <p>Integrating clinical samples from patients with hair loss and hair graying to conduct organ culture, hair follicle regeneration strategies, and clinical trials of novel therapeutics (e.g., multicenter RCTs of JAK inhibitors for alopecia areata).</p>
   </div>
   <div class="v2-utility-card">
-    <h3>Inflammatory skin disease</h3>
-    <p>Centered on rosacea, conducting pathogenesis and therapeutic strategy research based on patient-derived samples, and leading multicenter randomized controlled trials of gabapentin, paroxetine, hydroxychloroquine, and other agents.</p>
+    <h3>Skin aging cohorts</h3>
+    <p>Longitudinal follow-up cohorts of long-lived populations, integrating multi-omics molecular profiling, aging biomarker screening, and aging-clock model development to explore the molecular basis of healthy aging.</p>
   </div>
 </div>
 

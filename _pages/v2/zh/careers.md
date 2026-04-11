@@ -9,7 +9,8 @@ show_lead: false
 
 ### 联系邮箱
 
-<a href="mailto:{{ site.data.socials.email }}" style="text-decoration:none;">{{ site.data.socials.email }}</a>
+<a href="mailto:liji_xy@csu.edu.cn" style="text-decoration:none;">liji_xy@csu.edu.cn</a>（李吉）<br>
+<a href="mailto:dengzhili@csu.edu.cn" style="text-decoration:none;">dengzhili@csu.edu.cn</a>（邓智利）
 
 ### 通讯地址
 

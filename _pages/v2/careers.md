@@ -7,7 +7,8 @@ show_lead: false
 
 ### Email
 
-<a href="mailto:{{ site.data.socials.email }}" style="text-decoration:none;">{{ site.data.socials.email }}</a>
+<a href="mailto:liji_xy@csu.edu.cn" style="text-decoration:none;">liji_xy@csu.edu.cn</a> (Ji Li)<br>
+<a href="mailto:dengzhili@csu.edu.cn" style="text-decoration:none;">dengzhili@csu.edu.cn</a> (Zhili Deng)
 
 ### Address
 
