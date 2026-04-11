@@ -345,10 +345,10 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
 }
 .v2-dir-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
 }
-@media (max-width: 580px) { .v2-dir-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .v2-dir-grid { grid-template-columns: 1fr; } }
 .v2-dir-card {
   padding: 1rem;
   border: 1px solid var(--v2-line);
