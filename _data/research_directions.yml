@@ -1,33 +1,30 @@
 # Research direction narratives for the v2 homepage
-# Each direction contains bilingual narrative text with inline DOI-linked citations
+# Three directions: Rosacea & HS, Hair Disorders, Skin Aging
 
-- id: pilosebaceous
-  title: "Pilosebaceous-Related Diseases"
-  title_zh: "毛囊皮脂腺相关疾病"
-  summary: "Decoding the pathogenic mechanisms of rosacea, hair loss, and hair graying to develop targeted therapies through multi-omics, disease models, and clinical trials."
-  summary_zh: "通过多组学、疾病模型与临床试验，阐明玫瑰痤疮、脱发及白发的发病机制，开发靶向治疗策略。"
+- id: rosacea
+  title: "Rosacea & Hidradenitis Suppurativa"
+  title_zh: "玫瑰痤疮与化脓性汗腺炎"
+  summary: "Elucidating the pathogenic mechanisms of rosacea and hidradenitis suppurativa through multi-omics, disease models, and multicenter clinical trials to develop targeted therapies."
+  summary_zh: "通过多组学、疾病模型与多中心临床试验，阐明玫瑰痤疮与化脓性汗腺炎的发病机制，开发靶向治疗策略。"
   intro: |
     <ul>
       <li>Identified &alpha;-ketoglutarate as a rosacea-associated metabolite that activates OXGR1 to suppress pathological vasodilation; developed the selective agonist A-1 for rosacea erythema treatment (<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>).</li>
-      <li>Revealed CTS hypercontractility&ndash;PIEZO1 axis driving androgenetic alopecia; found MLCK inhibitor ML-7 restores hair growth (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>).</li>
       <li>Revealed pro-inflammatory fibroblast PTGDS pathway and neuro-immune CGRP&ndash;RAMP1 circuit in rosacea (<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>; <a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>).</li>
       <li>Multicenter RCTs demonstrated gabapentin improves rosacea flushing, paroxetine effectively treats refractory erythema, and hydroxychloroquine is a safe and efficacious option for rosacea (<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>; <a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>; <a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>).</li>
       <li>Led the first Chinese Rosacea Diagnosis and Treatment Guidelines (<a href="https://doi.org/10.35541/cjd.20201078" class="v2-cite" target="_blank">2021</a>).</li>
-      <li>Clinical studies established JAK inhibitor&ndash;based management for alopecia areata: ritlecitinib demonstrated efficacy across anatomical sites, in adolescents, and in patients refractory to prior JAK inhibitors, while tofacitinib dose tapering sustained treatment response (<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>; <a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>).</li>
+      <li>Reported PASH syndrome (pyoderma gangrenosum, acne, and hidradenitis suppurativa) responding to colchicine–thalidomide combination therapy (<a href="https://doi.org/10.3389/fmed.2022.856786" class="v2-cite" target="_blank"><em>Front Med</em> 2022</a>).</li>
     </ul>
   intro_zh: |
     <ul>
       <li>发现 &alpha;-酮戊二酸（&alpha;-KG）为玫瑰痤疮相关代谢物，激活 OXGR1 抑制病理性血管扩张；开发选择性激动剂 A-1 用于玫瑰痤疮红斑治疗（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。</li>
-      <li>揭示结缔组织鞘过度收缩–PIEZO1 轴介导雄激素性秃发的机制；发现 MLCK 抑制剂 ML-7 可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。</li>
       <li>阐明了促炎成纤维细胞 PTGDS 通路及 CGRP–RAMP1 神经免疫回路在玫瑰痤疮中的作用（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>；<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。</li>
       <li>多中心随机对照试验证实加巴喷丁改善玫瑰痤疮潮红，帕罗西汀有效治疗难治性红斑，羟氯喹安全有效地治疗玫瑰痤疮（<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>；<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>；<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>）。</li>
       <li>牵头制定首个《中国玫瑰痤疮诊疗指南（2021版）》（<a href="https://doi.org/10.35541/cjd.20201078" class="v2-cite" target="_blank">中华皮肤科杂志 2021</a>）。</li>
-      <li>临床研究建立了基于 JAK 抑制剂的斑秃管理策略：利特昔替尼在不同解剖部位、青少年及既往 JAK 抑制剂难治患者中均显示疗效，托法替尼减量方案可维持治疗应答（<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>；<a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>）。</li>
+      <li>报道 PASH 综合征（坏疽性脓皮病、痤疮与化脓性汗腺炎）对秋水仙碱–沙利度胺联合方案的治疗应答（<a href="https://doi.org/10.3389/fmed.2022.856786" class="v2-cite" target="_blank"><em>Front Med</em> 2022</a>）。</li>
     </ul>
-  link: "/projects/#pilosebaceous"
-  link_zh: "/zh/projects/#pilosebaceous"
+  link: "/projects/#rosacea"
+  link_zh: "/zh/projects/#rosacea"
   narrative: |
-    <h3>Rosacea &amp; Inflammatory Skin Diseases</h3>
     <p>
       Rosacea is a chronic inflammatory skin disorder that significantly impacts quality of life, yet its pathogenesis remains incompletely understood. Our laboratory has established a comprehensive research framework spanning metabolomics, single-cell transcriptomics, neurogenic signaling, and genetics to uncover the multi-dimensional mechanisms underlying this disease.
     </p>
@@ -42,8 +39,46 @@
     <p>
       These mechanistic insights have been translated into clinical practice through multicenter randomized controlled trials, demonstrating that gabapentin improves rosacea flushing (<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>), paroxetine effectively treats refractory erythema (<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>), and hydroxychloroquine is a safe and efficacious treatment option for rosacea (<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>).
     </p>
+  narrative_zh: |
+    <p>
+      玫瑰痤疮是一种严重影响生活质量的慢性炎症性皮肤病，其发病机制尚未完全阐明。实验室建立了涵盖代谢组学、单细胞转录组学、神经源性信号与遗传学的综合研究体系，从多个维度系统揭示该疾病的发病机制。
+    </p>
+    <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑"></div>
+      <div class="v2-research-block__text"><p>团队发现 &alpha;-酮戊二酸（&alpha;-KG）是玫瑰痤疮相关代谢物，可激活血管平滑肌细胞表面受体 OXGR1，促进血管收缩并抑制病理性血管扩张。基于 OXGR1-Gq 复合物的冷冻电镜结构，开发了选择性激动剂 A-1，其改善红斑的疗效与一线治疗相当（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。在细胞水平，单细胞转录组学揭示促炎成纤维细胞是玫瑰痤疮病变中血管扩张信号的主要来源，敲除 PTGDS 可抑制小鼠模型中的疾病表型进展（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。此外，团队证实感觉神经元通过 CGRP-RAMP1 轴激活 &gamma;&delta; T 细胞，揭示了介导面部超敏反应的神经免疫回路（<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。</p></div>
+    </div>
+    <div class="v2-research-block v2-research-block--reverse">
+      <div class="v2-research-block__img"><img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 介导 ROS 相关皮肤炎症"></div>
+      <div class="v2-research-block__text"><p>在遗传学层面，玫瑰痤疮家系全基因组测序发现 LRRC4、SH3PXD2A 和 SLC26A8 的罕见变异均涉及神经突触相关通路，导致神经肽过度释放（<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>）。血清蛋白质组学进一步解析出炎症主导型和神经源性-代谢型两种分子亚型，为个性化治疗提供了分子基础（<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>）。STAT3/IL-36G（<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>）、KRT6A/JAK1-STAT3（<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>）及 Nav1.8 介导的 ROS 信号通路（<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>）等关键炎症通路均已系统阐明，新型纳米酶 ROS 清除剂则为治疗提供了新思路（<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>）。</p></div>
+    </div>
+    <p>
+      基于上述机制研究，相关干预策略已在多中心随机对照试验中得到验证，并逐步应用于临床。研究证实加巴喷丁可有效改善玫瑰痤疮潮红（<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>），帕罗西汀可有效治疗难治性红斑（<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>），羟氯喹可安全有效地治疗玫瑰痤疮（<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>）。
+    </p>
 
-    <h3>Hair Disorders &amp; Regeneration</h3>
+- id: hair
+  title: "Hair Disorders & Regeneration"
+  title_zh: "毛发疾病与再生"
+  summary: "Investigating the molecular mechanisms of androgenetic alopecia, hair graying, and alopecia areata, and developing regenerative strategies and targeted clinical interventions."
+  summary_zh: "研究雄激素性秃发、白发及斑秃的分子机制，开发毛发再生策略与靶向临床干预手段。"
+  intro: |
+    <ul>
+      <li>Revealed CTS hypercontractility&ndash;PIEZO1 axis driving androgenetic alopecia; found MLCK inhibitor ML-7 restores hair growth (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>).</li>
+      <li>Identified arginine metabolic disruption as a core pathogenic driver of AGA; microneedle-based arginine replenishment restores hair growth (<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>).</li>
+      <li>Revealed two-step melanocyte adaptive patterning mechanism for regenerative hair pigmentation via skin organoids (<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>).</li>
+      <li>Demonstrated Hedgehog-driven SCUBE3 production in dermal papilla niche sufficient to induce new hair growth (<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>).</li>
+      <li>Clinical studies established JAK inhibitor&ndash;based management for alopecia areata: ritlecitinib demonstrated efficacy across anatomical sites, in adolescents, and in patients refractory to prior JAK inhibitors, while tofacitinib dose tapering sustained treatment response (<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>; <a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>).</li>
+    </ul>
+  intro_zh: |
+    <ul>
+      <li>揭示结缔组织鞘过度收缩–PIEZO1 轴介导雄激素性秃发的机制；发现 MLCK 抑制剂 ML-7 可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。</li>
+      <li>发现精氨酸代谢紊乱在雄激素性秃发发病中发挥关键作用；微针递送精氨酸方案可恢复毛发生长（<a href="https://doi.org/10.1002/advs.202504579" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。</li>
+      <li>利用皮肤类器官揭示黑素细胞适应性定位的两步调控机制，为再生性毛发色素恢复提供新策略（<a href="https://doi.org/10.1002/advs.202502436" class="v2-cite" target="_blank"><em>Adv Sci</em> 2025</a>）。</li>
+      <li>发现毛乳头微环境中 Hedgehog 信号过度激活可诱导 SCUBE3 产生，足以促进新毛发生长（<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>）。</li>
+      <li>临床研究建立了基于 JAK 抑制剂的斑秃管理策略：利特昔替尼在不同解剖部位、青少年及既往 JAK 抑制剂难治患者中均显示疗效，托法替尼减量方案可维持治疗应答（<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>；<a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>）。</li>
+    </ul>
+  link: "/projects/#hair"
+  link_zh: "/zh/projects/#hair"
+  narrative: |
     <div class="v2-research-block">
       <div class="v2-research-block__img"><img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS hypercontractility–PIEZO1 axis in androgenetic alopecia"></div>
       <div class="v2-research-block__text"><p>Androgenetic alopecia (AGA) manifests as progressive hair follicle miniaturization, yet the molecular mechanisms driving follicle miniaturization have remained elusive. Our single-cell transcriptomic atlas of human AGA anagen follicles revealed that hypercontractility of the connective tissue sheath (CTS) activates the mechanosensitive channel PIEZO1, inducing ectopic apoptosis of HF progenitor cells and driving progressive miniaturization. Pharmacological inhibition via the MLCK inhibitor ML-7 restored hair growth in patient-derived ex vivo models and humanized mice (<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>).</p></div>
@@ -60,23 +95,6 @@
       For alopecia areata, a series of real-world clinical studies have established JAK inhibitor&ndash;based management strategies: ritlecitinib demonstrated robust efficacy across different anatomical sites, in adolescent populations, and in patients refractory to prior JAK inhibitor therapy, while a patient-centered tofacitinib dose-tapering protocol sustained treatment response without compromising efficacy (<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>; <a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>; <a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>).
     </p>
   narrative_zh: |
-    <h3>玫瑰痤疮与炎症性皮肤病</h3>
-    <p>
-      玫瑰痤疮是一种严重影响生活质量的慢性炎症性皮肤病，其发病机制尚未完全阐明。实验室建立了涵盖代谢组学、单细胞转录组学、神经源性信号与遗传学的综合研究体系，从多个维度系统揭示该疾病的发病机制。
-    </p>
-    <div class="v2-research-block">
-      <div class="v2-research-block__img"><img src="/assets/img/cell2026_oxgr1.jpg" alt="Cell 2026 — α-KG 激活 OXGR1 抑制玫瑰痤疮红斑"></div>
-      <div class="v2-research-block__text"><p>团队发现 &alpha;-酮戊二酸（&alpha;-KG）是玫瑰痤疮相关代谢物，可激活血管平滑肌细胞表面受体 OXGR1，促进血管收缩并抑制病理性血管扩张。基于 OXGR1-Gq 复合物的冷冻电镜结构，开发了选择性激动剂 A-1，其改善红斑的疗效与一线治疗相当（<a href="https://doi.org/10.1016/j.cell.2026.01.036" class="v2-cite" target="_blank"><em>Cell</em> 2026</a>）。在细胞水平，单细胞转录组学揭示促炎成纤维细胞是玫瑰痤疮病变中血管扩张信号的主要来源，敲除 PTGDS 可抑制小鼠模型中的疾病表型进展（<a href="https://doi.org/10.1038/s41467-024-52946-7" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。此外，团队证实感觉神经元通过 CGRP-RAMP1 轴激活 &gamma;&delta; T 细胞，揭示了介导面部超敏反应的神经免疫回路（<a href="https://doi.org/10.1038/s41467-024-50970-1" class="v2-cite" target="_blank"><em>Nat Commun</em> 2024</a>）。</p></div>
-    </div>
-    <div class="v2-research-block v2-research-block--reverse">
-      <div class="v2-research-block__img"><img src="/assets/img/redoxbiol2022_nav18_ros.jpg" alt="Redox Biol 2022 — Nav1.8 介导 ROS 相关皮肤炎症"></div>
-      <div class="v2-research-block__text"><p>在遗传学层面，玫瑰痤疮家系全基因组测序发现 LRRC4、SH3PXD2A 和 SLC26A8 的罕见变异均涉及神经突触相关通路，导致神经肽过度释放（<a href="https://doi.org/10.1038/s41467-023-39761-2" class="v2-cite" target="_blank"><em>Nat Commun</em> 2023</a>）。血清蛋白质组学进一步解析出炎症主导型和神经源性-代谢型两种分子亚型，为个性化治疗提供了分子基础（<a href="https://doi.org/10.1016/j.jaad.2025.08.014" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>）。STAT3/IL-36G（<a href="https://doi.org/10.1016/j.jare.2024.06.013" class="v2-cite" target="_blank"><em>J Adv Res</em> 2025</a>）、KRT6A/JAK1-STAT3（<a href="https://doi.org/10.1186/s12929-025-01143-9" class="v2-cite" target="_blank"><em>J Biomed Sci</em> 2025</a>）及 Nav1.8 介导的 ROS 信号通路（<a href="https://doi.org/10.1016/j.redox.2022.102427" class="v2-cite" target="_blank"><em>Redox Biol</em> 2022</a>）等关键炎症通路均已系统阐明，新型纳米酶 ROS 清除剂则为治疗提供了新思路（<a href="https://doi.org/10.1016/j.redox.2024.103055" class="v2-cite" target="_blank"><em>Redox Biol</em> 2024</a>）。</p></div>
-    </div>
-    <p>
-      基于上述机制研究，相关干预策略已在多中心随机对照试验中得到验证，并逐步应用于临床。研究证实加巴喷丁可有效改善玫瑰痤疮潮红（<a href="https://doi.org/10.1016/j.jaad.2024.12.003" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>），帕罗西汀可有效治疗难治性红斑（<a href="https://doi.org/10.1016/j.jaad.2023.01.044" class="v2-cite" target="_blank"><em>JAAD</em> 2023</a>），羟氯喹可安全有效地治疗玫瑰痤疮（<a href="https://doi.org/10.1016/j.jaad.2020.05.050" class="v2-cite" target="_blank"><em>JAAD</em> 2021</a>）。
-    </p>
-
-    <h3>毛发疾病与再生</h3>
     <div class="v2-research-block">
       <div class="v2-research-block__img"><img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS-PIEZO1 轴介导雄激素性秃发"></div>
       <div class="v2-research-block__text"><p>雄激素性秃发（AGA）表现为毛囊渐进性微型化，但介导毛囊微型化的分子机制尚不清楚。团队构建的人类 AGA 生长期毛囊单细胞转录组图谱揭示，结缔组织鞘（CTS）过度收缩激活机械敏感通道 PIEZO1，诱导毛囊祖细胞异位凋亡，促进毛囊微型化进程。MLCK 抑制剂 ML-7 在患者来源的离体模型和人源化小鼠中均可恢复毛发生长（<a href="https://doi.org/10.1038/s41467-026-70153-4" class="v2-cite" target="_blank"><em>Nat Commun</em> 2026</a>）。</p></div>

@@ -9,7 +9,7 @@ last_name: Lab
 contact_note: >
   Department of Dermatology, Xiangya Hospital, Central South University
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Li Lab — Xiangya Hospital, Central South University. Research in pilosebaceous-related diseases and skin aging.
+  Li Lab — Xiangya Hospital, Central South University. Research in rosacea, hidradenitis suppurativa, hair disorders, and skin aging.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
