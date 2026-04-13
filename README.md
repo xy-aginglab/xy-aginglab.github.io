@@ -1,5 +1,7 @@
 # Li Lab — Xiangya Hospital, Central South University
 
+**Language / 语言**: **English** | [简体中文](README.zh.md)
+
 Official website for the Li Lab, Department of Dermatology, Xiangya Hospital, Central South University.
 
 **Live site**: [https://xy-lilab.github.io](https://xy-lilab.github.io)
