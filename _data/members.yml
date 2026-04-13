@@ -106,11 +106,24 @@
   sort_key: "14"
   name_en: Yanji Chu
   role: basic_researcher
-  title: 研究人员
-  title_en: Researcher
-  photo: /assets/img/members/placeholder.png
+  title: 助理研究员、博士
+  title_en: Assistant Research Fellow, PhD
+  photo: /assets/img/members/cyj.jpg
   department: 皮肤科
   department_en: Department of Dermatology
+  email: yanjichu@csu.edu.cn
+  bio: >-
+    B.Sc. in Chemistry (2019) and Ph.D. in Polymer Chemistry and Physics (2024) from Renmin University of China, under the supervision of Prof. Yapei Wang.
+    Joined Xiangya Hospital, Central South University as Assistant Research Fellow in 2024.
+    Published 9 papers as first/co-first or corresponding author in CCS Chemistry, Small, Langmuir, etc.
+    Principal investigator of 1 NSFC Young Scientists Fund (Category C); holder of 1 national invention patent.
+    Research interest: fundamental research and translational applications of nanotechnology in dermatology.
+  bio_zh: >-
+    2019 年获中国人民大学化学理学学士学位，2024 年获中国人民大学高分子化学与物理理学博士学位（硕博连读），导师为王亚培教授。
+    2024 年起任中南大学湘雅医院助理研究员。
+    以第一作者（含共同第一作者）及通讯作者身份在 CCS Chemistry、Small、Langmuir 等国内外知名期刊发表论文 9 篇。
+    主持国家自然科学青年基金（C 类）1 项，授权国家发明专利 1 项。
+    研究方向：纳米技术在皮肤领域的基础研究与应用开发。
 
 - name: 谢煜骅
   sort_key: "15"
