@@ -257,11 +257,19 @@
   sort_key: "10"
   name_en: Zhixiang Zhao
   role: clinical_researcher
-  title: 临床研究人员
-  title_en: Clinical Researcher, Dermatologist
-  photo: /assets/img/members/placeholder.png
+  title: 主治医师、硕士研究生导师
+  title_en: Attending Physician, Master's Supervisor
+  photo: /assets/img/members/zzx.jpg
   department: 皮肤科
   department_en: Department of Dermatology
+  bio: >
+    Visiting Scholar at Emory University.<br><br>
+    Clinical expertise focuses on the diagnosis and treatment of disfiguring skin diseases, including rosacea, acne, and hair loss disorders. Research focuses on the basic pathogenic mechanisms of rosacea.<br><br>
+    Led 1 NSFC Young Scientists Fund and 1 Hunan Natural Science Foundation General Program. Published 8 SCI papers as first or corresponding author in journals including <em>Journal of Investigative Dermatology</em>.
+  bio_zh: >
+    美国埃默里大学访问学者。<br><br>
+    临床主攻损容性皮肤病（玫瑰痤疮、痤疮及脱发性疾病等）的诊断与治疗，科研致力于玫瑰痤疮发病机制的基础研究。<br><br>
+    主持国家自然科学基金青年项目 1 项、湖南省自然科学基金面上项目 1 项。以第一作者或通讯作者身份在 <em>J Invest Dermatol</em> 等期刊发表 SCI 论文 8 篇。
 
 - name: 施为
   sort_key: "02"
