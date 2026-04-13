@@ -55,11 +55,11 @@
   photo: /assets/img/members/zyy.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    Research focus on inflammatory skin diseases and skin aging mechanisms.
+  bio: >
+    Research focus on inflammatory skin diseases and skin aging mechanisms.<br><br>
     Published 20+ SCI papers in Pharmacol Res, Front Pharmacol, J Biol Chem, etc.
-  bio_zh: >-
-    主要从事炎症性皮肤病及皮肤衰老的机制研究。
+  bio_zh: >
+    主要从事炎症性皮肤病及皮肤衰老的机制研究。<br><br>
     在 Pharmacol Res、Front Pharmacol、J Biol Chem 等期刊发表 SCI 论文 20 余篇。
 
 - name: 毛锐
@@ -112,17 +112,17 @@
   department: 皮肤科
   department_en: Department of Dermatology
   email: yanjichu@csu.edu.cn
-  bio: >-
-    B.Sc. in Chemistry (2019) and Ph.D. in Polymer Chemistry and Physics (2024) from Renmin University of China, under the supervision of Prof. Yapei Wang.
-    Joined Xiangya Hospital, Central South University as Assistant Research Fellow in 2024.
-    Published 9 papers as first/co-first or corresponding author in CCS Chemistry, Small, Langmuir, etc.
-    Principal investigator of 1 NSFC Young Scientists Fund (Category C); holder of 1 national invention patent.
+  bio: >
+    B.Sc. in Chemistry (2019) and Ph.D. in Polymer Chemistry and Physics (2024) from Renmin University of China, under the supervision of Prof. Yapei Wang.<br><br>
+    Joined Xiangya Hospital, Central South University as Assistant Research Fellow in 2024.<br><br>
+    Published 9 papers as first/co-first or corresponding author in CCS Chemistry, Small, Langmuir, etc.<br><br>
+    Principal investigator of 1 NSFC Young Scientists Fund (Category C); holder of 1 national invention patent.<br><br>
     Research interest: fundamental research and translational applications of nanotechnology in dermatology.
-  bio_zh: >-
-    2019 年获中国人民大学化学理学学士学位，2024 年获中国人民大学高分子化学与物理理学博士学位（硕博连读），导师为王亚培教授。
-    2024 年起任中南大学湘雅医院助理研究员。
-    以第一作者（含共同第一作者）及通讯作者身份在 CCS Chemistry、Small、Langmuir 等国内外知名期刊发表论文 9 篇。
-    主持国家自然科学青年基金（C 类）1 项，授权国家发明专利 1 项。
+  bio_zh: >
+    2019 年获中国人民大学化学理学学士学位，2024 年获中国人民大学高分子化学与物理理学博士学位（硕博连读），导师为王亚培教授。<br><br>
+    2024 年起任中南大学湘雅医院助理研究员。<br><br>
+    以第一作者（含共同第一作者）及通讯作者身份在 CCS Chemistry、Small、Langmuir 等国内外知名期刊发表论文 9 篇。<br><br>
+    主持国家自然科学青年基金（C 类）1 项，授权国家发明专利 1 项。<br><br>
     研究方向：纳米技术在皮肤领域的基础研究与应用开发。
 
 - name: 谢煜骅
@@ -154,14 +154,13 @@
   photo: /assets/img/members/xhf.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    First "Xiangya Distinguished Physician" of Central South University.
-    Director of Dermatology, Xiangya Hospital.
-    Chief Expert at the Rosacea Research Center, Chinese Medical Association.
+  bio: >
+    First "Xiangya Distinguished Physician" of Central South University. Director of Dermatology, Xiangya Hospital.<br><br>
+    Chief Expert at the Rosacea Research Center, Chinese Medical Association.<br><br>
     Led 4 NSFC projects. Published 86 papers.
-  bio_zh: >-
-    首届中南大学"湘雅名医"、湘雅医院皮肤科主任。
-    中华医学会皮肤性病学分会玫瑰痤疮研究中心首席专家。
+  bio_zh: >
+    首届中南大学"湘雅名医"、湘雅医院皮肤科主任。<br><br>
+    中华医学会皮肤性病学分会玫瑰痤疮研究中心首席专家。<br><br>
     主持国家自然科学基金项目 4 项，发表论文 86 篇。
 
 - name: 简丹
@@ -173,13 +172,12 @@
   photo: /assets/img/members/jd.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    Visiting Scholar at University of Southern California.
-    Research focus: skin aging mechanisms, disfiguring skin disease pathogenesis,
-    and photoelectric therapy for pigmentary disorders.
-  bio_zh: >-
-    美国南加州大学访问学者。主要研究方向为皮肤衰老机制、
-    损容性皮肤病的发病及治疗机制、色素性皮肤病的光电治疗。
+  bio: >
+    Visiting Scholar at University of Southern California.<br><br>
+    Research focus: skin aging mechanisms, disfiguring skin disease pathogenesis, and photoelectric therapy for pigmentary disorders.
+  bio_zh: >
+    美国南加州大学访问学者。<br><br>
+    主要研究方向为皮肤衰老机制、损容性皮肤病的发病及治疗机制、色素性皮肤病的光电治疗。
 
 - name: 唐言
   sort_key: "08"
@@ -190,11 +188,13 @@
   photo: /assets/img/members/ty.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    Visiting Scholar at Emory University. Specializes in hair disorders, rosacea,
-    and other disfiguring skin diseases. Led 2 NSFC projects. Published 15 SCI papers.
-  bio_zh: >-
-    美国埃默里大学访问学者。主攻毛发疾病、玫瑰痤疮等损容性皮肤病。
+  bio: >
+    Visiting Scholar at Emory University.<br><br>
+    Specializes in hair disorders, rosacea, and other disfiguring skin diseases.<br><br>
+    Led 2 NSFC projects. Published 15 SCI papers.
+  bio_zh: >
+    美国埃默里大学访问学者。<br><br>
+    主攻毛发疾病、玫瑰痤疮等损容性皮肤病。<br><br>
     主持国家自然科学基金项目 2 项，发表 SCI 论文 15 篇。
 
 - name: 刘芳芬
@@ -206,12 +206,14 @@
   photo: /assets/img/members/lff.png
   department: 皮肤科
   department_en: Department of Dermatology
-  bio: >-
-    Specializes in clinical diagnosis and basic research of alopecia.
-    Experienced in FUT/FUE hair transplant surgery. Led/participated in 4 NSFC projects.
-  bio_zh: >-
-    擅长脱发的临床诊治及基础研究，
-    熟练掌握 FUT/FUE 植发手术。主持国家自然科学基金项目 4 项。
+  bio: >
+    Specializes in clinical diagnosis and basic research of alopecia.<br><br>
+    Experienced in FUT/FUE hair transplant surgery.<br><br>
+    Led/participated in 4 NSFC projects.
+  bio_zh: >
+    擅长脱发的临床诊治及基础研究。<br><br>
+    熟练掌握 FUT/FUE 植发手术。<br><br>
+    主持国家自然科学基金项目 4 项。
 
 - name: 汪犇
   sort_key: "05"

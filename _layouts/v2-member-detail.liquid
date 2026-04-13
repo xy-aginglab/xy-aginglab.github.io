@@ -48,9 +48,21 @@ layout: v2
     </div>
 
     {% if lang == 'zh' and member.bio_zh %}
-      <div class="v2-member-detail__bio">{{ member.bio_zh }}</div>
+      {% assign bio_blocks = member.bio_zh | split: '<br><br>' %}
     {% elsif member.bio %}
-      <div class="v2-member-detail__bio">{{ member.bio }}</div>
+      {% assign bio_blocks = member.bio | split: '<br><br>' %}
+    {% else %}
+      {% assign bio_blocks = '' | split: '' %}
+    {% endif %}
+    {% if bio_blocks.size > 0 %}
+      <div class="v2-member-detail__bio">
+        {% for block in bio_blocks %}
+          {% assign block_text = block | strip %}
+          {% if block_text != '' %}
+            <p>{{ block_text }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
     {% endif %}
 
     {{ content }}
