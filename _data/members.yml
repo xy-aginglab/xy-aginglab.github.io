@@ -86,11 +86,20 @@
   sort_key: "12"
   name_en: Guo Li
   role: basic_researcher
-  title: 研究人员
-  title_en: Researcher
-  photo: /assets/img/members/placeholder.png
+  title: 副研究员、医师
+  title_en: Associate Research Fellow, Physician
+  photo: /assets/img/members/lg.jpg
   department: 皮肤科
   department_en: Department of Dermatology
+  email: liguo237@csu.edu.cn
+  bio: >
+    Recipient of the National Postdoctoral Program for Innovative Talents.<br><br>
+    Research focus: basic and translational research on pilosebaceous-related diseases (alopecia, canities, etc.).<br><br>
+    Published 7 SCI papers as first author in Nat Commun, EMBO, Adv Sci, JID, etc. Principal investigator of 1 NSFC project.
+  bio_zh: >
+    国家博士后创新人才计划获得者。<br><br>
+    研究方向：毛囊皮脂腺相关疾病（脱发、白发等）的基础与转化研究。<br><br>
+    以第一作者在 Nat Commun、EMBO、Adv Sci、JID 等杂志发表 SCI 论文 7 篇，主持国家自然科学基金项目 1 项。
 
 - name: 杨李
   sort_key: "13"
