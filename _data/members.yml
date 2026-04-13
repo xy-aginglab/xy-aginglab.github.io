@@ -66,11 +66,24 @@
   sort_key: "17"
   name_en: Rui Mao
   role: basic_researcher
-  title: 研究人员
-  title_en: Researcher
-  photo: /assets/img/members/placeholder.png
+  title: 博士研究生
+  title_en: PhD Candidate
+  photo: /assets/img/members/mr.jpg
   department: 皮肤科
   department_en: Department of Dermatology
+  email: 218102100@csu.edu.cn
+  bio: >
+    B.Med. from Xi'an Jiaotong University (2018). M.Med. in Clinical Medicine from Southwest Jiaotong University (2021), under the supervision of Prof. Yanjun Liu.<br><br>
+    Currently pursuing Ph.D. in Dermatology and Venereology at Xiangya Hospital, Central South University, under the supervision of Prof. Ji Li.<br><br>
+    Research focus: big-data approaches to skin health and aging.<br><br>
+    Published 31 SCI papers as first/corresponding author — 11 in CAS Zone 1 or IF &gt; 10 — with cumulative impact factor over 200. Representative venues include <em>JAAD</em>, <em>Aging Cell</em>, <em>J Autoimmun</em>, <em>Int J Surg</em>, <em>Theranostics</em>, <em>Metabolism</em>, <em>J Med Virol</em>, and <em>Cell Death Dis</em>.<br><br>
+    Recipient of the National Scholarship (2022 and 2024) and the CSU President's Innovation Award (2023); nominated for the CAST Young Talent Support Program (PhD Track).
+  bio_zh: >
+    2018 年毕业于西安交通大学临床医学（本科）；2021 年获西南交通大学临床医学学术型硕士学位，导师为刘雁军教授。<br><br>
+    现为中南大学湘雅医院皮肤病与性病专业型博士生，导师为李吉教授。<br><br>
+    研究方向：基于大数据的皮肤健康与衰老研究。<br><br>
+    以第一作者/通讯作者发表 SCI 论文 31 篇，其中中科院 1 区或影响因子 10 分以上 11 篇，累计影响因子 200+；代表性期刊包括 <em>JAAD</em>、<em>Aging Cell</em>、<em>J Autoimmun</em>、<em>Int J Surg</em>、<em>Theranostics</em>、<em>Metabolism</em>、<em>J Med Virol</em>、<em>Cell Death Dis</em> 等。<br><br>
+    获 2022、2024 年度国家奖学金，2023 年中南大学校长创新奖；入选湖南省科协提名"中国科协青年人才托举工程博士生专项计划"。
 
 - name: 陈梦婷
   sort_key: "11"
