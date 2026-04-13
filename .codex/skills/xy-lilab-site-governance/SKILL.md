@@ -16,9 +16,9 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 - This repository is the public website for the Hunan Key Laboratory of Aging Biology at Xiangya Hospital, Central South University.
 - The site must present the lab as credible, translational, academically serious, and easy to maintain as a static site.
 - The core public story is stable: the lab sits at the intersection of clinical dermatology and molecular biology, with three major research directions:
+  - rosacea and hidradenitis suppurativa
+  - hair disorders and hair regeneration
   - skin aging
-  - hair diseases and hair regeneration
-  - inflammatory skin diseases
 - The site must make it easy to discover research, publications, team members, clinical programs, and recruiting information.
 
 ## Current Product Shape
@@ -31,7 +31,7 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
   - homepage features PI intro, detailed research-direction narratives with inline paper citations
   - research narrative content lives in `_data/research_directions.yml` (bilingual)
   - layout files: `v2.liquid`, `v2-home.liquid`, `v2-page.liquid`, `v2-people.liquid`, `v2-member-detail.liquid`
-  - fonts: Playfair Display + Source Serif 4 (English), Noto Serif SC + Noto Sans SC (Chinese)
+  - fonts: Merriweather (serif titles) + Source Serif 4 (serif body) + Source Sans 3 (sans UI) for English; Noto Serif SC + Noto Sans SC for Chinese
   - Google Analytics (GA4) integrated
   - Open Graph + Twitter Card meta tags for social sharing
   - JSON-LD structured data for search engines
@@ -50,23 +50,23 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 
 ## Hard Guardrails
 
-- Do not mix `v1` SCSS components and `v2`/`v3` utility-style patterns inside the same user-facing surface unless the skill is updated to define a shared pattern.
+- Do not introduce patterns that conflict with the existing `v2-*` design system inside the same user-facing surface unless the skill is updated to define a shared pattern.
 - Do not hard-code repeated institutional, research, team, or contact content inside layouts when an existing data/content source already exists.
-- Do not collapse chooser, `v1`, `v2`, and `v3` into one surface as a side effect of a local cleanup.
+- Do not resurrect or re-introduce the archived `v1`, `v3`, chooser, or Bloom surfaces as a side effect of a local cleanup. They live in the private `xy-lilab/site-archive` repository.
 - Do not change navigation taxonomy, page hierarchy, or routing conventions without updating the skill first.
-- Do not introduce a new build dependency or app framework as an incidental implementation choice. The default assumption is Jekyll + Liquid + SCSS + lightweight JavaScript, plus Tailwind CDN only where the repository already uses it.
-- Do not make structural design changes in only one language when the affected surface is meant to stay bilingual.
-- Do not carry Bloom-specific naming, comments, or near-copy layout structures into new public-facing versions.
+- Do not introduce a new build dependency or app framework as an incidental implementation choice. The default assumption is Jekyll + Liquid + plain CSS with design-token custom properties + lightweight vanilla JavaScript.
+- Do not make structural design changes in only one language when the affected surface is bilingual.
+- Do not carry Bloom-specific naming, comments, or near-copy layout structures into this codebase.
 
 ## When The Skill Must Be Updated First
 
 - New or removed top-level page categories, routes, or navigation items
-- Changes to the chooser / `v1` / `v2` / `v3` relationship
 - Changes to visual identity, typography, color systems, motion rules, or interaction style
 - Changes to where core copy or structured content lives
-- Changes to data schemas in `_data`, `_projects`, or bibliography-driven page patterns
-- Changes to publication presentation patterns or paper detail behavior
+- Changes to data schemas in `_data/*.yml` or `_bibliography/papers.bib`
+- Changes to publication presentation patterns, filter facets, or paper detail behavior
 - Changes to team-role taxonomy, research-direction taxonomy, or bilingual coverage policy
+- Changes to the publication-fetch, classification, or citation-refresh automation schema
 - Refactors that move responsibility across layouts, includes, stylesheets, scripts, or data files
 
 ## When The Skill Usually Does Not Need Updates
@@ -79,9 +79,10 @@ description: Use when working in the xy-lilab.github.io repository for the Hunan
 
 ## Task Defaults
 
-- If the user does not specify a version, change only the minimum affected surface and avoid cross-version propagation unless the request is clearly cross-version.
+- Change only the minimum affected surface; do not propagate a local fix into unrelated layouts, pages, or styles.
 - If a request touches shared scientific messaging, keep the three research directions aligned with the existing framing unless the user explicitly changes the lab narrative.
-- Prefer data-driven edits over template-level duplication.
+- Prefer data-driven edits (`_data/*.yml`, `_bibliography/papers.bib`, i18n strings) over template-level duplication.
+- Bilingual surfaces (English at `/`, Chinese at `/zh/`) must stay semantically aligned. Structural changes apply to both languages unless the user explicitly scopes otherwise.
 
 ## References
 

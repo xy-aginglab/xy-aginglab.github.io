@@ -1,140 +1,139 @@
 # Module Map
 
+The site is a single-version Jekyll build rooted at `/` (English) and `/zh/` (Chinese). All public surface uses the `v2-*` layouts and the `v2-*.css` stylesheets. Legacy `v1`, `v3`, chooser, and Bloom files have been removed from this repository and live in `xy-lilab/site-archive` (private).
+
 ## Core Site Identity And Build
 
 - `_config.yml`
-  - global site identity, URLs, Jekyll behavior, scholar behavior, plugin toggles
+  - global site identity, URLs, Jekyll behavior, `jekyll-scholar` behavior, `jekyll-imagemagick` behavior, plugin toggles
   - changes here can affect the entire site and often require a skill update
 - `_plugins/`
   - custom Liquid and scholar helpers
   - treat as infrastructure, not page-level content
+- `Gemfile` / `Gemfile.lock`
+  - Jekyll 4.4 and plugin pinning
+- `.github/workflows/deploy.yml`
+  - builds the Jekyll site, caches ImageMagick WebP output and apt-installed ImageMagick, deploys to `gh-pages`
+- `.github/workflows/fetch-publications.yml`
+  - weekly PubMed → `papers.bib` append with auto-classification
+- `.github/workflows/update-citations.yml`
+  - weekly OpenAlex citation-count refresh
 
 ## Source Of Truth: Structured Content
 
-- `_data/i18n/en.yml`
-  - English shared UI copy for `v1`
-- `_data/i18n/zh.yml`
-  - Chinese shared UI copy for `v1`
 - `_data/members.yml`
-  - team roster, role grouping, bios, photos, profile links
+  - team roster with bilingual fields (`name`/`name_en`, `title`/`title_en`, `bio`/`bio_zh`), role, `sort_key`, photo path, contact
+- `_data/research_directions.yml`
+  - bilingual research-direction narratives; each entry carries `intro`/`intro_zh` (homepage bullet list with inline `<a class="v2-cite">` DOI citations) and `narrative`/`narrative_zh` (detail-page long form)
+- `_data/i18n/en.yml`, `_data/i18n/zh.yml`
+  - shared UI strings for the two languages
 - `_data/socials.yml`
   - social/contact endpoints used on the site
-- `_projects/*.md`
-  - research-direction detail pages and project-card metadata
-  - may also carry concise overview fields used by `v3` research listings, such as short highlight arrays
+- `_data/citations.yml`
+  - cached OpenAlex citation counts, written by `scripts/update_citations.py`
 - `_bibliography/papers.bib`
-  - publication metadata and category linking
-- `assets/img/publication_preview/*`
-  - publication thumbnails referenced from bibliography entries
+  - publication metadata. Classification fields (`category`, `subcategory`, `publication_type`, `clinical`, `basic`) drive the filtering UI on `/publications/` and the Chinese mirror
+- `assets/img/publication_preview/`
+  - publication thumbnails referenced from bibliography entries; `jekyll-imagemagick` auto-resizes to 480 / 800 / 1400 WebP during build
+- `assets/img/members/`
+  - team member photos referenced from `members.yml`
+- `assets/img/logos/`
+  - institutional logos
 
-## Version 1 Surface
+## Public Surface Layouts
 
-- `_layouts/default.liquid`
-  - primary `v1` shell, bilingual navigation, footer, language switching, theme toggle
-  - note: English navigation is page-driven; Chinese navigation is manually enumerated here
-- `_layouts/about.liquid`
-  - `v1` home structure
-- `_layouts/page.liquid`
-  - shared `v1` interior page frame
-- `_layouts/people.liquid`
-  - `v1` team page
-- `_includes/head.liquid`
-  - common head assets for `v1`
-- `_includes/projects.liquid`
-  - project card rendering
-- `_includes/selected_papers.liquid`
-  - featured publication block
+- `_layouts/v2.liquid`
+  - base shell: `<head>`, nav, footer, GA4, Open Graph / Twitter Card meta, JSON-LD
+- `_layouts/v2-home.liquid`
+  - homepage layout used by both `/` (English) and `/zh/` (Chinese)
+  - composes PI intro, research-direction narratives, selected publications, institutional anchor
+- `_layouts/v2-page.liquid`
+  - shared interior page frame (Clinical, Careers, Publications list, Projects index, and their `/zh/` mirrors)
+- `_layouts/v2-people.liquid`
+  - team page; renders PI block + role-grouped member listings from `_data/members.yml`
+- `_layouts/v2-member-detail.liquid`
+  - individual member detail page
 - `_layouts/bib.liquid`
-  - shared bibliography list-item renderer used by scholar-driven publication listings
-  - must stay version-neutral and must not preserve `v2` / Bloom-specific presentation assumptions
-- `_includes/scripts.liquid`
-  - lightweight shared scripts
-- `_sass/_custom.scss`
-  - main `v1` custom design system and component styling
-- `_sass/_themes.scss`
-  - theme tokens and dark/light behavior
-- `_sass/_publications.scss`
-  - bibliography styling
-- `assets/css/main.scss`
-  - imports the `v1` style stack
-- `assets/js/theme.js`
-  - `v1` theme behavior
-- `assets/js/bib-toggle.js`
-  - bibliography expand/collapse interactions
+  - shared bibliography list-item renderer used by jekyll-scholar-driven publication listings; must stay version-neutral
+- `_layouts/paper-detail-router.html`
+  - routes a DOI or bib key to the corresponding publication detail render
 
-## Version 2 Surface
+## Shared Includes
 
-- `_layouts/bloom.liquid`
-  - main `v2` shell and navigation
-- `_layouts/bloom-page.liquid`
-  - `v2` interior content page wrapper
-- `_layouts/bloom-people.liquid`
-  - `v2` team page
-- `_layouts/paper-detail.html`
-  - publication detail pages currently rendered in the `v2` visual language
-- `_pages/v2*.md` and `_pages/v2/*.md`
-  - `v2` routes and content
-- `assets/css/bloom.css`
-  - local CSS supporting chooser and `v2`-style pieces
+- `_includes/head.liquid`
+  - head assets, GA4 snippet, meta tags, JSON-LD
+- `_includes/nav.liquid`
+  - top navigation, bilingual language switcher
+- `_includes/footer.liquid`
+  - footer content and institutional anchor
+- `_includes/bib_search.liquid`
+  - publication search/filter UI used on the publications page
 
-## Version 3 Surface
+## Pages
 
-- `_layouts/v3-home.liquid`
-  - dedicated `v3` homepage shell
-  - exists so the approved homepage treatment can live at `/v3/` without being distorted by shared interior-page rules
-- `_layouts/v3.liquid`
-  - main `v3` shell and navigation
-  - shared `v3` interior shell and navigation
-- `_layouts/v3-page.liquid`
-  - `v3` interior content page wrapper
-  - owns the shared editorial masthead for `v3` interior pages
-  - may render page front matter such as eyebrow, description, lead, and optional compact next-step links
-  - should not assume every page needs a fact rail or sidebar
-- `_layouts/v3-people.liquid`
-  - `v3` team page
-  - owns the simplified team-page masthead and any lightweight team count summary
-- `_layouts/v3-paper-detail.html`
-  - `v3` publication detail presentation when routed through the minimalist branch
-  - should prefer a simple bibliographic header and reading-first detail view over card-heavy metadata treatment
-- `_pages/v3*.md` and `_pages/v3/*.md`
-  - `v3` routes and content
-- `assets/css/v3.css`
-  - local CSS dedicated to the `v3` visual language
-  - primary frontier for `v3` interior-page design work
-- `assets/css/v3-home.css`
-  - homepage-only CSS for the approved cleaner shell now mapped directly onto `/v3/`
-- `assets/js/v3.js`
-  - `v3` navigation interactions and the homepage rotating-text behavior
+- `_pages/v2.md`
+  - English homepage, routed to `/`
+- `_pages/v2/`
+  - English interior pages: `projects.md`, `publications.md`, `clinical.md`, `careers.md`, `team.md`, and `team/` member-detail stubs
+- `_pages/v2/zh/`
+  - Chinese mirror: `index.md`, `projects.md`, `publications.md`, `clinical.md`, `careers.md`, `team.md`, and `team/` member-detail stubs
+- `_pages/404.md`
+  - not-found page
 
-## Chooser Surface
+## Styles
 
-- `_pages/home.md`
-  - root redirect / handoff into the chosen public branch
-- `_pages/chooser.md`
-  - version-comparison route
-- `_layouts/chooser.liquid`
-  - version-surface rendering and design-direction framing
+- `assets/css/v2-home.css`
+  - homepage styles and the shared design-token layer: colors, typography, spacing, CSS custom properties used across all `v2` surfaces
+- `assets/css/v2-pages.css`
+  - interior-page styles (team, publications, clinical, careers, projects, member detail, paper detail)
+- `assets/css/v2-print.css`
+  - print stylesheet
+- `assets/css/academicons.min.css`
+  - academic-icon font used in contact blocks
+
+## Scripts (Client-Side)
+
+- `assets/js/v2-nav.js`
+  - navigation interactions (mobile menu toggle)
+- `assets/js/bibsearch.js`
+  - publications-page search + multi-dimensional filtering
+
+## Automation Scripts (Build-Side)
+
+- `scripts/fetch_publications.py`
+  - queries PubMed for new lab papers and appends classified BibTeX entries to `_bibliography/papers.bib`
+- `scripts/classify_paper.py`
+  - keyword-based category / subcategory / publication-type / clinical / basic classifier used by `fetch_publications.py`
+- `scripts/update_citations.py`
+  - refreshes citation counts from OpenAlex into `_data/citations.yml`
+- `scripts/fetch_previews.py`
+  - fetches publication thumbnail images into `assets/img/publication_preview/`
+
+## Governance
+
+- `AGENTS.md`, `CLAUDE.md`
+  - repository entry points for contributors and AI assistants; point at this skill
+- `.codex/skills/xy-lilab-site-governance/SKILL.md`
+  - the operating contract this module map belongs to
+- `.codex/skills/xy-lilab-site-governance/references/*`
+  - design, feature, and module references
 
 ## Ownership Rules
 
-- If the change is mostly copy or structured data, edit `_data`, `_projects`, or `_bibliography` first.
-- If the change is page structure inside `v1`, prefer `_layouts/about.liquid`, `_layouts/page.liquid`, `_layouts/people.liquid`, and `_sass/_custom.scss`.
-- If the change is page structure inside `v2`, prefer the `bloom*` layouts and `assets/css/bloom.css`.
-- If the change is page structure inside `v3`, prefer the `v3*` layouts and `assets/css/v3.css`.
-- If the change is a design-forward refinement and no version is specified, prefer implementing it in `v3`.
-- If the change is a navigation taxonomy change:
-  - update page front matter where English `v1` nav depends on it
-  - update `_layouts/default.liquid` for Chinese `v1` nav
-  - update `_layouts/bloom.liquid` for `v2` nav if the legacy branch still needs it
-  - update `_layouts/v3.liquid` for `v3` nav
-  - update the skill first
+- If the change is mostly copy or structured data, edit `_data`, `_bibliography`, or the relevant `_pages` entry — do not inline content into layouts.
+- If the change is page structure, prefer the matching `_layouts/v2-*.liquid` file. Do not create a parallel layout for a one-off variation.
+- If the change is a shared design-token adjustment (color, font, spacing), edit the CSS custom properties at the top of `assets/css/v2-home.css`; do not duplicate tokens in `v2-pages.css`.
+- If the change is bilingual UI copy, edit `_data/i18n/zh.yml` (and `en.yml` where applicable) rather than hardcoding strings in layouts.
+- If the change is a navigation taxonomy change, update `_includes/nav.liquid` for both languages and update the skill first.
+- If the change touches publication rendering (list or detail), update `_layouts/bib.liquid` or `_layouts/paper-detail-router.html` — and update the skill first when rendering rules change.
+- Automation scripts are shared by humans and scheduled workflows. Keep their CLI contract and output location stable.
 
 ## Skill-First Structural Triggers
 
 - Moving content responsibility between layouts and data files
-- Introducing a shared component across `v1` and `v2`
-- Introducing a shared component across `v1`, `v2`, and `v3`
+- Adding or removing a top-level page category or navigation item
 - Changing how bibliography detail pages are themed or routed
 - Changing member roles or research categories
 - Changing bilingual coverage rules
 - Changing which files own navigation, homepage narrative, or contact data
+- Introducing a new build dependency, plugin, or client framework
