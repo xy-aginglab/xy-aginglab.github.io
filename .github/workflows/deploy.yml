@@ -25,6 +25,11 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: Install ImageMagick (cached) 📦
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: imagemagick
+          version: 1.0
       - name: Cache ImageMagick webp output 🖼️
         uses: actions/cache@v4
         with:
@@ -39,9 +44,8 @@ jobs:
             cp -r .webp-cache/. _site/ 2>/dev/null || true
             echo "Restored $(find _site -name '*.webp' 2>/dev/null | wc -l) cached webp files"
           fi
-      - name: Install and Build 🔧
+      - name: Build 🔧
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Save webp outputs to cache dir 💾
