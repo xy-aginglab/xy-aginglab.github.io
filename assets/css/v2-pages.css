@@ -843,7 +843,8 @@ body.v2-body {
   color: var(--v2-body);
   line-height: 1.8;
 }
-.v2-member-detail__bio p { margin: 0 0 0.7rem; }
+.v2-member-detail__bio p { margin: 0 0 0.9rem; }
+.v2-member-detail__bio p:last-child { margin-bottom: 0; }
 .v2-member-detail__back {
   margin-top: 2rem;
 }
