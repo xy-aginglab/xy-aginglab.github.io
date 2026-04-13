@@ -6,9 +6,10 @@ Official website for the Li Lab, Department of Dermatology, Xiangya Hospital, Ce
 
 ## Research
 
-The lab focuses on two major directions:
+The lab focuses on three major directions:
 
-- **Pilosebaceous-Related Diseases** — rosacea, hair loss, hair graying, and acne
+- **Rosacea and Hidradenitis Suppurativa** — pathogenesis, multi-omics, and clinical trials
+- **Hair Disorders & Regeneration** — alopecia mechanisms, hair follicle biology, and regenerative strategies
 - **Skin Aging** — aging mechanisms, longevity cohorts, and anti-aging interventions
 
 ## Features
