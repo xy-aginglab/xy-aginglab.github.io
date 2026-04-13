@@ -144,6 +144,7 @@ exclude:
 keep_files:
   - CNAME
   - .nojekyll
+  - assets/img  # preserve cached ImageMagick webp output from CI cache
 
 # Plug-ins
 plugins:

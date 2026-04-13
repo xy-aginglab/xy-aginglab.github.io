@@ -25,11 +25,37 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: Cache ImageMagick webp output 🖼️
+        uses: actions/cache@v4
+        with:
+          path: .webp-cache
+          key: webp-${{ hashFiles('assets/img/**/*.jpg', 'assets/img/**/*.jpeg', 'assets/img/**/*.png', 'assets/img/**/*.tiff', 'assets/img/**/*.gif') }}
+          restore-keys: |
+            webp-
+      - name: Restore webp cache into _site 🔁
+        run: |
+          if [ -d .webp-cache ]; then
+            mkdir -p _site
+            cp -r .webp-cache/. _site/ 2>/dev/null || true
+            echo "Restored $(find _site -name '*.webp' 2>/dev/null | wc -l) cached webp files"
+          fi
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Save webp outputs to cache dir 💾
+        run: |
+          rm -rf .webp-cache
+          mkdir -p .webp-cache
+          # Copy only .webp files, preserving _site/assets/img/... path structure
+          find _site/assets/img -name '*.webp' -print0 2>/dev/null | while IFS= read -r -d '' f; do
+            rel="${f#_site/}"
+            dest=".webp-cache/$rel"
+            mkdir -p "$(dirname "$dest")"
+            cp "$f" "$dest"
+          done
+          echo "Cached $(find .webp-cache -name '*.webp' 2>/dev/null | wc -l) webp files"
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
