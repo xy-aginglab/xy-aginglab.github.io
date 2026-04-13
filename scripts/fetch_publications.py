@@ -23,6 +23,12 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from classify_paper import (
+    classify as classify_paper,
+    classify_type,
+    classify_clinical_basic,
+)
+
 # ── Configuration ──
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -263,6 +269,18 @@ def format_bibtex_entry(paper):
     lines.append(f"  pmid={{{paper['pmid']}}},")
     if paper["abstract"]:
         lines.append(f"  abstract={{{escape_bibtex(paper['abstract'])}}},")
+    category, subcategory = classify_paper(paper["title"], paper.get("abstract", ""))
+    paper_type = classify_type(paper["title"], paper.get("abstract", ""))
+    is_clinical, is_basic = classify_clinical_basic(
+        paper["title"], paper.get("abstract", ""), paper_type
+    )
+    lines.append(f"  category={{{category}}},")
+    lines.append(f"  subcategory={{{subcategory}}},")
+    lines.append(f"  publication_type={{{paper_type}}},")
+    if is_clinical:
+        lines.append(f"  clinical={{true}},")
+    if is_basic:
+        lines.append(f"  basic={{true}},")
     lines.append(f"  language={{en}},")
     lines.append(f"  bibtex_show={{true}},")
     lines.append(f"  author_verified={{pubmed_auto}},")
