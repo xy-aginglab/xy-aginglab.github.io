@@ -12,7 +12,11 @@ show_lead: false
 {% for dir in site.data.research_directions %}
   <article class="v2-program-entry" id="{{ dir.id }}">
     <h2>{{ dir.title_zh }}</h2>
-    {% if dir.id == 'hair' %}
+    {% if dir.id == 'rosacea' %}
+    <div class="v2-program-entry__media">
+      <img src="{{ '/assets/img/research_rosacea.png' | relative_url }}" alt="{{ dir.title_zh }}">
+    </div>
+    {% elsif dir.id == 'hair' %}
     <div class="v2-program-entry__media">
       <img src="{{ '/assets/img/research_hair_follicle.png' | relative_url }}" alt="{{ dir.title_zh }}">
     </div>
