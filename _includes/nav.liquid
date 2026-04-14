@@ -13,7 +13,7 @@
     <nav class="v2-topbar__nav">
       {% if lang == 'zh' %}
       <a href="{{ '/zh/' | relative_url }}"{% if current_url == '/zh/' %} class="is-active"{% endif %}>首页</a>
-      <a href="{{ '/zh/projects/' | relative_url }}"{% if current_url contains '/zh/projects' %} class="is-active"{% endif %}>研究方向</a>
+      <a href="{{ '/zh/research/' | relative_url }}"{% if current_url contains '/zh/research' %} class="is-active"{% endif %}>研究方向</a>
       <a href="{{ '/zh/publications/' | relative_url }}"{% if current_url contains '/zh/publications' %} class="is-active"{% endif %}>论文发表</a>
       <a href="{{ '/zh/team/' | relative_url }}"{% if current_url contains '/zh/team' %} class="is-active"{% endif %}>团队成员</a>
       <a href="{{ '/zh/clinical/' | relative_url }}"{% if current_url contains '/zh/clinical' %} class="is-active"{% endif %}>临床研究</a>
@@ -21,7 +21,7 @@
       <a href="{{ '/' | relative_url }}">English</a>
       {% else %}
       <a href="{{ '/' | relative_url }}"{% if current_url == '/' %} class="is-active"{% endif %}>Home</a>
-      <a href="{{ '/projects/' | relative_url }}"{% if current_url contains '/projects' %} class="is-active"{% endif %}>Research</a>
+      <a href="{{ '/research/' | relative_url }}"{% if current_url contains '/research' %} class="is-active"{% endif %}>Research</a>
       <a href="{{ '/publications/' | relative_url }}"{% if current_url contains '/publications' or current_url contains '/bibliography/' %} class="is-active"{% endif %}>Publications</a>
       <a href="{{ '/team/' | relative_url }}"{% if current_url contains '/team' %} class="is-active"{% endif %}>People</a>
       <a href="{{ '/clinical/' | relative_url }}"{% if current_url contains '/clinical' %} class="is-active"{% endif %}>Clinical</a>

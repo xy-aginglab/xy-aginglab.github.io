@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /projects/
+permalink: /research/
 title: Our Research
 description: Rosacea & hidradenitis suppurativa, hair disorders & regeneration, and skin aging.
 show_lead: false

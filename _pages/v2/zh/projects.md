@@ -1,6 +1,6 @@
 ---
 layout: v2-page
-permalink: /zh/projects/
+permalink: /zh/research/
 title: 研究方向
 lang: zh
 description: 聚焦玫瑰痤疮与化脓性汗腺炎、毛发疾病与再生、皮肤衰老三大方向的基础、临床与转化研究。

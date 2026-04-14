@@ -64,7 +64,7 @@
   - one clear email / contact route
 - Avoid repeating role philosophy and application instructions in multiple sections.
 
-### Projects (`/projects/` and `/zh/projects/`)
+### Projects (`/research/` and `/zh/research/`)
 
 - Lightweight research-project overview, complementary to the research-direction detail pages.
 - Should not duplicate the homepage research-direction narrative; use it for additional programs or translational initiatives when needed.

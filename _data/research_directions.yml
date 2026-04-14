@@ -22,8 +22,8 @@
       <li>牵头制定首个《中国玫瑰痤疮诊疗指南（2021版）》（<a href="https://doi.org/10.35541/cjd.20201078" class="v2-cite" target="_blank">中华皮肤科杂志 2021</a>）。</li>
       <li>报道 PASH 综合征（坏疽性脓皮病、痤疮与化脓性汗腺炎）对秋水仙碱–沙利度胺联合方案的治疗应答（<a href="https://doi.org/10.3389/fmed.2022.856786" class="v2-cite" target="_blank"><em>Front Med</em> 2022</a>）。</li>
     </ul>
-  link: "/projects/#rosacea"
-  link_zh: "/zh/projects/#rosacea"
+  link: "/research/#rosacea"
+  link_zh: "/zh/research/#rosacea"
   narrative: |
     <p>
       Rosacea is a chronic inflammatory skin disorder that significantly impacts quality of life, yet its pathogenesis remains incompletely understood. Our laboratory has established a comprehensive research framework spanning metabolomics, single-cell transcriptomics, neurogenic signaling, and genetics to uncover the multi-dimensional mechanisms underlying this disease.
@@ -76,8 +76,8 @@
       <li>发现毛乳头微环境中 Hedgehog 信号过度激活可诱导 SCUBE3 产生，足以促进新毛发生长（<a href="https://doi.org/10.1016/j.devcel.2022.06.005" class="v2-cite" target="_blank"><em>Dev Cell</em> 2022</a>）。</li>
       <li>临床研究建立了基于 JAK 抑制剂的斑秃管理策略：利特昔替尼在不同解剖部位、青少年及既往 JAK 抑制剂难治患者中均显示疗效，托法替尼减量方案可维持治疗应答（<a href="https://doi.org/10.1016/j.jaad.2025.07.008" class="v2-cite" target="_blank"><em>JAAD</em> 2025</a>；<a href="https://doi.org/10.1016/j.jaad.2025.09.053" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1016/j.jaad.2025.12.020" class="v2-cite" target="_blank"><em>JAAD</em> 2026</a>；<a href="https://doi.org/10.1177/12034754261429965" class="v2-cite" target="_blank"><em>J Cutan Med Surg</em> 2026</a>）。</li>
     </ul>
-  link: "/projects/#hair"
-  link_zh: "/zh/projects/#hair"
+  link: "/research/#hair"
+  link_zh: "/zh/research/#hair"
   narrative: |
     <div class="v2-research-block">
       <div class="v2-research-block__img"><img src="/assets/img/natcomm2026_cts_piezo1.png" alt="Nat Commun 2026 — CTS hypercontractility–PIEZO1 axis in androgenetic alopecia"></div>
@@ -130,8 +130,8 @@
       <li>FTO 缺失通过 KAT8/RSF1 级联导致异染色质丢失，揭示 RNA m<sup>6</sup>A 修饰在皮肤衰老染色质重塑中的作用（<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>）。</li>
       <li>HOXC10 通过 FZD6/Wnt/&beta;-catenin 通路延缓成纤维细胞衰老；辛伐他汀被鉴定为功能类似物（<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>）。</li>
     </ul>
-  link: "/projects/#skin-aging"
-  link_zh: "/zh/projects/#skin-aging"
+  link: "/research/#skin-aging"
+  link_zh: "/zh/research/#skin-aging"
   narrative: |
     <p>
       Aging is a complex, multifactorial process that affects every organ, with the skin serving as one of the most visible and accessible models for studying its biology. Our laboratory investigates the fundamental mechanisms of skin aging through an integrated approach combining longevity population cohorts, multi-omics technologies, and advanced cellular and animal models.
