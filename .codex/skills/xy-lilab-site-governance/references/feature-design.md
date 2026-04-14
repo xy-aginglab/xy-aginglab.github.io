@@ -39,12 +39,12 @@
 - Do not introduce card-heavy metadata dashboards on detail pages.
 - Any change to the filter facets, list rendering, or detail layout requires a skill update first.
 
-### Team (`/team/` and `/zh/team/`)
+### Team (`/people/` and `/zh/people/`)
 
 - Team page emphasizes people as research contributors, not generic profile cards.
 - PI block is visually distinct from grouped member listings.
 - Role grouping follows `_data/members.yml`'s `role` taxonomy (`pi`, `basic_researcher`, `clinical_researcher`, `technician`). Order inside each group is controlled by `sort_key`.
-- Member detail pages (`/team/<slug>/` and `/zh/team/<slug>/`) carry longer bio, photo, contact, and selected publications where applicable.
+- Member detail pages (`/people/<slug>/` and `/zh/people/<slug>/`) carry longer bio, photo, contact, and selected publications where applicable.
 - For members without a photo, keep the roster compact rather than forcing placeholder-style empty-image blocks.
 
 ### Clinical (`/clinical/` and `/zh/clinical/`)

@@ -74,9 +74,9 @@ The site is a single-version Jekyll build rooted at `/` (English) and `/zh/` (Ch
 - `_pages/v2.md`
   - English homepage, routed to `/`
 - `_pages/v2/`
-  - English interior pages: `projects.md`, `publications.md`, `clinical.md`, `careers.md`, `team.md`, and `team/` member-detail stubs
+  - English interior pages: `research.md`, `publications.md`, `clinical.md`, `careers.md`, `people.md`, and `people/` member-detail stubs
 - `_pages/v2/zh/`
-  - Chinese mirror: `index.md`, `projects.md`, `publications.md`, `clinical.md`, `careers.md`, `team.md`, and `team/` member-detail stubs
+  - Chinese mirror: `index.md`, `research.md`, `publications.md`, `clinical.md`, `careers.md`, `people.md`, and `people/` member-detail stubs
 - `_pages/404.md`
   - not-found page
 
@@ -85,7 +85,7 @@ The site is a single-version Jekyll build rooted at `/` (English) and `/zh/` (Ch
 - `assets/css/v2-home.css`
   - homepage styles and the shared design-token layer: colors, typography, spacing, CSS custom properties used across all `v2` surfaces
 - `assets/css/v2-pages.css`
-  - interior-page styles (team, publications, clinical, careers, projects, member detail, paper detail)
+  - interior-page styles (people, publications, clinical, careers, research, member detail, paper detail)
 - `assets/css/v2-print.css`
   - print stylesheet
 - `assets/css/academicons.min.css`

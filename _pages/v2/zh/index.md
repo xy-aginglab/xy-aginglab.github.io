@@ -1,6 +1,6 @@
 ---
 layout: v2-home
-title: Li Lab
+title: 首页
 permalink: /zh/
 lang: zh
 description: Li Lab — 中南大学湘雅医院皮肤科。玫瑰痤疮与化脓性汗腺炎、毛发疾病与再生、皮肤衰老研究。
