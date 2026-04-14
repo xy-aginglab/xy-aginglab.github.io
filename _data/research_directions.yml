@@ -137,8 +137,12 @@
       Aging is a complex, multifactorial process that affects every organ, with the skin serving as one of the most visible and accessible models for studying its biology. Our laboratory investigates the fundamental mechanisms of skin aging through an integrated approach combining longevity population cohorts, multi-omics technologies, and advanced cellular and animal models.
     </p>
     <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/natmed2023_aging_biomarkers.webp" alt="Nat Med 2023 — Aging Biomarker Consortium framework"></div>
+      <div class="v2-research-block__text"><p>As a core member of the Aging Biomarker Consortium&mdash;a national initiative to establish standardized aging biomarkers across organ systems in China (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>)&mdash;we leverage large-scale cohort data to decode aging trajectories.</p></div>
+    </div>
+    <div class="v2-research-block v2-research-block--reverse">
       <div class="v2-research-block__img"><img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 regulates healthy aging via ribosomal activity"></div>
-      <div class="v2-research-block__text"><p>As a core member of the Aging Biomarker Consortium&mdash;a national initiative to establish standardized aging biomarkers across organ systems in China (<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>)&mdash;we leverage large-scale cohort data to decode aging trajectories. A key discovery from longevity cohort transcriptomics revealed that ETS1 governs healthy aging by downregulating ribosomal protein gene expression, reducing energy-intensive ribosomal biogenesis as an adaptive energy-saving mechanism (<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>).</p></div>
+      <div class="v2-research-block__text"><p>A key discovery from longevity cohort transcriptomics revealed that ETS1 governs healthy aging by downregulating ribosomal protein gene expression, reducing energy-intensive ribosomal biogenesis as an adaptive energy-saving mechanism (<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>).</p></div>
     </div>
     <p>
       At the epigenetic level, we uncovered that depletion of the m<sup>6</sup>A demethylase FTO drives heterochromatin loss through a KAT8/RSF1 acetylation cascade, directly linking RNA modification to chromatin remodeling in skin aging (<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>). The transcription factor regulatory network has been further elucidated with the discovery that HOXC10 delays fibroblast senescence via the FZD6/Wnt/&beta;-catenin pathway, with simvastatin identified as a functional mimic through Connectivity Map screening (<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>).
@@ -151,8 +155,12 @@
       衰老是涉及全身各个器官系统的复杂多因素生物学过程。皮肤因其直观性和易获取性，是研究衰老生物学的理想模型。实验室综合运用长寿人群队列、多组学技术及细胞与动物模型，系统研究皮肤衰老的核心机制。
     </p>
     <div class="v2-research-block">
+      <div class="v2-research-block__img"><img src="/assets/img/natmed2023_aging_biomarkers.webp" alt="Nat Med 2023 — 衰老生物标志物联盟整体框架"></div>
+      <div class="v2-research-block__text"><p>实验室是衰老生物标志物联盟（Aging Biomarker Consortium）的核心成员，该联盟旨在建立中国跨器官系统的标准化衰老生物标志物体系（<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>）。</p></div>
+    </div>
+    <div class="v2-research-block v2-research-block--reverse">
       <div class="v2-research-block__img"><img src="/assets/img/sciadv2022_ets1_aging.jpg" alt="Sci Adv 2022 — ETS1 调控健康衰老"></div>
-      <div class="v2-research-block__text"><p>实验室是衰老生物标志物联盟（Aging Biomarker Consortium）的核心成员，该联盟旨在建立中国跨器官系统的标准化衰老生物标志物体系（<a href="https://doi.org/10.1038/s41591-023-02444-y" class="v2-cite" target="_blank"><em>Nat Med</em> 2023</a>）。基于长寿队列转录组学分析，团队发现 ETS1 通过下调核糖体蛋白基因表达抑制高能耗的核糖体生物合成过程，提示核糖体生物合成的下调可能是长寿人群适应性能量代谢调控的关键环节（<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>）。</p></div>
+      <div class="v2-research-block__text"><p>基于长寿队列转录组学分析，团队发现 ETS1 通过下调核糖体蛋白基因表达抑制高能耗的核糖体生物合成过程，提示核糖体生物合成的下调可能是长寿人群适应性能量代谢调控的关键环节（<a href="https://doi.org/10.1126/sciadv.abf2017" class="v2-cite" target="_blank"><em>Sci Adv</em> 2022</a>）。</p></div>
     </div>
     <p>
       在表观遗传水平，团队发现 m<sup>6</sup>A 去甲基化酶 FTO 缺失可通过 KAT8/RSF1 乙酰化级联反应导致异染色质丢失，为 RNA m⁶A 修饰参与皮肤衰老过程中的染色质重塑提供了新证据（<a href="https://doi.org/10.1002/mco2.70205" class="v2-cite" target="_blank"><em>MedComm</em> 2025</a>）。在转录因子调控网络方面，HOXC10 通过 FZD6/Wnt/&beta;-catenin 通路延缓成纤维细胞衰老，经 Connectivity Map 筛选发现辛伐他汀可作为其功能类似物（<a href="https://doi.org/10.34133/research.0976" class="v2-cite" target="_blank"><em>Research</em> 2025</a>）。
