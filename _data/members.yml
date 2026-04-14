@@ -247,11 +247,19 @@
   sort_key: "05"
   name_en: Ben Wang
   role: clinical_researcher
-  title: 临床研究人员
-  title_en: Clinical Researcher, Dermatologist
-  photo: /assets/img/members/placeholder.png
+  title: 副主任医师、博士研究生导师
+  title_en: Associate Chief Physician, Doctoral Supervisor
+  photo: /assets/img/members/wb.jpg
   department: 皮肤科
   department_en: Department of Dermatology
+  bio: >
+    Department of Dermatology, Xiangya Hospital, Central South University. Selected for the Hunan Furong Scholars Program (Young Scholar) and named a 2025 CDA Outstanding Young/Mid-career Dermatologist.<br><br>
+    Currently serves as Member of the Cosmetic Dermatology Group, CMA Dermatology; Member and Secretary of the Rosacea Group, CMDA Dermatology; Member of the Dermatological Cosmetology Committee, Chinese Association of Plastics and Aesthetics; and Deputy Head of the Laser Cosmetology Group, Hunan Medical Aesthetics &amp; Cosmetology Committee.<br><br>
+    Led 3 NSFC projects and 4 provincial/ministerial projects. Published 30+ SCI papers.
+  bio_zh: >
+    中南大学湘雅医院皮肤科。入选湖南省芙蓉学者奖励计划青年学者，2025 年度 CDA 优秀中青年医师。<br><br>
+    现兼任中华医学会皮肤性病学分会美容学组委员、中国医师协会皮肤科医师分会玫瑰痤疮学组委员兼秘书、中国整形美容协会皮肤美容分会委员、湖南省医学美学与美容学专业委员会激光美容学组副组长。<br><br>
+    主持国家自然科学基金 3 项、省部级课题 4 项，发表 SCI 论文 30 余篇。
 
 - name: 赵志祥
   sort_key: "10"
