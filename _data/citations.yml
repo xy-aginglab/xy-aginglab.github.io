@@ -15,19 +15,19 @@ zhang2021frontimmunol:
 
 liu2022devcell:
   doi: "10.1016/j.devcel.2022.06.005"
-  citations: 80
+  citations: 81
 
 zhou2023jeadv:
   doi: "10.1111/jdv.18725"
   citations: 70
 
+li2020jdermatol_epi:
+  doi: "10.1111/1346-8138.15301"
+  citations: 62
+
 chen2020jamacadderma:
   doi: "10.1016/j.jaad.2020.04.113"
   citations: 62
-
-li2020jdermatol_epi:
-  doi: "10.1111/1346-8138.15301"
-  citations: 61
 
 xiao2022sciadv:
   doi: "10.1126/sciadv.abf2017"
@@ -41,13 +41,13 @@ ren2023natmed:
   doi: "10.1038/s41591-023-02444-y"
   citations: 55
 
+zhao2021jmir:
+  doi: "10.2196/23415"
+  citations: 55
+
 liu2020biochembioph:
   doi: "10.1016/j.bbrc.2019.10.073"
   citations: 55
-
-zhao2021jmir:
-  doi: "10.2196/23415"
-  citations: 54
 
 wang2022jinflammres:
   doi: "10.2147/JIR.S356551"
@@ -77,25 +77,25 @@ wang2021jaad_hcq:
   doi: "10.1016/j.jaad.2020.05.050"
   citations: 38
 
+wang2023jaad_paroxetine:
+  doi: "10.1016/j.jaad.2023.01.044"
+  citations: 37
+
+zhao2022jid_neutrophils:
+  doi: "10.1016/j.jid.2021.12.009"
+  citations: 36
+
 mao2023frontimmunol:
   doi: "10.3389/fimmu.2023.1231848"
   citations: 36
 
-wang2023jaad_paroxetine:
-  doi: "10.1016/j.jaad.2023.01.044"
-  citations: 35
-
-zhao2022jid_neutrophils:
-  doi: "10.1016/j.jid.2021.12.009"
-  citations: 35
-
 hu2022heliyon:
   doi: "10.1016/j.heliyon.2022.e10874"
-  citations: 33
+  citations: 34
 
 mao2024eurheartjcar:
   doi: "10.1093/ehjci/jeae126"
-  citations: 33
+  citations: 34
 
 xie2022bjd:
   doi: "10.1111/bjd.20662"
@@ -281,6 +281,10 @@ li2022cellregen:
   doi: "10.1186/s13619-022-00122-x"
   citations: 10
 
+huang2022peerj:
+  doi: "10.7717/peerj.13917"
+  citations: 10
+
 wang2020jdermatol:
   doi: "10.1111/1346-8138.15598"
   citations: 10
@@ -288,10 +292,6 @@ wang2020jdermatol:
 wang2025archdermatol:
   doi: "10.1007/s00403-025-03898-5"
   citations: 10
-
-huang2022peerj:
-  doi: "10.7717/peerj.13917"
-  citations: 9
 
 zhao2024biomarkres:
   doi: "10.1186/s40364-024-00663-0"
