@@ -319,17 +319,25 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
 }
 .v2-readmore:hover { text-decoration: underline; }
 
-/* Unified arrow CTA — SVG mask, inline-block + vertical-align:middle aligns to x-height */
+/* Unified arrow CTA — inline-flex with line-height:1 makes line-box == em-box,
+   so align-items:center centers the arrow on the em-box center. Works for both
+   Latin (no x-height assumption) and CJK (no x-height concept) without per-lang tweaks. */
+.v2-readmore,
+.v2-card__more,
+.v2-dir-card a,
+.bib-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  line-height: 1;
+}
 .v2-readmore::after,
 .v2-card__more::after,
-.bib-link::after,
-.v2-dir-card a::after {
+.v2-dir-card a::after,
+.bib-link::after {
   content: '';
-  display: inline-block;
-  width: 0.85em;
-  height: 0.85em;
-  margin-left: 0.3em;
-  vertical-align: middle;
+  width: 0.9em;
+  height: 0.9em;
   background-color: currentColor;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8h11M9 4l4 4-4 4' stroke='black' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8h11M9 4l4 4-4 4' stroke='black' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
