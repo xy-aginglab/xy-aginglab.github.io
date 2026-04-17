@@ -14,6 +14,7 @@ import re
 import os
 import sys
 import time
+import hashlib
 import urllib.request
 import urllib.error
 import json
@@ -23,6 +24,16 @@ BIB_PATH = "_bibliography/papers.bib"
 IMG_DIR = "assets/img/publication_preview"
 EMAIL = "liji_xy@csu.edu.cn"
 DELAY = 0.2  # seconds between API calls
+
+# Known publisher / database fallback "no-thumbnail" placeholders.
+# When OG scraping returns one of these instead of a real figure, reject it.
+PLACEHOLDER_HASHES = {
+    "c4cbb17e90bb4ad068937b011d075937",  # PubMed pubmed-meta-image-v2.jpg
+    "70a18f8e0d1ceccb59ea652864289c1a",  # 4097B generic 200x200 PNG
+}
+PLACEHOLDER_URL_PATTERNS = (
+    "pubmed-meta-image",  # NCBI generic
+)
 
 # Skip SSL verification for some publisher sites
 ctx = ssl.create_default_context()
@@ -80,8 +91,19 @@ def fetch_og_image(url):
     return None
 
 
+def is_placeholder_url(url):
+    """Quick reject for known publisher fallback image URLs."""
+    return any(pat in url for pat in PLACEHOLDER_URL_PATTERNS)
+
+
 def download_image(url, path):
-    """Download image to path. Returns True on success."""
+    """Download image to path. Returns True on success.
+
+    Rejects publisher fallback placeholders by content hash so we don't
+    pollute the bib with identical 'no-thumbnail' images.
+    """
+    if is_placeholder_url(url):
+        return False
     req = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
     })
@@ -92,6 +114,8 @@ def download_image(url, path):
                 return False
             content_type = resp.headers.get("Content-Type", "")
             if "html" in content_type:
+                return False
+            if hashlib.md5(data).hexdigest() in PLACEHOLDER_HASHES:
                 return False
             with open(path, "wb") as f:
                 f.write(data)
