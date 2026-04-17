@@ -327,6 +327,16 @@ body.v2-body {
   line-height: 1.7;
 }
 .v2-pi-card__bio p { margin: 0 0 0.7rem; }
+.v2-card__more {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-family: var(--v2-font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--v2-accent);
+  letter-spacing: 0.02em;
+}
+.v2-member-card__info .v2-card__more { margin-top: 0.35rem; font-size: 0.78rem; }
 @media (max-width: 580px) {
   .v2-pi-card { grid-template-columns: 100px 1fr; gap: 1rem; }
   .v2-pi-card img { width: 100px; }
