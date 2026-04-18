@@ -342,7 +342,7 @@ a[href^="mailto:"]:hover { text-decoration: none; opacity: 0.8; }
 }
 :lang(zh) .v2-readmore::after,
 :lang(zh) .v2-card__more::after,
-:lang(zh) .v2-dir-card a::after { vertical-align: 0.05em; }
+:lang(zh) .v2-dir-card a::after { vertical-align: 0.03em; }
 @media (hover: hover) {
   .v2-readmore:hover::after,
   .bib-link:hover::after,
